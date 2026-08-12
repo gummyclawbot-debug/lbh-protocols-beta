@@ -16,7 +16,7 @@
 - Independent pre-commit review; documentation freshness findings resolved.
 
 ## Current phase
-- First authoritative-source pilot for the November 2024 Do Not Tube appendix is released on beta and awaiting Jarvis acceptance.
+- First authoritative-source pilot for the November 2024 Do Not Tube appendix is accepted, corrected, and released on beta.
 
 ## Remaining
 - Reconcile the remaining clinical tabs with authoritative source/protocol provenance one document at a time.
@@ -36,3 +36,4 @@
 - 2026-08-11: ingested the current approved `Appendix A: Do Not Tube List` pilot. Preserved the public source PDF byte-for-byte, replaced the unsupported legacy beta list with all 14 approved categories and medication subgroups, added tab-level and References links, and established source-to-UI/test traceability.
 - 2026-08-11: corrected the verified beta Vercel project framework preset from `Other` to `Next.js`; protected legacy was not targeted.
 - 2026-08-11: independent review passed, verified commit `45fa6fa` shipped to beta deployment `DsSetWgDviAFEbVDwnaRwCtyyw4H`, canonical beta/PDF returned HTTP 200, live PDF hash matched, production UI/console checks passed, and protected legacy remained unchanged.
+- 2026-08-11: Jarvis accepted the pilot with the approved `clevidipine` correction and compact-layout request. Verified commit `4de82ff` shipped only to beta deployment `6Mv7zEJ9EuuMYwAP22GjdaHYrgwf`; live TPN card measured 46 px, all 14 categories remained intact, the source PDF hash/size stayed unchanged, and protected legacy remained untouched.
