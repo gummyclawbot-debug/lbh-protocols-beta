@@ -140,21 +140,167 @@ export const HIV_FORMULARY = [
   { regimen: "Opportunistic infection ppx", use: "CD4-guided (TMP-SMX, azithro, etc.)", notes: "Follow ID / OI guidelines; formulary agents preferred." },
 ];
 
-export const DO_NOT_TUBE = [
-  "Finasteride",
-  "Dutasteride",
-  "Chemotherapy agents (hazardous)",
-  "Hormones (e.g., estradiol, testosterone products)",
-  "Mycophenolate",
-  "Tacrolimus (check product — many hazardous)",
-  "Azathioprine",
-  "Methotrexate",
-  "Warfarin (prefer hand delivery / double-check)",
-  "Controlled substances per policy",
-  "Thick suspensions that clog tubes",
-  "Oils / sticky compounds (e.g., some softgels)",
-  "Live vaccines",
-  'Packaging marked "Do not tube"',
+export type ProtocolReference = {
+  id: string;
+  title: string;
+  updated: string;
+  pageCount: number;
+  href: string;
+  sha256: string;
+  authority: string;
+  affectedViews: string[];
+};
+
+export type DoNotTubeGroup = {
+  title: string;
+  items?: string[];
+};
+
+export type DoNotTubeCategory = {
+  number: number;
+  title: string;
+  detail: string;
+  groups?: DoNotTubeGroup[];
+};
+
+export const DO_NOT_TUBE_PROTOCOL = {
+  source: {
+    id: "do-not-tube-2024-sinai",
+    title: "Appendix A: Do Not Tube List",
+    updated: "November 2024",
+    pageCount: 1,
+    href: "/references/do-not-tube-list-2024-sinai.pdf",
+    sha256: "09cdb4b11a0d80e7ca326ed7901592750cd18632613a55d11a2b6660a7f85226",
+    authority: "LBH institutional protocol; medical-board and P&T reviewed/approved",
+    affectedViews: ["dnt"],
+  } satisfies ProtocolReference,
+  policyReference: 'Refer to Policy Tech “Pneumatic Tube” Policy',
+  introduction:
+    "Before tubing, please be aware that there are several items which cannot be sent via the pneumatic tubing system, including:",
+  medicationQualifier:
+    "Not a comprehensive list. Contact Pharmacy to determine if the medication is appropriate to send through the pneumatic tube system if unsure.",
+  categories: [
+    {
+      number: 1,
+      title: "Medications",
+      detail: "Medications that must not be sent through the pneumatic tube system.",
+      groups: [
+        {
+          title: "Protein based medications (altered by shaking)",
+          items: [
+            "Albumin",
+            "filgrastim (Neupogen®)",
+            "IVIG",
+            "insulin",
+            "vaccines",
+            "lipids",
+            "propofol",
+            "cevidipine (Cleviprex®)",
+            "epoprostenol",
+            'monoclonal antibodies (“-mabs”)',
+            "epoetin products ex.: Retacrit, Epogen, Procrit",
+            "darbepoetin",
+          ],
+        },
+        {
+          title: "Controlled substances / narcotics",
+          items: ["Fentanyl", "morphine", "PCA", "epidurals", "lacosamide", "etc."],
+        },
+        {
+          title: "High-cost medications, including but not limited to",
+          items: [
+            "Amphotericin",
+            "daptomycin",
+            "denosumab",
+            "zoledronic acid",
+            "paliperidone palmitate (Invega Sustenna®)",
+            "aripiprazole monohydrate (Abilify Maintena®)",
+            "leuprolide (Lupron®)",
+            "rituximab",
+            "remdesivir",
+            "study drugs (investigational drugs)",
+            "intrauterine devices",
+            "blood factor products",
+          ],
+        },
+        { title: "TPN" },
+        { title: "Patients own/personal medications" },
+        {
+          title: "Anticoagulation reversal agents",
+          items: ["Kcentra", "Andexxa", "Novoseven", "etc."],
+        },
+        { title: "Chemicals", items: ["Lugols", "Dakins"] },
+      ],
+    },
+    {
+      number: 2,
+      title: "Heavy items",
+      detail: "Heavy items (e.g., IV bags greater than one (1) liter).",
+    },
+    {
+      number: 3,
+      title: "Glass bottles and ampules",
+      detail: "Glass bottles greater than 100 mL and glass ampules.",
+    },
+    {
+      number: 4,
+      title: "Personal and non-authorized items",
+      detail: "Personal items, food, and any other non-authorized item.",
+    },
+    {
+      number: 5,
+      title: "Oversized or overweight materials",
+      detail:
+        "Materials which are too large or too heavy to be secured and contained (2.5 lbs or 1 L of fluid max capacity).",
+    },
+    {
+      number: 6,
+      title: "Urgent or emergent blood",
+      detail:
+        "Blood to any area of the hospital when transfusion is URGENT or EMERGENT, except Emergency Department and Operating Room. The tubing of blood products to other areas in emergent situations should be at the discretion of the Transfusion Service.",
+    },
+    {
+      number: 7,
+      title: "Unused contaminated blood",
+      detail: "Unused contaminated blood.",
+    },
+    {
+      number: 8,
+      title: "Spiked or transfused blood products",
+      detail:
+        "Blood products that have been spiked or transfused need to be returned to the Transfusion Service for any reason.",
+    },
+    { number: 9, title: "Tissues", detail: "Tissues." },
+    {
+      number: 10,
+      title: "Original medical records",
+      detail: "Original medical records.",
+    },
+    {
+      number: 11,
+      title: "Contaminated or broken carriers",
+      detail: "Contaminated or broken carriers.",
+    },
+    {
+      number: 12,
+      title: "Medication order sheets",
+      detail: "Medication order sheets. Exception: downtime.",
+    },
+    {
+      number: 13,
+      title: "CSF / sterile fluids",
+      detail: "CSF / sterile fluids.",
+    },
+    {
+      number: 14,
+      title: "COVID-19 specimens",
+      detail: "COVID-19 specimens are to be hand delivered to the laboratory.",
+    },
+  ] satisfies DoNotTubeCategory[],
+};
+
+export const PROTOCOL_REFERENCES: ProtocolReference[] = [
+  DO_NOT_TUBE_PROTOCOL.source,
 ];
 
 export const DO_NOT_CRUSH = [
@@ -186,4 +332,5 @@ export const NAV = [
   { id: "hiv" as const, label: "HIV Formulary", shortLabel: "HIV", emoji: "💊", description: "Preferred HIV regimens" },
   { id: "dnt" as const, label: "Do Not Tube", shortLabel: "DNT", emoji: "🚫", description: "Medications not for pneumatic tube" },
   { id: "dnc" as const, label: "Do Not Crush", shortLabel: "DNC", emoji: "🚫", description: "Medications that must not be crushed" },
+  { id: "references" as const, label: "References", shortLabel: "References", emoji: "📚", description: "Original approved institutional protocols" },
 ];

@@ -10,6 +10,7 @@
 - Architecture/setup/dependencies: `systemPatterns.md`, `techContext.md`
 - Deployment or recovery: `runbooks/beta-deployment.md`
 - Formula/protocol changes: `runbooks/clinical-validation.md`
+- Approved source records and traceability: `sources/`
 - Consequential decisions: matching file in `decisions/`
 
 ## Ownership

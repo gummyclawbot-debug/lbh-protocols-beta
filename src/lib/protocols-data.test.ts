@@ -2,7 +2,6 @@ import { describe, expect, it } from "vitest";
 import {
   CRRT_DRUGS,
   DO_NOT_CRUSH,
-  DO_NOT_TUBE,
   HE_PROTOCOL,
   HIV_FORMULARY,
   INSULIN_SWITCH,
@@ -25,8 +24,8 @@ function expectNonEmptyRecords(
 }
 
 describe("protocol data characterization", () => {
-  it("keeps all thirteen navigation destinations unique and populated", () => {
-    expect(NAV).toHaveLength(13);
+  it("keeps all navigation destinations unique and populated", () => {
+    expect(NAV).toHaveLength(14);
     expect(new Set(NAV.map((entry) => entry.id)).size).toBe(NAV.length);
     expect(NAV[0]?.id).toBe("home");
     expect(NAV.map((entry) => entry.id)).toEqual([
@@ -43,6 +42,7 @@ describe("protocol data characterization", () => {
       "hiv",
       "dnt",
       "dnc",
+      "references",
     ]);
     expectNonEmptyRecords(NAV, ["id", "label", "shortLabel", "emoji", "description"]);
   });
@@ -65,7 +65,6 @@ describe("protocol data characterization", () => {
     expect(RESTRICTIONS).toHaveLength(8);
     expect(INSULIN_SWITCH).toHaveLength(6);
     expect(HIV_FORMULARY).toHaveLength(7);
-    expect(DO_NOT_TUBE).toHaveLength(14);
     expect(DO_NOT_CRUSH).toHaveLength(12);
   });
 
@@ -77,7 +76,6 @@ describe("protocol data characterization", () => {
     expectNonEmptyRecords(INSULIN_SWITCH, ["from", "to", "factor", "tips"]);
     expectNonEmptyRecords(HIV_FORMULARY, ["regimen", "use", "notes"]);
     expectNonEmptyRecords(DO_NOT_CRUSH, ["drug", "reason"]);
-    for (const item of DO_NOT_TUBE) expect(item.trim()).not.toBe("");
   });
 
   it("preserves high-alert and contraindication language", () => {

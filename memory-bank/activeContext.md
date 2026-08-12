@@ -4,7 +4,7 @@ Last verified: 2026-08-11 EDT
 Evidence: Git/GitHub, Vercel CLI, live HTTP probes, local lint/build/audit
 
 ## Current objective
-Pilot the approved-protocol ingestion workflow one document at a time: preserve the original, inventory every page/section, build source-to-UI/test traceability, reconcile current beta content, implement without silent omission, and expose the original in References.
+Complete verification and beta-only release of the first approved-protocol pilot: Do Not Tube List, November 2024.
 
 ## Verified state
 - Canonical clone: `/Users/gummyserver/Developer/jarvis/active/lbh-protocols-beta`
@@ -25,13 +25,19 @@ Pilot the approved-protocol ingestion workflow one document at a time: preserve 
 - Protected legacy returned HTTP 200 and its deployment list shows no new deployment from this work.
 - Jarvis stated that the hospital protocols he will upload are individually reviewed and approved by the hospital medical board and Pharmacy & Therapeutics Committee. Treat each supplied protocol as the authoritative institutional source for its stated scope/version.
 - Jarvis wants original source documents hosted under a References area and linked from affected tabs so users can validate application content.
+- Pilot source `Do Not Tube List 2024_Sinai.pdf` is preserved byte-for-byte at `/references/do-not-tube-list-2024-sinai.pdf` (SHA-256 `09cdb4b11a0d80e7ca326ed7901592750cd18632613a55d11a2b6660a7f85226`).
+- One-page image-based appendix was visually reviewed at high resolution. All 14 numbered categories, seven medication subgroups, named examples, limits, blood exceptions, downtime exception, hand-delivery direction, policy pointer, and November 2024 update label are mapped to UI and tests.
+- Previous beta list was not source-faithful; it was replaced rather than blended. Unsupported prior entries are documented in `sources/do-not-tube-2024-sinai.md` without implying they are safe.
+- New References view and affected-tab source link expose the original approved PDF. Local HTTP retrieval is 200 and byte-identical.
+- Twenty-three tests, lint, TypeScript, build, audit, browser search/UI smoke tests, and console checks pass before independent review.
+- Vercel remote project preset was corrected from `Other` to `Next.js` on the verified `lbh-protocols-beta` project; `.vercel/project.json` still identifies only `lbh-protocols-beta`.
 
 ## Exact next actions
-1. Receive one pilot protocol file from Jarvis, preferably the protocol for one existing tab.
-2. Confirm it is cleared for public beta hosting and contains no PHI or restricted material.
-3. Preserve/hash/extract and visually review every page, then produce the inventory, reconciliation report, and traceability matrix before coding.
-4. Resolve ambiguities with Jarvis; then add failing boundary/content tests and implement the full approved content plus References entry.
-5. Present completeness evidence for Jarvis acceptance, deploy only to beta, and verify all affected UI/source links.
+1. Finish independent review and correct any findings.
+2. Commit/push the complete source, implementation, tests, and traceability evidence.
+3. Deploy only to `lbh-protocols-beta`; verify Do Not Tube, search, References, PDF hash/link, and zero console errors.
+4. Confirm protected legacy receives no deployment.
+5. Present the pilot completeness/reconciliation evidence to Jarvis for `accepted-beta` confirmation.
 
 ## Hazards
 - Never link, deploy, alias, or promote against `lbh-protocols` legacy.

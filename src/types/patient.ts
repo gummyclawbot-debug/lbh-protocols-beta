@@ -31,4 +31,5 @@ export type ViewId =
   | "he"
   | "hiv"
   | "dnt"
-  | "dnc";
+  | "dnc"
+  | "references";

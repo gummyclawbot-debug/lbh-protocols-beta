@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { motion } from "framer-motion";
+import { ExternalLink, FileText } from "lucide-react";
 import { PatientProfileCard } from "@/components/patient-profile-card";
 import { usePatient } from "@/components/patient-provider";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -17,7 +18,7 @@ import {
 import {
   CRRT_DRUGS,
   DO_NOT_CRUSH,
-  DO_NOT_TUBE,
+  DO_NOT_TUBE_PROTOCOL,
   HE_PROTOCOL,
   HIV_FORMULARY,
   INSULIN_SWITCH,
@@ -25,6 +26,7 @@ import {
   NAV,
   RENAL_DOSING,
   RESTRICTIONS,
+  PROTOCOL_REFERENCES,
   THERAPEUTIC_SUBS,
 } from "@/lib/protocols-data";
 import type { ViewId } from "@/types/patient";
@@ -428,30 +430,122 @@ function HivView() {
 
 function DntView() {
   const [q, setQ] = React.useState("");
-  const list = DO_NOT_TUBE.filter((d) =>
-    d.toLowerCase().includes(q.trim().toLowerCase())
-  );
+  const query = q.trim().toLowerCase();
+  const categories = DO_NOT_TUBE_PROTOCOL.categories.filter((category) => {
+    const searchable = [
+      category.title,
+      category.detail,
+      ...(category.groups ?? []).flatMap((group) => [
+        group.title,
+        ...(group.items ?? []),
+      ]),
+    ].join(" ").toLowerCase();
+    return searchable.includes(query);
+  });
   return (
     <Panel
-      title="🚫 Do Not Tube"
-      description="Do not send via pneumatic tube system. Hand-deliver per policy."
+      title="🚫 Appendix A: Do Not Tube List"
+      description={DO_NOT_TUBE_PROTOCOL.introduction}
     >
+      <div className="mb-4 rounded-xl border border-amber-500/30 bg-amber-500/10 p-4">
+        <p className="font-semibold text-amber-950 dark:text-amber-100">
+          {DO_NOT_TUBE_PROTOCOL.medicationQualifier}
+        </p>
+        <p className="mt-2 text-sm text-muted-foreground">
+          {DO_NOT_TUBE_PROTOCOL.policyReference}
+        </p>
+        <a
+          href={DO_NOT_TUBE_PROTOCOL.source.href}
+          target="_blank"
+          rel="noreferrer"
+          className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-primary underline-offset-4 hover:underline"
+        >
+          <FileText className="size-4" />
+          Open approved source · Updated {DO_NOT_TUBE_PROTOCOL.source.updated}
+          <ExternalLink className="size-3.5" />
+        </a>
+      </div>
       <Input
-        placeholder="Search medications…"
+        placeholder="Search medications, items, limits, or exceptions…"
         value={q}
         onChange={(e) => setQ(e.target.value)}
-        className="mb-3 max-w-md"
+        className="mb-4 max-w-xl"
       />
-      <ul className="grid gap-2 sm:grid-cols-2">
-        {list.map((d) => (
-          <li
-            key={d}
-            className="rounded-lg border border-destructive/20 bg-destructive/5 px-3 py-2 text-sm"
-          >
-            {d}
-          </li>
+      <div className="space-y-3">
+        {categories.map((category) => (
+          <section key={category.number} className="rounded-xl border border-destructive/20 bg-destructive/5 p-4">
+            <div className="flex gap-3">
+              <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-destructive text-xs font-bold text-destructive-foreground">
+                {category.number}
+              </span>
+              <div className="min-w-0 flex-1">
+                <h3 className="font-semibold">{category.title}</h3>
+                {category.number !== 1 ? (
+                  <p className="mt-1 text-sm leading-relaxed">{category.detail}</p>
+                ) : null}
+                {category.groups ? (
+                  <div className="mt-3 grid gap-3 md:grid-cols-2">
+                    {category.groups.map((group) => (
+                      <div key={group.title} className="rounded-lg border bg-background/80 p-3">
+                        <h4 className="text-sm font-semibold">{group.title}</h4>
+                        {group.items ? (
+                          <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-muted-foreground">
+                            {group.items.map((item) => <li key={item}>{item}</li>)}
+                          </ul>
+                        ) : null}
+                      </div>
+                    ))}
+                  </div>
+                ) : null}
+              </div>
+            </div>
+          </section>
         ))}
-      </ul>
+        {categories.length === 0 ? (
+          <p className="rounded-xl border border-dashed p-6 text-center text-sm text-muted-foreground">
+            No approved Do Not Tube items match “{q}”. If unsure, contact Pharmacy.
+          </p>
+        ) : null}
+      </div>
+    </Panel>
+  );
+}
+
+function ReferencesView() {
+  return (
+    <Panel
+      title="📚 References"
+      description="Original approved institutional protocols used by LBH Protocols Beta. Open the source to validate the rendered workflow."
+    >
+      <div className="space-y-3">
+        {PROTOCOL_REFERENCES.map((reference) => (
+          <article key={reference.id} className="rounded-xl border p-4">
+            <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+              <div>
+                <div className="flex flex-wrap items-center gap-2">
+                  <h3 className="font-semibold">{reference.title}</h3>
+                  <Badge variant="secondary">Institutional source</Badge>
+                </div>
+                <p className="mt-2 text-sm text-muted-foreground">{reference.authority}</p>
+                <dl className="mt-3 grid gap-x-6 gap-y-1 text-sm sm:grid-cols-2">
+                  <div><dt className="inline font-medium">Updated: </dt><dd className="inline">{reference.updated}</dd></div>
+                  <div><dt className="inline font-medium">Pages: </dt><dd className="inline">{reference.pageCount}</dd></div>
+                  <div><dt className="inline font-medium">Applies to: </dt><dd className="inline">Do Not Tube</dd></div>
+                  <div><dt className="inline font-medium">Integrity: </dt><dd className="inline font-mono text-xs">{reference.sha256.slice(0, 12)}…</dd></div>
+                </dl>
+              </div>
+              <a
+                href={reference.href}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex shrink-0 items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm hover:bg-primary/90"
+              >
+                <FileText className="size-4" /> Open source PDF <ExternalLink className="size-3.5" />
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
     </Panel>
   );
 }
@@ -515,6 +609,7 @@ export function CalculatorViews({
         {view === "hiv" && <HivView />}
         {view === "dnt" && <DntView />}
         {view === "dnc" && <DncView />}
+        {view === "references" && <ReferencesView />}
       </section>
     </div>
   );
