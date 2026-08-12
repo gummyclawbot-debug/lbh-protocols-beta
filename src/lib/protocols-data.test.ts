@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import {
   CRRT_DRUGS,
-  DO_NOT_CRUSH,
+  DO_NOT_CRUSH_PROTOCOL,
   HE_PROTOCOL,
   HIV_FORMULARY,
   INSULIN_SWITCH,
@@ -66,7 +66,8 @@ describe("protocol data characterization", () => {
     expect(RESTRICTIONS).toHaveLength(8);
     expect(INSULIN_SWITCH).toHaveLength(6);
     expect(HIV_FORMULARY).toHaveLength(7);
-    expect(DO_NOT_CRUSH).toHaveLength(12);
+    expect(DO_NOT_CRUSH_PROTOCOL.tables).toHaveLength(4);
+    expect(DO_NOT_CRUSH_PROTOCOL.tables.flatMap((table) => table.rows)).toHaveLength(100);
   });
 
   it("keeps current clinical table fields non-empty", () => {
@@ -79,7 +80,10 @@ describe("protocol data characterization", () => {
     expectNonEmptyRecords(RESTRICTIONS, ["drug", "restriction", "alt"]);
     expectNonEmptyRecords(INSULIN_SWITCH, ["from", "to", "factor", "tips"]);
     expectNonEmptyRecords(HIV_FORMULARY, ["regimen", "use", "notes"]);
-    expectNonEmptyRecords(DO_NOT_CRUSH, ["drug", "reason"]);
+    expectNonEmptyRecords(
+      DO_NOT_CRUSH_PROTOCOL.tables.flatMap((table) => table.rows),
+      ["generic", "brand", "comments"],
+    );
   });
 
   it("preserves high-alert and contraindication language", () => {
@@ -93,8 +97,10 @@ describe("protocol data characterization", () => {
       RESTRICTIONS.find((row) => row.drug === "Daptomycin")?.restriction,
     ).toContain("Not for pneumonia");
     expect(
-      DO_NOT_CRUSH.find((row) => row.drug === "Dabigatran")?.reason,
-    ).toContain("bleeding risk");
+      DO_NOT_CRUSH_PROTOCOL.tables
+        .flatMap((table) => table.rows)
+        .find((row) => row.generic === "morphine")?.comments,
+    ).toContain("potentially fatal dose");
   });
 
   it("keeps the current hepatic encephalopathy pathway populated", () => {

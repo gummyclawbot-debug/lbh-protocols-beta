@@ -16,7 +16,7 @@
 - Independent pre-commit review; documentation freshness findings resolved.
 
 ## Current phase
-- Do Not Tube pilot is accepted/released; January 2026 Therapeutic Substitution is implemented locally and in pre-release validation.
+- Do Not Tube and January 2026 Therapeutic Substitution are released; January 2026 Do Not Crush is implemented locally and in pre-release validation.
 
 ## Remaining
 - Reconcile the remaining clinical tabs with authoritative source/protocol provenance one document at a time.
@@ -40,3 +40,6 @@
 - 2026-08-11: received the authoritative 20-page January 2026 Therapeutic Substitution source with public hosting/no-redaction clearance; preserved and visually reviewed every page, reconciled all 31 sections and 296 complete rows, replaced six unsupported placeholders, added compact all-source search/tables plus source-page and References traceability, and passed initial local engineering/browser/source-integrity checks. Independent review and beta-only release remain pending.
 - 2026-08-11: initial independent Therapeutic Substitution review correctly blocked release because the ACE alert trigger was incomplete and note-only search inflated unrelated rows. Restored the exact `>40mg during T.sub.` trigger, separated direct row results from section context, added exact regression tests and a mobile table-scroll cue, and passed the corrected 32-test/full build/browser gate. Fresh re-review remains pending; nothing has shipped.
 - 2026-08-11: fresh independent re-review passed with no blockers. Verified commit `6836249` deployed only to beta as `dpl_5TUrU1KKS6Qeewfxxycn9w41STSs`; canonical UI/search/References and exact hosted PDF integrity passed production verification, while protected legacy remained unchanged.
+- 2026-08-12: received the authoritative five-page January 2026 Do Not Crush appendix and explicit unchanged-public-hosting clearance. Preserved/hash-verified the source, visually reviewed every page, reconciled four tables and 100 logical rows plus two governing notes/four references, replaced the unsupported 12-row placeholder, and passed the 40-test/full build/security/desktop/mobile/source-integrity gate. Independent review and beta-only release remain pending.
+- 2026-08-12: independent UX review blocked the Do Not Crush release because literal search failed the natural `25ml water` query. Replaced literal phrase matching with all-token matching, pinned both `25ml water` and `25ml of water` to the single Cenobamate/Xcopri row, preserved note-context semantics, and passed the corrected full gate/browser matrix. Fresh re-review returned PASS with no release blockers; nothing has shipped yet.
+- 2026-08-12: fresh independent clinical/citation, engineering/security/isolation, and corrected desktop/mobile UX re-reviews all returned PASS with no release blockers. The exact staged candidate is approved for beta-only commit/deployment; nothing has shipped yet.

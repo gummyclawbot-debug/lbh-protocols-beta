@@ -17,7 +17,7 @@ import {
 } from "@/lib/calculations";
 import {
   CRRT_DRUGS,
-  DO_NOT_CRUSH,
+  DO_NOT_CRUSH_PROTOCOL,
   DO_NOT_TUBE_PROTOCOL,
   HE_PROTOCOL,
   HIV_FORMULARY,
@@ -27,6 +27,7 @@ import {
   RENAL_DOSING,
   RESTRICTIONS,
   PROTOCOL_REFERENCES,
+  searchDoNotCrush,
   searchTherapeuticSubstitutions,
   THERAPEUTIC_SUBSTITUTION_PROTOCOL,
 } from "@/lib/protocols-data";
@@ -666,33 +667,150 @@ function ReferencesView() {
 }
 
 function DncView() {
-  const [q, setQ] = React.useState("");
-  const list = DO_NOT_CRUSH.filter(
-    (d) =>
-      d.drug.toLowerCase().includes(q.trim().toLowerCase()) ||
-      d.reason.toLowerCase().includes(q.trim().toLowerCase())
-  );
+  const [query, setQuery] = React.useState("");
+  const normalizedQuery = query.trim().toLowerCase();
+  const tables = searchDoNotCrush(query);
+  const rowCount = tables.reduce((total, table) => total + table.rows.length, 0);
+  const contextCount = tables.filter((table) => table.tableMatch || table.noteMatch).length;
+
   return (
     <Panel
-      title="🚫 Do Not Crush"
-      description="Crushing may alter release, increase toxicity, or create hazardous exposure."
+      title="🚫 LBH Do Not Crush List — Appendix A"
+      description="January 2026 LBH formulary guidance for medications that cannot be crushed/opened, require handling precautions, have taste limitations, or need special administration instructions."
     >
-      <Input
-        placeholder="Search…"
-        value={q}
-        onChange={(e) => setQ(e.target.value)}
-        className="mb-3 max-w-md"
-      />
-      <div className="space-y-2">
-        {list.map((d) => (
-          <div
-            key={d.drug}
-            className="flex flex-col gap-1 rounded-xl border p-3 sm:flex-row sm:justify-between"
-          >
-            <div className="font-medium">{d.drug}</div>
-            <div className="text-sm text-muted-foreground">{d.reason}</div>
+      <div className="space-y-4">
+        <div className="rounded-xl border bg-muted/25 p-4">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+            <div className="w-full max-w-xl space-y-1.5">
+              <Label htmlFor="do-not-crush-search">Search all 100 source rows</Label>
+              <Input
+                id="do-not-crush-search"
+                type="search"
+                placeholder="e.g. Revlimid, small bore tubes, PPE, 25ml of water…"
+                value={query}
+                onChange={(event) => setQuery(event.target.value)}
+              />
+            </div>
+            <a
+              href={DO_NOT_CRUSH_PROTOCOL.source.href}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex shrink-0 items-center justify-center gap-2 rounded-lg border bg-background px-3 py-2 text-sm font-medium hover:bg-muted"
+            >
+              <FileText className="size-4" /> Open approved source <ExternalLink className="size-3.5" />
+            </a>
           </div>
-        ))}
+          <p className="mt-2 text-xs text-muted-foreground">
+            {normalizedQuery
+              ? `${rowCount} direct ${rowCount === 1 ? "row match" : "row matches"}${contextCount ? ` · ${contextCount} source-context ${contextCount === 1 ? "match" : "matches"}` : ""} across ${tables.length} ${tables.length === 1 ? "table" : "tables"}.`
+              : "4 source tables · 100 complete medication rows · administration comments and source-page traceability preserved."}
+          </p>
+          <p className="mt-2 text-sm font-medium text-amber-950 dark:text-amber-100">
+            {DO_NOT_CRUSH_PROTOCOL.formularyQualifier}
+          </p>
+        </div>
+
+        {!normalizedQuery ? (
+          <nav aria-label="Do Not Crush table index" className="grid gap-2 sm:grid-cols-2">
+            {DO_NOT_CRUSH_PROTOCOL.tables.map((table) => (
+              <a
+                key={table.number}
+                href={`#do-not-crush-table-${table.number}`}
+                className="rounded-lg border px-3 py-2 text-sm hover:border-primary/50 hover:bg-muted/40"
+              >
+                <span className="mr-2 font-mono text-xs text-muted-foreground">Table {table.number}</span>
+                {table.title}
+                <span className="ml-2 text-xs text-muted-foreground">({table.rows.length})</span>
+              </a>
+            ))}
+          </nav>
+        ) : null}
+
+        {tables.length ? (
+          <div className="space-y-3">
+            {tables.map((table) => (
+              <details
+                id={`do-not-crush-table-${table.number}`}
+                key={table.number}
+                open={normalizedQuery ? true : undefined}
+                className="group scroll-mt-32 overflow-hidden rounded-xl border"
+              >
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-3 bg-muted/25 px-4 py-3 hover:bg-muted/50 [&::-webkit-details-marker]:hidden">
+                  <span className="font-semibold">
+                    <span className="mr-2 font-mono text-xs text-muted-foreground">Table {table.number}</span>
+                    {table.title}
+                  </span>
+                  <span className="flex shrink-0 items-center gap-2 text-xs text-muted-foreground">
+                    {table.rows.length} {table.rows.length === 1 ? "row" : "rows"}
+                    <span aria-hidden="true" className="transition-transform group-open:rotate-180">⌄</span>
+                  </span>
+                </summary>
+                <div className="border-t">
+                  {table.rows.length ? (
+                    <p className="border-b px-4 py-2 text-xs text-muted-foreground sm:hidden">
+                      Swipe horizontally to view all table columns.
+                    </p>
+                  ) : null}
+                  {table.rows.length ? (
+                    <div className="overflow-x-auto">
+                      <table className="w-full min-w-[760px] text-left text-sm">
+                        <thead className="bg-muted/40 text-xs uppercase tracking-wide text-muted-foreground">
+                          <tr>
+                            <th className="w-[28%] px-3 py-2">Generic (active ingredient)</th>
+                            <th className="w-[22%] px-3 py-2">Drug brand name</th>
+                            <th className="w-[42%] px-3 py-2">Administration comments</th>
+                            <th className="px-3 py-2">Source</th>
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y">
+                          {table.rows.map((row, rowIndex) => (
+                            <tr key={`${row.page}-${rowIndex}-${row.generic}`} className="align-top hover:bg-muted/20">
+                              <td className="whitespace-pre-line px-3 py-2.5 font-medium leading-relaxed">{row.generic}</td>
+                              <td className="whitespace-pre-line px-3 py-2.5 leading-relaxed">{row.brand}</td>
+                              <td className="whitespace-pre-line px-3 py-2.5 leading-relaxed">{row.comments}</td>
+                              <td className="whitespace-nowrap px-3 py-2.5 text-xs text-muted-foreground">
+                                {row.pageEnd ? `pp. ${row.page}–${row.pageEnd}` : `p. ${row.page}`}
+                              </td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  ) : (
+                    <p className="px-4 py-3 text-sm text-muted-foreground">
+                      Source context matches; no individual medication row contains this search term.
+                    </p>
+                  )}
+                </div>
+              </details>
+            ))}
+          </div>
+        ) : (
+          <div className="rounded-xl border border-dashed p-8 text-center text-sm text-muted-foreground">
+            No source rows or governing notes match “{query}”.
+          </div>
+        )}
+
+        <section className="rounded-xl border border-amber-500/30 bg-amber-500/10 p-4">
+          <h3 className="font-semibold text-amber-950 dark:text-amber-100">Source notes</h3>
+          <div className="mt-2 space-y-3 text-sm leading-relaxed">
+            {DO_NOT_CRUSH_PROTOCOL.notes.map((note) => <p key={note}>{note}</p>)}
+          </div>
+        </section>
+
+        <details className="rounded-xl border">
+          <summary className="cursor-pointer px-4 py-3 font-semibold">Source citations ({DO_NOT_CRUSH_PROTOCOL.references.length})</summary>
+          <ul className="space-y-2 border-t px-4 py-4 text-sm leading-relaxed text-muted-foreground">
+            {DO_NOT_CRUSH_PROTOCOL.references.map((reference) => (
+              <li key={reference.label} className="grid grid-cols-[2.5rem_1fr] gap-2">
+                <span className="font-mono text-xs text-foreground">
+                  {reference.label}
+                </span>
+                <span>{reference.text}</span>
+              </li>
+            ))}
+          </ul>
+        </details>
       </div>
     </Panel>
   );

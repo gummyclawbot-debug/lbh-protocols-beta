@@ -1,4 +1,5 @@
 import therapeuticSubstitutionData from "./therapeutic-substitution-data.json";
+import doNotCrushData from "./do-not-crush-data.json";
 
 export type RenalDrug = {
   name: string;
@@ -160,6 +161,25 @@ export type TherapeuticSubstitutionSection = {
   rows: TherapeuticSubstitutionRow[];
 };
 
+export type DoNotCrushRow = {
+  generic: string;
+  brand: string;
+  comments: string;
+  page: number;
+  pageEnd?: number;
+};
+
+export type DoNotCrushTable = {
+  number: number;
+  title: string;
+  rows: DoNotCrushRow[];
+};
+
+export type DoNotCrushCitation = {
+  label: string;
+  text: string;
+};
+
 export const THERAPEUTIC_SUBSTITUTION_PROTOCOL = therapeuticSubstitutionData as {
   source: ProtocolReference;
   sections: TherapeuticSubstitutionSection[];
@@ -186,6 +206,44 @@ export function searchTherapeuticSubstitutions(query: string) {
       return { ...section, rows, sectionMatch, noteMatch };
     })
     .filter((section) => !normalizedQuery || section.rows.length > 0 || section.sectionMatch || section.noteMatch);
+}
+
+export const DO_NOT_CRUSH_PROTOCOL = doNotCrushData as {
+  source: ProtocolReference;
+  formularyQualifier: string;
+  tables: DoNotCrushTable[];
+  notes: string[];
+  references: DoNotCrushCitation[];
+};
+
+export function searchDoNotCrush(query: string) {
+  const normalizedQuery = query.trim().toLowerCase();
+  const queryTokens = normalizedQuery.split(/\s+/).filter(Boolean);
+  const matchesQuery = (value: string) => {
+    const normalizedValue = value.toLowerCase();
+    return queryTokens.every((token) => normalizedValue.includes(token));
+  };
+  return DO_NOT_CRUSH_PROTOCOL.tables
+    .map((table) => {
+      const tableMatch = normalizedQuery
+        ? matchesQuery(table.title)
+        : false;
+      const noteMatch = normalizedQuery && table.number === 1
+        ? DO_NOT_CRUSH_PROTOCOL.notes.some((note) =>
+            matchesQuery(note),
+          )
+        : false;
+      const rows = normalizedQuery
+        ? table.rows.filter((row) =>
+            matchesQuery([row.generic, row.brand, row.comments].join(" ")),
+          )
+        : table.rows;
+      return { ...table, rows, tableMatch, noteMatch };
+    })
+    .filter(
+      (table) =>
+        !normalizedQuery || table.rows.length > 0 || table.tableMatch || table.noteMatch,
+    );
 }
 
 export type DoNotTubeGroup = {
@@ -339,21 +397,7 @@ export const DO_NOT_TUBE_PROTOCOL = {
 export const PROTOCOL_REFERENCES: ProtocolReference[] = [
   DO_NOT_TUBE_PROTOCOL.source,
   THERAPEUTIC_SUBSTITUTION_PROTOCOL.source,
-];
-
-export const DO_NOT_CRUSH = [
-  { drug: "Extended-release (ER/XR/SR/CR) tabs", reason: "Dose dumping / toxicity risk" },
-  { drug: "Enteric-coated (EC) tabs", reason: "Destroys coating; gastric irritation / inactivation" },
-  { drug: "Dabigatran", reason: "Increases bioavailability — bleeding risk" },
-  { drug: "Potassium chloride XR", reason: "GI ulceration risk" },
-  { drug: "Bupropion XL/SR", reason: "Seizure risk if crushed" },
-  { drug: "Mesalamine EC/DR", reason: "Site-specific delivery lost" },
-  { drug: "Pantoprazole EC", reason: "Acid-labile — use suspension/packet if needed" },
-  { drug: "Rivaroxaban (some strengths)", reason: "Follow label — some may mix with applesauce, not crush all" },
-  { drug: "Sublingual / ODT specialty forms", reason: "Wrong route/absorption" },
-  { drug: "Hazardous meds", reason: "Occupational exposure — use closed system" },
-  { drug: "Softgel special oils (e.g., dronabinol)", reason: "Content loss / exposure" },
-  { drug: "Combination hormones", reason: "Exposure + altered release" },
+  DO_NOT_CRUSH_PROTOCOL.source,
 ];
 
 export const NAV = [

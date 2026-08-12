@@ -1,10 +1,10 @@
 # Active context
 
-Last verified: 2026-08-11 EDT
+Last verified: 2026-08-12 EDT
 Evidence: Git/GitHub, Vercel CLI, live HTTP probes, local lint/build/audit
 
 ## Current objective
-Continue one authoritative protocol at a time after the verified January 2026 Therapeutic Substitution beta release.
+Complete independent review and beta-only release of the fully reconciled January 2026 Do Not Crush source.
 
 ## Verified state
 - Canonical clone: `/Users/gummyserver/Developer/jarvis/active/lbh-protocols-beta`
@@ -55,10 +55,19 @@ Continue one authoritative protocol at a time after the verified January 2026 Th
 - Verified commit `6836249` was pushed and deployed only to `lbh-protocols-beta` as `dpl_5TUrU1KKS6Qeewfxxycn9w41STSs`; canonical beta is `https://lbh-protocols-beta.vercel.app` and the team-scoped immutable URL is `https://lbh-protocols-beta-lsjguhk7e-gummys-projects-8bf81988.vercel.app` (Vercel SSO protected).
 - Canonical production verification passes: app and public source return HTTP 200; PDF is `application/pdf`, 469,423 bytes, 20 pages, and exact SHA-256; U-500/PTSD/ACE/Trelegy searches match reviewed semantics; References shows both approved sources; no page overflow or console errors.
 - Protected legacy deployment list is unchanged; its newest deployment remains eight days old.
+- The January 2026 Do Not Crush PDF is user-designated authoritative and explicitly cleared for unchanged public hosting after disclosure of hidden author metadata. It is preserved at `/references/lbh-do-not-crush-list-2026-01.pdf` (208,396 bytes; SHA-256 `402c62b6c53ee91bb83cbee19716fe88728291d1841a7574e20570767bf6a92e`).
+- Every one of five pages was extracted, rendered, and visually reviewed. The source contains four tables and 100 logical rows: 70 cannot-be-crushed/opened, 4 handling-precaution, 4 taste-limited, and 22 special-instruction rows.
+- The lenalidomide row is correctly joined across pages 1–2; both complete page-5 governing notes and four references are modeled. Source-visible anomalies are preserved.
+- The visible source says January 2026; hidden PDF title metadata still says May 2025. Visible version governs the UI and the immutable PDF remains unchanged.
+- The generic 12-row placeholder was removed rather than merged. Local UI now provides all-field search, direct-row versus context semantics, compact collapsed source tables, complete administration comments, page traceability, governing notes, references, mobile swipe guidance, and direct source linkage.
+- A clean extraction rebuild is byte-identical to the structured JSON. Full local gate passes 40 tests, lint, TypeScript, production build, zero-vulnerability audit, PDF/model integrity, security scans, desktop/mobile browser checks, References checks, and zero console errors.
+- Initial independent UX review blocked shipment because `25ml water` did not match source text `25ml of water`. Token-aware all-field matching now returns exactly Cenobamate/Xcopri for both queries while retaining direct-row/context separation; the corrected full gate and real 390px browser matrix pass. Fresh independent UX re-review returned PASS with no release blockers.
 
 ## Exact next actions
-1. Obtain Jarvis acceptance/feedback on the released Therapeutic Substitution tab.
-2. Select the next authoritative protocol source and repeat the one-document ingestion workflow.
+1. Commit and push the exact independently reviewed Do Not Crush candidate.
+2. Reassert `.vercel/project.json` targets `lbh-protocols-beta`, then deploy only that project.
+3. Verify canonical beta UI/search/References/source bytes and protected-legacy deployment identity.
+4. Update this Memory Bank, Obsidian Project OS/daily note, and Aegis Control with real release evidence.
 
 ## Hazards
 - Never link, deploy, alias, or promote against `lbh-protocols` legacy.

@@ -1,0 +1,664 @@
+{
+  "source": {
+    "id": "do-not-crush-2026-01",
+    "title": "LBH DO NOT CRUSH LIST — APPENDIX A",
+    "updated": "January 2026",
+    "pageCount": 5,
+    "href": "/references/lbh-do-not-crush-list-2026-01.pdf",
+    "sha256": "402c62b6c53ee91bb83cbee19716fe88728291d1841a7574e20570767bf6a92e",
+    "authority": "LBH institutional protocol; medical-board and P&T reviewed/approved",
+    "affectedViews": [
+      "dnc"
+    ]
+  },
+  "formularyQualifier": "*Note- Tables contain formulary medications only*",
+  "tables": [
+    {
+      "number": 1,
+      "title": "Medications that cannot be crushed/opened.",
+      "rows": [
+        {
+          "generic": "Abacavir and abacavir containing\ncombination products",
+          "brand": "Ziagen\nEpzicom",
+          "comments": "Do not crush or open. Liquid formulation available for\nabacavir.",
+          "page": 1
+        },
+        {
+          "generic": "alendronate",
+          "brand": "Fosamax",
+          "comments": "Do not chew or crush. Mucous membrane irritant.",
+          "page": 1
+        },
+        {
+          "generic": "aspirin enteric coated",
+          "brand": "Ecotrin",
+          "comments": "Do not chew or crush. Enteric coated. Slow release. Note:\nUtilize other formulations.",
+          "page": 1
+        },
+        {
+          "generic": "aspirin-dipyridamole",
+          "brand": "Aggrenox",
+          "comments": "Do not chew or crush. Slow-release capsule.",
+          "page": 1
+        },
+        {
+          "generic": "benzonatate",
+          "brand": "Tessalon Perles",
+          "comments": "Do not chew or crush; swallow capsule whole. Local mucosal\nirritant and anesthetic.",
+          "page": 1
+        },
+        {
+          "generic": "bisacodyl",
+          "brand": "Dulcolax",
+          "comments": "Do not chew or crush. Enteric coated; liquid filled.",
+          "page": 1
+        },
+        {
+          "generic": "bupropion",
+          "brand": "Wellbutrin",
+          "comments": "Do not chew or crush.",
+          "page": 1
+        },
+        {
+          "generic": "bupropion",
+          "brand": "Wellbutrin SR,\nWellbutrin XL",
+          "comments": "Do not chew or crush. Slow release.",
+          "page": 1
+        },
+        {
+          "generic": "carbamazepine",
+          "brand": "Tegretol-XR",
+          "comments": "Do not chew or crush. Slow release. Teratogenic potential.",
+          "page": 1
+        },
+        {
+          "generic": "cobicistat",
+          "brand": "Tybost",
+          "comments": "Do not crush. Cobicistat is insoluble in water.",
+          "page": 1
+        },
+        {
+          "generic": "dabigatran",
+          "brand": "Pradaxa",
+          "comments": "Do not chew or crush.\nNote: breaking, chewing, or emptying contents of the capsule\ncan result in increased exposure of the drug.",
+          "page": 1
+        },
+        {
+          "generic": "didanosine",
+          "brand": "Videx EC",
+          "comments": "Do not chew or crush. Enteric-coated, Slow release.",
+          "page": 1
+        },
+        {
+          "generic": "diltiazem SR",
+          "brand": "Cardizem CD",
+          "comments": "Do not chew or crush. Extended-release capsule.",
+          "page": 1
+        },
+        {
+          "generic": "disopyramide",
+          "brand": "Norpace CR",
+          "comments": "Do not chew or crush. Slow release.",
+          "page": 1
+        },
+        {
+          "generic": "divalproex",
+          "brand": "Depakote",
+          "comments": "Do not chew or crush tablet. Delayed or extended release.\nTeratogenic potential.",
+          "page": 1
+        },
+        {
+          "generic": "doxylamine/pyridoxine",
+          "brand": "Diclegis",
+          "comments": "Do not chew or crush. Slow release.",
+          "page": 1
+        },
+        {
+          "generic": "efavirenz/emtricitabine/tenofovir",
+          "brand": "Atripla",
+          "comments": "Do not chew or crush",
+          "page": 1
+        },
+        {
+          "generic": "emtricitabine/rilpivirine/tenofovir",
+          "brand": "Complera",
+          "comments": "Do not chew or crush",
+          "page": 1
+        },
+        {
+          "generic": "Elvitegravir, cobicistat, emtricitabine,\ntenofovir",
+          "brand": "Genvoya\nStribild",
+          "comments": "Do not chew or crush",
+          "page": 1
+        },
+        {
+          "generic": "erythromycin",
+          "brand": "Ery-tab",
+          "comments": "Do not chew or crush. Enteric-coated.",
+          "page": 1
+        },
+        {
+          "generic": "fosamprenavir",
+          "brand": "Lexiva",
+          "comments": "Do not chew or crush",
+          "page": 1
+        },
+        {
+          "generic": "gefitinib",
+          "brand": "Iressa",
+          "comments": "Do not chew or crush.\nNote: Tablet may be dissolved in 4-8 ounces of water",
+          "page": 1
+        },
+        {
+          "generic": "guaifenesin",
+          "brand": "Mucinex ER",
+          "comments": "Do not chew or crush. Slow release.",
+          "page": 1
+        },
+        {
+          "generic": "guaifenesin/ dextromethorphan",
+          "brand": "Mucinex DM",
+          "comments": "Do not chew or crush. Slow release.",
+          "page": 1
+        },
+        {
+          "generic": "hyoscyamine",
+          "brand": "Levbid",
+          "comments": "Do not chew or crush.\nNote: Tablet is scored and may be broken in half without\naffecting release characteristics.",
+          "page": 1
+        },
+        {
+          "generic": "ibuprofen",
+          "brand": "Motrin",
+          "comments": "Do not chew or crush.\nNote: Crushing tablets has resulted\nin decreased bioavailability of drug.",
+          "page": 1
+        },
+        {
+          "generic": "isosorbide mononitrate",
+          "brand": "Imdur",
+          "comments": "Do not chew or crush\nNote: 30mg tablet may not be split",
+          "page": 1
+        },
+        {
+          "generic": "lenalidomide",
+          "brand": "Revlimid",
+          "comments": "Do not chew or crush\nNote: Teratogenic potential; health care workers should avoid contact with capsule contents.",
+          "page": 1,
+          "pageEnd": 2
+        },
+        {
+          "generic": "levodopa/carbidopa",
+          "brand": "Sinemet CR",
+          "comments": "Do not chew or crush. Slow release.\nNote: Tablet is scored and may be broken in half if needed.",
+          "page": 2
+        },
+        {
+          "generic": "lithium",
+          "brand": "Lithobid",
+          "comments": "Do not chew or crush. Slow release.",
+          "page": 2
+        },
+        {
+          "generic": "lopinavir-ritonavir",
+          "brand": "Kaletra",
+          "comments": "Do not chew or crush. Film-coated.",
+          "page": 2
+        },
+        {
+          "generic": "maraviroc",
+          "brand": "Selzentry",
+          "comments": "Do not crush",
+          "page": 2
+        },
+        {
+          "generic": "mesalamine",
+          "brand": "Delzicol",
+          "comments": "Do not chew or crush. Slow release.",
+          "page": 2
+        },
+        {
+          "generic": "methylphenidate",
+          "brand": "Concerta",
+          "comments": "Do not chew or crush. Slow-release tablet.",
+          "page": 2
+        },
+        {
+          "generic": "metoprolol succinate",
+          "brand": "Toprol XL",
+          "comments": "Do not chew or crush.\nNote: Tablet is scored and may be broken in half.",
+          "page": 2
+        },
+        {
+          "generic": "mirabegron",
+          "brand": "Myrbetriq",
+          "comments": "Do not chew, crush, or divide tablets.",
+          "page": 2
+        },
+        {
+          "generic": "morphine",
+          "brand": "MS Contin",
+          "comments": "Do not chew or crush.\nNote: crushing, chewing, or dissolving tablets can cause rapid\nrelease and absorption of a potentially fatal dose",
+          "page": 2
+        },
+        {
+          "generic": "mycophenolate",
+          "brand": "CellCept",
+          "comments": "Do not chew, crush, or open. Teratogenic potential",
+          "page": 2
+        },
+        {
+          "generic": "mycophenolic acid",
+          "brand": "Myfortic",
+          "comments": "Do not chew or crush. Slow release; Enteric coated.",
+          "page": 2
+        },
+        {
+          "generic": "Naproxen EC",
+          "brand": "Naprosyn EC",
+          "comments": "Do not chew or crush. Slow release.",
+          "page": 2
+        },
+        {
+          "generic": "nevirapine",
+          "brand": "Viramune XR",
+          "comments": "Do not chew or crush. Slow release, Carcinogen.",
+          "page": 2
+        },
+        {
+          "generic": "niacin",
+          "brand": "Niacin ER",
+          "comments": "Do not chew or crush. Slow release.",
+          "page": 2
+        },
+        {
+          "generic": "Nifedipine",
+          "brand": "Procardia",
+          "comments": "Do not chew or crush.\nNote: pharmacokinetics may be altered if not taken whole.",
+          "page": 2
+        },
+        {
+          "generic": "Nifedipine",
+          "brand": "Procardia XL",
+          "comments": "Do not chew or crush. Extended release.",
+          "page": 2
+        },
+        {
+          "generic": "nitroglycerin",
+          "brand": "Nitrostat",
+          "comments": "Do not chew or crush.\nNote: Tablets are made to disintegrate under the tongue.",
+          "page": 2
+        },
+        {
+          "generic": "omega-3-acid ethyl esters",
+          "brand": "Lovaza",
+          "comments": "Do not chew or crush. Content of capsule may be erosive.",
+          "page": 2
+        },
+        {
+          "generic": "oxybutynin",
+          "brand": "Ditropan XL",
+          "comments": "Do not chew or crush. Slow release.\nNote: Immediate-release tablets may be crushed and can be\nused as an alternative.",
+          "page": 2
+        },
+        {
+          "generic": "oxycodone",
+          "brand": "Oxycontin",
+          "comments": "Do not chew or crush.\nNote: Crushing, chewing, or dissolving\ntablets can cause rapid release and absorption of a potentially\nfatal dose.",
+          "page": 2
+        },
+        {
+          "generic": "paliperidone",
+          "brand": "Invega",
+          "comments": "Do not chew or crush. Slow release.",
+          "page": 2
+        },
+        {
+          "generic": "pantoprazole",
+          "brand": "Protonix",
+          "comments": "Do not chew or crush. Slow release.",
+          "page": 2
+        },
+        {
+          "generic": "paroxetine",
+          "brand": "Paxil",
+          "comments": "Do not chew or crush. Film-coated.",
+          "page": 2
+        },
+        {
+          "generic": "pentoxifylline",
+          "brand": "Trental",
+          "comments": "Do not chew or crush. Extended release.",
+          "page": 2
+        },
+        {
+          "generic": "potassium chloride",
+          "brand": "K-Dur",
+          "comments": "Do not chew or crush.\nNote: Use alternative formulation.",
+          "page": 2
+        },
+        {
+          "generic": "propafenone",
+          "brand": "Rythmol SR",
+          "comments": "Do not chew or crush. Slow release.",
+          "page": 2
+        },
+        {
+          "generic": "propranolol",
+          "brand": "Inderal LA",
+          "comments": "Do not chew or crush. Slow release.",
+          "page": 2
+        },
+        {
+          "generic": "quetiapine",
+          "brand": "Seroquel XR",
+          "comments": "Do not chew or crush. Slow release.",
+          "page": 2
+        },
+        {
+          "generic": "raltegravir",
+          "brand": "Isentress",
+          "comments": "Do not chew or crush film coated 400mg tablets. If needed,\nchewable tablets are an alternative.",
+          "page": 2
+        },
+        {
+          "generic": "ranolazine",
+          "brand": "Ranexa",
+          "comments": "Do not chew or crush. Slow release.",
+          "page": 2
+        },
+        {
+          "generic": "rilpivirine",
+          "brand": "Edurant",
+          "comments": "Do not crush",
+          "page": 2
+        },
+        {
+          "generic": "ritonavir",
+          "brand": "Norvir",
+          "comments": "Do not chew or crush.\nNote: Crushing tablets has resulted in decreased\nbioavailability of drug.",
+          "page": 2
+        },
+        {
+          "generic": "sacubitril/valsartan",
+          "brand": "Entresto",
+          "comments": "Do not open or split. Not enough guidance available. If\nrequired, oral suspension may be compounded using 49/51mg\ntablets (see Micromedex.",
+          "page": 3
+        },
+        {
+          "generic": "tacrolimus",
+          "brand": "Prograf",
+          "comments": "Do not open or crush capsules for NG/G tube administration.\nNote: Pharmacy to compound suspension using oral capsules.",
+          "page": 3
+        },
+        {
+          "generic": "tamsulosin",
+          "brand": "Flomax",
+          "comments": "Do not chew or crush. Slow release.*",
+          "page": 3
+        },
+        {
+          "generic": "temozolomide",
+          "brand": "Temodar",
+          "comments": "Do not open capsules, crush or chew.\nNote: avoid inhalation or contact with the skin or mucous\nmembranes.",
+          "page": 3
+        },
+        {
+          "generic": "theophylline",
+          "brand": "Theo-24",
+          "comments": "Do not chew or crush. Extended release.",
+          "page": 3
+        },
+        {
+          "generic": "tolterodine",
+          "brand": "Detrol LA",
+          "comments": "Do not chew or crush. Extended release.",
+          "page": 3
+        },
+        {
+          "generic": "valganciclovir",
+          "brand": "Valcyte",
+          "comments": "Do not chew or crush. Teratogenic and irritant potential",
+          "page": 3
+        },
+        {
+          "generic": "venlafaxine",
+          "brand": "Effexor XR",
+          "comments": "Do not chew or crush. Slow release.\nNote: Utilize immediate-release tablet formulation if needed.",
+          "page": 3
+        },
+        {
+          "generic": "zidovudine",
+          "brand": "Retrovir",
+          "comments": "Do not crush. Liquid formulation available",
+          "page": 3
+        },
+        {
+          "generic": "ziprasidone",
+          "brand": "Geodon caps",
+          "comments": "Do not open, crush or chew capsules.",
+          "page": 3
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Can be crushed, but handling precaution required.",
+      "rows": [
+        {
+          "generic": "divalproex capsule",
+          "brand": "Depakote Sprinkles",
+          "comments": "Sprinkle capsules may be opened, and contents mixed with\nteaspoonful of soft food; swallow the drug/food mixture\nimmediately (do not chew). Use double gloves.",
+          "page": 3
+        },
+        {
+          "generic": "finasteride",
+          "brand": "Proscar",
+          "comments": "Crush/disperse only using a closed system using PPE. Women who\nare or may become pregnant should not handle crushed or broken\ntablets due to teratogenic potential.",
+          "page": 3
+        },
+        {
+          "generic": "hydroxyurea",
+          "brand": "Hydrea",
+          "comments": "Exposure to the powder may cause serious skin toxicities,\nhealth care workers should wear double gloves to administer.",
+          "page": 3
+        },
+        {
+          "generic": "raloxifene",
+          "brand": "Evista",
+          "comments": "Due to taste and teratogenic potential, healthcare workers should\nwear double gloves and a protective gown.",
+          "page": 3
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Can be Crushed, but taste may limit tolerability.",
+      "rows": [
+        {
+          "generic": "brivaracetam",
+          "brand": "Briviact",
+          "comments": "Tablets may be crushed, but taste may limit tolerability.",
+          "page": 3
+        },
+        {
+          "generic": "cefuroxime",
+          "brand": "Ceftin",
+          "comments": "Tablets may be dispersed in water (20ml)",
+          "page": 3
+        },
+        {
+          "generic": "indinavir",
+          "brand": "Crixivan",
+          "comments": "Due to taste, capsule may be opened and mixed with fruit puree",
+          "page": 3
+        },
+        {
+          "generic": "levetiracetam",
+          "brand": "Keppra",
+          "comments": "Do not chew or crush as taste may limit tolerability.\nUtilize liquid formulation as an alternative.",
+          "page": 3
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Can be Administered with Special Instructions",
+      "rows": [
+        {
+          "generic": "amphetamine-salt",
+          "brand": "Adderall XR",
+          "comments": "Do not chew or crush. Capsule may be opened, and the contents\ncan be mixed with soft food such as applesauce, contents may be\nadministered via NG tube using an appropriate fluid provided\nentire contents are washed down the tube.",
+          "page": 3
+        },
+        {
+          "generic": "artemether-Lumefantrine",
+          "brand": "Coartem",
+          "comments": "May be crushed and mixed with one-two teaspoons of water.",
+          "page": 3
+        },
+        {
+          "generic": "atazanavir",
+          "brand": "Reyataz",
+          "comments": "Capsule may be opened and contents mixed with 4oz of\napplesauce. Must be administered within 5 minutes after a light\nmeal.",
+          "page": 4
+        },
+        {
+          "generic": "bictegravir,emtricitabine,tenofovir\nalafenamide",
+          "brand": "Biktarvy",
+          "comments": "May dissolve tablet in water or orange juice.",
+          "page": 4
+        },
+        {
+          "generic": "carvedilol",
+          "brand": "Coreg CR",
+          "comments": "Do not chew or crush. May add contents of capsule to chilled\napplesauce and consume immediately.",
+          "page": 4
+        },
+        {
+          "generic": "Cenobamate",
+          "brand": "Xcopri",
+          "comments": "Crushed tablet may be mixed with 25ml of water for NG tube\nadministration.",
+          "page": 4
+        },
+        {
+          "generic": "Cinacalcet",
+          "brand": "Sensipar",
+          "comments": "May be crushed. Crush each 30mg tablet with 10ml of water for\nadministration.",
+          "page": 4
+        },
+        {
+          "generic": "doxycycline",
+          "brand": "Doryx",
+          "comments": "May be crushed, but risk of gastritis exists. May be compounded\ninto solution if needed.",
+          "page": 4
+        },
+        {
+          "generic": "duloxetine",
+          "brand": "Cymbalta",
+          "comments": "Do not crush. Capsule may be opened, and contents taken\nwithout crushing or chewing; soft foods such as applesauce,\ncontents may be administered via NG tube using an appropriate\nfluid provided entire contents are washed down the tube.",
+          "page": 4
+        },
+        {
+          "generic": "Emtricitabine/ tenofovir\ndisoproxil",
+          "brand": "Truvada",
+          "comments": "Tablet may be crushed and disintegrated in water.",
+          "page": 4
+        },
+        {
+          "generic": "ergocalciferol",
+          "brand": "Drisdol",
+          "comments": "Do not chew or crush. Liquid-filled. Capsule may be opened,\nand the liquid contents removed for administration.",
+          "page": 4
+        },
+        {
+          "generic": "esomeprazole",
+          "brand": "Nexium",
+          "comments": "Capsule may be opened and the contents taken without chewing\nor crushing; soft food such as apple sauce or pudding may\nfacilitate administration; contents may generally be administered\nvia NG tube using an appropriate fluid provided entire contents\nare washed down the tube.",
+          "page": 4
+        },
+        {
+          "generic": "etravirine",
+          "brand": "Intelence",
+          "comments": "Tablet should be swallowed whole and not crushed;\ntablet may be dispersed in water and given by mouth or feeding\ntube.",
+          "page": 4
+        },
+        {
+          "generic": "gabapentin",
+          "brand": "Neurontin",
+          "comments": "May open capsule and mix with 4oz applesauce or 120ml\norange juice.",
+          "page": 4
+        },
+        {
+          "generic": "hydroxychloroquine",
+          "brand": "Plaquenil",
+          "comments": "Tablets may be crushed and mixed with small amount of\napplesauce, or an extemporaneous suspension may be\ncompounded",
+          "page": 4
+        },
+        {
+          "generic": "imatinib",
+          "brand": "Gleevec",
+          "comments": "Do not chew or crush. Mucous membrane irritant. Tablet may\nbe dissolved in water or apple juice.",
+          "page": 4
+        },
+        {
+          "generic": "lansoprazole",
+          "brand": "Prevacid Solu-tab",
+          "comments": "Do not chew or crush. Orally disintegrating. Dissolve in 10ml\nwater only and dispense via dosing syringe or NG tube.",
+          "page": 4
+        },
+        {
+          "generic": "memantine",
+          "brand": "Namenda XR",
+          "comments": "Do not chew or crush. Capsule can be opened and sprinkled on\napple sauce.",
+          "page": 4
+        },
+        {
+          "generic": "mesalamine",
+          "brand": "Pentasa",
+          "comments": "Capsules may be opened and the entire contents sprinkles onto\napplesauce or yogurt. Contents should be consumed\nimmediately, do not chew or crush.",
+          "page": 4
+        },
+        {
+          "generic": "pancrelipase",
+          "brand": "Creon",
+          "comments": "Do not chew or crush. Capsule may be opened, and contents\ntaken without crushing or chewing; soft foods such as\napplesauce, contents may be administered via NG tube using an\nappropriate fluid provided entire contents are washed down the\ntube.",
+          "page": 5
+        },
+        {
+          "generic": "potassium chloride",
+          "brand": "Micro K/ K Dur",
+          "comments": "Do not chew or crush, Open capsule and mix in at least 2 ounces\nof liquid.",
+          "page": 5
+        },
+        {
+          "generic": "topiramate",
+          "brand": "Topamax, Topamax\nSprinkles",
+          "comments": "Do not chew or crush. Capsule may be opened, and the contents\ntaken without chewing or crushing; soft food such as applesauce\nor pudding may facilitate administration; contents may be\ngenerally be administered via NG tube using an appropriate\nfluid provided entire contents are washed down the tube.",
+          "page": 5
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Diltiazem IR: ISMP states not to split, chew or crush. Conflicting information exists when reviewing Micromedex and other tertiary sites. Teva pharmaceutical labeling specifically states their product CAN be crushed or chewed and therefore, diltiazem IR has been removed from this list as of 2022. Note that diltiazem IR 30mg tabs can’t be split in half.",
+    "Tamsulosin: Studies in pediatrics allowed opening capsules and mixing with acidic food (apple sauce, juice) without chewing or crushing the contents. Lack of studies exist for opening capsules for administration via tubes. If no therapeutic alternative available for patient with G tube, may consider administration by opening capsule and mixing with juice. Do not use with small bore tubes. Monitor patient for postural hypotension, dizziness, vertigo."
+  ],
+  "references": [
+    {
+      "label": "1(a)",
+      "text": "Immunodeficiency Clinic. LIQUID DRUG FORMULATIONS (hivclinic.ca)"
+    },
+    {
+      "label": "1(b)",
+      "text": "Zamora, J. A Complete Guide on Crushing Tablets and/or Opening Capsules of Human Immunodeficiency Virus Medications. Infectious Disease in Clinical Practice. 2017. Research Gate Link"
+    },
+    {
+      "label": "2",
+      "text": "Institute for Safe Medication Practices. Oral Dosage Forms That Should Not Be Crushed. 2020."
+    },
+    {
+      "label": "3",
+      "text": "Uttaro E, Zhao F, Schweighardt A. Filling the Gaps on the Institute for Safe Medication Practices (ISMP) Do Not Crush List for Immediate-release Products. International Journal of Pharmaceutical Compounding. 2021; 25(5):364-71."
+    }
+  ]
+}
