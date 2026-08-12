@@ -1,5 +1,6 @@
 import therapeuticSubstitutionData from "./therapeutic-substitution-data.json";
 import doNotCrushData from "./do-not-crush-data.json";
+import ivEnteralData from "./iv-enteral-data.json";
 
 export type RenalDrug = {
   name: string;
@@ -71,19 +72,6 @@ export const CRRT_DRUGS = [
   { name: "Cefepime", dose: "1–2 g IV q8–12h on CRRT.", note: "Neurotoxicity risk—monitor." },
   { name: "Levofloxacin", dose: "500–750 mg IV q24h (minimal CRRT clearance variability).", note: "Still adjust for residual function." },
   { name: "Fluconazole", dose: "200–400 mg q24h; load 800 mg when indicated.", note: "Highly dialyzable—dose after sessions if IHD." },
-];
-
-export const IV_PO = [
-  { iv: "Levofloxacin IV", po: "Levofloxacin PO", ratio: "1:1", criteria: "Tolerating PO, hemodynamically stable" },
-  { iv: "Ciprofloxacin IV", po: "Ciprofloxacin PO", ratio: "1:1.25 (400 IV ≈ 500 PO)", criteria: "No severe sepsis/malabsorption" },
-  { iv: "Metronidazole IV", po: "Metronidazole PO", ratio: "1:1", criteria: "GI tract functional" },
-  { iv: "Fluconazole IV", po: "Fluconazole PO", ratio: "1:1", criteria: "Excellent bioavailability" },
-  { iv: "Linezolid IV", po: "Linezolid PO", ratio: "1:1", criteria: "Bioavailability ~100%" },
-  { iv: "Pantoprazole IV", po: "Pantoprazole PO", ratio: "1:1", criteria: "Not NPO / not continuous infusion indication" },
-  { iv: "Famotidine IV", po: "Famotidine PO", ratio: "1:1", criteria: "Tolerating oral meds" },
-  { iv: "Acetaminophen IV", po: "Acetaminophen PO/PR", ratio: "1:1", criteria: "Can take enteral therapy" },
-  { iv: "Levetiracetam IV", po: "Levetiracetam PO", ratio: "1:1", criteria: "Seizures controlled, taking PO" },
-  { iv: "Ondansetron IV", po: "Ondansetron PO/ODT", ratio: "1:1", criteria: "Not actively vomiting" },
 ];
 
 export const RESTRICTIONS = [
@@ -180,6 +168,20 @@ export type DoNotCrushCitation = {
   text: string;
 };
 
+export type IvEnteralRow = {
+  medication: string;
+  iv: string;
+  enteral: string;
+};
+
+export type ApprovedSourceCorrection = {
+  sourceText: string;
+  renderedText: string;
+  approver: string;
+  approvedOn: string;
+  scope: string;
+};
+
 export const THERAPEUTIC_SUBSTITUTION_PROTOCOL = therapeuticSubstitutionData as {
   source: ProtocolReference;
   sections: TherapeuticSubstitutionSection[];
@@ -215,6 +217,28 @@ export const DO_NOT_CRUSH_PROTOCOL = doNotCrushData as {
   notes: string[];
   references: DoNotCrushCitation[];
 };
+
+export const IV_ENTERAL_PROTOCOL = ivEnteralData as {
+  source: ProtocolReference;
+  documentTitle: string;
+  department: string;
+  approver: string;
+  originalDate: string;
+  expirationDate: string;
+  sites: string[];
+  rows: IvEnteralRow[];
+  notes: string[];
+  approvedCorrections: ApprovedSourceCorrection[];
+};
+
+export function searchIvEnteral(query: string) {
+  const tokens = query.trim().toLowerCase().split(/\s+/).filter(Boolean);
+  if (!tokens.length) return IV_ENTERAL_PROTOCOL.rows;
+  return IV_ENTERAL_PROTOCOL.rows.filter((row) => {
+    const searchable = [row.medication, row.iv, row.enteral].join(" ").toLowerCase();
+    return tokens.every((token) => searchable.includes(token));
+  });
+}
 
 export function searchDoNotCrush(query: string) {
   const normalizedQuery = query.trim().toLowerCase();
@@ -398,6 +422,7 @@ export const PROTOCOL_REFERENCES: ProtocolReference[] = [
   DO_NOT_TUBE_PROTOCOL.source,
   THERAPEUTIC_SUBSTITUTION_PROTOCOL.source,
   DO_NOT_CRUSH_PROTOCOL.source,
+  IV_ENTERAL_PROTOCOL.source,
 ];
 
 export const NAV = [
@@ -407,7 +432,7 @@ export const NAV = [
   { id: "renal-dosing" as const, label: "Renal Dosing", shortLabel: "Renal Dosing", emoji: "🫘", description: "CrCl-based dose adjustments" },
   { id: "therapeutic-sub" as const, label: "Therapeutic Sub", shortLabel: "Therapeutic Sub", emoji: "🔄", description: "Formulary therapeutic interchange" },
   { id: "crrt-dosing" as const, label: "CRRT Dosing", shortLabel: "CRRT Dosing", emoji: "🩺", description: "Dosing considerations on CRRT" },
-  { id: "iv-po" as const, label: "IV → PO Conversion", shortLabel: "IV→PO", emoji: "💊", description: "IV to oral conversion guide" },
+  { id: "iv-po" as const, label: "IV → Enteral Conversion", shortLabel: "IV→Enteral", emoji: "💊", description: "Approved pharmacist IV-to-enteral conversion appendix" },
   { id: "restrictions" as const, label: "Formulary Restrictions", shortLabel: "Restrictions", emoji: "⚠️", description: "Restricted antimicrobials & high-cost meds" },
   { id: "insulin-switch" as const, label: "Insulin Switch", shortLabel: "Insulin Switch", emoji: "💉", description: "Insulin product conversions" },
   { id: "he" as const, label: "Hepatic Encephalopathy", shortLabel: "HE", emoji: "🧠", description: "HE supportive treatment pathway" },

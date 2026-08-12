@@ -1,0 +1,57 @@
+{
+  "source": {
+    "id": "iv-to-enteral-2024-04",
+    "title": "Appendix A: Medications Approved for Pharmacist IV to Enteral Conversion",
+    "updated": "April 2, 2024",
+    "pageCount": 1,
+    "href": "/references/lbh-iv-to-enteral-conversion-appendix-a-2024-04.pdf",
+    "sha256": "e4396eb39eb1bbcfd935bdcb35b6b4f00b68dfd9520f843bce5a7429f0ca5932",
+    "authority": "LBH institutional protocol; medical-board and P&T reviewed/approved",
+    "affectedViews": ["iv-po"]
+  },
+  "documentTitle": "Pharmacy Dosing Service – Intravenous to Enteral Therapy Conversion Program",
+  "department": "Pharmacy",
+  "approver": "Lisa Polinsky, AVP Pharmacy Services",
+  "originalDate": "January 11, 2022",
+  "expirationDate": "January 31, 2025",
+  "sites": [
+    "Sinai Hospital of Baltimore",
+    "Northwest Hospital Center",
+    "Carroll Hospital Center",
+    "Levindale Hebrew Geriatric Center and Hospital",
+    "Grace Medical Center"
+  ],
+  "rows": [
+    {"medication":"Azithromycin","iv":"250 – 500 mg IV Q24H","enteral":"250 – 500 mg PO Q24H"},
+    {"medication":"Ciprofloxacin","iv":"400 mg IV Q12H\n400 mg IV Q8H","enteral":"500 mg PO Q12H\n750 mg PO Q12H"},
+    {"medication":"Clindamycin","iv":"600 mg IV Q8H","enteral":"300 to 450 mg PO Q6-8H\n600 mg PO Q8H*\n(*dosing conversion for following indications: anthrax, barbesiosis, pneumonia due to MRSA, septic arthritis)"},
+    {"medication":"Dexamethasone","iv":"Total daily dose and frequency are the same (1:1 conversion)","enteral":"Total daily dose and frequency are the same (1:1 conversion)"},
+    {"medication":"Doxycycline","iv":"100 mg IV Q12H","enteral":"100 mg PO Q12H"},
+    {"medication":"Famotidine","iv":"20 mg IV Q12H\n40 mg IV Q24H","enteral":"20 mg PO Q12H\n40 mg PO Q24H"},
+    {"medication":"Fluconazole","iv":"200 – 400 mg IV Q24H","enteral":"200 – 400 mg PO Q24H"},
+    {"medication":"Folic Acid","iv":"1mg IV Q24H","enteral":"1mg PO Q24H"},
+    {"medication":"Lacosamide","iv":"Total daily dose and frequency are the same (1:1 conversion)","enteral":"Total daily dose and frequency are the same (1:1 conversion)"},
+    {"medication":"Levetiracetam","iv":"Total daily dose and frequency are the same (1:1 conversion)","enteral":"Total daily dose and frequency are the same (1:1 conversion)"},
+    {"medication":"Levofloxacin","iv":"250 – 750 mg IV, frequency","enteral":"250 – 750 mg PO, same frequency"},
+    {"medication":"Levothyroxine","iv":"IV Q24H","enteral":"PO Q24H\n*IV dose is half the enteral dose\nE.g.: 0.1 mg PO equals 0.05 mg IV"},
+    {"medication":"Linezolid","iv":"600 mg IV Q12H","enteral":"600 mg PO Q12H"},
+    {"medication":"Metronidazole","iv":"500 mg IV Q8H","enteral":"500 mg PO Q8H"},
+    {"medication":"Pantoprazole\n(*Sinai/Northwest/Carroll/Levindale)","iv":"40 mg IV Q24H","enteral":"40 mg PO Q24H\nEsomeprazole 40 mg capsule NG/G(PEG)-tube Q24H\n*Lansoprazole SoluTab 30 mg J-tube Q24H"},
+    {"medication":"Thiamine","iv":"100mg IV","enteral":"100mg PO"},
+    {"medication":"Valproic Acid","iv":"Total daily dose conversion for oral and IV is 1:1. Oral doses are generally given twice daily.^","enteral":"Total daily dose conversion for oral and IV is 1:1. Oral doses are generally given twice daily.^"}
+  ],
+  "notes": [
+    "+ medication may be given through oral or enteral tube route.",
+    "* see procedure 3a and 3b in the policy for inclusion and exclusion criteria",
+    "^ Valproic acid: If converting from oral to IV dosing, total IV daily dose should be divided for Q 6-8hr administration. Review home medication history and Micromedex for dosing interval consideration."
+  ],
+  "approvedCorrections": [
+    {
+      "sourceText": "1mg PO 24H",
+      "renderedText": "1mg PO Q24H",
+      "approver": "Jarvis, clinical owner",
+      "approvedOn": "2026-08-12",
+      "scope": "Folic Acid enteral dose in the IV-to-enteral beta presentation only"
+    }
+  ]
+}

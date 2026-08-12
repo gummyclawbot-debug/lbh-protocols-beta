@@ -5,7 +5,7 @@ import {
   HE_PROTOCOL,
   HIV_FORMULARY,
   INSULIN_SWITCH,
-  IV_PO,
+  IV_ENTERAL_PROTOCOL,
   NAV,
   RENAL_DOSING,
   RESTRICTIONS,
@@ -62,7 +62,7 @@ describe("protocol data characterization", () => {
     expect(THERAPEUTIC_SUBSTITUTION_PROTOCOL.sections).toHaveLength(31);
     expect(THERAPEUTIC_SUBSTITUTION_PROTOCOL.sections.flatMap((section) => section.rows)).toHaveLength(296);
     expect(CRRT_DRUGS).toHaveLength(6);
-    expect(IV_PO).toHaveLength(10);
+    expect(IV_ENTERAL_PROTOCOL.rows).toHaveLength(17);
     expect(RESTRICTIONS).toHaveLength(8);
     expect(INSULIN_SWITCH).toHaveLength(6);
     expect(HIV_FORMULARY).toHaveLength(7);
@@ -76,7 +76,7 @@ describe("protocol data characterization", () => {
       ["ordered", "substitute"],
     );
     expectNonEmptyRecords(CRRT_DRUGS, ["name", "dose", "note"]);
-    expectNonEmptyRecords(IV_PO, ["iv", "po", "ratio", "criteria"]);
+    expectNonEmptyRecords(IV_ENTERAL_PROTOCOL.rows, ["medication", "iv", "enteral"]);
     expectNonEmptyRecords(RESTRICTIONS, ["drug", "restriction", "alt"]);
     expectNonEmptyRecords(INSULIN_SWITCH, ["from", "to", "factor", "tips"]);
     expectNonEmptyRecords(HIV_FORMULARY, ["regimen", "use", "notes"]);

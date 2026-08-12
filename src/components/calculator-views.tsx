@@ -22,12 +22,13 @@ import {
   HE_PROTOCOL,
   HIV_FORMULARY,
   INSULIN_SWITCH,
-  IV_PO,
+  IV_ENTERAL_PROTOCOL,
   NAV,
   RENAL_DOSING,
   RESTRICTIONS,
   PROTOCOL_REFERENCES,
   searchDoNotCrush,
+  searchIvEnteral,
   searchTherapeuticSubstitutions,
   THERAPEUTIC_SUBSTITUTION_PROTOCOL,
 } from "@/lib/protocols-data";
@@ -408,32 +409,89 @@ function CrrtView() {
 }
 
 function IvPoView() {
+  const [query, setQuery] = React.useState("");
+  const rows = searchIvEnteral(query);
+
   return (
     <Panel
-      title="💊 IV → PO Conversion"
-      description="Convert when clinically stable, functioning GI tract, and no NPO restriction."
+      title="💊 IV → Enteral Conversion"
+      description="Approved pharmacist IV-to-enteral conversion appendix for the listed LBH facilities. Apply the parent policy’s inclusion and exclusion criteria."
     >
-      <div className="overflow-x-auto rounded-xl border">
-        <table className="w-full min-w-[640px] text-left text-sm">
-          <thead className="bg-muted/60 text-xs uppercase tracking-wide text-muted-foreground">
-            <tr>
-              <th className="px-3 py-2">IV</th>
-              <th className="px-3 py-2">PO</th>
-              <th className="px-3 py-2">Ratio</th>
-              <th className="px-3 py-2">Criteria</th>
-            </tr>
-          </thead>
-          <tbody className="divide-y">
-            {IV_PO.map((r) => (
-              <tr key={r.iv} className="hover:bg-muted/30">
-                <td className="px-3 py-2 font-medium">{r.iv}</td>
-                <td className="px-3 py-2">{r.po}</td>
-                <td className="px-3 py-2">{r.ratio}</td>
-                <td className="px-3 py-2 text-muted-foreground">{r.criteria}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+      <div className="space-y-4">
+        <div className="rounded-xl border bg-muted/25 p-4">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+            <div className="w-full max-w-xl space-y-1.5">
+              <Label htmlFor="iv-enteral-search">Search all 17 approved medication rows</Label>
+              <Input
+                id="iv-enteral-search"
+                type="search"
+                placeholder="e.g. ciprofloxacin, MRSA, J-tube, Q24H…"
+                value={query}
+                onChange={(event) => setQuery(event.target.value)}
+              />
+            </div>
+            <a
+              href={IV_ENTERAL_PROTOCOL.source.href}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex shrink-0 items-center justify-center gap-2 rounded-lg border bg-background px-3 py-2 text-sm font-medium hover:bg-muted"
+            >
+              <FileText className="size-4" /> Open approved source <ExternalLink className="size-3.5" />
+            </a>
+          </div>
+          <p className="mt-2 text-xs text-muted-foreground">
+            {query.trim() ? `${rows.length} direct ${rows.length === 1 ? "row match" : "row matches"}.` : "17 source rows · five approved facilities · complete footnotes preserved."}
+          </p>
+          <p className="mt-2 text-xs font-medium text-amber-950 dark:text-amber-100">
+            Source updated {IV_ENTERAL_PROTOCOL.source.updated}; visible expiration date {IV_ENTERAL_PROTOCOL.expirationDate}. Jarvis designated this version as the current authoritative source for beta implementation.
+          </p>
+        </div>
+
+        {rows.length ? (
+          <div className="overflow-hidden rounded-xl border">
+            <p className="border-b px-4 py-2 text-xs text-muted-foreground sm:hidden">Swipe horizontally to view all table columns.</p>
+            <div className="overflow-x-auto">
+              <table className="w-full min-w-[760px] text-left text-sm">
+                <thead className="bg-muted/60 text-xs uppercase tracking-wide text-muted-foreground">
+                  <tr>
+                    <th className="w-[23%] px-3 py-2">Medication</th>
+                    <th className="w-[35%] px-3 py-2">IV medication</th>
+                    <th className="px-3 py-2">Enteral medication+</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y">
+                  {rows.map((row) => (
+                    <tr key={row.medication} className="align-top hover:bg-muted/30">
+                      <td className="whitespace-pre-line px-3 py-2.5 font-medium leading-relaxed">{row.medication}</td>
+                      <td className="whitespace-pre-line px-3 py-2.5 leading-relaxed">{row.iv}</td>
+                      <td className="whitespace-pre-line px-3 py-2.5 leading-relaxed">{row.enteral}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        ) : (
+          <div className="rounded-xl border border-dashed p-8 text-center text-sm text-muted-foreground">
+            No approved source row matches “{query}”.
+          </div>
+        )}
+
+        <section className="rounded-xl border border-amber-500/30 bg-amber-500/10 p-4">
+          <h3 className="font-semibold text-amber-950 dark:text-amber-100">Governing source notes</h3>
+          <div className="mt-2 space-y-2 text-sm leading-relaxed">
+            {IV_ENTERAL_PROTOCOL.notes.map((note) => <p key={note}>{note}</p>)}
+          </div>
+        </section>
+
+        <details className="rounded-xl border">
+          <summary className="cursor-pointer px-4 py-3 font-semibold">Source scope and approved rendered correction</summary>
+          <div className="space-y-3 border-t px-4 py-4 text-sm leading-relaxed">
+            <p><strong>Sites:</strong> {IV_ENTERAL_PROTOCOL.sites.join("; ")}.</p>
+            <p><strong>Approver visible in source:</strong> {IV_ENTERAL_PROTOCOL.approver}.</p>
+            <p><strong>Correction:</strong> The immutable PDF says “1mg PO 24H” for Folic Acid. Jarvis approved rendering “1mg PO Q24H” in the beta presentation on August 12, 2026.</p>
+          </div>
+        </details>
       </div>
     </Panel>
   );
