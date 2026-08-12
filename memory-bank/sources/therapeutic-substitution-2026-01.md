@@ -128,3 +128,13 @@ The application preserves source wording rather than silently correcting clinica
 - Source page location is represented per row.
 - No clinically meaningful source content is intentionally omitted.
 - Decorative table borders, whitespace, font choices, and pagination are not reproduced because they are non-clinical formatting; the unchanged PDF remains available for source appearance.
+
+## Verified beta release
+- Independent corrected re-review: PASS, no blockers.
+- Commit: `6836249` (`[verified] feat: ingest January 2026 Therapeutic Substitution source`).
+- Vercel deployment: `dpl_5TUrU1KKS6Qeewfxxycn9w41STSs`, Ready, project `lbh-protocols-beta`.
+- Canonical beta: `https://lbh-protocols-beta.vercel.app`.
+- Team-scoped immutable URL: `https://lbh-protocols-beta-lsjguhk7e-gummys-projects-8bf81988.vercel.app` (Vercel SSO protected; canonical alias is the public verification surface).
+- Production source verification: HTTP 200, `application/pdf`, 469,423 bytes, 20 pages, SHA-256 `51472c2ac457a625c3cac30684157376f48978b0fa8a6b13b911c60a70156360`.
+- Production UI verification: corrected U-500/PTSD/ACE context semantics, Trelegy direct match, both References cards, zero document-level horizontal overflow, and zero console errors.
+- Protected `lbh-protocols` deployment list remained unchanged; no legacy deployment occurred.

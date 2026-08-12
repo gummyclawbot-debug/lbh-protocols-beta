@@ -4,7 +4,7 @@ Last verified: 2026-08-11 EDT
 Evidence: Git/GitHub, Vercel CLI, live HTTP probes, local lint/build/audit
 
 ## Current objective
-Complete independent review and beta-only release of the fully reconciled January 2026 Therapeutic Substitution source.
+Continue one authoritative protocol at a time after the verified January 2026 Therapeutic Substitution beta release.
 
 ## Verified state
 - Canonical clone: `/Users/gummyserver/Developer/jarvis/active/lbh-protocols-beta`
@@ -50,12 +50,15 @@ Complete independent review and beta-only release of the fully reconciled Januar
 - Initial independent review failed release on two blockers: the ACE-inhibitor warning omitted the explicit `if equivalent lisinopril doses exceed 40mg during T.sub.` trigger, and note matches were incorrectly counted/displayed as matches for every row in a section.
 - Both blockers are corrected source-first. The ACE warning is restored verbatim and exact-tested. Search now distinguishes direct row matches from section-title/note context; browser verification reports U-500 as one direct row plus one context match, and PTSD/ACE note queries as zero direct rows plus one context match.
 - A mobile horizontal-table swipe cue was added. The temporary normalized generator now reproduces the corrected 31-section/296-row JSON byte-for-byte.
-- Corrected validation passes 32 tests, lint, TypeScript, production build, audit, diff checks, staged PDF/model integrity, browser search checks, and zero console errors. Fresh independent re-review is in progress; commit/deployment remain blocked until PASS.
+- Corrected validation passes 32 tests, lint, TypeScript, production build, audit, diff checks, staged PDF/model integrity, browser search checks, and zero console errors.
+- Fresh independent re-review returned PASS with no blockers and explicitly verified both prior blockers resolved, source/PDF integrity, References, search/UI behavior, security, and beta isolation.
+- Verified commit `6836249` was pushed and deployed only to `lbh-protocols-beta` as `dpl_5TUrU1KKS6Qeewfxxycn9w41STSs`; canonical beta is `https://lbh-protocols-beta.vercel.app` and the team-scoped immutable URL is `https://lbh-protocols-beta-lsjguhk7e-gummys-projects-8bf81988.vercel.app` (Vercel SSO protected).
+- Canonical production verification passes: app and public source return HTTP 200; PDF is `application/pdf`, 469,423 bytes, 20 pages, and exact SHA-256; U-500/PTSD/ACE/Trelegy searches match reviewed semantics; References shows both approved sources; no page overflow or console errors.
+- Protected legacy deployment list is unchanged; its newest deployment remains eight days old.
 
 ## Exact next actions
-1. Obtain PASS from the fresh source-fidelity/UI/engineering re-review and resolve any new blocker.
-2. Reassert final staged integrity and beta target after review.
-3. Commit, push, deploy only to `lbh-protocols-beta`, and production-verify UI/search/source hash plus protected-legacy isolation.
+1. Obtain Jarvis acceptance/feedback on the released Therapeutic Substitution tab.
+2. Select the next authoritative protocol source and repeat the one-document ingestion workflow.
 
 ## Hazards
 - Never link, deploy, alias, or promote against `lbh-protocols` legacy.
