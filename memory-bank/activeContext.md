@@ -4,7 +4,7 @@ Last verified: 2026-08-11 EDT
 Evidence: Git/GitHub, Vercel CLI, live HTTP probes, local lint/build/audit
 
 ## Current objective
-Complete verification and beta-only release of the first approved-protocol pilot: Do Not Tube List, November 2024.
+Obtain Jarvis acceptance of the released first approved-protocol pilot, then continue one authoritative protocol at a time.
 
 ## Verified state
 - Canonical clone: `/Users/gummyserver/Developer/jarvis/active/lbh-protocols-beta`
@@ -31,13 +31,15 @@ Complete verification and beta-only release of the first approved-protocol pilot
 - New References view and affected-tab source link expose the original approved PDF. Local HTTP retrieval is 200 and byte-identical.
 - Twenty-three tests, lint, TypeScript, build, audit, browser search/UI smoke tests, and console checks pass before independent review.
 - Vercel remote project preset was corrected from `Other` to `Next.js` on the verified `lbh-protocols-beta` project; `.vercel/project.json` still identifies only `lbh-protocols-beta`.
+- Independent source-fidelity and engineering review passed with no pre-commit blockers.
+- Verified commit `45fa6fa` was pushed and deployed only to `lbh-protocols-beta` as deployment `DsSetWgDviAFEbVDwnaRwCtyyw4H`; immutable URL is `https://lbh-protocols-beta-b096qt14o-gummys-projects-8bf81988.vercel.app`.
+- Canonical beta and hosted PDF return HTTP 200. The live PDF is 153,387 bytes and SHA-256-identical to the approved source. Production browser review shows all 14 categories and zero console errors.
+- Protected legacy remains HTTP 200 and its newest deployment is still eight days old; it received no deployment from this work.
 
 ## Exact next actions
-1. Finish independent review and correct any findings.
-2. Commit/push the complete source, implementation, tests, and traceability evidence.
-3. Deploy only to `lbh-protocols-beta`; verify Do Not Tube, search, References, PDF hash/link, and zero console errors.
-4. Confirm protected legacy receives no deployment.
-5. Present the pilot completeness/reconciliation evidence to Jarvis for `accepted-beta` confirmation.
+1. Present the pilot completeness/reconciliation evidence to Jarvis for `accepted-beta` confirmation.
+2. If accepted, record acceptance without modifying the immutable source artifact.
+3. Receive the next current, public-hosting-cleared protocol and repeat the one-document workflow.
 
 ## Hazards
 - Never link, deploy, alias, or promote against `lbh-protocols` legacy.

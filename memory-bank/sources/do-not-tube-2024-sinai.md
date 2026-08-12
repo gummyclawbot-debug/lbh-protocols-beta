@@ -81,4 +81,4 @@ None. All clinically/operationally meaningful source content is represented in t
 - `traceability-complete`: yes
 - `clinically-reviewed`: inherited from Jarvis’s designation of the current hospital-approved protocol; no additional committee metadata invented
 - `accepted-beta`: pending Jarvis review of the pilot result
-- `released-beta`: pending deployment
+- `released-beta`: yes — deployment `DsSetWgDviAFEbVDwnaRwCtyyw4H`, verified 2026-08-11 EDT
