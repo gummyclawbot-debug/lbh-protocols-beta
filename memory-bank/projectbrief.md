@@ -12,6 +12,13 @@ Modernize the LBH pharmacy protocol toolkit while preserving clinical behavior, 
 ## Users and use
 Hospital pharmacy staff use the toolkit as institutional reference and calculation support. It is not a substitute for authoritative LBH policy, clinical judgment, or independent verification.
 
+## Source authority
+- Hospital protocol documents supplied by Jarvis are the authoritative institutional source for the clinical content they govern because they have completed the hospital's medical-board and Pharmacy & Therapeutics review/approval process.
+- Preserve the original approved document without semantic alteration and expose it through the application's References area so users can validate rendered content against the source.
+- The application is a faithful presentation/implementation layer. If code, prior beta content, secondary literature, or memory conflicts with an uploaded approved protocol, stop and reconcile to the approved protocol rather than silently combining sources.
+- Record the document title, protocol identifier, revision/effective date, approval/review metadata shown in the file, superseded version if known, file hash, and exact tab/section/rule mappings.
+- This authority applies only to the scope and version of the supplied document. Never infer approval for content absent from it.
+
 ## Current scope
 - Shared patient profile: sex, age, height, weight, serum creatinine
 - CrCl/BMI/IBW/adjusted weight
@@ -32,3 +39,5 @@ Hospital pharmacy staff use the toolkit as institutional reference and calculati
 3. Formula, threshold, unit, and data changes receive focused tests and human clinical review.
 4. Beta deployment remains isolated from protected legacy.
 5. A fresh agent can resume from the compact Memory Bank without relying on recalled chat context.
+6. Every implemented protocol section is traceable to the exact source page/section and users can open the preserved original from References.
+7. No source content is omitted silently: exclusions, duplicates, ambiguities, illegible text, and non-applicable administrative material are documented explicitly for user review.

@@ -4,7 +4,7 @@ Last verified: 2026-08-11 EDT
 Evidence: Git/GitHub, Vercel CLI, live HTTP probes, local lint/build/audit
 
 ## Current objective
-Begin the next planning phase from a tested, documented beta baseline. Before clinical-rule work, map authoritative protocol sources and human review ownership.
+Pilot the approved-protocol ingestion workflow one document at a time: preserve the original, inventory every page/section, build source-to-UI/test traceability, reconcile current beta content, implement without silent omission, and expose the original in References.
 
 ## Verified state
 - Canonical clone: `/Users/gummyserver/Developer/jarvis/active/lbh-protocols-beta`
@@ -23,13 +23,15 @@ Begin the next planning phase from a tested, documented beta baseline. Before cl
 - Vercel deployment `dpl_AqwWengiSirqrAZMLGGfFJAaroFT` is Ready and aliased to `https://lbh-protocols-beta.vercel.app`.
 - Canonical beta returned HTTP 200 and passed a production browser smoke test with no console errors.
 - Protected legacy returned HTTP 200 and its deployment list shows no new deployment from this work.
+- Jarvis stated that the hospital protocols he will upload are individually reviewed and approved by the hospital medical board and Pharmacy & Therapeutics Committee. Treat each supplied protocol as the authoritative institutional source for its stated scope/version.
+- Jarvis wants original source documents hosted under a References area and linked from affected tabs so users can validate application content.
 
 ## Exact next actions
-1. Inventory authoritative LBH protocol/source documents, versions, effective dates, and clinical owners without changing application rules.
-2. Build a source-to-code traceability map for formulas, thresholds, medication tables, conversions, and recommendations.
-3. Define human clinical review/approval and beta acceptance criteria.
-4. Expand focused boundary/invalid-input tests before the first approved clinical behavior change.
-5. Keep all development and deployments isolated to `lbh-protocols-beta` until an explicit independently verified cutover decision.
+1. Receive one pilot protocol file from Jarvis, preferably the protocol for one existing tab.
+2. Confirm it is cleared for public beta hosting and contains no PHI or restricted material.
+3. Preserve/hash/extract and visually review every page, then produce the inventory, reconciliation report, and traceability matrix before coding.
+4. Resolve ambiguities with Jarvis; then add failing boundary/content tests and implement the full approved content plus References entry.
+5. Present completeness evidence for Jarvis acceptance, deploy only to beta, and verify all affected UI/source links.
 
 ## Hazards
 - Never link, deploy, alias, or promote against `lbh-protocols` legacy.
