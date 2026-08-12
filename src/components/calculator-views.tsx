@@ -27,7 +27,8 @@ import {
   RENAL_DOSING,
   RESTRICTIONS,
   PROTOCOL_REFERENCES,
-  THERAPEUTIC_SUBS,
+  searchTherapeuticSubstitutions,
+  THERAPEUTIC_SUBSTITUTION_PROTOCOL,
 } from "@/lib/protocols-data";
 import type { ViewId } from "@/types/patient";
 import { cn } from "@/lib/utils";
@@ -252,24 +253,135 @@ function RenalView() {
 }
 
 function TherapeuticSubView() {
+  const [query, setQuery] = React.useState("");
+  const normalizedQuery = query.trim().toLowerCase();
+  const sections = searchTherapeuticSubstitutions(query);
+  const resultCount = sections.reduce((total, section) => total + section.rows.length, 0);
+  const contextCount = sections.filter((section) => section.noteMatch || section.sectionMatch).length;
+
   return (
     <Panel
       title="🔄 Therapeutic Substitution"
-      description="Formulary interchange guidance. Hold if provider documents do-not-substitute."
+      description="January 2026 LBH inpatient therapeutic substitution list. Search the medication ordered, substitute, facility, section, or source note."
     >
-      <div className="space-y-3">
-        {THERAPEUTIC_SUBS.map((row) => (
-          <div
-            key={row.from}
-            className="flex flex-col gap-1 rounded-xl border p-4 sm:flex-row sm:items-center sm:justify-between"
-          >
-            <div>
-              <div className="font-medium">{row.from}</div>
-              <div className="text-sm text-muted-foreground">→ {row.to}</div>
+      <div className="space-y-4">
+        <div className="rounded-xl border bg-muted/25 p-4">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+            <div className="w-full max-w-xl space-y-1.5">
+              <Label htmlFor="therapeutic-sub-search">Search all 296 substitutions</Label>
+              <Input
+                id="therapeutic-sub-search"
+                type="search"
+                placeholder="e.g. Trelegy, insulin U-500, SH, dispense as written…"
+                value={query}
+                onChange={(event) => setQuery(event.target.value)}
+              />
             </div>
-            <p className="max-w-md text-sm text-muted-foreground">{row.note}</p>
+            <a
+              href={THERAPEUTIC_SUBSTITUTION_PROTOCOL.source.href}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex shrink-0 items-center justify-center gap-2 rounded-lg border bg-background px-3 py-2 text-sm font-medium hover:bg-muted"
+            >
+              <FileText className="size-4" /> Open approved source <ExternalLink className="size-3.5" />
+            </a>
           </div>
-        ))}
+          <p className="mt-2 text-xs text-muted-foreground">
+            {normalizedQuery
+              ? `${resultCount} direct ${resultCount === 1 ? "row match" : "row matches"}${contextCount ? ` · ${contextCount} section-context ${contextCount === 1 ? "match" : "matches"}` : ""} across ${sections.length} ${sections.length === 1 ? "section" : "sections"}.`
+              : "31 source sections · 296 complete substitution rows · facility scope and source-page traceability preserved."}
+          </p>
+        </div>
+
+        {!normalizedQuery ? (
+          <nav aria-label="Therapeutic substitution section index" className="grid gap-2 sm:grid-cols-2 xl:grid-cols-3">
+            {THERAPEUTIC_SUBSTITUTION_PROTOCOL.sections.map((section) => (
+              <a
+                key={section.number}
+                href={`#therapeutic-sub-section-${section.number}`}
+                className="rounded-lg border px-3 py-2 text-sm hover:border-primary/50 hover:bg-muted/40"
+              >
+                <span className="mr-2 font-mono text-xs text-muted-foreground">{section.number}.</span>
+                {section.title}
+                <span className="ml-2 text-xs text-muted-foreground">({section.rows.length})</span>
+              </a>
+            ))}
+          </nav>
+        ) : null}
+
+        {sections.length ? (
+          <div className="space-y-3">
+            {sections.map((section) => (
+              <details
+                id={`therapeutic-sub-section-${section.number}`}
+                key={section.number}
+                open={normalizedQuery ? true : undefined}
+                className="group scroll-mt-32 overflow-hidden rounded-xl border"
+              >
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-3 bg-muted/25 px-4 py-3 hover:bg-muted/50 [&::-webkit-details-marker]:hidden">
+                  <span className="font-semibold">
+                    <span className="mr-2 font-mono text-xs text-muted-foreground">{section.number}.</span>
+                    {section.title}
+                  </span>
+                  <span className="flex shrink-0 items-center gap-2 text-xs text-muted-foreground">
+                    {section.rows.length} {section.rows.length === 1 ? "row" : "rows"}
+                    <span aria-hidden="true" className="transition-transform group-open:rotate-180">⌄</span>
+                  </span>
+                </summary>
+                <div className="border-t">
+                  {section.notes.length ? (
+                    <div className="space-y-2 border-b bg-amber-500/10 px-4 py-3 text-sm leading-relaxed">
+                      {section.notes.map((note) => <p key={note}>{note}</p>)}
+                    </div>
+                  ) : null}
+                  {section.rows.length ? (
+                    <p className="border-b px-4 py-2 text-xs text-muted-foreground sm:hidden">Swipe horizontally to view all table columns.</p>
+                  ) : null}
+                  {section.rows.length ? <div className="overflow-x-auto">
+                    <table className="w-full min-w-[760px] text-left text-sm">
+                      <thead className="bg-muted/40 text-xs uppercase tracking-wide text-muted-foreground">
+                        <tr>
+                          <th className="w-[38%] px-3 py-2">Medication ordered</th>
+                          <th className="w-[38%] px-3 py-2">Substitute to</th>
+                          <th className="px-3 py-2">Facility</th>
+                          <th className="px-3 py-2">Source</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y">
+                        {section.rows.map((row, rowIndex) => {
+                          const showSubgroup = row.subgroup && row.subgroup !== section.rows[rowIndex - 1]?.subgroup;
+                          return (
+                            <React.Fragment key={`${row.page}-${rowIndex}-${row.ordered}`}>
+                              {showSubgroup ? (
+                                <tr className="bg-primary/5">
+                                  <th colSpan={4} className="px-3 py-2 text-xs uppercase tracking-wide text-primary">{row.subgroup}</th>
+                                </tr>
+                              ) : null}
+                              <tr className="align-top hover:bg-muted/20">
+                                <td className="whitespace-pre-line px-3 py-2.5 font-medium leading-relaxed">{row.ordered}</td>
+                                <td className="whitespace-pre-line px-3 py-2.5 leading-relaxed">{row.substitute}</td>
+                                <td className="whitespace-pre-line px-3 py-2.5 text-muted-foreground">{row.facility}</td>
+                                <td className="whitespace-nowrap px-3 py-2.5 text-xs text-muted-foreground">
+                                  {row.pageEnd ? `pp. ${row.page}–${row.pageEnd}` : `p. ${row.page}`}
+                                </td>
+                              </tr>
+                            </React.Fragment>
+                          );
+                        })}
+                      </tbody>
+                    </table>
+                  </div> : (
+                    <p className="px-4 py-3 text-sm text-muted-foreground">Section context matches; no individual substitution row contains this search term.</p>
+                  )}
+                </div>
+              </details>
+            ))}
+          </div>
+        ) : (
+          <div className="rounded-xl border border-dashed p-8 text-center text-sm text-muted-foreground">
+            No source rows match “{query}”.
+          </div>
+        )}
       </div>
     </Panel>
   );
@@ -533,7 +645,7 @@ function ReferencesView() {
                 <dl className="mt-3 grid gap-x-6 gap-y-1 text-sm sm:grid-cols-2">
                   <div><dt className="inline font-medium">Updated: </dt><dd className="inline">{reference.updated}</dd></div>
                   <div><dt className="inline font-medium">Pages: </dt><dd className="inline">{reference.pageCount}</dd></div>
-                  <div><dt className="inline font-medium">Applies to: </dt><dd className="inline">Do Not Tube</dd></div>
+                  <div><dt className="inline font-medium">Applies to: </dt><dd className="inline">{reference.affectedViews.map((view) => NAV.find((item) => item.id === view)?.label ?? view).join(", ")}</dd></div>
                   <div><dt className="inline font-medium">Integrity: </dt><dd className="inline font-mono text-xs">{reference.sha256.slice(0, 12)}…</dd></div>
                 </dl>
               </div>

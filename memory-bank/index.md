@@ -11,6 +11,7 @@
 - Deployment or recovery: `runbooks/beta-deployment.md`
 - Formula/protocol changes: `runbooks/clinical-validation.md`
 - Approved source records and traceability: `sources/`
+- Current source records: `sources/do-not-tube-2024-sinai.md` and `sources/therapeutic-substitution-2026-01.md`
 - Consequential decisions: matching file in `decisions/`
 
 ## Ownership

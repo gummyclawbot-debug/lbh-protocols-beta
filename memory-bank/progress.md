@@ -16,7 +16,7 @@
 - Independent pre-commit review; documentation freshness findings resolved.
 
 ## Current phase
-- First authoritative-source pilot for the November 2024 Do Not Tube appendix is accepted, corrected, and released on beta.
+- Do Not Tube pilot is accepted/released; January 2026 Therapeutic Substitution is implemented locally and in pre-release validation.
 
 ## Remaining
 - Reconcile the remaining clinical tabs with authoritative source/protocol provenance one document at a time.
@@ -37,3 +37,5 @@
 - 2026-08-11: corrected the verified beta Vercel project framework preset from `Other` to `Next.js`; protected legacy was not targeted.
 - 2026-08-11: independent review passed, verified commit `45fa6fa` shipped to beta deployment `DsSetWgDviAFEbVDwnaRwCtyyw4H`, canonical beta/PDF returned HTTP 200, live PDF hash matched, production UI/console checks passed, and protected legacy remained unchanged.
 - 2026-08-11: Jarvis accepted the pilot with the approved `clevidipine` correction and compact-layout request. Verified commit `4de82ff` shipped only to beta deployment `6Mv7zEJ9EuuMYwAP22GjdaHYrgwf`; live TPN card measured 46 px, all 14 categories remained intact, the source PDF hash/size stayed unchanged, and protected legacy remained untouched.
+- 2026-08-11: received the authoritative 20-page January 2026 Therapeutic Substitution source with public hosting/no-redaction clearance; preserved and visually reviewed every page, reconciled all 31 sections and 296 complete rows, replaced six unsupported placeholders, added compact all-source search/tables plus source-page and References traceability, and passed initial local engineering/browser/source-integrity checks. Independent review and beta-only release remain pending.
+- 2026-08-11: initial independent Therapeutic Substitution review correctly blocked release because the ACE alert trigger was incomplete and note-only search inflated unrelated rows. Restored the exact `>40mg during T.sub.` trigger, separated direct row results from section context, added exact regression tests and a mobile table-scroll cue, and passed the corrected 32-test/full build/browser gate. Fresh re-review remains pending; nothing has shipped.

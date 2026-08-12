@@ -9,7 +9,7 @@ import {
   NAV,
   RENAL_DOSING,
   RESTRICTIONS,
-  THERAPEUTIC_SUBS,
+  THERAPEUTIC_SUBSTITUTION_PROTOCOL,
 } from "./protocols-data";
 
 function expectNonEmptyRecords(
@@ -59,7 +59,8 @@ describe("protocol data characterization", () => {
   });
 
   it("characterizes the current static clinical table counts", () => {
-    expect(THERAPEUTIC_SUBS).toHaveLength(6);
+    expect(THERAPEUTIC_SUBSTITUTION_PROTOCOL.sections).toHaveLength(31);
+    expect(THERAPEUTIC_SUBSTITUTION_PROTOCOL.sections.flatMap((section) => section.rows)).toHaveLength(296);
     expect(CRRT_DRUGS).toHaveLength(6);
     expect(IV_PO).toHaveLength(10);
     expect(RESTRICTIONS).toHaveLength(8);
@@ -69,7 +70,10 @@ describe("protocol data characterization", () => {
   });
 
   it("keeps current clinical table fields non-empty", () => {
-    expectNonEmptyRecords(THERAPEUTIC_SUBS, ["from", "to", "note"]);
+    expectNonEmptyRecords(
+      THERAPEUTIC_SUBSTITUTION_PROTOCOL.sections.flatMap((section) => section.rows),
+      ["ordered", "substitute"],
+    );
     expectNonEmptyRecords(CRRT_DRUGS, ["name", "dose", "note"]);
     expectNonEmptyRecords(IV_PO, ["iv", "po", "ratio", "criteria"]);
     expectNonEmptyRecords(RESTRICTIONS, ["drug", "restriction", "alt"]);

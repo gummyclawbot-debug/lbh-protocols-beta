@@ -1,3 +1,5 @@
+import therapeuticSubstitutionData from "./therapeutic-substitution-data.json";
+
 export type RenalDrug = {
   name: string;
   notes: string;
@@ -59,15 +61,6 @@ export const RENAL_DOSING: RenalDrug[] = [
       { crcl: "HD", dose: "Load then post-HD dosing per levels" },
     ],
   },
-];
-
-export const THERAPEUTIC_SUBS = [
-  { from: "Rosuvastatin", to: "Atorvastatin", note: "Convert roughly 5→10, 10→20, 20→40 mg (clinical judgment)." },
-  { from: "Esomeprazole IV/PO", to: "Pantoprazole", note: "PPI class interchange per formulary; IV pantoprazole preferred." },
-  { from: "Levetiracetam brand", to: "Levetiracetam generic", note: "1:1 interchange unless DNS." },
-  { from: "Insulin aspart (NovoLog)", to: "Insulin lispro / formulary rapid", note: "1:1 unit interchange for mealtime insulin per protocol." },
-  { from: "Albuterol HFA brand", to: "Formulary albuterol HFA", note: "Therapeutic interchange 1:1." },
-  { from: "Ondansetron ODT brand", to: "Ondansetron tab/ODT generic", note: "1:1 mg interchange." },
 ];
 
 export const CRRT_DRUGS = [
@@ -150,6 +143,50 @@ export type ProtocolReference = {
   authority: string;
   affectedViews: string[];
 };
+
+export type TherapeuticSubstitutionRow = {
+  ordered: string;
+  substitute: string;
+  facility: string;
+  page: number;
+  pageEnd?: number;
+  subgroup?: string | null;
+};
+
+export type TherapeuticSubstitutionSection = {
+  number: number;
+  title: string;
+  notes: string[];
+  rows: TherapeuticSubstitutionRow[];
+};
+
+export const THERAPEUTIC_SUBSTITUTION_PROTOCOL = therapeuticSubstitutionData as {
+  source: ProtocolReference;
+  sections: TherapeuticSubstitutionSection[];
+};
+
+export function searchTherapeuticSubstitutions(query: string) {
+  const normalizedQuery = query.trim().toLowerCase();
+  return THERAPEUTIC_SUBSTITUTION_PROTOCOL.sections
+    .map((section) => {
+      const sectionMatch = normalizedQuery
+        ? section.title.toLowerCase().includes(normalizedQuery)
+        : false;
+      const noteMatch = normalizedQuery
+        ? section.notes.some((note) => note.toLowerCase().includes(normalizedQuery))
+        : false;
+      const rows = normalizedQuery
+        ? section.rows.filter((row) =>
+            [row.ordered, row.substitute, row.facility, row.subgroup ?? ""]
+              .join(" ")
+              .toLowerCase()
+              .includes(normalizedQuery),
+          )
+        : section.rows;
+      return { ...section, rows, sectionMatch, noteMatch };
+    })
+    .filter((section) => !normalizedQuery || section.rows.length > 0 || section.sectionMatch || section.noteMatch);
+}
 
 export type DoNotTubeGroup = {
   title: string;
@@ -301,6 +338,7 @@ export const DO_NOT_TUBE_PROTOCOL = {
 
 export const PROTOCOL_REFERENCES: ProtocolReference[] = [
   DO_NOT_TUBE_PROTOCOL.source,
+  THERAPEUTIC_SUBSTITUTION_PROTOCOL.source,
 ];
 
 export const DO_NOT_CRUSH = [

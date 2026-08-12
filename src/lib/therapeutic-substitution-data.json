@@ -1,0 +1,2044 @@
+{
+  "source": {
+    "id": "therapeutic-substitution-2026-01",
+    "title": "LifeBridge Health Inpatient Pharmacy: Therapeutic Substitution List. Appendix A",
+    "updated": "January 2026",
+    "pageCount": 20,
+    "href": "/references/lbh-therapeutic-substitution-list-2026-01-inhaler-go-live.pdf",
+    "sha256": "51472c2ac457a625c3cac30684157376f48978b0fa8a6b13b911c60a70156360",
+    "authority": "LBH institutional protocol; medical-board and P&T reviewed/approved",
+    "affectedViews": [
+      "therapeutic-sub"
+    ]
+  },
+  "sections": [
+    {
+      "number": 1,
+      "title": "Calcium Channel Blockers",
+      "notes": [],
+      "rows": [
+        {
+          "ordered": "Felodipine 2.5mg",
+          "substitute": "Amlodipine 2.5mg",
+          "facility": "All",
+          "page": 2
+        },
+        {
+          "ordered": "Felodipine 5 mg",
+          "substitute": "Amlodipine 5 mg",
+          "facility": "All",
+          "page": 2
+        },
+        {
+          "ordered": "Felodipine 10 mg",
+          "substitute": "Amlodipine 10 mg",
+          "facility": "All",
+          "page": 2
+        },
+        {
+          "ordered": "Nifedipine {any dose}",
+          "substitute": "Procardia XL {same dose and schedule}.",
+          "facility": "All",
+          "page": 2
+        },
+        {
+          "ordered": "Diltiazem XR (Dilacor XR ®)",
+          "substitute": "Diltiazem CD (Cardizem® CD) {same dose + schedule}",
+          "facility": "All",
+          "page": 2
+        },
+        {
+          "ordered": "Isoptin SR, Veralan, Calan SR po",
+          "substitute": "Verapamil SR {same dose + schedule}",
+          "facility": "All",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Angiotensin Converting Enzyme Inhibitors",
+      "notes": [
+        "*MP will receive the following alert if equivalent lisinopril doses exceed 40mg during T.sub. “Lisinopril doses up to 80 mg have been used for the management of hypertension, but do not appear to provide additional benefit over 40 mg daily. Please review the home medication list to determine if the patient has established previous tolerance to higher ACE inhibitor doses.” MP can decide on continuation of high dose or lowering the dose."
+      ],
+      "rows": [
+        {
+          "ordered": "Benazepril 10mg",
+          "substitute": "Lisinopril 10mg",
+          "facility": "All",
+          "page": 2
+        },
+        {
+          "ordered": "Enalapril 5mg",
+          "substitute": "Lisinopril 10mg",
+          "facility": "All",
+          "page": 2
+        },
+        {
+          "ordered": "Fosinopril 10mg",
+          "substitute": "Lisinopril 10mg",
+          "facility": "All",
+          "page": 2
+        },
+        {
+          "ordered": "Moexipril 7.5mg",
+          "substitute": "Lisinopril 10mg",
+          "facility": "All",
+          "page": 2
+        },
+        {
+          "ordered": "Perindopril 4mg",
+          "substitute": "Lisinopril 10mg",
+          "facility": "All",
+          "page": 2
+        },
+        {
+          "ordered": "Quinapril 10mg",
+          "substitute": "Lisinopril 10mg",
+          "facility": "All",
+          "page": 2
+        },
+        {
+          "ordered": "Ramipril 2.5mg",
+          "substitute": "Lisinopril 10mg",
+          "facility": "All",
+          "page": 2
+        },
+        {
+          "ordered": "Trandolapril 1mg",
+          "substitute": "Lisinopril 10mg",
+          "facility": "All",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Angiotensin Receptor Blockers",
+      "notes": [],
+      "rows": [
+        {
+          "ordered": "Azilsartan 40mg",
+          "substitute": "Losartan 50mg",
+          "facility": "All",
+          "page": 2
+        },
+        {
+          "ordered": "Azilsartan 80mg",
+          "substitute": "N/A – Dispense as Written",
+          "facility": "All",
+          "page": 2
+        },
+        {
+          "ordered": "Candesartan 4mg",
+          "substitute": "N/A – Dispense as Written",
+          "facility": "All",
+          "page": 3
+        },
+        {
+          "ordered": "Candesartan 8mg",
+          "substitute": "N/A – Dispense as Written",
+          "facility": "All",
+          "page": 3
+        },
+        {
+          "ordered": "Candesartan 16mg",
+          "substitute": "N/A – Dispense as Written",
+          "facility": "All",
+          "page": 3
+        },
+        {
+          "ordered": "Candesartan 32mg",
+          "substitute": "N/A – Dispense as Written",
+          "facility": "All",
+          "page": 3
+        },
+        {
+          "ordered": "Eprosartan 400mg",
+          "substitute": "Losartan 25mg",
+          "facility": "All",
+          "page": 3
+        },
+        {
+          "ordered": "Eprosartan 600mg",
+          "substitute": "Losartan 50mg",
+          "facility": "All",
+          "page": 3
+        },
+        {
+          "ordered": "Eprosartan 800mg",
+          "substitute": "Losartan 100mg",
+          "facility": "All",
+          "page": 3
+        },
+        {
+          "ordered": "Irbesartan 75mg",
+          "substitute": "Losartan 25mg",
+          "facility": "All",
+          "page": 3
+        },
+        {
+          "ordered": "Irbesartan 150mg",
+          "substitute": "Losartan 50mg",
+          "facility": "All",
+          "page": 3
+        },
+        {
+          "ordered": "Irbesartan 300mg",
+          "substitute": "Losartan 100mg",
+          "facility": "All",
+          "page": 3
+        },
+        {
+          "ordered": "Olmesartan 20mg",
+          "substitute": "Losartan 50mg",
+          "facility": "All",
+          "page": 3
+        },
+        {
+          "ordered": "Olmesartan 40mg",
+          "substitute": "Losartan 100mg",
+          "facility": "All",
+          "page": 3
+        },
+        {
+          "ordered": "Telmisartan 20mg",
+          "substitute": "Losartan 25mg",
+          "facility": "All",
+          "page": 3
+        },
+        {
+          "ordered": "Telmisartan 40mg",
+          "substitute": "Losartan 50mg",
+          "facility": "All",
+          "page": 3
+        },
+        {
+          "ordered": "Telmisartan 80mg",
+          "substitute": "Losartan 100mg",
+          "facility": "All",
+          "page": 3
+        },
+        {
+          "ordered": "Valsartan 40mg",
+          "substitute": "N/A – Dispense as Written",
+          "facility": "All",
+          "page": 3
+        },
+        {
+          "ordered": "Valsartan 80mg",
+          "substitute": "N/A – Dispense as Written",
+          "facility": "All",
+          "page": 3
+        },
+        {
+          "ordered": "Valsartan 160mg",
+          "substitute": "N/A – Dispense as Written",
+          "facility": "All",
+          "page": 3
+        },
+        {
+          "ordered": "Valsartan 320mg",
+          "substitute": "N/A – Dispense as Written",
+          "facility": "All",
+          "page": 3
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Statins",
+      "notes": [],
+      "rows": [
+        {
+          "ordered": "Fluvastatin 20mg",
+          "substitute": "Pravastatin 10mg",
+          "facility": "All",
+          "page": 3
+        },
+        {
+          "ordered": "Fluvastatin 40mg",
+          "substitute": "Atorvastatin 5mg\nor pravastatin 20mg",
+          "facility": "All",
+          "page": 3
+        },
+        {
+          "ordered": "Fluvastatin 80mg",
+          "substitute": "Atorvastatin 10mg\nor pravastatin 40mg",
+          "facility": "All",
+          "page": 3
+        },
+        {
+          "ordered": "Lovastatin 10mg",
+          "substitute": "Pravastatin 10mg",
+          "facility": "All",
+          "page": 4
+        },
+        {
+          "ordered": "Lovastatin 20mg",
+          "substitute": "Atorvastatin 5mg\nor pravastatin 20mg",
+          "facility": "All",
+          "page": 4
+        },
+        {
+          "ordered": "Lovastatin 40mg",
+          "substitute": "Atorvastatin 10mg\nor pravastatin 40mg",
+          "facility": "All",
+          "page": 4
+        },
+        {
+          "ordered": "Lovastatin 80mg",
+          "substitute": "Atorvastatin 20mg\nor pravastatin 80mg",
+          "facility": "All",
+          "page": 4
+        },
+        {
+          "ordered": "Pitavastatin 2 mg",
+          "substitute": "Atorvastatin 10mg\nor pravastatin 40mg",
+          "facility": "All",
+          "page": 4
+        },
+        {
+          "ordered": "Pitavastatin 4 mg",
+          "substitute": "Atorvastatin 20mg\nor pravastatin 80mg",
+          "facility": "All",
+          "page": 4
+        },
+        {
+          "ordered": "Simvastatin 5 mg",
+          "substitute": "Pravastatin 10mg",
+          "facility": "All",
+          "page": 4
+        },
+        {
+          "ordered": "Simvastatin 10mg",
+          "substitute": "Atorvastatin 5mg\nor pravastatin 20mg",
+          "facility": "All",
+          "page": 4
+        },
+        {
+          "ordered": "Simvastatin 20mg",
+          "substitute": "Atorvastatin 10mg\nor pravastatin 40mg",
+          "facility": "All",
+          "page": 4
+        },
+        {
+          "ordered": "Simvastatin 40mg",
+          "substitute": "Atorvastatin 20mg\nor pravastatin 80mg",
+          "facility": "All",
+          "page": 4
+        },
+        {
+          "ordered": "Simvastatin 80mg",
+          "substitute": "Atorvastatin 40mg",
+          "facility": "All",
+          "page": 4
+        },
+        {
+          "ordered": "Ezetimibe/simvastatin (Vytorin®) 10/10mg",
+          "substitute": "Ezetimibe 10mg + Atorvastatin 5mg",
+          "facility": "All",
+          "page": 4
+        },
+        {
+          "ordered": "Ezetimibe/simvastatin (Vytorin®) 10/20mg",
+          "substitute": "Ezetimibe 10mg + Atorvastatin 10mg",
+          "facility": "All",
+          "page": 4
+        },
+        {
+          "ordered": "Ezetimibe/simvastatin (Vytorin®) 10/40mg",
+          "substitute": "Ezetimibe 10mg + Atorvastatin 20mg",
+          "facility": "All",
+          "page": 4
+        },
+        {
+          "ordered": "Ezetimibe/simvastatin (Vytorin®) 10/80mg",
+          "substitute": "Ezetimibe 10mg + Atorvastatin 40mg",
+          "facility": "All",
+          "page": 4
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Miscellaneous Hyperlipidemia agents",
+      "notes": [],
+      "rows": [
+        {
+          "ordered": "Fenofibrate 54 mg non-micronized tablet\nFenofibrate 50 mg capsule non-micronized\nFenofibrate 50 mg tablets\nFenofibrate 48 mg non-micronized (Tricor®) tablets\nFenofibrate 40 mg non-micronized tablets\nFenofibric Acid 45 mg (Trilipix®) delayed-release",
+          "substitute": "Fenofibrate 67mg micronized capsules",
+          "facility": "All",
+          "page": 4
+        },
+        {
+          "ordered": "Fenofibrate 134 mg capsule\nFenofibrate 130 mg capsule\nFenofibrate 120 mg non-micronized tablet",
+          "substitute": "Fenofibrate 134mg micronized capsules",
+          "facility": "All",
+          "page": 4
+        },
+        {
+          "ordered": "Fenofibrate 145 mg non-micronized (Tricor®) tablets\nFenofibrate 160 mg non-micronized tablet\nFenofibrate 150 mg capsule non-micronized\nFenofibric Acid mg (Trilipix®) 135 mg capsule delayed-\nrelease",
+          "substitute": "Fenofibrate 200mg micronized capsules",
+          "facility": "All",
+          "page": 4
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Anti-epileptics",
+      "notes": [],
+      "rows": [
+        {
+          "ordered": "Carbamazepine ER capsule (Carbatrol ®)",
+          "substitute": "Carbamazepine XR tablets (Tegretol XR®)",
+          "facility": "All",
+          "page": 5
+        },
+        {
+          "ordered": "Carbamazepine ER capsule (Equetro ®)",
+          "substitute": "Carbamazepine XR tablets (Tegretol XR®)",
+          "facility": "All",
+          "page": 5
+        },
+        {
+          "ordered": "Levetiracetam ER (Keppra XR®) 500 mg q24h",
+          "substitute": "Levetiracetam 250 mg q 12h",
+          "facility": "All",
+          "page": 5
+        },
+        {
+          "ordered": "Levetiracetam ER (Keppra XR®) 750 mg q24h",
+          "substitute": "Levetiracetam 375 mg q 12h",
+          "facility": "All",
+          "page": 5
+        },
+        {
+          "ordered": "Levetiracetam ER (Keppra XR®) 1000 mg\nq24h",
+          "substitute": "Levetiracetam 500 mg q 12h",
+          "facility": "All",
+          "page": 5
+        },
+        {
+          "ordered": "Depakote ER tablet\n750mg ---------------------------------------------→\n1000mg -------------------------------------------→\n1250mg -------------------------------------------→\n1500mg -------------------------------------------→\n1750mg -------------------------------------------→\n2000mg -------------------------------------------→\n2250mg -------------------------------------------→\n2500mg -------------------------------------------→\n2750mg -------------------------------------------→\n3000mg -------------------------------------------→\n3250mg -------------------------------------------→\n3500mg -------------------------------------------→",
+          "substitute": "Depakote DR tablet\n250mg BID\n250mg TID\n500mg BID\n500mg qam and 750mg qpm\n500mg TID\n750mg qam and 1000mg qpm\n1000mg BID\n750mg TID\n750mg at 6 am, 750mg 1400pm, 875mg at 2200pm\n1250mg BID\n1000mg 6am, 1000mg 1400pm, 875mg 2200pm\n1000mg TID",
+          "facility": "All",
+          "page": 5
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Miscellaneous neurology agents",
+      "notes": [
+        "LSH patients may continue rivastigmine transdermal patch if patch is a “home medication” or capsules deemed inappropriate for those patients."
+      ],
+      "rows": [
+        {
+          "ordered": "Rivastigmine 4.6 mg transdermal patch",
+          "substitute": "Rivastigmine 3 mg PO BID",
+          "facility": "SH, NW, CH\nonly*",
+          "page": 5
+        },
+        {
+          "ordered": "Rivastigmine 9.5 mg transdermal patch",
+          "substitute": "Rivastigmine 6 mg PO BID",
+          "facility": "SH, NW, CH\nonly*",
+          "page": 5
+        },
+        {
+          "ordered": "Ropinirole ER (Requip XL®) 2 to 12 mg q day",
+          "substitute": "Ropinirole IR (Requip®) Closest equivalent total\ndaily dose divided TID",
+          "facility": "All",
+          "page": 5
+        },
+        {
+          "ordered": "Memantine XR (Namenda XR®) capsule\n7 mg daily",
+          "substitute": "Memantine IR tablet 5 mg daily",
+          "facility": "All",
+          "page": 5
+        },
+        {
+          "ordered": "Memantine XR (Namenda XR®) capsule\n14 mg daily",
+          "substitute": "Memantine IR tablet 5 mg BID",
+          "facility": "All",
+          "page": 5
+        },
+        {
+          "ordered": "Memantine XR (Namenda XR®) capsule\n21 mg daily",
+          "substitute": "Memantine IR tablet 5 mg qam and 10 mg qHS",
+          "facility": "All",
+          "page": 5
+        },
+        {
+          "ordered": "Memantine XR (Namenda XR®) capsule\n28 mg daily",
+          "substitute": "Memantine IR tablet 10 mg BID",
+          "facility": "SH, NW, CH\nonly",
+          "page": 6
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Sleep Agents",
+      "notes": [],
+      "rows": [
+        {
+          "ordered": "Eszopiclone 1 or 2 mg qHS",
+          "substitute": "Zolpidem 5mg qHS prn",
+          "facility": "All",
+          "page": 6
+        },
+        {
+          "ordered": "Eszopiclone 3mg qHS",
+          "substitute": "Zolpidem 10mg qHS prn\n(5 mg if > 65 years of age and all females)",
+          "facility": "All",
+          "page": 6
+        },
+        {
+          "ordered": "Zaleplon 5mg qHS",
+          "substitute": "Zolpidem 5mg qHS prn",
+          "facility": "All",
+          "page": 6
+        },
+        {
+          "ordered": "Zaleplon 10 or 20mg qHS",
+          "substitute": "Zolpidem 10mg qHS prn\n(5 mg if > 65 years of age and all females)",
+          "facility": "All",
+          "page": 6
+        },
+        {
+          "ordered": "Zolpidem (Ambien CR®) 6.25mg qHS",
+          "substitute": "Zolpidem (Ambien®) 5mg qHS prn",
+          "facility": "All",
+          "page": 6
+        },
+        {
+          "ordered": "Zolpidem (Ambien CR®) 12.5mg qHS",
+          "substitute": "Zolpidem (Ambien®) 10mg qHS prn\n(5 mg if > 65 years of age and all females)",
+          "facility": "All",
+          "page": 6
+        },
+        {
+          "ordered": "Zolpidem 10 mg qHS in any patient >65\nyears of age and any female",
+          "substitute": "Zolpidem (Ambien®) 5 mg qHS prn",
+          "facility": "All",
+          "page": 6
+        },
+        {
+          "ordered": "Zolpidem qHS in any patient",
+          "substitute": "Zolpidem (Ambien®) qHS prn",
+          "facility": "All",
+          "page": 6
+        },
+        {
+          "ordered": "Melatonin 5mg qHS",
+          "substitute": "Melatonin 3mg qHS",
+          "facility": "All",
+          "page": 6
+        },
+        {
+          "ordered": "Melatonin 10mg qHS",
+          "substitute": "Melatonin 9mg qHS",
+          "facility": "All",
+          "page": 6
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Selective Serotonin Reuptake Inhibitors",
+      "notes": [],
+      "rows": [
+        {
+          "ordered": "Paroxetine CR (once a day)\n12.5mg -----------------------------------------→\n25mg -------------------------------------------→\n37.5mg -----------------------------------------→",
+          "substitute": "Paroxetine IR (once a day)\n10mg\n20mg\n30mg",
+          "facility": "All",
+          "page": 6
+        },
+        {
+          "ordered": "Citalopram 20mg",
+          "substitute": "Escitalopram 10mg",
+          "facility": "SH, NW, LSH\nonly",
+          "page": 6
+        },
+        {
+          "ordered": "Citalopram 40mg",
+          "substitute": "Escitalopram 20mg",
+          "facility": "SH, NW, LSH\nonly",
+          "page": 6
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Antibiotics",
+      "notes": [],
+      "rows": [
+        {
+          "ordered": "Ampicillin PO q6h",
+          "substitute": "Amoxicillin PO q8h (same dose)",
+          "facility": "All",
+          "page": 7
+        },
+        {
+          "ordered": "Caspofungin 70 mg IV x 1, then 50 mg IV q\n24h",
+          "substitute": "Micafungin 100 mg IV q 24h",
+          "facility": "All",
+          "page": 7
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Vaginal Antifungals",
+      "notes": [],
+      "rows": [
+        {
+          "ordered": "Butoconazole (Femstat 3®, Mycelex-3®) 2% cream x 3 days",
+          "substitute": "Tioconazole (Monistat 1®, Vagistat 1®)\n6.5% cream x 1 dose",
+          "facility": "All",
+          "page": 7
+        },
+        {
+          "ordered": "Butoconazole (Gynazole 1®) 2% cream x 1 dose",
+          "substitute": "Tioconazole (Monistat 1®, Vagistat 1®)\n6.5% cream x 1 dose",
+          "facility": "All",
+          "page": 7
+        },
+        {
+          "ordered": "Clotrimazole (Gyne-Lotrimin®, Mycelex-7®) 1% cream\nx 7-14 days",
+          "substitute": "Tioconazole (Monistat 1®, Vagistat 1®)\n6.5% cream x 1 dose",
+          "facility": "All",
+          "page": 7
+        },
+        {
+          "ordered": "Clotrimazole (Gyne-Lotrimin®, Mycelex-7®) 100 mg vaginal\ntablets x 7 days",
+          "substitute": "Tioconazole (Monistat 1®, Vagistat 1®)\n6.5% cream x 1 dose",
+          "facility": "All",
+          "page": 7
+        },
+        {
+          "ordered": "Clotrimazole (Gyne-Lotrimin-3®) 200 mg vaginal tablets x 3\ndays",
+          "substitute": "Tioconazole (Monistat 1®, Vagistat 1®)\n6.5% cream x 1 dose",
+          "facility": "All",
+          "page": 7
+        },
+        {
+          "ordered": "Miconazole (Monistat 7®, Femizol-M®) 2% cream x 7 days",
+          "substitute": "Tioconazole (Monistat 1®, Vagistat 1®)\n6.5% cream x 1 dose",
+          "facility": "All",
+          "page": 7
+        },
+        {
+          "ordered": "Miconazole (Monistat 7®) 100 mg vaginal suppository x 7 days",
+          "substitute": "Tioconazole (Monistat 1®, Vagistat 1®)\n6.5% cream x 1 dose",
+          "facility": "All",
+          "page": 7
+        },
+        {
+          "ordered": "Miconazole (Monistat 3®) 4% vaginal cream x 3 days",
+          "substitute": "Tioconazole (Monistat 1®, Vagistat 1®)\n6.5% cream x 1 dose",
+          "facility": "All",
+          "page": 7
+        },
+        {
+          "ordered": "Terconazole (Terazol 7®) 0.4% cream x 7 days",
+          "substitute": "Tioconazole (Monistat 1®, Vagistat 1®)\n6.5% cream x 1 dose",
+          "facility": "All",
+          "page": 7
+        },
+        {
+          "ordered": "Terconazole (Terazol 3®) 0.8% cream and 80 mg vaginal\nsuppository x 3 days",
+          "substitute": "Tioconazole (Monistat 1®, Vagistat 1®)\n6.5% cream x 1 dose",
+          "facility": "All",
+          "page": 7
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "H2 Receptor Antagonist",
+      "notes": [],
+      "rows": [
+        {
+          "ordered": "Cimetidine 800mg PO Daily or BID",
+          "substitute": "Famotidine 40mg PO same frequency",
+          "facility": "All",
+          "page": 7
+        },
+        {
+          "ordered": "Cimetidine 300mg or 400mg PO daily or BID",
+          "substitute": "Famotidine 20mg PO same frequency",
+          "facility": "All",
+          "page": 7
+        },
+        {
+          "ordered": "Cimetidine 300mg PO TID or QID",
+          "substitute": "Famotidine 20mg PO BID",
+          "facility": "All",
+          "page": 7
+        },
+        {
+          "ordered": "Cimetidine 400mg PO QID",
+          "substitute": "Famotidine 40mg PO BID",
+          "facility": "All",
+          "page": 7
+        },
+        {
+          "ordered": "Cimetidine 400mg IV BID",
+          "substitute": "Famotidine 20 mg IV q12h",
+          "facility": "All",
+          "page": 7
+        },
+        {
+          "ordered": "Cimetidine 400mg IV q24h",
+          "substitute": "Famotidine 20mg IV q24h",
+          "facility": "All",
+          "page": 7
+        },
+        {
+          "ordered": "Ranitidine 50mg IV q \\8h",
+          "substitute": "Famotidine 20 mg IV q12h",
+          "facility": "All",
+          "page": 8
+        },
+        {
+          "ordered": "Ranitidine 50mg IV q12h",
+          "substitute": "Famotidine 20mg IV q24h",
+          "facility": "All",
+          "page": 8
+        },
+        {
+          "ordered": "Ranitidine 50mg IV q24h",
+          "substitute": "Famotidine 20mg IV q24h",
+          "facility": "All",
+          "page": 8
+        },
+        {
+          "ordered": "Ranitidine 75 mg PO q24h or QHS",
+          "substitute": "Famotidine 10mg PO q24h or QHS",
+          "facility": "All",
+          "page": 8
+        },
+        {
+          "ordered": "Ranitidine 150mg PO q24h",
+          "substitute": "Famotidine 20mg PO q24h or QHS",
+          "facility": "All",
+          "page": 8
+        },
+        {
+          "ordered": "Ranitidine 150mg PO BID",
+          "substitute": "Famotidine 20mg PO BID",
+          "facility": "All",
+          "page": 8
+        },
+        {
+          "ordered": "Ranitidine 300mg PO qHS",
+          "substitute": "Famotidine 40mg PO qHS",
+          "facility": "All",
+          "page": 8
+        },
+        {
+          "ordered": "Ranitidine 300mg PO BID",
+          "substitute": "Famotidine 40 mg PO BID",
+          "facility": "All",
+          "page": 8
+        },
+        {
+          "ordered": "Nizatidine 150 mg PO q24h or qHS",
+          "substitute": "Famotidine 20mg PO q24h or QHS",
+          "facility": "All",
+          "page": 8
+        },
+        {
+          "ordered": "Nizatidine 150 mg PO BID",
+          "substitute": "Famotidine 20 mg PO BID",
+          "facility": "All",
+          "page": 8
+        },
+        {
+          "ordered": "Nizatidine 300mg PO q24h or QHS",
+          "substitute": "Famotidine 40mg PO q24h or QHS",
+          "facility": "All",
+          "page": 8
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Proton Pump Inhibitors",
+      "notes": [],
+      "rows": [
+        {
+          "ordered": "Dexlansoprazole 30mg q24h",
+          "substitute": "Pantoprazole 40mg q24h",
+          "facility": "All",
+          "page": 8
+        },
+        {
+          "ordered": "Dexlansoprazole 60mg q24h",
+          "substitute": "Pantoprazole 40mg q24h",
+          "facility": "All",
+          "page": 8
+        },
+        {
+          "ordered": "Esomeprazole 20mg q24h",
+          "substitute": "Pantoprazole 40mg q24h",
+          "facility": "All",
+          "page": 8
+        },
+        {
+          "ordered": "Esomeprazole 20mg BID",
+          "substitute": "Pantoprazole 40mg q24h",
+          "facility": "All",
+          "page": 8
+        },
+        {
+          "ordered": "Esomeprazole 40mg q24h",
+          "substitute": "Pantoprazole 40mg q24h",
+          "facility": "All",
+          "page": 8
+        },
+        {
+          "ordered": "Esomeprazole 40mg BID",
+          "substitute": "Pantoprazole 40mg q24h",
+          "facility": "All",
+          "page": 8
+        },
+        {
+          "ordered": "Omeprazole 10mg q24h",
+          "substitute": "Pantoprazole 40mg q24h",
+          "facility": "All",
+          "page": 8
+        },
+        {
+          "ordered": "Omeprazole 10mg BID",
+          "substitute": "Pantoprazole 40mg q24h",
+          "facility": "All",
+          "page": 8
+        },
+        {
+          "ordered": "Omeprazole 20mg q24h",
+          "substitute": "Pantoprazole 40mg q24h",
+          "facility": "All",
+          "page": 8
+        },
+        {
+          "ordered": "Omeprazole 20mg BID",
+          "substitute": "Pantoprazole 40mg q24h",
+          "facility": "All",
+          "page": 8
+        },
+        {
+          "ordered": "Omeprazole 40mg q24h",
+          "substitute": "Pantoprazole 40mg q24h",
+          "facility": "All",
+          "page": 8
+        },
+        {
+          "ordered": "Omeprazole/sodium bicarb 20mg (Zegerid®)\nq24h",
+          "substitute": "Pantoprazole 40mg q24h",
+          "facility": "All",
+          "page": 9
+        },
+        {
+          "ordered": "Omeprazole/sodium bicarb 40mg (Zegerid®)\nq24h",
+          "substitute": "Pantoprazole 40mg q24h",
+          "facility": "All",
+          "page": 9
+        },
+        {
+          "ordered": "Lansoprazole 30 mg q24h",
+          "substitute": "Pantoprazole 40mg q24h",
+          "facility": "All",
+          "page": 9
+        },
+        {
+          "ordered": "Lansoprazole 15mg q24h",
+          "substitute": "Pantoprazole 40mg q24h",
+          "facility": "All",
+          "page": 9
+        },
+        {
+          "ordered": "Rabeprazole 20mg q24h",
+          "substitute": "Pantoprazole 40mg q24h",
+          "facility": "All",
+          "page": 9
+        },
+        {
+          "ordered": "Omeprazole, pantoprazole, lansoprazole NG tube",
+          "substitute": "Esomeprazole 40mg NG/ G(PEG) tube caps",
+          "facility": "All",
+          "page": 9
+        },
+        {
+          "ordered": "Omeprazole, pantoprazole, lansoprazole J tube",
+          "substitute": "Lansoprazole solutab 30mg J tube",
+          "facility": "SH, NW, LSH, CH",
+          "page": 9
+        },
+        {
+          "ordered": "Lansoprazole suspension J tube",
+          "substitute": "Lansoprazole solutab J tube",
+          "facility": "SH, NW, LSH, CH",
+          "page": 9
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "title": "Miscellaneous GI agents",
+      "notes": [
+        "Frequency remains the same on substitution. Viokase 10 will not be substituted."
+      ],
+      "rows": [
+        {
+          "ordered": "Lipase 6000",
+          "substitute": "Pancrelipase (Creon®) 6000 units lipase",
+          "facility": "All",
+          "page": 9
+        },
+        {
+          "ordered": "Pancreaze®: Lipase 4500",
+          "substitute": "Pancrelipase (Creon®) 6000 units lipase",
+          "facility": "All",
+          "page": 9
+        },
+        {
+          "ordered": "Pancrecarb® MS-4: Lipase 4000",
+          "substitute": "Pancrelipase (Creon®) 6000 units lipase",
+          "facility": "All",
+          "page": 9
+        },
+        {
+          "ordered": "Pancrease® MT 4: Lipase 4000",
+          "substitute": "Pancrelipase (Creon®) 6000 units lipase",
+          "facility": "All",
+          "page": 9
+        },
+        {
+          "ordered": "Ultrase®: Lipase 4500",
+          "substitute": "Pancrelipase (Creon®) 6000 units lipase",
+          "facility": "All",
+          "page": 9
+        },
+        {
+          "ordered": "Zenpep®: Lipase 5000",
+          "substitute": "Pancrelipase (Creon®) 6000 units lipase",
+          "facility": "All",
+          "page": 9
+        },
+        {
+          "ordered": "Lipase 12,000",
+          "substitute": "Pancrelipase (Creon®) 12,000 units lipase",
+          "facility": "All",
+          "page": 9
+        },
+        {
+          "ordered": "Pancrecarb® MS-8: Lipase 8000",
+          "substitute": "Pancrelipase (Creon®) 12,000 units lipase",
+          "facility": "All",
+          "page": 9
+        },
+        {
+          "ordered": "Pancreaze® MT 10: Lipase 10,000",
+          "substitute": "Pancrelipase (Creon®) 12,000 units lipase",
+          "facility": "All",
+          "page": 9
+        },
+        {
+          "ordered": "Ultrase® MT 12: Lipase 12,000",
+          "substitute": "Pancrelipase (Creon®) 12,000 units lipase",
+          "facility": "All",
+          "page": 9
+        },
+        {
+          "ordered": "Viokase® 8: Lipase 8000",
+          "substitute": "Pancrelipase (Creon®) 12,000 units lipase",
+          "facility": "All",
+          "page": 9
+        },
+        {
+          "ordered": "Zenpep®: Lipase 10,000",
+          "substitute": "Pancrelipase (Creon®) 12,000 units lipase",
+          "facility": "All",
+          "page": 9
+        },
+        {
+          "ordered": "Pancrecarb® MS-16: Lipase 16,000",
+          "substitute": "Pancrelipase (Creon®) 18,000 units lipase",
+          "facility": "All",
+          "page": 9
+        },
+        {
+          "ordered": "Viokase® 16: Lipase 16,000",
+          "substitute": "Pancrelipase (Creon®) 18,000 units lipase",
+          "facility": "All",
+          "page": 9
+        },
+        {
+          "ordered": "Zenpep®: Lipase 15,000",
+          "substitute": "Pancrelipase (Creon®) 18,000 units lipase",
+          "facility": "All",
+          "page": 9
+        },
+        {
+          "ordered": "Ultrase® MT 18: Lipase 18,000",
+          "substitute": "Pancrelipase (Creon®) 18,000 units lipase",
+          "facility": "All",
+          "page": 9
+        },
+        {
+          "ordered": "Lipase 24,000",
+          "substitute": "Pancrelipase (Creon®) 24,000 units lipase",
+          "facility": "All",
+          "page": 10
+        },
+        {
+          "ordered": "Pancreaze® MT 20: Lipase 20,000",
+          "substitute": "Pancrelipase (Creon®) 24,000 units lipase",
+          "facility": "All",
+          "page": 10
+        },
+        {
+          "ordered": "Ultrase® MT 18: Lipase 18,000",
+          "substitute": "Pancrelipase (Creon®) 24,000 units lipase",
+          "facility": "All",
+          "page": 10
+        },
+        {
+          "ordered": "Ultrase® MT 20: Lipase 20,000",
+          "substitute": "Pancrelipase (Creon®) 24,000 units lipase",
+          "facility": "All",
+          "page": 10
+        },
+        {
+          "ordered": "Zenpep®: Lipase 20,000",
+          "substitute": "Pancrelipase (Creon®) 24,000 units lipase",
+          "facility": "All",
+          "page": 10
+        },
+        {
+          "ordered": "Lipase 36,000",
+          "substitute": "Pancrelipase (Creon®) 36,000 units lipase",
+          "facility": "All",
+          "page": 10
+        },
+        {
+          "ordered": "Zenpep®: Lipase 40,000",
+          "substitute": "Pancrelipase (Creon®) 36,000 units lipase",
+          "facility": "All",
+          "page": 10
+        },
+        {
+          "ordered": "Saccharomyces boulardii (Florastor®) 250 mg\nonce daily",
+          "substitute": "Lactobacillus rhamnosus (Culturelle®)\n1 capsule daily",
+          "facility": "All",
+          "page": 10
+        },
+        {
+          "ordered": "Saccharomyces boulardii (Florastor®) 250 mg\nBID or 500 mg at any frequency",
+          "substitute": "Lactobacillus rhamnosus (Culturelle®)\n1 capsule twice daily",
+          "facility": "All",
+          "page": 10
+        },
+        {
+          "ordered": "Lactobacillus acidophilus and lactobacillus\nhelveticus (Lactinex® or Florinex®) tablets or\ngranules",
+          "substitute": "Lactobacillus rhamnosus (Culturelle®)\n1 capsule twice daily",
+          "facility": "All",
+          "page": 10
+        },
+        {
+          "ordered": "Other probiotic formulation",
+          "substitute": "Lactobacillus rhamnosus (Culturelle®)\n1 capsule daily",
+          "facility": "All",
+          "page": 10
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "title": "Insulin",
+      "notes": [
+        "Apidra® in insulin pump will not be substituted.",
+        "Insulin U-500 conversion is not an automatic therapeutic substitution and requires conversation with MP."
+      ],
+      "rows": [
+        {
+          "ordered": "Insulin Lispro (Humalog®)",
+          "substitute": "Insulin Aspart (NovoLog®)",
+          "facility": "All",
+          "page": 10
+        },
+        {
+          "ordered": "Insulin Glulisine (Apidra®)\n*Apidra® in insulin pump will not be substituted.",
+          "substitute": "Insulin Aspart (Novolog®)",
+          "facility": "All",
+          "page": 10
+        },
+        {
+          "ordered": "Insulin u-500\n(Not an automatic T.sub)",
+          "substitute": "Insulin u-100\nPatients using insulin regular U-500 who are admitted should\nbe converted to insulin u-100 based on the below calculation\nafter conversation with MP:\n1. Calculate total daily dose (TDD) of u-500 (in units of insulin\ngiven)\n2. Reduce TDD of u-500 by 20% to obtain new u-100\nrequirements\n3. If patient is PO--> take 50% of new u-100 TDD as insulin\nglargine (may split dose into BID dosing if individual doses\nexceed 50 units) and take remainder 50% and split evenly into\naspart TID dosing. Add sliding scale insulin to this regimen.\n4. If patient is NPO--> take 50% of new u-100 TDD as insulin\nglargine (may split dose into BID dosing if individual doses\nexceed 50 units) and add sliding scale therapy to regimen.",
+          "facility": "",
+          "page": 10,
+          "pageEnd": 11
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "title": "Oral anti-diabetic agents",
+      "notes": [],
+      "rows": [
+        {
+          "ordered": "Metformin XR\n500mg qday -----------------------------------------→\n1000mg qday----------------------------------------→\n1500mg qday----------------------------------------→\n2000mg qday----------------------------------------→",
+          "substitute": "Metformin IR\n250mg BID\n500mg BID\n500mg TID\n1000mg BID",
+          "facility": "All",
+          "page": 11
+        },
+        {
+          "ordered": "Glipizide ER",
+          "substitute": "Glipizide IR {same dose, once daily}",
+          "facility": "All",
+          "page": 11
+        },
+        {
+          "ordered": "Glyburide\n1.25mg once daily ---------------------------------→\n2.5mg once daily ----------------------------------→\n5mg once daily ------------------------------------→\n10mg once daily -----------------------------------→",
+          "substitute": "Glipizide IR\n2.5mg once daily\n5mg once daily\n5mg BID\n10mg BID",
+          "facility": "All",
+          "page": 11
+        },
+        {
+          "ordered": "Glimepiride\n1mg once daily ------------------------------------→\n2mg once daily -----------------------------------→\n3mg once daily -----------------------------------→\n4mg once daily -----------------------------------→",
+          "substitute": "Glipizide IR\n2.5mg once daily\n5mg once daily\n7.5mg once daily\n5mg BID",
+          "facility": "All",
+          "page": 11
+        },
+        {
+          "ordered": "Glyburide-Metformin",
+          "substitute": "Glipizide IR + Metformin as individual\ncomponents",
+          "facility": "All",
+          "page": 11
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "title": "Erythropoiesis Stimulating Agents",
+      "notes": [
+        "For inpatients, previously on darbepoetin prior to admission, who meet criteria for conversion/continuation of epoetin alfa and requiring dosing recommendations. Do not substitute for oncology patients."
+      ],
+      "rows": [
+        {
+          "ordered": "Darbepoetin alfa (Aranesp®) 12.5 mcg qweek",
+          "substitute": "Epoetin Alfa (Procrit®) 3000 units qweek",
+          "facility": "All",
+          "page": 11
+        },
+        {
+          "ordered": "Darbepoetin alfa (Aranesp®) 25 mcg qweek",
+          "substitute": "Epoetin Alfa (Procrit®) 5000 units qweek",
+          "facility": "All",
+          "page": 11
+        },
+        {
+          "ordered": "Darbepoetin alfa (Aranesp®) 40 mcg qweek",
+          "substitute": "Epoetin Alfa (Procrit®) 10,000 units qweek",
+          "facility": "All",
+          "page": 11
+        },
+        {
+          "ordered": "Darbepoetin alfa (Aranesp®) 60 mcg qweek",
+          "substitute": "Epoetin Alfa (Procrit®) 20,000 units qweek",
+          "facility": "All",
+          "page": 11
+        },
+        {
+          "ordered": "Darbepoetin alfa (Aranesp®) 100 mcg qweek",
+          "substitute": "Epoetin Alfa (Procrit®) 30,000 units qweek",
+          "facility": "All",
+          "page": 11
+        },
+        {
+          "ordered": "Darbepoetin alfa (Aranesp®) 200 mcg qweek",
+          "substitute": "Epoetin Alfa (Procrit®) 40,000 units qweek",
+          "facility": "All",
+          "page": 11
+        },
+        {
+          "ordered": "Darbepoetin alfa (Aranesp®) 60 mcg Bi-\nweekly",
+          "substitute": "Epoetin Alfa (Procrit®) 20,000 units\nBi-weekly",
+          "facility": "All",
+          "page": 11
+        },
+        {
+          "ordered": "Darbepoetin alfa (Aranesp®) 100 mcg Bi-\nweekly",
+          "substitute": "Epoetin Alfa (Procrit®) 30,000 units\nBi-weekly",
+          "facility": "All",
+          "page": 11
+        },
+        {
+          "ordered": "Darbepoetin alfa (Aranesp®) 200 mcg Bi-\nweekly",
+          "substitute": "Epoetin Alfa (Procrit®) 40,000 units\nBi-weekly",
+          "facility": "All",
+          "page": 12
+        },
+        {
+          "ordered": "Darbepoetin alfa (Aranesp®) 300 mcg Bi-\nweekly",
+          "substitute": "Epoetin Alfa (Procrit®) 80,000 units\nBi-weekly",
+          "facility": "All",
+          "page": 12
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "title": "Colony Stimulating Factors",
+      "notes": [],
+      "rows": [
+        {
+          "ordered": "Filgrastim (Neupogen®) any dose and\nfrequency",
+          "substitute": "TBO-Filgrastim (Granix®) same dose\nand frequency",
+          "facility": "All",
+          "page": 12
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "title": "Overactive bladder/ Bladder Dysfunction agents",
+      "notes": [],
+      "rows": [
+        {
+          "ordered": "Tolterodine 1mg BID",
+          "substitute": "Oxybutynin 2.5mg TID",
+          "facility": "All",
+          "page": 12
+        },
+        {
+          "ordered": "Tolterodine 2mg BID",
+          "substitute": "Oxybutynin 5mg TID",
+          "facility": "All",
+          "page": 12
+        },
+        {
+          "ordered": "Tolterodine LA 2mg daily",
+          "substitute": "Oxybutynin XL 5mg daily",
+          "facility": "All",
+          "page": 12
+        },
+        {
+          "ordered": "Tolterodine LA 4mg daily",
+          "substitute": "Oxybutynin XL 10mg daily",
+          "facility": "All",
+          "page": 12
+        },
+        {
+          "ordered": "Fesoterodine 4 mg daily",
+          "substitute": "Oxybutynin XL 5mg daily",
+          "facility": "All",
+          "page": 12
+        },
+        {
+          "ordered": "Fesoterodine 8 mg daily",
+          "substitute": "Oxybutynin XL 10mg daily",
+          "facility": "All",
+          "page": 12
+        },
+        {
+          "ordered": "Silodosin 4 mg daily or 8 mg daily",
+          "substitute": "Tamsulosin 0.4 mg daily",
+          "facility": "All",
+          "page": 12
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "title": "Alpha-1 Blockers",
+      "notes": [
+        "For patients on prazosin therapy for PTSD associated nightmares, providers may utilize the non-formulary template and patients should provide medication from home."
+      ],
+      "rows": [
+        {
+          "ordered": "Prazosin\n0.5mg BID ----------------------------------------→\n1mg BID ----------------------------------------→\n2mg BID ----------------------------------------→",
+          "substitute": "Doxazosin\n1mg daily\n2mg daily\n4mg daily",
+          "facility": "SH, NW, LSH",
+          "page": 12
+        },
+        {
+          "ordered": "Terazosin\n1mg daily ----------------------------------------→\n2mg daily ----------------------------------------→\n5mg daily ----------------------------------------→\n10mg daily ----------------------------------------→\n15mg daily ----------------------------------------→\n20mg daily ----------------------------------------→",
+          "substitute": "Doxazosin\n1mg daily\n2mg daily\n4mg daily\n8mg daily\n12mg daily\n16mg daily",
+          "facility": "SH, NW, LSH",
+          "page": 12
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "title": "Anti-histamines",
+      "notes": [],
+      "rows": [
+        {
+          "ordered": "Desloratidine 5mg daily",
+          "substitute": "Loratadine 10mg daily",
+          "facility": "All",
+          "page": 13
+        },
+        {
+          "ordered": "Fexofenadine 60mg BID",
+          "substitute": "Loratadine 10mg daily",
+          "facility": "All",
+          "page": 13
+        },
+        {
+          "ordered": "Fexofenadine 180mg daily",
+          "substitute": "Loratadine 10mg daily",
+          "facility": "All",
+          "page": 13
+        },
+        {
+          "ordered": "Fexofenadine 60mg/pseudoephedrine 120mg\n(Allegra-D® 12 hr.) daily",
+          "substitute": "Loratadine 5mg/pseudoephedrine 120mg\n(Claritin-D® 12 hr.) daily",
+          "facility": "All",
+          "page": 13
+        },
+        {
+          "ordered": "Levocetirizine 2.5mg",
+          "substitute": "Loratadine 5mg",
+          "facility": "All",
+          "page": 13
+        },
+        {
+          "ordered": "Levocetirizine 5mg",
+          "substitute": "Loratadine 10mg",
+          "facility": "All",
+          "page": 13
+        },
+        {
+          "ordered": "Azelastine 1 or 2 sprays each nostril BID",
+          "substitute": "Loratadine 10 mg po daily",
+          "facility": "All",
+          "page": 13
+        },
+        {
+          "ordered": "Azelastine 1 or 2 sprays each nostril qday or BID",
+          "substitute": "Loratadine 10 mg po daily",
+          "facility": "All",
+          "page": 13
+        },
+        {
+          "ordered": "Olopatadine 2 sprays each nostril BID",
+          "substitute": "Loratadine 10 mg po daily",
+          "facility": "All",
+          "page": 13
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "title": "Non-Steroidal Anti-Inflammatory Drugs",
+      "notes": [],
+      "rows": [
+        {
+          "ordered": "Naproxen Sodium (Aleve®) 220mg",
+          "substitute": "Naproxen (Naprosyn®) 250mg tab",
+          "facility": "All",
+          "page": 13
+        },
+        {
+          "ordered": "Indomethacin CR 75mg daily",
+          "substitute": "Indomethacin IR 25mg TID",
+          "facility": "All",
+          "page": 13
+        },
+        {
+          "ordered": "Indomethacin CR 75mg BID or q12h",
+          "substitute": "Indomethacin IR 50mg TID",
+          "facility": "All",
+          "page": 13
+        },
+        {
+          "ordered": "Indomethacin CR 150mg daily",
+          "substitute": "Indomethacin IR 50mg TID",
+          "facility": "All",
+          "page": 13
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "title": "Vitamins & Supplements",
+      "notes": [],
+      "rows": [
+        {
+          "ordered": "Potassium Chloride 8 mEq XR daily",
+          "substitute": "Potassium Chloride 10 mEq XR daily",
+          "facility": "All",
+          "page": 13
+        },
+        {
+          "ordered": "Potassium chloride oral liquid (Adults only)",
+          "substitute": "Potassium chloride powder",
+          "facility": "All",
+          "page": 13
+        },
+        {
+          "ordered": "Calcium (Caltrate®) 600mg daily",
+          "substitute": "Calcium carbonate (Oscal®) 500mg daily",
+          "facility": "All",
+          "page": 14
+        },
+        {
+          "ordered": "Calcium 600 + D, Caltrate® 600 + D, Posture®\nD, Caltrate® Plus, Calcium Carbonate 600mg +\nVitamin D daily",
+          "substitute": "Calcium 500mg + Vitamin D 125 units)\n(Oscal® 500 + D) daily",
+          "facility": "All",
+          "page": 14
+        },
+        {
+          "ordered": "Any brand multivitamin product daily",
+          "substitute": "Multivitamin with Minerals tab daily",
+          "facility": "All",
+          "page": 14
+        },
+        {
+          "ordered": "Folic acid-Cyanocobalamin-Pyridoxine (any\nproducts containing this combination including\nFolgard®) - all strengths daily",
+          "substitute": "Folic acid 2mg + pyridoxine 25mg +\ncyanocobalamin 1000 mcg daily\n(substitute to nearest individual formulary\ndose)",
+          "facility": "All",
+          "page": 14
+        },
+        {
+          "ordered": "Rena-vite or Rena-vite Rx",
+          "substitute": "Nephro-vite",
+          "facility": "All",
+          "page": 14
+        },
+        {
+          "ordered": "Nephrocap or Nephro-vite Rx",
+          "substitute": "Nephro-vite",
+          "facility": "All",
+          "page": 14
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "title": "Inhaled short acting beta agonists and inhaled steroids",
+      "notes": [],
+      "rows": [
+        {
+          "ordered": "Levalbuterol 0.63 mg or 1.25 mg nebs TID or QID",
+          "substitute": "Albuterol 2.5 mg nebs (adults and peds) QID\n(q1-4 hr.: use same frequency",
+          "facility": "All",
+          "page": 14
+        },
+        {
+          "ordered": "Levalbuterol inhaler",
+          "substitute": "Albuterol inhaler - use same dose + frequency",
+          "facility": "All",
+          "page": 14
+        },
+        {
+          "ordered": "Ipratropium bromide/albuterol (Combivent®)\ninhaler\nQ4 hr., q6 hr., q8 hr., TID, QID",
+          "substitute": "Ipratropium bromide/albuterol (Duoneb®)\nnebs\n{same frequency}",
+          "facility": "All",
+          "page": 14
+        },
+        {
+          "ordered": "Mometasone/formoterol (Dulera) 100-5 mcg",
+          "substitute": "Budesonide/formoterol 80-4.5mcg\n{same frequency, normally 2 puffs BID}",
+          "facility": "All",
+          "page": 14
+        },
+        {
+          "ordered": "Mometasone/formoterol (Dulera) 200-5 mcg",
+          "substitute": "Budesonide/formoterol 160-4.5mcg\n{same frequency, normally 2 puffs BID}",
+          "facility": "All",
+          "page": 14
+        },
+        {
+          "ordered": "Fluticasone/salmeterol (Advair) DPI 100/50 1 puff\nBID",
+          "substitute": "Budesonide 80mcg/formoterol 4.5mg\n2 puffs BID",
+          "facility": "All",
+          "page": 14
+        },
+        {
+          "ordered": "Fluticasone/salmeterol (Advair) DPI 250/50 1 puff\nBID",
+          "substitute": "Budesonide 160mcg/formoterol 4.5mg\n2 puffs BID",
+          "facility": "All",
+          "page": 14
+        },
+        {
+          "ordered": "Fluticasone/salmeterol (Advair) DPI 500/50 1 puff\nBID",
+          "substitute": "Budesonide 160mcg/formoterol 4.5mg\n2 puffs BID",
+          "facility": "All",
+          "page": 14
+        },
+        {
+          "ordered": "Fluticasone/salmeterol (Advair) HFA 45/21mcg 2\npuffs BID",
+          "substitute": "Budesonide 80mcg/formoterol 4.5mg\n2 puffs BID",
+          "facility": "All",
+          "page": 14
+        },
+        {
+          "ordered": "Fluticasone/salmeterol (Advair) HFA 115/21mcg 2\npuffs BID",
+          "substitute": "Budesonide 160mcg/formoterol 4.5mg\n2 puffs BID",
+          "facility": "All",
+          "page": 14
+        },
+        {
+          "ordered": "Fluticasone/salmeterol (Advair) HFA 230/21mcg 2\npuffs BID",
+          "substitute": "Budesonide 160mcg/formoterol 4.5mg\n2 puffs BID",
+          "facility": "All",
+          "page": 15
+        },
+        {
+          "ordered": "Fluticasone furoate/vilanterol DPI (Breo Ellipta)\n100mcg/25mcg, 1 puff once daily",
+          "substitute": "Budesonide 160mcg/formoterol 4.5mg\n1 puffs BID",
+          "facility": "All",
+          "page": 15
+        },
+        {
+          "ordered": "Fluticasone furoate/vilanterol DPI (Breo Ellipta)\n200mcg/25mcg, 1 puff once daily",
+          "substitute": "Budesonide 160mcg/formoterol 4.5mg\n2 puffs BID",
+          "facility": "All",
+          "page": 15
+        },
+        {
+          "ordered": "Fluticasone propionate HFA (Flovent) 220mcg\n1 puff BID -----------------------------------------------→\n2 puffs BID ----------------------------------------------→",
+          "substitute": "Fluticasone propionate HFA (Flovent) 110mcg\n2 puffs BID\n4 puffs BID",
+          "facility": "All",
+          "page": 15
+        },
+        {
+          "ordered": "Fluticasone furoate (Arnuity Ellipta)\n100mcg/day -----------------------------------------------→\n200mcg/day ----------------------------------------------→",
+          "substitute": "Fluticasone propionate HFA (Flovent)\n110mcg BID\n440mcg BID",
+          "facility": "All",
+          "page": 15
+        },
+        {
+          "ordered": "Beclomethasone dipropionate (Qvar Redihaler)\n40mcg/inh, 1 puff BID ---------------------------------→\n80mcg/inh, 1 puff BID ---------------------------------→",
+          "substitute": "Fluticasone propionate HFA (Flovent)\n44mcg/inh, 1 puff BID\n110mcg/inh, 1 puff BID",
+          "facility": "All",
+          "page": 15
+        },
+        {
+          "ordered": "Budesonide/Glycopyrrolate/Formoterol Fumarate\n(Breztri Aerosphere)\n2 puffs BID",
+          "substitute": "Budesonide 160mcg/formoterol 4.5mg 2 puffs\nBID\n+\nTiotropium 2.5mcg- 2 puffs qdaily",
+          "facility": "All",
+          "page": 15
+        },
+        {
+          "ordered": "Fluticasone Furoate/Umeclidinium/Vilanterol\n(Trelegy Ellipta)\n100/62.5/25mcg 1 puff qdaily ------------------------→\n200/62.5/25 1 puff qdaily -----------------------------→",
+          "substitute": "Budesonide 80mcg/formoterol 4.5mg 2 puffs\nBID + tiotropium 2.5mcg 1 puffs qdaily\nBudesonide 160mcg/formoterol 4.5mg 2 puffs\nBID + tiotropium 2.5mcg 2 puffs qdaily",
+          "facility": "All",
+          "page": 15
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "title": "Nasal Sprays",
+      "notes": [],
+      "rows": [
+        {
+          "ordered": "Beclomethasone (Beconase® AQ) 1 spray each nostril\ntwice daily",
+          "substitute": "Fluticasone propionate (Flonase®) 1 spray\neach nostril daily",
+          "facility": "All",
+          "page": 15
+        },
+        {
+          "ordered": "Triamcinolone (Nasocort®, Nasocort® AQ) 2 spray\neach nostril daily",
+          "substitute": "Fluticasone propionate (Flonase®) 1 spray\neach nostril daily",
+          "facility": "All",
+          "page": 15
+        },
+        {
+          "ordered": "Budesonide (Rhinocort® Aqua) 1 spray each nostril\ndaily",
+          "substitute": "Fluticasone propionate (Flonase®) 1 spray\neach nostril daily",
+          "facility": "All",
+          "page": 15
+        },
+        {
+          "ordered": "Mometasone (Nasonex®) 2 sprays each nostril daily",
+          "substitute": "Fluticasone propionate (Flonase®) 1 spray\neach nostril daily",
+          "facility": "All",
+          "page": 15
+        },
+        {
+          "ordered": "Fluticasone furoate (Veramyst®) 2 sprays each nostril\ndaily",
+          "substitute": "Fluticasone propionate (Flonase®) 2 sprays\neach nostril daily",
+          "facility": "All",
+          "page": 15
+        },
+        {
+          "ordered": "Ciclesonide (Omnaris®) 2 sprays in each nostril daily",
+          "substitute": "Fluticasone propionate (Flonase®) 2 sprays\neach nostril daily",
+          "facility": "All",
+          "page": 15
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "title": "Topical Steroids",
+      "notes": [],
+      "rows": [
+        {
+          "ordered": "Desonide (Tridesilon, Desowen®) 0.05% cream,\nointment",
+          "substitute": "Hydrocortisone 2.5% cream, ointment",
+          "facility": "All",
+          "page": 16,
+          "subgroup": "Low Potency Agents"
+        },
+        {
+          "ordered": "Fluocinolone (Synalar®) 0.01% cream",
+          "substitute": "Hydrocortisone 2.5% cream",
+          "facility": "All",
+          "page": 16,
+          "subgroup": "Low Potency Agents"
+        },
+        {
+          "ordered": "Triamcinolone 0.025% cream or ointment",
+          "substitute": "Triamcinolone 0.1% cream or ointment",
+          "facility": "All",
+          "page": 16,
+          "subgroup": "Medium Potency Agents"
+        },
+        {
+          "ordered": "Betamethasone Dipropionate (Diprosone®) 0.05%\nLotion Qday",
+          "substitute": "Triamcinolone (Kenalog®) 0.1% lotion\nBID or TID",
+          "facility": "All",
+          "page": 16,
+          "subgroup": "Medium Potency Agents"
+        },
+        {
+          "ordered": "Betamethasone Valerate (Valisone®) 0.1% cream,\nointment",
+          "substitute": "Triamcinolone (Kenalog®) 0.1% cream or\nointment",
+          "facility": "All",
+          "page": 16,
+          "subgroup": "Medium Potency Agents"
+        },
+        {
+          "ordered": "Fluocinolone Acetonide (Synalar®) 0.025% cream,\nointment\nBID --------------------------------------------------------→\nTID --------------------------------------------------------→\nQID --------------------------------------------------------→",
+          "substitute": "Triamcinolone (Kenalog®) 0.1% cream or\nointment\nQday\nBID\nTID",
+          "facility": "All",
+          "page": 16,
+          "subgroup": "Medium Potency Agents"
+        },
+        {
+          "ordered": "Hydrocortisone Valerate (Westcort®) 0.2% cream,\nointment",
+          "substitute": "Triamcinolone (Kenalog®) 0.1% cream or\nointment",
+          "facility": "All",
+          "page": 16,
+          "subgroup": "Medium Potency Agents"
+        },
+        {
+          "ordered": "Mometasone (Elocon®) 0.01% lotion",
+          "substitute": "Triamcinolone (Aristocort®, Kenalog®)\n0.1% lotion",
+          "facility": "All",
+          "page": 16,
+          "subgroup": "Medium Potency Agents"
+        },
+        {
+          "ordered": "Mometasone (Elocon®) 0.1% cream",
+          "substitute": "Triamcinolone (Kenalog®) 0.1% cream",
+          "facility": "All",
+          "page": 16,
+          "subgroup": "Medium Potency Agents"
+        },
+        {
+          "ordered": "Desoximetasone (Topicort®) 0.05% cream",
+          "substitute": "Triamcinolone (Kenalog®) 0.5% cream",
+          "facility": "All",
+          "page": 16,
+          "subgroup": "High Potency Agents"
+        },
+        {
+          "ordered": "Desoximetasone (Topicort®) LP 0.05% emollient",
+          "substitute": "Triamcinolone (Kenalog®) 0.5% cream",
+          "facility": "All",
+          "page": 16,
+          "subgroup": "High Potency Agents"
+        },
+        {
+          "ordered": "Desoximethasone (Topicort®) 0.25% ointment, cream\nBID",
+          "substitute": "Triamcinolone (Kenalog®) 0.5% ointment,\ncream BID",
+          "facility": "All",
+          "page": 16,
+          "subgroup": "High Potency Agents"
+        },
+        {
+          "ordered": "Diflorasone 0.05% (Florone®) ointment, cream\n1-3 times/day",
+          "substitute": "Triamcinolone (Kenalog®) 0.5% ointment,\ncream 1-3x/day",
+          "facility": "All",
+          "page": 16,
+          "subgroup": "High Potency Agents"
+        },
+        {
+          "ordered": "Diflorasone (Florone® E) emollient\n1-4 times/day",
+          "substitute": "Triamcinolone (Kenalog®) 0.5% cream Qday",
+          "facility": "All",
+          "page": 17,
+          "subgroup": "High Potency Agents"
+        },
+        {
+          "ordered": "Betamethasone Dipropionate (Diprosone®) 0.05%\ncream",
+          "substitute": "Fluocinonide 0.1% (Lidex®, Lidex®-E)\ncream",
+          "facility": "All",
+          "page": 17,
+          "subgroup": "High Potency Agents"
+        },
+        {
+          "ordered": "Betamethasone Dipropionate (Diprosone®) 0.05%\nointment",
+          "substitute": "Triamcinolone 0.5% ointment",
+          "facility": "All",
+          "page": 17,
+          "subgroup": "High Potency Agents"
+        },
+        {
+          "ordered": "Fluocinonide 0.05% cream and ointment",
+          "substitute": "Triamcinolone 0.5% cream or ointment",
+          "facility": "All",
+          "page": 17,
+          "subgroup": "High Potency Agents"
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "title": "Otic drops",
+      "notes": [],
+      "rows": [
+        {
+          "ordered": "Ciprofloxacin/hydrocortisone otic suspension (Cipro\nHC®) 3 drops BID",
+          "substitute": "Ciprofloxacin otic solution 0.25 ml (one\nsingle-dose container) BID",
+          "facility": "All",
+          "page": 17
+        },
+        {
+          "ordered": "Ciprofloxacin/dexamethasone otic suspension\n(Ciprodex®) 4 drops BID",
+          "substitute": "Adults and Pediatrics > 1 year of age:\nCiprofloxacin otic solution 0.25ml (one sing-\ndose container) BID",
+          "facility": "All",
+          "page": 17
+        },
+        {
+          "ordered": "Ofloxacin otic 10 drops BID",
+          "substitute": "Ciprofloxacin otic solution 0.25ml (one sing-\ndose container) BID",
+          "facility": "All",
+          "page": 17
+        },
+        {
+          "ordered": "Ofloxacin otic 10 drops daily",
+          "substitute": "Ciprofloxacin otic solution 0.25ml (one sing-\ndose container) BID",
+          "facility": "All",
+          "page": 17
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "title": "Ophthalmic Agents",
+      "notes": [],
+      "rows": [
+        {
+          "ordered": "Bimatoprost 0.01% (Lumigan®)\n1 drop into affected eye (s) once daily in the evening",
+          "substitute": "Latanaprost 0.005% (Xalatan®)\n1 drop into affected eye (s) once daily in the\nevening",
+          "facility": "All",
+          "page": 17
+        },
+        {
+          "ordered": "Bimatoprost 0.03% (Lumigan®)\n1 drop into affected eye (s) once daily in the evening",
+          "substitute": "Latanaprost 0.005% (Xalatan®)\n1 drop into affected eye (s) once daily in the\nevening",
+          "facility": "All",
+          "page": 17
+        },
+        {
+          "ordered": "Tafluprost 0.0015% (Zioptan®)\n1 drop into affected eye (s) once daily in the evening",
+          "substitute": "Latanaprost 0.005% (Xalatan®)\n1 drop into affected eye (s) once daily in the\nevening",
+          "facility": "All",
+          "page": 17
+        },
+        {
+          "ordered": "Travoprost 0.004% (Travatan®)\n1 drop into affected eye (s) once daily in the evening",
+          "substitute": "Latanaprost 0.005% (Xalatan®)\n1 drop into affected eye (s) once daily in the\nevening",
+          "facility": "All",
+          "page": 17
+        },
+        {
+          "ordered": "Brinzolamide 1% (Azopt®) 1 drop in affected eye(s)\ntwo to three times daily",
+          "substitute": "Dorzolamide 2%\n1 drop in affected eye(s) two or three times\ndaily",
+          "facility": "All",
+          "page": 17
+        },
+        {
+          "ordered": "Brinzolamide 1% and Brimonidine 0.2%\n(Simbrinza®)\n1 drop in affected eye(s) three times daily",
+          "substitute": "Dorzolamide 2%\n1 drop in affected eye(s) three times daily\nAND\nBrimonidine 0.2%\n1 drop in affected eye(s) three times daily",
+          "facility": "All",
+          "page": 17,
+          "pageEnd": 18
+        },
+        {
+          "ordered": "Brimonidine and Timolol 0.2%-0.5% (Combigan®)\n1 drop in affected eye(s) three times daily",
+          "substitute": "Brimonidine (0.2%)\n1 drop in affected eye(s) twice daily\nAND\nTimolol (0.5%)\n1 drop in affected eye(s) twice daily",
+          "facility": "All",
+          "page": 18
+        },
+        {
+          "ordered": "Olopatadine 0.1% (Patanol®) 1 drop in each eye BID",
+          "substitute": "Ketotifen 0.025% ophthalmic 1 drop in each\neye BID",
+          "facility": "All",
+          "page": 18
+        },
+        {
+          "ordered": "Olopatadine 0.2% (Pataday®) 1 drop in each eye daily",
+          "substitute": "Ketotifen 0.025% ophthalmic 1 drop in each\neye BID",
+          "facility": "All",
+          "page": 18
+        },
+        {
+          "ordered": "Apraclonidine 0.5% or 1`% (Iopidine®)\nUp to 6 drops in affected eye(s) three times daily",
+          "substitute": "Brimonidine 0.2% (Alphagan P®)\n1 drop in affected eye(s) three times daily",
+          "facility": "All",
+          "page": 18
+        },
+        {
+          "ordered": "Brimonidine 0.1% (Alphagan P®)\n1 drop in affected eye(s) three times daily",
+          "substitute": "Brimonidine 0.2% (Alphagan P®)\n1 drop in affected eye(s) three times daily",
+          "facility": "All",
+          "page": 18
+        },
+        {
+          "ordered": "Brimonidine 0.15% (Alphagan P®)\n1 drop in affected eye(s) three times daily",
+          "substitute": "Brimonidine 0.2% (Alphagan P®)\n1 drop in affected eye(s) three times daily",
+          "facility": "All",
+          "page": 18
+        },
+        {
+          "ordered": "Betaxolol (0.25%) susp (Betoptic®)\n1 drop in affected eye(s) twice daily",
+          "substitute": "Timolol (0.25%)\n1 drop in affected eye(s) twice daily",
+          "facility": "All",
+          "page": 18
+        },
+        {
+          "ordered": "Levobunonolol (0.25%) (Betagan®)\n1 drop in affected eye(s) twice daily",
+          "substitute": "Timolol (0.25%)\n1 drop in affected eye(s) twice daily",
+          "facility": "All",
+          "page": 18
+        },
+        {
+          "ordered": "Timolol hemihydrate (Betimol®) 0.25%\n1 drop in affected eye(s) twice daily",
+          "substitute": "Timolol (0.25%)\n1 drop in affected eye(s) twice daily",
+          "facility": "All",
+          "page": 18
+        },
+        {
+          "ordered": "Carteolol (1%) (Cartol®)\n1 drop in affected eye(s) twice daily",
+          "substitute": "Timolol (0.5%)\n1 drop in affected eye(s) twice daily",
+          "facility": "All",
+          "page": 18
+        },
+        {
+          "ordered": "Levobunolol (0.5%) (Betagan®)\n1-2 drops in affected eye(s) once daily",
+          "substitute": "Timolol (0.5%)\n1 drop in affected eye(s) twice daily",
+          "facility": "All",
+          "page": 18
+        },
+        {
+          "ordered": "Timolol hemihydrate (Betimol®) 0.5%\n1 drop in affected eye(s) twice daily",
+          "substitute": "Timolol (0.5%)\n1 drop in affected eye(s) twice daily",
+          "facility": "All",
+          "page": 18
+        },
+        {
+          "ordered": "Timolol XE (0.25% and 0.5%) (Timoptic XE®)\n1 drop in affected eye(s) once daily",
+          "substitute": "Timolol (0.5%)\n1 drop in affected eye(s) twice daily",
+          "facility": "All",
+          "page": 18
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "title": "HIV (Antiretroviral) Agents",
+      "notes": [],
+      "rows": [
+        {
+          "ordered": "Raltegravir film-coated tab (Isentress® HD)\n1200mg Qday",
+          "substitute": "Raltegravir film-coated tab (Isentress®) 400mg\nBID",
+          "facility": "All",
+          "page": 18
+        },
+        {
+          "ordered": "Prezcobix 1 tablet once daily",
+          "substitute": "darunavir 800mg 1 tablet once daily\n+\nTybost (cobicistat) 150mg 1 tablet once daily",
+          "facility": "All",
+          "page": 18
+        },
+        {
+          "ordered": "Triumeq 1 tablet once daily",
+          "substitute": "Epizcom (abacavir 600mg/lamivudine 300mg)\n1 tablet once daily\n+\nTivicay (dolutegravir 50mg) 1 tablet once daily",
+          "facility": "All",
+          "page": 18
+        },
+        {
+          "ordered": "Juluca 1 tablet once daily",
+          "substitute": "Edurant (rilpivirine 25mg) 1 tablet once daily\n+\nTivicay (dolutegravir 50mg) 1 tablet once daily",
+          "facility": "All",
+          "page": 19
+        },
+        {
+          "ordered": "Combivir 1 tablet BID",
+          "substitute": "lamivudine 150mg 1 tablet BID\n+\nzidovudine 300mg 1 tablet BID",
+          "facility": "All",
+          "page": 19
+        },
+        {
+          "ordered": "Evotaz 1 tablet once daily",
+          "substitute": "atazanavir 300mg 1 tablet once daily\n+\nTybost (cobicistat) 1 tablet once daily",
+          "facility": "All",
+          "page": 19
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "title": "Other Miscellaneous Agents",
+      "notes": [],
+      "rows": [
+        {
+          "ordered": "Carvedilol (Coreg®) CR\n10mg -------------------------------------------------------→\n20mg -------------------------------------------------------→\n40mg -------------------------------------------------------→\n80mg -------------------------------------------------------→",
+          "substitute": "Carvedilol (Coreg®) IR\n3.125mg BID\n6.25mg BID\n12.5mg BID\n25mg BID",
+          "facility": "All",
+          "page": 19
+        },
+        {
+          "ordered": "Niacin IR (all doses)",
+          "substitute": "Niacin ER 500mg qHS",
+          "facility": "SH, NW, LSH",
+          "page": 19
+        },
+        {
+          "ordered": "Bupropion (Wellbutrin®) XL\n150mg qdaily ---------------------------------------------→\n300mg qdaily ---------------------------------------------→\n450mg qdaily ---------------------------------------------→",
+          "substitute": "Bupropion (Wellbutrin®) SR\n150mg qdaily\n150mg BID\n150mg TID",
+          "facility": "SH, NW, LSH",
+          "page": 19
+        },
+        {
+          "ordered": "Megestrol Acetate Suspension (Megace ES®)\n625mg/5ml",
+          "substitute": "Megestrol Acetate Suspension 800mg/20ml",
+          "facility": "All",
+          "page": 19
+        },
+        {
+          "ordered": "Promethazine (Phenergan)\n6.25 mg IV or IM ----------------------------------------→\n12.5 mg IV or IM ----------------------------------------→\n25 mg IV or IM ----------------------------------------→",
+          "substitute": "Prochlorperazine (Compazine)\n2.5 mg IV or IM\n5 mg IV or IM\n10 mg IV or IM",
+          "facility": "All",
+          "page": 19
+        },
+        {
+          "ordered": "Lidocaine 5% transdermal patch or Lidocaine\n3.6%/menthol 1.25% transdermal patch\n{1-3 patches, 12 hrs. on 12 hrs. off)",
+          "substitute": "Lidocaine 4% transdermal patch\n{1-3 patches, 12 hrs. on 12 hrs. off}",
+          "facility": "All",
+          "page": 19
+        },
+        {
+          "ordered": "Infliximab (Remicade®) infusion (Adult outpatients)",
+          "substitute": "Infliximab (Renflexis®) infusion (Adult\noutpatients)\n* All inpatient adults to receive Renflexis® as per\nrestriction criteria",
+          "facility": "All",
+          "page": 19
+        },
+        {
+          "ordered": "Any theophylline SR/ ER tablets",
+          "substitute": "Theo-24 SR capsules\n{same dose, given once a day}",
+          "facility": "All",
+          "page": 19
+        },
+        {
+          "ordered": "Suboxone (buprenorphine/naloxone) SL tablets",
+          "substitute": "Buprenorphine SL tablets\n{1:1 conversion of buprenorphine\ncomponent. Ex 2mg-0.5mg Suboxone = 2mg\nbuprenorphine}",
+          "facility": "All",
+          "page": 19
+        },
+        {
+          "ordered": "Zubsolv (buprenorphine/naloxone) SL tablets\n1.4mg/0.36mg ----------------------------------------→\n2.9mg/0.71mg ----------------------------------------→\n5.7mg/1.4mg -----------------------------------------→\n8.6mg/2.1mg -----------------------------------------→\n11.4mg/2.9mg ----------------------------------------→",
+          "substitute": "Buprenorphine SL tablets\n2mg\n4mg\n8mg\n12mg\n16mg",
+          "facility": "All",
+          "page": 19,
+          "pageEnd": 20
+        },
+        {
+          "ordered": "Spiriva HandiHaler (tiotropium) -------------------→\nTudorza Pressair (aclidinium) ----------------------→\nIncruse Ellipta (umeclidium) -----------------------→",
+          "substitute": "Spiriva respimat 2.5mcg 2 inhalations once\ndaily",
+          "facility": "All",
+          "page": 20
+        },
+        {
+          "ordered": "Hydrocortisone/pramoxine 1-1% cream-----------→",
+          "substitute": "Hydrocortisone/pramoxine 2.5-1% cream",
+          "facility": "All",
+          "page": 20
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "title": "Substitutions Reserved for Drug Shortages",
+      "notes": [
+        "These substitutions are reserved for drug shortages."
+      ],
+      "rows": [
+        {
+          "ordered": "Phosphorus 250 mg/sodium 160 mg/potassium 280\nmg packet (Neutra-Phos®)",
+          "substitute": "Phosphorus 250 mg/sodium 298 mg/potassium\n45 mg tablet\n(Phospha Neutral®)",
+          "facility": "All",
+          "page": 20
+        },
+        {
+          "ordered": "Methylprednisolone\n20mg IV---------------------------------------------------→\n40mg IV ---------------------------------------------------→\n60mg IV ---------------------------------------------------→\n80mg IV----------------------------------------------------→\n100mg IV--------------------------------------------------→\n120 (125mg) IV ------------------------------------------→",
+          "substitute": "Dexamethasone\n4mg IV\n8mg IV\n12mg IV\n16mg IV\n20mg IV\n24mg IV",
+          "facility": "All",
+          "page": 20
+        },
+        {
+          "ordered": "Magnesium 2gm IV premix bags",
+          "substitute": "Magnesium 1gm IV x 2 bags",
+          "facility": "All",
+          "page": 20
+        },
+        {
+          "ordered": "Potassium Phosphate and Sodium Phosphate IV",
+          "substitute": "Sodium Glycerophosphate IV",
+          "facility": "All",
+          "page": 20
+        },
+        {
+          "ordered": "Dextrose 50%, 50 ml syringe and vials",
+          "substitute": "Dextrose 10%, 250ml",
+          "facility": "All",
+          "page": 20
+        },
+        {
+          "ordered": "Retacrit",
+          "substitute": "Procrit",
+          "facility": "All",
+          "page": 20
+        },
+        {
+          "ordered": "Lidocaine 4% transdermal patch",
+          "substitute": "Lidocaine 5% or Lidocaine 3.6%/menthol 1.25%",
+          "facility": "All",
+          "page": 20
+        },
+        {
+          "ordered": "Lantus (insulin glargine)",
+          "substitute": "Semglee (insulin glargine-yfgn)",
+          "facility": "All",
+          "page": 20
+        }
+      ]
+    }
+  ]
+}

@@ -4,7 +4,7 @@ Last verified: 2026-08-11 EDT
 Evidence: Git/GitHub, Vercel CLI, live HTTP probes, local lint/build/audit
 
 ## Current objective
-Continue one authoritative protocol at a time after the accepted and corrected Do Not Tube pilot.
+Complete independent review and beta-only release of the fully reconciled January 2026 Therapeutic Substitution source.
 
 ## Verified state
 - Canonical clone: `/Users/gummyserver/Developer/jarvis/active/lbh-protocols-beta`
@@ -41,10 +41,21 @@ Continue one authoritative protocol at a time after the accepted and corrected D
 - Verified correction commit `4de82ff` was pushed and deployed only to `lbh-protocols-beta` as deployment `6Mv7zEJ9EuuMYwAP22GjdaHYrgwf`; immutable URL is `https://lbh-protocols-beta-bkckengnn-gummys-projects-8bf81988.vercel.app`.
 - Production verification confirms `clevidipine (Cleviprex®)` is present, `cevidipine (Cleviprex®)` is absent, TPN is a compact 46 px card, all 14 categories remain rendered, the console has zero errors, and the hosted PDF still matches the approved SHA-256/size.
 - Protected legacy remains HTTP 200 with no deployment newer than eight days.
+- The January 2026 Therapeutic Substitution PDF is user-designated authoritative, cleared for public hosting/no redaction, and preserved unchanged at `/references/lbh-therapeutic-substitution-list-2026-01-inhaler-go-live.pdf` (469,423 bytes; SHA-256 `51472c2ac457a625c3cac30684157376f48978b0fa8a6b13b911c60a70156360`).
+- Every one of 20 pages was extracted, rendered, and visually reviewed; three independent page-range inventories covered pages 1–7, 8–14, and 15–20.
+- Reconciliation yields 31 sections and 296 complete clinical rows after merging three page-continuation fragments and treating three potency labels as subgroup headings; visually merged vaginal-antifungal substitution applies to all ten orders.
+- All identified governing notes, facility scopes, source-page locations, and source-visible anomalies are represented. No silent clinical correction was made.
+- The prior six unsupported placeholder substitutions were replaced rather than merged.
+- Local Therapeutic Substitution UI now provides all-source search, compact 31-section index, collapsed sections, dense tables, governing warnings, facility and page traceability, direct source link, and central References linkage.
+- Initial independent review failed release on two blockers: the ACE-inhibitor warning omitted the explicit `if equivalent lisinopril doses exceed 40mg during T.sub.` trigger, and note matches were incorrectly counted/displayed as matches for every row in a section.
+- Both blockers are corrected source-first. The ACE warning is restored verbatim and exact-tested. Search now distinguishes direct row matches from section-title/note context; browser verification reports U-500 as one direct row plus one context match, and PTSD/ACE note queries as zero direct rows plus one context match.
+- A mobile horizontal-table swipe cue was added. The temporary normalized generator now reproduces the corrected 31-section/296-row JSON byte-for-byte.
+- Corrected validation passes 32 tests, lint, TypeScript, production build, audit, diff checks, staged PDF/model integrity, browser search checks, and zero console errors. Fresh independent re-review is in progress; commit/deployment remain blocked until PASS.
 
 ## Exact next actions
-1. Receive the next current, public-hosting-cleared protocol.
-2. Repeat the one-document source-preservation, reconciliation, implementation, review, and beta-release workflow.
+1. Obtain PASS from the fresh source-fidelity/UI/engineering re-review and resolve any new blocker.
+2. Reassert final staged integrity and beta target after review.
+3. Commit, push, deploy only to `lbh-protocols-beta`, and production-verify UI/search/source hash plus protected-legacy isolation.
 
 ## Hazards
 - Never link, deploy, alias, or promote against `lbh-protocols` legacy.
