@@ -89,6 +89,9 @@ The source has three numbered reference groups; group 1 contains two sub-citatio
 - Mobile 390×844: zero document overflow; source link visible; swipe cue visible; 760px table contained within a 324px horizontal scroll region.
 
 ## Release state
-- Source-reconciled and traceability-complete locally.
+- Released and production-verified on beta only.
 - Public-hosting authorization confirmed.
-- Fresh independent re-review after the search correction and citation-hierarchy correction returned PASS with no release blockers; beta-only commit/deployment and production verification remain pending.
+- Fresh independent re-review after the search correction and citation-hierarchy correction returned PASS with no release blockers.
+- Application commit: `ee0b802`.
+- Vercel deployment: `dpl_D1VQciJovN43UfWmDWURvoXT8tUb` (`https://lbh-protocols-beta-mjh7bvb0r-gummys-projects-8bf81988.vercel.app`).
+- Canonical beta browser/source-byte verification passed; protected legacy remained unchanged on `dpl_9B425JWD4PwPnxKM3sUQDPvfuXMa`.

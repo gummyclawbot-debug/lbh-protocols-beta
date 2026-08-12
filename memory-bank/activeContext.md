@@ -4,7 +4,7 @@ Last verified: 2026-08-12 EDT
 Evidence: Git/GitHub, Vercel CLI, live HTTP probes, local lint/build/audit
 
 ## Current objective
-Complete independent review and beta-only release of the fully reconciled January 2026 Do Not Crush source.
+Keep the verified January 2026 Do Not Crush beta release stable while publishing the completed accomplishment to Obsidian Project OS and Aegis Control.
 
 ## Verified state
 - Canonical clone: `/Users/gummyserver/Developer/jarvis/active/lbh-protocols-beta`
@@ -62,12 +62,15 @@ Complete independent review and beta-only release of the fully reconciled Januar
 - The generic 12-row placeholder was removed rather than merged. Local UI now provides all-field search, direct-row versus context semantics, compact collapsed source tables, complete administration comments, page traceability, governing notes, references, mobile swipe guidance, and direct source linkage.
 - A clean extraction rebuild is byte-identical to the structured JSON. Full local gate passes 40 tests, lint, TypeScript, production build, zero-vulnerability audit, PDF/model integrity, security scans, desktop/mobile browser checks, References checks, and zero console errors.
 - Initial independent UX review blocked shipment because `25ml water` did not match source text `25ml of water`. Token-aware all-field matching now returns exactly Cenobamate/Xcopri for both queries while retaining direct-row/context separation; the corrected full gate and real 390px browser matrix pass. Fresh independent UX re-review returned PASS with no release blockers.
+- Verified application commit `ee0b802` was pushed and deployed only to `lbh-protocols-beta` as `dpl_D1VQciJovN43UfWmDWURvoXT8tUb`; immutable URL is `https://lbh-protocols-beta-mjh7bvb0r-gummys-projects-8bf81988.vercel.app` and canonical alias is `https://lbh-protocols-beta.vercel.app`.
+- Canonical production verification passes the full DNC browser contract: both `25ml water` forms return one Cenobamate row, small-bore query remains context-only, Revlimid remains one pp. 1–2 row, citation labels are `1(a), 1(b), 2, 3`, all four tables default collapsed, References has three approved cards, document overflow is zero, and console errors are zero.
+- The production PDF returns HTTP 200 `application/pdf`, 208,396 bytes, SHA-256 `402c62b6c53ee91bb83cbee19716fe88728291d1841a7574e20570767bf6a92e`, and is byte-identical to the approved upload.
+- Protected legacy remained unchanged on deployment `dpl_9B425JWD4PwPnxKM3sUQDPvfuXMa` before and after the beta release.
 
 ## Exact next actions
-1. Commit and push the exact independently reviewed Do Not Crush candidate.
-2. Reassert `.vercel/project.json` targets `lbh-protocols-beta`, then deploy only that project.
-3. Verify canonical beta UI/search/References/source bytes and protected-legacy deployment identity.
-4. Update this Memory Bank, Obsidian Project OS/daily note, and Aegis Control with real release evidence.
+1. Commit and push this evidence-only Memory Bank handoff.
+2. Update Obsidian Project OS and the 2026-08-12 daily note with verified release evidence.
+3. Publish only those targeted accomplishment entries to Aegis Control and production-verify them.
 
 ## Hazards
 - Never link, deploy, alias, or promote against `lbh-protocols` legacy.
