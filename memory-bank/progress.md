@@ -15,8 +15,8 @@
 - Sixteen clinical calculation/protocol-data characterization and invariant tests.
 - Independent pre-commit review; documentation freshness findings resolved.
 
-## In progress
-- Commit, push, beta-only production deployment, and live verification.
+## Current phase
+- Source provenance, human clinical review ownership, and beta acceptance planning.
 
 ## Remaining
 - Reconcile every clinical rule with authoritative source/protocol provenance.
@@ -31,3 +31,5 @@
 - 2026-08-03: Vercel Next.js framework pin (`6a516ba`).
 - 2026-08-09: canonical clone reconciled; duplicate preserved non-destructively.
 - 2026-08-11: resumed active development; local Vercel pointer corrected to beta and hardening branch opened.
+- 2026-08-11: hardening baseline committed as `a2cf97f`; 16 tests, lint, TypeScript, build, audit, independent review, and browser smoke checks passed.
+- 2026-08-11: beta deployment `dpl_AqwWengiSirqrAZMLGGfFJAaroFT` reached Ready and canonical beta returned HTTP 200; protected legacy remained unchanged.
