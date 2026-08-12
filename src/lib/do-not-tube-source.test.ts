@@ -86,7 +86,7 @@ describe("approved Do Not Tube institutional source", () => {
       "vaccines",
       "lipids",
       "propofol",
-      "cevidipine (Cleviprex®)",
+      "clevidipine (Cleviprex®)",
       "epoprostenol",
       'monoclonal antibodies (“-mabs”)',
       "epoetin products ex.: Retacrit, Epogen, Procrit",

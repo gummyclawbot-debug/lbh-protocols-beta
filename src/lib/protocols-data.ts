@@ -195,7 +195,7 @@ export const DO_NOT_TUBE_PROTOCOL = {
             "vaccines",
             "lipids",
             "propofol",
-            "cevidipine (Cleviprex®)",
+            "clevidipine (Cleviprex®)",
             "epoprostenol",
             'monoclonal antibodies (“-mabs”)',
             "epoetin products ex.: Retacrit, Epogen, Procrit",
@@ -330,7 +330,7 @@ export const NAV = [
   { id: "insulin-switch" as const, label: "Insulin Switch", shortLabel: "Insulin Switch", emoji: "💉", description: "Insulin product conversions" },
   { id: "he" as const, label: "Hepatic Encephalopathy", shortLabel: "HE", emoji: "🧠", description: "HE supportive treatment pathway" },
   { id: "hiv" as const, label: "HIV Formulary", shortLabel: "HIV", emoji: "💊", description: "Preferred HIV regimens" },
-  { id: "dnt" as const, label: "Do Not Tube", shortLabel: "DNT", emoji: "🚫", description: "Medications not for pneumatic tube" },
+  { id: "dnt" as const, label: "Do Not Tube", shortLabel: "DNT", emoji: "🚫", description: "Items not for pneumatic tube" },
   { id: "dnc" as const, label: "Do Not Crush", shortLabel: "DNC", emoji: "🚫", description: "Medications that must not be crushed" },
   { id: "references" as const, label: "References", shortLabel: "References", emoji: "📚", description: "Original approved institutional protocols" },
 ];

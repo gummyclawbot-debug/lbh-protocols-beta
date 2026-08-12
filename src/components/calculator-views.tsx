@@ -471,9 +471,12 @@ function DntView() {
         onChange={(e) => setQ(e.target.value)}
         className="mb-4 max-w-xl"
       />
-      <div className="space-y-3">
+      <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
         {categories.map((category) => (
-          <section key={category.number} className="rounded-xl border border-destructive/20 bg-destructive/5 p-4">
+          <section
+            key={category.number}
+            className={`rounded-xl border border-destructive/20 bg-destructive/5 p-3 ${category.number === 1 ? "md:col-span-2 xl:col-span-3" : ""}`}
+          >
             <div className="flex gap-3">
               <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-destructive text-xs font-bold text-destructive-foreground">
                 {category.number}
@@ -484,9 +487,9 @@ function DntView() {
                   <p className="mt-1 text-sm leading-relaxed">{category.detail}</p>
                 ) : null}
                 {category.groups ? (
-                  <div className="mt-3 grid gap-3 md:grid-cols-2">
+                  <div className="mt-3 columns-1 gap-3 lg:columns-2 2xl:columns-3">
                     {category.groups.map((group) => (
-                      <div key={group.title} className="rounded-lg border bg-background/80 p-3">
+                      <div key={group.title} className="mb-3 break-inside-avoid rounded-lg border bg-background/80 p-3">
                         <h4 className="text-sm font-semibold">{group.title}</h4>
                         {group.items ? (
                           <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-muted-foreground">

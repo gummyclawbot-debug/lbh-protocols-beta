@@ -20,7 +20,8 @@
 - The PDF is image-based. Ordinary text extraction returned only the added heading `Refer to Policy Tech “Pneumatic Tube” Policy`.
 - The embedded appendix was rendered at 3× and medication content at 5× for direct visual transcription.
 - Every numbered category, subgroup, example, warning, exception, limit, and footer was checked against the rendered page.
-- Source spellings/punctuation intentionally preserved include `cevidipine`, `Novoseven`, `Lugols`, `Dakins`, and `epoetin products ex.:`.
+- Source spellings/punctuation preserved include `Novoseven`, `Lugols`, `Dakins`, and `epoetin products ex.:`.
+- **Approved rendered correction (2026-08-11):** Jarvis identified the source-visible `cevidipine` as a typo and explicitly approved rendering the medication as `clevidipine (Cleviprex®)`. The immutable original PDF is unchanged, and this source-to-render correction is covered by the exact-array test.
 
 ## Source-to-UI/test traceability
 | Source location | Approved content | UI destination | Test evidence |
@@ -80,5 +81,5 @@ None. All clinically/operationally meaningful source content is represented in t
 - `source-reconciled`: yes
 - `traceability-complete`: yes
 - `clinically-reviewed`: inherited from Jarvis’s designation of the current hospital-approved protocol; no additional committee metadata invented
-- `accepted-beta`: pending Jarvis review of the pilot result
+- `accepted-beta`: yes — Jarvis reviewed the pilot on 2026-08-11 and said it looks good, with an approved `clevidipine` correction and compact-layout request
 - `released-beta`: yes — deployment `DsSetWgDviAFEbVDwnaRwCtyyw4H`, verified 2026-08-11 EDT

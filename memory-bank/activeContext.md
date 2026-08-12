@@ -4,7 +4,7 @@ Last verified: 2026-08-11 EDT
 Evidence: Git/GitHub, Vercel CLI, live HTTP probes, local lint/build/audit
 
 ## Current objective
-Obtain Jarvis acceptance of the released first approved-protocol pilot, then continue one authoritative protocol at a time.
+Release Jarvis-approved Do Not Tube corrections (`clevidipine` and compact reference layout), then continue one authoritative protocol at a time.
 
 ## Verified state
 - Canonical clone: `/Users/gummyserver/Developer/jarvis/active/lbh-protocols-beta`
@@ -35,10 +35,13 @@ Obtain Jarvis acceptance of the released first approved-protocol pilot, then con
 - Verified commit `45fa6fa` was pushed and deployed only to `lbh-protocols-beta` as deployment `DsSetWgDviAFEbVDwnaRwCtyyw4H`; immutable URL is `https://lbh-protocols-beta-b096qt14o-gummys-projects-8bf81988.vercel.app`.
 - Canonical beta and hosted PDF return HTTP 200. The live PDF is 153,387 bytes and SHA-256-identical to the approved source. Production browser review shows all 14 categories and zero console errors.
 - Protected legacy remains HTTP 200 and its newest deployment is still eight days old; it received no deployment from this work.
+- Jarvis reviewed the pilot, said it looks good, corrected `cevidipine` to `clevidipine`, and flagged excessive scrolling/blank space around TPN. Treat this as beta acceptance plus an explicit rendered-content correction.
+- The immutable PDF remains unchanged. Structured data/tests now render `clevidipine (Cleviprex®)` and the source record documents the source-to-render correction.
+- Do Not Tube medication groups now use non-stretching responsive columns; TPN no longer inherits a tall neighboring card. Categories 2–14 use a compact responsive grid to reduce scrolling.
 
 ## Exact next actions
-1. Present the pilot completeness/reconciliation evidence to Jarvis for `accepted-beta` confirmation.
-2. If accepted, record acceptance without modifying the immutable source artifact.
+1. Run independent review and final gates for the approved correction/compact layout.
+2. Deploy only to beta and verify text, TPN height, compact layout, source hash, and untouched legacy.
 3. Receive the next current, public-hosting-cleared protocol and repeat the one-document workflow.
 
 ## Hazards
