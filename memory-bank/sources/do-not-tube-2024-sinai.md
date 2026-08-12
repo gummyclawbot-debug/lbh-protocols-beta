@@ -82,4 +82,4 @@ None. All clinically/operationally meaningful source content is represented in t
 - `traceability-complete`: yes
 - `clinically-reviewed`: inherited from Jarvis’s designation of the current hospital-approved protocol; no additional committee metadata invented
 - `accepted-beta`: yes — Jarvis reviewed the pilot on 2026-08-11 and said it looks good, with an approved `clevidipine` correction and compact-layout request
-- `released-beta`: yes — deployment `DsSetWgDviAFEbVDwnaRwCtyyw4H`, verified 2026-08-11 EDT
+- `released-beta`: yes — initial deployment `DsSetWgDviAFEbVDwnaRwCtyyw4H`; accepted correction/layout deployment `6Mv7zEJ9EuuMYwAP22GjdaHYrgwf`, verified 2026-08-11 EDT

@@ -4,7 +4,7 @@ Last verified: 2026-08-11 EDT
 Evidence: Git/GitHub, Vercel CLI, live HTTP probes, local lint/build/audit
 
 ## Current objective
-Release Jarvis-approved Do Not Tube corrections (`clevidipine` and compact reference layout), then continue one authoritative protocol at a time.
+Continue one authoritative protocol at a time after the accepted and corrected Do Not Tube pilot.
 
 ## Verified state
 - Canonical clone: `/Users/gummyserver/Developer/jarvis/active/lbh-protocols-beta`
@@ -38,11 +38,13 @@ Release Jarvis-approved Do Not Tube corrections (`clevidipine` and compact refer
 - Jarvis reviewed the pilot, said it looks good, corrected `cevidipine` to `clevidipine`, and flagged excessive scrolling/blank space around TPN. Treat this as beta acceptance plus an explicit rendered-content correction.
 - The immutable PDF remains unchanged. Structured data/tests now render `clevidipine (Cleviprex®)` and the source record documents the source-to-render correction.
 - Do Not Tube medication groups now use non-stretching responsive columns; TPN no longer inherits a tall neighboring card. Categories 2–14 use a compact responsive grid to reduce scrolling.
+- Verified correction commit `4de82ff` was pushed and deployed only to `lbh-protocols-beta` as deployment `6Mv7zEJ9EuuMYwAP22GjdaHYrgwf`; immutable URL is `https://lbh-protocols-beta-bkckengnn-gummys-projects-8bf81988.vercel.app`.
+- Production verification confirms `clevidipine (Cleviprex®)` is present, `cevidipine (Cleviprex®)` is absent, TPN is a compact 46 px card, all 14 categories remain rendered, the console has zero errors, and the hosted PDF still matches the approved SHA-256/size.
+- Protected legacy remains HTTP 200 with no deployment newer than eight days.
 
 ## Exact next actions
-1. Run independent review and final gates for the approved correction/compact layout.
-2. Deploy only to beta and verify text, TPN height, compact layout, source hash, and untouched legacy.
-3. Receive the next current, public-hosting-cleared protocol and repeat the one-document workflow.
+1. Receive the next current, public-hosting-cleared protocol.
+2. Repeat the one-document source-preservation, reconciliation, implementation, review, and beta-release workflow.
 
 ## Hazards
 - Never link, deploy, alias, or promote against `lbh-protocols` legacy.
