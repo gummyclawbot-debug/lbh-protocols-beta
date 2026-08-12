@@ -63,4 +63,10 @@ Unchecked sites are not represented as approved scope.
 - `src/lib/protocols-data.test.ts` — 17-row count and non-empty field invariants.
 
 ## Release state
-- Implementation candidate only; release evidence is recorded after independent review and beta-only deployment verification.
+- Released and production-verified on beta only.
+- Two independent governed-source and engineering/security/deployment-isolation reviews returned PASS with no blockers against frozen index tree `e36a27851c7d30c6ad47f26a963e724970ad78e1`.
+- Application commit: `3cac604`.
+- Vercel deployment: `8R76Yi53AYQLiESwqs2sBJW2jaJ2` (`https://lbh-protocols-beta-c4tmrw81a-gummys-projects-8bf81988.vercel.app`).
+- Canonical `https://lbh-protocols-beta.vercel.app` and the hosted PDF return HTTP 200. The production PDF is `application/pdf`, `%PDF-`, 98,239 bytes, and exact SHA-256 `e4396eb39eb1bbcfd935bdcb35b6b4f00b68dfd9520f843bce5a7429f0ca5932`.
+- Production browser verification confirms all 17 rows, the approved `1mg PO Q24H` correction, MRSA search returning the single Clindamycin row, visible expiration disclosure, complete governing notes, and zero console errors.
+- Protected legacy remained HTTP 200 and received no new deployment; its newest deployment remains nine days old.

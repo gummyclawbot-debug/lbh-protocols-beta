@@ -4,7 +4,7 @@ Last verified: 2026-08-12 EDT
 Evidence: Git/GitHub, Vercel CLI, live HTTP probes, local lint/build/audit
 
 ## Current objective
-Keep the verified January 2026 Do Not Crush beta release stable while publishing the completed accomplishment to Obsidian Project OS and Aegis Control.
+Keep the verified April 2024 IV-to-Enteral beta release stable and continue reconciling remaining clinical tabs one authoritative source at a time.
 
 ## Verified state
 - Canonical clone: `/Users/gummyserver/Developer/jarvis/active/lbh-protocols-beta`
@@ -66,11 +66,19 @@ Keep the verified January 2026 Do Not Crush beta release stable while publishing
 - Canonical production verification passes the full DNC browser contract: both `25ml water` forms return one Cenobamate row, small-bore query remains context-only, Revlimid remains one pp. 1–2 row, citation labels are `1(a), 1(b), 2, 3`, all four tables default collapsed, References has three approved cards, document overflow is zero, and console errors are zero.
 - The production PDF returns HTTP 200 `application/pdf`, 208,396 bytes, SHA-256 `402c62b6c53ee91bb83cbee19716fe88728291d1841a7574e20570767bf6a92e`, and is byte-identical to the approved upload.
 - Protected legacy remained unchanged on deployment `dpl_9B425JWD4PwPnxKM3sUQDPvfuXMa` before and after the beta release.
+- The April 2024 `Appendix A: Medications Approved for Pharmacist IV to Enteral Conversion` is user-designated current authoritative despite its visible 01/31/2025 expiration date and is explicitly cleared for unchanged public hosting after hidden author metadata disclosure.
+- Its immutable source is preserved at `/references/lbh-iv-to-enteral-conversion-appendix-a-2024-04.pdf` (98,239 bytes; SHA-256 `e4396eb39eb1bbcfd935bdcb35b6b4f00b68dfd9520f843bce5a7429f0ca5932`). The one page was extracted, rendered at high resolution, and visually reviewed.
+- All 17 source rows, five checked facilities, three governing notes, merged instructions, route-specific options, and qualifiers are modeled. Ten unsupported placeholder rows were replaced rather than merged.
+- Jarvis approved rendering the source-visible Folic Acid text `1mg PO 24H` as `1mg PO Q24H`; the immutable PDF remains unchanged and provenance/tests disclose and pin the correction.
+- Full validation passes 45 tests, lint, TypeScript, production build, zero-vulnerability audit, PDF/model integrity, local/production browser search/UI checks, and zero console errors.
+- Two independent reviews returned PASS with no blockers against frozen index tree `e36a27851c7d30c6ad47f26a963e724970ad78e1`.
+- Verified commit `3cac604` was pushed and deployed only to `lbh-protocols-beta` as deployment `8R76Yi53AYQLiESwqs2sBJW2jaJ2`; immutable URL is `https://lbh-protocols-beta-c4tmrw81a-gummys-projects-8bf81988.vercel.app` and canonical alias is `https://lbh-protocols-beta.vercel.app`.
+- Canonical app/source return HTTP 200; the live PDF is `%PDF-`, `application/pdf`, 98,239 bytes, and exact SHA-256. Production confirms all 17 rows, corrected Folic Acid, MRSA→Clindamycin search, complete notes, visible expiration disclosure, and zero console errors.
+- Protected legacy remains HTTP 200 with no new deployment; its newest deployment remains nine days old.
 
 ## Exact next actions
 1. Commit and push this evidence-only Memory Bank handoff.
-2. Update Obsidian Project OS and the 2026-08-12 daily note with verified release evidence.
-3. Publish only those targeted accomplishment entries to Aegis Control and production-verify them.
+2. Await the next authoritative clinical source and ingest only one protocol at a time.
 
 ## Hazards
 - Never link, deploy, alias, or promote against `lbh-protocols` legacy.
