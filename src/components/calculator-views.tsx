@@ -4,7 +4,6 @@ import * as React from "react";
 import { motion } from "framer-motion";
 import { PatientProfileCard } from "@/components/patient-profile-card";
 import { usePatient } from "@/components/patient-provider";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
