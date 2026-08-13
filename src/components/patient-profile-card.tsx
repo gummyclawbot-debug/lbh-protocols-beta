@@ -83,8 +83,8 @@ export function PatientProfileCard({ className }: { className?: string }) {
                 type="number"
                 min={18}
                 max={120}
-                value={patient.age}
-                onChange={(e) => setAge(Number(e.target.value))}
+                value={patient.age ?? ""}
+                onChange={(e) => setAge(e.target.value === "" ? null : Number(e.target.value))}
               />
               <span className="pointer-events-none absolute top-1/2 right-3 -translate-y-1/2 text-xs text-muted-foreground">
                 yrs
@@ -100,8 +100,8 @@ export function PatientProfileCard({ className }: { className?: string }) {
                 type="number"
                 min={120}
                 max={220}
-                value={patient.heightCm}
-                onChange={(e) => setHeightCm(Number(e.target.value))}
+                value={patient.heightCm ?? ""}
+                onChange={(e) => setHeightCm(e.target.value === "" ? null : Number(e.target.value))}
               />
               <span className="pointer-events-none absolute top-1/2 right-3 -translate-y-1/2 text-xs text-muted-foreground">
                 cm
@@ -117,8 +117,8 @@ export function PatientProfileCard({ className }: { className?: string }) {
                 type="number"
                 min={30}
                 max={300}
-                value={patient.weightKg}
-                onChange={(e) => setWeightKg(Number(e.target.value))}
+                value={patient.weightKg ?? ""}
+                onChange={(e) => setWeightKg(e.target.value === "" ? null : Number(e.target.value))}
               />
               <span className="pointer-events-none absolute top-1/2 right-3 -translate-y-1/2 text-xs text-muted-foreground">
                 kg
@@ -135,8 +135,8 @@ export function PatientProfileCard({ className }: { className?: string }) {
                 min={0.3}
                 max={15}
                 step={0.1}
-                value={patient.scr}
-                onChange={(e) => setScr(Number(e.target.value))}
+                value={patient.scr ?? ""}
+                onChange={(e) => setScr(e.target.value === "" ? null : Number(e.target.value))}
               />
               <span className="pointer-events-none absolute top-1/2 right-3 -translate-y-1/2 text-xs text-muted-foreground">
                 mg/dL

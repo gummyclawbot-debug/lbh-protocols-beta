@@ -1,10 +1,22 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
+import { DEFAULT_PATIENT, derivePatient } from "../lib/calculations";
 
 const readSource = (path: string) => readFileSync(join(process.cwd(), path), "utf8");
 
 describe("global Clear All", () => {
+  it("starts and clears with blank patient numeric parameters", () => {
+    expect(DEFAULT_PATIENT).toEqual({
+      sex: "M",
+      age: null,
+      heightCm: null,
+      weightKg: null,
+      scr: null,
+    });
+    expect(Object.values(derivePatient(DEFAULT_PATIENT)).every(Number.isNaN)).toBe(true);
+  });
+
   it("resets the shared patient and remounts every active-view parameter owner", () => {
     const provider = readSource("src/components/patient-provider.tsx");
     const views = readSource("src/components/calculator-views.tsx");

@@ -2,10 +2,10 @@ export type Sex = "M" | "F";
 
 export interface PatientProfile {
   sex: Sex;
-  age: number;
-  heightCm: number;
-  weightKg: number;
-  scr: number;
+  age: number | null;
+  heightCm: number | null;
+  weightKg: number | null;
+  scr: number | null;
 }
 
 export interface PatientDerived {

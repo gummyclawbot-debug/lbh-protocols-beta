@@ -2,10 +2,10 @@ import type { PatientDerived, PatientProfile, Sex } from "@/types/patient";
 
 export const DEFAULT_PATIENT: PatientProfile = {
   sex: "M",
-  age: 65,
-  heightCm: 175,
-  weightKg: 85,
-  scr: 1.2,
+  age: null,
+  heightCm: null,
+  weightKg: null,
+  scr: null,
 };
 
 export function cmToInches(cm: number): number {
@@ -44,6 +44,17 @@ export function cockcroftGault(
 }
 
 export function derivePatient(p: PatientProfile): PatientDerived {
+  if (p.age == null || p.heightCm == null || p.weightKg == null || p.scr == null) {
+    return {
+      bmi: Number.NaN,
+      ibwKg: Number.NaN,
+      adjBwKg: Number.NaN,
+      dosingWtKg: Number.NaN,
+      crclAbw: Number.NaN,
+      crclIbw: Number.NaN,
+      heightIn: Number.NaN,
+    };
+  }
   const heightIn = cmToInches(p.heightCm);
   const bmi = bodyMassIndex(p.weightKg, p.heightCm);
   const ibwKg = idealBodyWeight(p.sex, heightIn);

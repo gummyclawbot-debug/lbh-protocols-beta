@@ -11,10 +11,10 @@ type PatientContextValue = {
   patient: PatientProfile;
   derived: PatientDerived;
   setSex: (sex: Sex) => void;
-  setAge: (age: number) => void;
-  setHeightCm: (cm: number) => void;
-  setWeightKg: (kg: number) => void;
-  setScr: (scr: number) => void;
+  setAge: (age: number | null) => void;
+  setHeightCm: (cm: number | null) => void;
+  setWeightKg: (kg: number | null) => void;
+  setScr: (scr: number | null) => void;
   resetVersion: number;
   clearAll: () => void;
 };
