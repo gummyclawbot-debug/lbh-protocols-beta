@@ -91,6 +91,9 @@ Keep the verified April 2024 IV-to-Enteral beta release stable and continue reco
 - Blank input restores all 21 sections/109 entries; punctuation-only input renders an explicit zero-result state. Filtered disclosures reliably reopen when the query changes, and result status uses `aria-live="polite"`.
 - The final interaction candidate passed 54 tests, lint, TypeScript, production build, zero-vulnerability audit, browser/mobile accessibility probes, and two independent PASS reviews on tree `9b72ecaf78eae3460f6681725e0693d5d090365e`.
 - Verified commit `9c344f9` was pushed and deployed only to `lbh-protocols-beta` as `dpl_2LJev8cWmbn8ZkfPmcFhpXe9W9rg`; canonical production search behavior, exact source PDF integrity, zero overflow, and zero console errors all passed. Protected legacy remained HTTP 200 and byte-identical before/after.
+- Restrictions tab source context was reordered at user request: search remains first, followed by the complete alphabetic medication list/search results and provenance disclosures; the title/January 2026 description and complete governing source note now appear exactly once at the bottom.
+- Exact wording and all nine alerts/13 corrections remain unchanged. The layout passed 55 tests, full engineering gates, desktop/mobile browser checks, and two independent PASS reviews on tree `9de1a3514f346906c1e203d2a30431d2e1e38a41`.
+- Verified commit `7d6663a` deployed only to beta as `dpl_7ATU9rYpuw8xV7c2Evmcxpj6n3c9`; canonical order and `pert` full-section highlighting passed with no overflow or console errors. Protected legacy remained byte-identical.
 
 ## Exact next actions
 1. Commit and push this evidence-only Memory Bank handoff.
