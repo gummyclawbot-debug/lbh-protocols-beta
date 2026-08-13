@@ -5,6 +5,7 @@ import { describe, expect, it } from "vitest";
 import {
   FORMULARY_RESTRICTIONS_PROTOCOL,
   PROTOCOL_REFERENCES,
+  resolveFormularyRestrictionLookup,
   searchFormularyRestrictions,
 } from "./protocols-data";
 
@@ -152,5 +153,47 @@ describe("approved January 2026 Formulary Medications with Restrictions source",
     expect(searchFormularyRestrictions("CrCl 30").flatMap((section) => section.entries).map((item) => item.medication)).toContain("Sugammadex");
     expect(searchFormularyRestrictions("pediatric only").flatMap((section) => section.entries).map((item) => item.medication)).toContain("Cefdinir");
     expect(searchFormularyRestrictions("definitely-not-a-source-term")).toEqual([]);
+  });
+
+  it("opens a complete alphabetic section and identifies only real medication-name matches", () => {
+    const prefixLookup = resolveFormularyRestrictionLookup("pra");
+    expect(prefixLookup.sections.map((section) => section.letter)).toEqual(["P"]);
+    expect(prefixLookup.sections[0]?.entries).toHaveLength(6);
+    expect(prefixLookup.matchingMedicationNames).toEqual([]);
+
+    const matchingLookup = resolveFormularyRestrictionLookup("pert");
+    expect(matchingLookup.sections.map((section) => section.letter)).toEqual(["P"]);
+    expect(matchingLookup.sections[0]?.entries).toHaveLength(6);
+    expect(matchingLookup.matchingMedicationNames).toEqual([
+      "Pertuzumab",
+      "Pertuzumab/Trastuzumab/Hyaluronidase-zzxf (PHESGO)",
+    ]);
+
+    const absentMedication = resolveFormularyRestrictionLookup("prazosin");
+    expect(absentMedication.sections.map((section) => section.letter)).toEqual(["P"]);
+    expect(absentMedication.sections[0]?.entries).toHaveLength(6);
+    expect(absentMedication.matchingMedicationNames).toEqual([]);
+
+    const exactMedication = resolveFormularyRestrictionLookup("Sugammadex");
+    expect(exactMedication.sections.map((section) => section.letter)).toEqual(["S"]);
+    expect(exactMedication.sections[0]?.entries).toHaveLength(5);
+    expect(exactMedication.matchingMedicationNames).toEqual(["Sugammadex"]);
+
+    const punctuatedMedication = resolveFormularyRestrictionLookup("Ceftazidime-Avibactam");
+    expect(punctuatedMedication.sections.map((section) => section.letter)).toEqual(["C"]);
+    expect(punctuatedMedication.matchingMedicationNames).toEqual(["Ceftazidime-Avibactam"]);
+
+    const singleCriterion = resolveFormularyRestrictionLookup("pediatric");
+    expect(singleCriterion.mode).toBe("criteria");
+    expect(singleCriterion.directEntryMatchCount).toBeGreaterThan(0);
+    expect(singleCriterion.sections.flatMap((section) => section.entries).map((entry) => entry.medication)).toContain("Cefdinir");
+
+    expect(resolveFormularyRestrictionLookup("   ").mode).toBe("all");
+    expect(resolveFormularyRestrictionLookup("!!!")).toEqual({
+      sections: [],
+      matchingMedicationNames: [],
+      directEntryMatchCount: 0,
+      mode: "none",
+    });
   });
 });

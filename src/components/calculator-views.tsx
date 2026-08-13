@@ -27,8 +27,8 @@ import {
   NAV,
   RENAL_DOSING,
   PROTOCOL_REFERENCES,
+  resolveFormularyRestrictionLookup,
   searchDoNotCrush,
-  searchFormularyRestrictions,
   searchIvEnteral,
   searchTherapeuticSubstitutions,
   THERAPEUTIC_SUBSTITUTION_PROTOCOL,
@@ -501,8 +501,38 @@ function IvPoView() {
 function RestrictionsView() {
   const [query, setQuery] = React.useState("");
   const normalizedQuery = query.trim();
-  const sections = searchFormularyRestrictions(query);
-  const resultCount = sections.reduce((total, section) => total + section.entries.length, 0);
+  const lookup = resolveFormularyRestrictionLookup(query);
+  const sections = lookup.sections;
+  const matchingMedicationNames = new Set(lookup.matchingMedicationNames);
+
+  const lookupSummary = (() => {
+    if (lookup.mode === "all") {
+      return "21 alphabetic source sections · 109 complete medication entries · facility scope and source-page traceability preserved.";
+    }
+    if (lookup.mode === "medication") {
+      return `${lookup.directEntryMatchCount} matching ${lookup.directEntryMatchCount === 1 ? "medication" : "medications"}; showing ${sections.length === 1 ? `the complete ${sections[0]?.letter} section` : `${sections.length} complete sections`}.`;
+    }
+    if (lookup.mode === "criteria") {
+      return `${lookup.directEntryMatchCount} matching ${lookup.directEntryMatchCount === 1 ? "restriction entry" : "restriction entries"}; complete matching sections are expanded.`;
+    }
+    if (lookup.mode === "alphabetic") {
+      return `Showing the complete ${sections[0]?.letter} section. No medication name in the approved source matches “${normalizedQuery}”.`;
+    }
+    return `No approved source section or entry matches “${normalizedQuery}”.`;
+  })();
+
+  const highlightMedication = (medication: string) => {
+    if (!matchingMedicationNames.has(medication)) return medication;
+    const tokens = [...new Set(normalizedQuery.toLowerCase().split(/[^a-z0-9]+/).filter(Boolean))]
+      .sort((a, b) => b.length - a.length)
+      .map((token) => token.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
+    const pattern = new RegExp(`(${tokens.join("|")})`, "gi");
+    return medication.split(pattern).map((part, index) =>
+      tokens.some((token) => new RegExp(`^${token}$`, "i").test(part))
+        ? <mark key={`${part}-${index}`} className="rounded bg-yellow-300 px-0.5 text-black dark:bg-yellow-300 dark:text-black">{part}</mark>
+        : <React.Fragment key={`${part}-${index}`}>{part}</React.Fragment>,
+    );
+  };
 
   return (
     <Panel
@@ -531,10 +561,8 @@ function RestrictionsView() {
               <FileText className="size-4" /> Open approved source <ExternalLink className="size-3.5" />
             </a>
           </div>
-          <p className="mt-2 text-xs text-muted-foreground">
-            {normalizedQuery
-              ? `${resultCount} direct ${resultCount === 1 ? "entry match" : "entry matches"} across ${sections.length} ${sections.length === 1 ? "section" : "sections"}.`
-              : "21 alphabetic source sections · 109 complete medication entries · facility scope and source-page traceability preserved."}
+          <p aria-live="polite" className="mt-2 text-xs text-muted-foreground">
+            {lookupSummary}
           </p>
         </div>
 
@@ -562,7 +590,7 @@ function RestrictionsView() {
             {sections.map((section) => (
               <details
                 id={`restriction-section-${section.letter.replace(/[^a-z0-9]/gi, "-")}`}
-                key={section.letter}
+                key={`${section.letter}-${normalizedQuery.toLowerCase()}`}
                 open={normalizedQuery ? true : undefined}
                 className="group scroll-mt-32 overflow-hidden rounded-xl border"
               >
@@ -578,7 +606,7 @@ function RestrictionsView() {
                     <article key={`${entry.page}-${entry.medication}`} className="p-4 hover:bg-muted/20">
                       <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
                         <div>
-                          <h3 className="font-semibold">{entry.medication}</h3>
+                          <h3 className="font-semibold">{highlightMedication(entry.medication)}</h3>
                           {entry.scope ? <p className="mt-0.5 text-xs font-medium text-primary">{entry.scope}</p> : null}
                         </div>
                         <span className="shrink-0 text-xs text-muted-foreground">
@@ -596,7 +624,7 @@ function RestrictionsView() {
           </div>
         ) : (
           <div className="rounded-xl border border-dashed p-8 text-center text-sm text-muted-foreground">
-            No approved source entry matches “{query}”.
+            No approved source section or entry matches “{query}”.
           </div>
         )}
 

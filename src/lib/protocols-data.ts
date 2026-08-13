@@ -258,6 +258,92 @@ export function searchFormularyRestrictions(query: string) {
     .filter((section) => section.entries.length > 0);
 }
 
+export type FormularyRestrictionLookup = {
+  sections: FormularyRestrictionSection[];
+  matchingMedicationNames: string[];
+  directEntryMatchCount: number;
+  mode: "all" | "medication" | "criteria" | "alphabetic" | "none";
+};
+
+export function resolveFormularyRestrictionLookup(query: string): FormularyRestrictionLookup {
+  const normalizedQuery = query.trim().toLowerCase();
+  const tokens = normalizedQuery.split(/[^a-z0-9]+/).filter(Boolean);
+  if (!normalizedQuery) {
+    return {
+      sections: FORMULARY_RESTRICTIONS_PROTOCOL.sections,
+      matchingMedicationNames: [],
+      directEntryMatchCount: 0,
+      mode: "all",
+    };
+  }
+  if (!tokens.length) {
+    return { sections: [], matchingMedicationNames: [], directEntryMatchCount: 0, mode: "none" };
+  }
+
+  const medicationMatches = FORMULARY_RESTRICTIONS_PROTOCOL.sections.flatMap((section) =>
+    section.entries
+      .filter((entry) => {
+        const medicationWords = entry.medication.toLowerCase().split(/[^a-z0-9]+/).filter(Boolean);
+        return tokens.every((token) => medicationWords.some((word) => word.startsWith(token)));
+      })
+      .map((entry) => ({ letter: section.letter, medication: entry.medication })),
+  );
+  if (medicationMatches.length) {
+    const matchingLetters = new Set(medicationMatches.map((match) => match.letter));
+    return {
+      sections: FORMULARY_RESTRICTIONS_PROTOCOL.sections.filter((section) => matchingLetters.has(section.letter)),
+      matchingMedicationNames: medicationMatches.map((match) => match.medication),
+      directEntryMatchCount: medicationMatches.length,
+      mode: "medication",
+    };
+  }
+
+  // Multi-word input retains token-based criteria lookup. A single token is a
+  // criterion only when it occurs as a complete word; otherwise drug-like text
+  // falls back to its alphabetic section without substring collisions.
+  const directMatches = tokens.length > 1
+    ? searchFormularyRestrictions(tokens.join(" "))
+    : FORMULARY_RESTRICTIONS_PROTOCOL.sections
+        .map((section) => ({
+          ...section,
+          entries: section.entries.filter((entry) => {
+            const criteriaWords = [entry.scope, entry.restriction]
+              .join(" ")
+              .toLowerCase()
+              .split(/[^a-z0-9]+/)
+              .filter(Boolean);
+            return criteriaWords.includes(tokens[0]);
+          }),
+        }))
+        .filter((section) => section.entries.length > 0);
+  if (directMatches.length) {
+    const matchingLetters = new Set(directMatches.map((section) => section.letter));
+    return {
+      sections: FORMULARY_RESTRICTIONS_PROTOCOL.sections.filter((section) => matchingLetters.has(section.letter)),
+      matchingMedicationNames: [],
+      directEntryMatchCount: directMatches.reduce((total, section) => total + section.entries.length, 0),
+      mode: "criteria",
+    };
+  }
+
+  const initial = normalizedQuery.match(/[a-z]/)?.[0]?.toUpperCase();
+  const alphabeticSection = initial
+    ? FORMULARY_RESTRICTIONS_PROTOCOL.sections.find((section) =>
+        section.letter === initial || (section.letter === "U-Z" && /^[U-Z]$/.test(initial)),
+      )
+    : undefined;
+  if (alphabeticSection) {
+    return {
+      sections: [alphabeticSection],
+      matchingMedicationNames: [],
+      directEntryMatchCount: 0,
+      mode: "alphabetic",
+    };
+  }
+
+  return { sections: [], matchingMedicationNames: [], directEntryMatchCount: 0, mode: "none" };
+}
+
 export function searchIvEnteral(query: string) {
   const tokens = query.trim().toLowerCase().split(/\s+/).filter(Boolean);
   if (!tokens.length) return IV_ENTERAL_PROTOCOL.rows;
