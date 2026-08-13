@@ -1,0 +1,886 @@
+{
+  "source": {
+    "id": "formulary-restrictions-2026-01",
+    "title": "LifeBridge Health: Formulary Medications with Restrictions",
+    "updated": "January 2026",
+    "pageCount": 19,
+    "href": "/references/lbh-formulary-medications-with-restrictions-2026-01.pdf",
+    "sha256": "09eaebabb1e7f86af3e63da949547513471252225fb17b7bfa5a64ce602b8950",
+    "authority": "LBH institutional protocol; medical-board and P&T reviewed/approved",
+    "affectedViews": [
+      "restrictions"
+    ]
+  },
+  "governingNote": "Document will be updated as soon as possible after addition of new medications to formulary or based on changes to existing restrictions. Please note that delays may occur. Refer to the CPOE order alerts when available. Restriction date = date approved by LFRC.",
+  "sections": [
+    {
+      "letter": "A",
+      "entries": [
+        {
+          "medication": "Acetaminophen IV",
+          "scope": "(Sinai formulary only)",
+          "restriction": "a. Restriction update: 01/2021\nb. Pediatrics only: Any of the following\ni. Febrile pediatric patients when oral and rectal acetaminophen and\nalternative agents are contraindicated.\nii. One-time dose for preoperative pain management for pediatric patients\nundergoing oral or dental surgery at the Children’s Diagnostic Center who\ncannot for medical reasons or will not due to developmental disability or\nuncooperativeness receive rectal acetaminophen.\niii. Postoperative pain management limited to 72 hours for patients in the pediatric\nintensive care unit.",
+          "page": 2
+        },
+        {
+          "medication": "Adalimumab-bwwd (Hadlima)",
+          "scope": "(LBH) — inpatients to use this biosimilar only",
+          "restriction": "a. Restriction date: 09/2023\nb. Inpatients:\ni. Restricted to ordering by GI for induction dosing (new starts) in patients with\nsevere IBD who are not fully responding to steroids.\nii. Patients on maintenance therapy at home should provide their own medication\nfor administration while hospitalized.",
+          "page": 2
+        },
+        {
+          "medication": "Aflibercept",
+          "scope": "",
+          "restriction": "a. Restriction date: 01/2012\nb. For Krieger Eye Institute only",
+          "page": 2
+        },
+        {
+          "medication": "Alemtuzumab",
+          "scope": "(LBH)",
+          "restriction": "a. Restriction date: 09/2017\nb. Reserved for patients who have tried and failed two other MS treatments.\ni. Follow REMS criteria",
+          "page": 2
+        },
+        {
+          "medication": "Alvimopan",
+          "scope": "(Sinai, Northwest)",
+          "restriction": "a. Restriction update: 01/2020\nb. For ERAS protocol patients undergoing colorectal surgeries\ni. This medication is part of a Risk Evaluation and Mitigation Strategy (REMS) and\nrestricted to inpatients undergoing partial bowel resection with primary\nanastomosis on the Enhanced Recovery After Surgery (ERAS) Protocol. Cannot\nexceed a MAXIMUM of 7 doses during admission. Patient has NOT received 4 or\nmore therapeutic doses of opioids in the past 7 consecutive days PRIOR to first\ndose of Alvimopan. Patient does NOT have severe hepatic impairment, end-\nstage renal disease, complete gastrointestinal obstruction, or pancreatic/gastric\nanastomosis",
+          "page": 2
+        },
+        {
+          "medication": "Anakinra",
+          "scope": "(SH)",
+          "restriction": "a. Restriction date: 03/2025\nb. To be utilized by orthopedic surgeon for patients with recurrent arthrofibrosis of knee,\nundergoing repeat surgery. Administered in the OR. Limited to one time (200mg) intra-\narticular dose.",
+          "page": 3
+        },
+        {
+          "medication": "Aprepitant",
+          "scope": "(LBH)",
+          "restriction": "a. Restriction date: 05/2010; 02/2019\nb. Adults only for Outpatient oncology infusion center and Inpatients for Highly or\nmoderately emetic chemotherapy regimens.",
+          "page": 3
+        },
+        {
+          "medication": "Artesunate",
+          "scope": "(LBH)",
+          "restriction": "a. Restriction date: 11/2023\nb. Reserved for treatment of severe malaria. Limited to 3 doses (24 hours) initial therapy,\nafter which PO Coartem is recommended. Additional IV Artesunate doses may be\nadministered if parasite density is >1% after 3 doses.",
+          "page": 3
+        },
+        {
+          "medication": "Atezolizumab",
+          "scope": "(SH, NW, CH)",
+          "restriction": "a. Restriction date: 08/2016\nb. For outpatient infusion center use only",
+          "page": 3
+        },
+        {
+          "medication": "Aztreonam",
+          "scope": "(LBH)",
+          "restriction": "a. Refer to Restricted Antibiotic Policy 2020",
+          "page": 3
+        }
+      ]
+    },
+    {
+      "letter": "B",
+      "entries": [
+        {
+          "medication": "Belinostat",
+          "scope": "(LBH)",
+          "restriction": "a. Restriction date: 12/2021\nb. For outpatient infusion center use in patients with failure of two prior lines of\nchemotherapy or failure of stem cell transplantation.",
+          "page": 3
+        },
+        {
+          "medication": "Brivaracetam",
+          "scope": "(LBH)",
+          "restriction": "a. Restriction updated: 02/2020\nb. Any of the following:\ni. Patients who failed levetiracetam therapy\nii. Patients intolerant to levetiracetam related side effects\niii. Continuation of home therapy\niv. Patients failing 1st line benzodiazepines (BZD) or not appropriate for BZD\ntherapy as determined by neurologist, for acutely non-intubated patients",
+          "page": 3
+        },
+        {
+          "medication": "Budesonide respules",
+          "scope": "(LBH)",
+          "restriction": "a. Restriction updated: 05/2020\nb. Any of the following:\ni. pediatric patients\nii. Adult patients with an indication for ICS therapy who are intubated or require\ncontinuous BiPAP and are unable to receive MDI therapy with or without a\nspacer",
+          "page": 3,
+          "pageEnd": 4
+        },
+        {
+          "medication": "Bupivacaine liposomal",
+          "scope": "",
+          "restriction": "a. Formulary only at Northwest and Carroll hospitals",
+          "page": 4
+        }
+      ]
+    },
+    {
+      "letter": "C",
+      "entries": [
+        {
+          "medication": "Calaspargase pegol-mknl (Asparlas)",
+          "scope": "",
+          "restriction": "a. Restriction date: 07/2022\nb. For inpatient and outpatient infusion center formulary for pediatric hem/onc patients.",
+          "page": 4
+        },
+        {
+          "medication": "Calcitonin",
+          "scope": "(LBH)",
+          "restriction": "a. Restriction date: 2018\nb. Limit duration of use to 48 hours (2022, previously limited to 72 hours of therapy).\ni. Patient should have calcium level of >/=12mg/dl",
+          "page": 4
+        },
+        {
+          "medication": "Calcium IV",
+          "scope": "(Sinai- restriction due to drug shortage)",
+          "restriction": "a. Restriction date: 3/2017\nb. Injectable calcium is restricted to the following patients:\ni. Acute symptomatic hyperkalemia (EKG changes)\nii. Acute symptomatic hypermagnesemia\niii. Calcium channel blocker overdose\niv. Ionized calcium level </= 0.85 mmol/L\nv. Corrected Ca < 7.5 mg/dL\nvi. Acute symptomatic hypocalcemia\nvii. Cardiac surgery patients (POD 0-1)\nviii. S/P thyroidectomy and parathyroidectomy\nix. Patients requiring massive blood transfusion or requiring exchange transfusion\nx. Plasmapheresis\nxi. Pediatric and neonatal patients",
+          "page": 4
+        },
+        {
+          "medication": "Cangrelor",
+          "scope": "(SH, NW, CH)",
+          "restriction": "a. Restriction date: 01/2017,2019\nb. Cardiac Indications:\ni. Adjunct to PCI in patients who have not been treated with a P2Y12 platelet\ninhibitor and are not being given a glycoprotein IIb/IIIa inhibitor, who are unable\nto take oral medications.\nii. Adjunct to PCI in patients determined to need CABG after angiogram\niii. Bridge therapy to CABG in high risk patients requiring discontinuation of oral\nP2Y12 inhibitors.\nc. Neuro-Endovascular Procedures (off-label):\ni. Coil embolism\nii. Stent assisted coiling\niii. Flow diverters: pipeline embolization device",
+          "page": 4,
+          "pageEnd": 5
+        },
+        {
+          "medication": "Caplacizumab",
+          "scope": "(SH, NW, CH)",
+          "restriction": "a. Restriction date: 07/2020\nb. For use in inpatient and outpatient settings- must meet all criteria below:\ni. Caplacizumab naïve patients with diagnosis of first episode of acquired TTP to\nreduce risk of death and recurrence\nii. Requires hematology consult and approval for ordering\niii. For use in adult non-pregnant patients (≥ 18 y/o)\niv. To be used in conjunction with plasma exchange and immunosuppressive\ntherapy with platelet counts of < 100K.\nv. Continue caplacizumab for ADAMTS13 level < 10 U/dL or stop if ADAMTS13\nlevel > 10 U/dL. Maximum duration of therapy limited to 28 days\nvi. Exclude or do not administer caplacizumab in patients with coagulopathies\nand/or on active full dose- anticoagulation treatment",
+          "page": 5
+        },
+        {
+          "medication": "Cariprazine",
+          "scope": "(LBH)",
+          "restriction": "a. Restriction date: 01/2021\nb. Adults ≥ 18 years for any of the following indications:\ni. Continuation of home therapy\nii. New starts for bipolar disorder MRE mixed mania and bipolar disorder MRE\ndepression\niii. Schizophrenia after failure of ≥ 2 other atypical antipsychotics",
+          "page": 5
+        },
+        {
+          "medication": "Cefiderocol",
+          "scope": "(LBH)",
+          "restriction": "a. Restriction date: 11/2023\nb. Refer to Restricted Antibiotic Policy",
+          "page": 5
+        },
+        {
+          "medication": "Cefdinir",
+          "scope": "(SH, CH formulary only)",
+          "restriction": "a. Restriction date: ?\nb. For use in pediatrics only",
+          "page": 5
+        },
+        {
+          "medication": "Ceftaroline",
+          "scope": "(LBH)",
+          "restriction": "a. Refer to Restricted Antibiotic Policy",
+          "page": 5
+        },
+        {
+          "medication": "Ceftazidime",
+          "scope": "(LBH)",
+          "restriction": "a. Restriction date: 09/2024\nb. For patients with pseudomonal infections with known susceptibility to ceftazidime. Not\nfor empiric use.",
+          "page": 5
+        },
+        {
+          "medication": "Ceftazidime-Avibactam",
+          "scope": "(LBH)",
+          "restriction": "a. Restriction date: 12/2021\nb. Refer to Restricted Antibiotic Policy",
+          "page": 5
+        },
+        {
+          "medication": "Ceftolozane-Tazobactam",
+          "scope": "(LBH)",
+          "restriction": "a. Restriction date: 04/2022\nb. Refer to Restricted Antibiotic Policy",
+          "page": 6
+        },
+        {
+          "medication": "Clevidipine",
+          "scope": "(SH, NW, CH)",
+          "restriction": "a. Restriction update: 03/2021; updated 01/2026\nb. For neurology or neurosurgery patients requiring urgent blood pressure lowering in\ncritical care areas (ED, ICU)\nc. For pre-and post-operative cardiac surgery patients (OR, ICU)",
+          "page": 6
+        },
+        {
+          "medication": "Collagenase Ointment (Santyl),",
+          "scope": "(LBH)",
+          "restriction": "a. Restriction date: 02/2023\nb. Inpatient use restricted for patients with acute non-infected wounds, who are not\nsurgical candidates and do not have adequate blood flow for autolytic debridement.\nAvailable via Santyl power plan only.",
+          "page": 6
+        },
+        {
+          "medication": "Crizanlizumab-tmca",
+          "scope": "(SH, NW, CH)",
+          "restriction": "a. Restriction date: 05/2020\nb. Restricted for outpatient use only (Outpatient Infusion) for: (must meet all criteria)\ni. Patients ≥16 years old.\nii. Patient has had ≥3 SCD related VOCs ER visits and/or inpatient admissions in last\n12 months.\niii. The patient is stable on hydroxyurea therapy per age recommendations for at\nleast 3 months with still uncontrolled VOC or Patient has failed/or is intolerant\nto optimized dosing of hydroxyurea per guidelines.\niv. To be ordered by hematologist/oncologist provider only",
+          "page": 6
+        }
+      ]
+    },
+    {
+      "letter": "D",
+      "entries": [
+        {
+          "medication": "Dalbavancin",
+          "scope": "(LBH)",
+          "restriction": "a. Refer to Restricted Antibiotic Policy",
+          "page": 6
+        },
+        {
+          "medication": "Daptomycin",
+          "scope": "(LBH)",
+          "restriction": "a. Refer to Restricted Antibiotic Policy",
+          "page": 6
+        },
+        {
+          "medication": "Darbepoetin",
+          "scope": "(LBH)",
+          "restriction": "a. Restriction date: 01/2017\nb. Use in oncology-related conditions (i.e. prevention of chemotherapy-induced anemia).\nEpoetin must be ordered for chronic kidney disease (CKD) or use in Jehovah's witnesses.",
+          "page": 6
+        },
+        {
+          "medication": "Denosumab",
+          "scope": "(LBH)",
+          "restriction": "a. Restriction date: 09/2022\nb. Inpatient use:\ni. One-time dose for patients with severe hypercalcemia (Ca>14) and acute renal\ninjury (CrCl <30) who are refractory to pamidronate (after 5-7 days), and/or\ncalcitonin therapy. Adequate hydration therapy should occur prior to receiving\nthese agents.\nii. One-time dose for patients with severe hypercalcemia (Ca>14) with CKD stage 5\nor hemodialysis. Adequate hydration therapy should occur prior to receiving\nthese agents.\niii. NOT in hypercalcemia power plan. Pharmacy to enter dose via med manager\nwhen requested and patient meets criteria",
+          "page": 6,
+          "pageEnd": 7
+        },
+        {
+          "medication": "Dexamethasone Intravitreal Implant",
+          "scope": "",
+          "restriction": "a. Restriction date: 12/2015\nb. Use in Krieger Eye Institute Only",
+          "page": 7
+        },
+        {
+          "medication": "Durvalumab",
+          "scope": "(SH, CH, NW)",
+          "restriction": "a. Restriction date: 06/2018\nb. For Non-Small Cell Lung Cancer indications",
+          "page": 7
+        }
+      ]
+    },
+    {
+      "letter": "E",
+      "entries": [
+        {
+          "medication": "Eculizumab (Soliris)",
+          "scope": "(LBH)",
+          "restriction": "a. Restriction date: 08/2020\nb. Adult patients with Generalized Myasthenia Gravis (AchR antibody positive) and\nNeuromyelitis Optic Spectrum Disorder (AQP4 antibody positive).\ni. Should be ordered by neurology and ophthalmology providers for above\nindications",
+          "page": 7
+        },
+        {
+          "medication": "Enfortumab Vedotin-ejfv",
+          "scope": "(SH, NW, CH)",
+          "restriction": "a. Restriction date: 01/2021\nb. Restricted to Outpatient Infusion Center\ni. Administer to patients that fall into the categories listed: Patients with locally\nadvanced or metastatic urothelial cancer who have previously received a\nprogrammed death receptor-1 (PD-1) or programmed death- ligand 1 (PD-L1) inhibitor, and a platinum-containing chemotherapy in neoadjuvant /adjuvant,\nlocally advanced or metastatic setting.",
+          "page": 7
+        },
+        {
+          "medication": "Epoetin",
+          "scope": "(LBH)",
+          "restriction": "a. Restriction date: 2017\nb. Will be held for first 7 days of admission unless one of the following criteria are met:\ni. Hgb < 8.5g/dl\nii. Jehovah’s Witness\niii. Anticipated blood loss\niv. Active Cardiovascular disease (CHF/CAD)\nv. Anticipated duration of stay >7 days\nvi. Hgb 8.5-9.5 g/dL (day 3 and beyond ONLY)",
+          "page": 7,
+          "pageEnd": 8
+        },
+        {
+          "medication": "Epoprostenol",
+          "scope": "(SH, NW, CH)",
+          "restriction": "a. Restriction date: 2020\nb. Restricted to patients on an adult critical care service (MICU, SICU, CCU, Cardiac\nsurgery) at Sinai Hospital and NWH for: treatment of refractory hypoxemia in pulmonary\nvasoconstriction (acute respiratory distress syndrome), pulmonary\narterial hypertension, or right ventricular dysfunction/failure in cardiac surgery",
+          "page": 8
+        },
+        {
+          "medication": "Eptinezumab",
+          "scope": "(LBH)",
+          "restriction": "a. Restriction date: 09/2021\nb. Restricted to Outpatient Infusion Center:\ni. Do not stock routinely.\nii. For patients ≥ 18 years who have failed an adequate trial of two classes of\nmedications for migraine prevention including failure of subcutaneous CGRP\ninhibitor. Not to be used as first line treatment.",
+          "page": 8
+        },
+        {
+          "medication": "Ertapenem",
+          "scope": "(LBH)",
+          "restriction": "a. Refer to Restricted Antibiotic Policy",
+          "page": 8
+        },
+        {
+          "medication": "Estradiol cream",
+          "scope": "(LBH)",
+          "restriction": "a. Restriction date: 07/2022\nb. For use in:\ni. Genitourinary syndrome of menopause (GSM)\nii. Prophylaxis in peri-menopausal and menopausal patients with recurrent\nuncomplicated UTI\niii. Vaginal packing during uro-gyne procedures",
+          "page": 8
+        }
+      ]
+    },
+    {
+      "letter": "F",
+      "entries": [
+        {
+          "medication": "Fam-trastuzumab deruxtecan",
+          "scope": "(SH, NW, CH)",
+          "restriction": "a. Restriction date: 11/2019, updated 07/2024\nb. For patients who have progression of HER-2 positive breast cancer, lung cancer or\ngastric cancer after two or more HER2-directed therapies. For outpatient infusion center\nuse only.",
+          "page": 8
+        },
+        {
+          "medication": "Fentanyl patch",
+          "scope": "(LBH)",
+          "restriction": "a. Restriction date: 08/2021\nb. For use in:\ni. Continuation of Home therapy\nii. Patient Requiring around-the-clock opioid treatment for an extended period of\ntime\niii. Opioid Tolerant Patient. (Patient has been receiving 60 mg morphine, 30 mg oral\noxycodone, or 8 mg oral hydromorphone daily or equianalgesic opioid dose for\nONE WEEK OR LONGER.)",
+          "page": 8,
+          "pageEnd": 9
+        },
+        {
+          "medication": "Fidaxomicin",
+          "scope": "(LBH)",
+          "restriction": "a. Refer to Restricted Antibiotic Policy",
+          "page": 9
+        },
+        {
+          "medication": "Fluocinolone Acetonide Intravitreal Implant",
+          "scope": "",
+          "restriction": "a. Restricted for use at Krieger Eye Institute only",
+          "page": 9
+        },
+        {
+          "medication": "Flora Tummy",
+          "scope": "(Sinai NICU)",
+          "restriction": "a. Restriction date: 05/2022\nb. For pediatric NICU patients to prevent necrotizing enterocolitis",
+          "page": 9
+        },
+        {
+          "medication": "Fondaparinux",
+          "scope": "(LBH)",
+          "restriction": "a. Restriction date: 08/2016\nb. For patients with heparin allergy or documented/suspected HIT",
+          "page": 9
+        },
+        {
+          "medication": "Fosaprepitant IV (Cinvanti)",
+          "scope": "(LBH)",
+          "restriction": "a. Restriction date: 2019\nb. Adults only. For Outpatient oncology infusion center and Inpatient for HEC or MEC\nchemotherapy regimens only",
+          "page": 9
+        },
+        {
+          "medication": "Fosfomycin",
+          "scope": "(LBH)",
+          "restriction": "a. Refer to Restricted Antibiotic Policy",
+          "page": 9
+        }
+      ]
+    },
+    {
+      "letter": "G",
+      "entries": [
+        {
+          "medication": "Gardasil (human papillomavirus 9-valent vaccine)",
+          "scope": "(Sinai only)",
+          "restriction": "a. Restriction date: 11/2023\nb. Limited to use for OB/GYN patients as part of quality improvement study. Limited to one\ndose per patient in the inpatient setting. Use in postpartum patients <45 years who are\npreviously unvaccinated and for patients diagnosed with cervical intraepithelial\nneoplasia who are either unvaccinated or partially vaccinated and scheduled to undergo\na loop electrosurgical excision procedure or conization procedure.",
+          "page": 9
+        }
+      ]
+    },
+    {
+      "letter": "H",
+      "entries": [
+        {
+          "medication": "Hydromorphone IV",
+          "scope": "(LBH)",
+          "restriction": "a. Restriction updated: 03/2021; LBH wide-08/2021\nb. For use in:\ni. Hospice patients\nii. Burn patients\niii. Trauma or injury with high suspicion of fracture\niv. Surgery patients and post-op: including Anesthesia induction and while in the\nPACU, CICU, ICU, and CCU\nv. Patients with documented failure of morphine defined as documented post-\nadministration pain score ≥ 7/10 despite escalated morphine injection doses\nover at least a 48-hour duration.\nvi. Allergy to morphine (including Anaphylaxis and hives)\nvii. Patient with CrCl <30 ml/min",
+          "page": 9,
+          "pageEnd": 10
+        }
+      ]
+    },
+    {
+      "letter": "I",
+      "entries": [
+        {
+          "medication": "Ibuprofen IV",
+          "scope": "",
+          "restriction": "a. Sinai- Pediatrics only\nb. NW- No restrictions\nc. CH, LSH, GMC- Non- Formulary",
+          "page": 10
+        },
+        {
+          "medication": "Infliximab products",
+          "scope": "(LBH)",
+          "restriction": "a. Infliximab unbranded (biosimilar) to be used in inpatient adults who meet the below\ncriteria:\ni. Rescue therapy for acute severe ulcerative colitis refractory to cyclosporine or\nwith contraindications to cyclosporine with GI consult/approval for use\nb. Remicade preserved for pediatric patients",
+          "page": 10
+        },
+        {
+          "medication": "Irinotecan liposomal",
+          "scope": "(SH, NW, CH)",
+          "restriction": "a. Restriction date: 01/2016\nb. For outpatient infusion center use with approval by Oncologist in patients with\nmetastatic pancreatic adenocarcinoma with poor performance status (ECOG >/=2) who\nhave failed a gemcitabine-based chemotherapy regimen.",
+          "page": 10
+        }
+      ]
+    },
+    {
+      "letter": "J",
+      "entries": []
+    },
+    {
+      "letter": "K",
+      "entries": []
+    },
+    {
+      "letter": "L",
+      "entries": [
+        {
+          "medication": "Levothyroxine IV",
+          "scope": "(LBH)",
+          "restriction": "a. Restriction date: 06/2014\ni. Organ harvesting (for drips)\nii. Myxedema coma\niii. NPO patients with one of the following indications:\n1. Severe, symptomatic hypothyroidism\n2. S/P thyroidectomy or parathyroidectomy\n3. Pregnancy\n4. Pediatric / Neonatal indications\n5. Not received oral levothyroxine dose for ≥5 days (and continue to be\nNPO)\n6. Newly diagnosed hypothyroidism (TSH >10)",
+          "page": 10,
+          "pageEnd": 11
+        },
+        {
+          "medication": "Leuprolide",
+          "scope": "(LBH)",
+          "restriction": "a. Restriction date: 08/24/2021\nb. Limit use to oncology and pediatric patients when ordered via power plan. Should not\nbe used for OB/GYN indications in the inpatient setting.",
+          "page": 11
+        },
+        {
+          "medication": "Lurbinectedin",
+          "scope": "(SH, NW, CH)",
+          "restriction": "a. Restriction date: 01/2021\nb. For use in outpatient infusion center\ni. Adults who relapse within 6 months or less (chemo-sensitive disease) after\nsystemic platinum-based therapy.",
+          "page": 11
+        },
+        {
+          "medication": "Luspatercept",
+          "scope": "(SH, NW, CH)",
+          "restriction": "a. Restriction date: 11/2020\nb. For Outpatient infusion center use only\ni. Approval by Hematologist/Oncologist in patients with beta thalassemia or very\nlow to intermediate risk MDS (IPSS-R score 0-4.5) who have failed ESA\ntherapy, required more than 2 units of RBC transfusion within an 8-\nweek period.",
+          "page": 11
+        }
+      ]
+    },
+    {
+      "letter": "M",
+      "entries": [
+        {
+          "medication": "Meperidine",
+          "scope": "(LBH)",
+          "restriction": "a. Restriction date: 05/2023\nb. Criteria for use:\ni. Postoperative or post-cath shivering\nii. Drug-induced rigors (amphotericin B)\niii. True allergy to all other opioids\niv. For use in the outpatient infusion centers as part of the management of drug-\ninduced hypersensitivity rigors",
+          "page": 11
+        },
+        {
+          "medication": "Mepivacaine",
+          "scope": "(SH, NW, CH)",
+          "restriction": "a. Restriction date: 03/2021\nb. For use in outpatient same day surgery for Total Knee or Total Hip Arthroplasty",
+          "page": 11
+        },
+        {
+          "medication": "Mepolizumab",
+          "scope": "(LBH)",
+          "restriction": "a. Restriction date: 07/2017\nb. Restricted to patients 12 years and older with confirmed eosinophilic phenotype\n(baseline eosinophil count ≥150 cells per μL) asthma who are not controlled on oral\nglucocorticoids with maintenance inhalers and have a history of severe exacerbations.\nc. Restricted to use in outpatient clinic setting only.",
+          "page": 11,
+          "pageEnd": 12
+        },
+        {
+          "medication": "Meropenem",
+          "scope": "(LBH)",
+          "restriction": "a. Refer to Restricted Antibiotic Policy",
+          "page": 12
+        },
+        {
+          "medication": "Meropenem-Vaborbactam",
+          "scope": "(LBH)",
+          "restriction": "a. Restriction date: 12/2021\nb. Refer to Restricted Antibiotic Policy",
+          "page": 12
+        },
+        {
+          "medication": "Methadone IV",
+          "scope": "(Sinai)",
+          "restriction": "a. Restriction date: 12/2025\nb. Restriction criteria: For Anesthesia Use Only\ni. Allow use of IV methadone as a one-time pre-operative dose (range 0.05-\n0.2mg/kg), not to exceed 20mg.\nii. For Patients undergoing complex spinal surgery, complex abdominal or\nhepatobiliary surgery, complex orthopedic surgery or cardiac surgeries.",
+          "page": 12
+        },
+        {
+          "medication": "Methylnaltrexone IV",
+          "scope": "(LBH)",
+          "restriction": "a. Restriction date: 04/2010 (Sinai), LBH (2022)\nb. Restricted to Palliative Care and Oncology patients with opioid induced constipation\nwho have failed other laxative therapies. May be used in sickle cell patients who cannot\ntake oral therapy with naldemedine.",
+          "page": 12
+        },
+        {
+          "medication": "Mifepristone",
+          "scope": "(Sinai)",
+          "restriction": "a. Restriction date: 02/2020, 03/2021\nb. Use by REMS registered OB/GYN only for use in women with intrauterine fetal demise in\nfirst or second trimester pregnancy in combination with appropriate misoprostol\ntherapy.",
+          "page": 12
+        },
+        {
+          "medication": "Minocycline",
+          "scope": "(LBH)",
+          "restriction": "a. Restriction date: 05/2024\nb. Oral formulation available. For treatment of carbapenem-resistant Acinetobacter baumannii\n(CRAB) and Stenotrophomonas infections. Refer to Restricted Antibiotic Policy/\nalgorithm.",
+          "page": 12
+        },
+        {
+          "medication": "Mirvetuximab soravtansine-gynx (Elahere)",
+          "scope": "(LBH)",
+          "restriction": "a. Restriction date: 11/2023\nb. For Outpatient Infusion Center use only\ni. For patients with platinum resistant ovarian cancer as third line therapy with\nconfirmatory test with FRα expression",
+          "page": 12
+        },
+        {
+          "medication": "Morphine Oral Concentrated Solution",
+          "scope": "(SH, CH, NW) (not restricted at LSH & NF at Grace)",
+          "restriction": "a. Restriction date: 07/2020\ni. Patients who cannot swallow* oral tablets/capsules/solution (require ≥5ml of\nstandard solution dosing (10mg) per dose).\n(*Swallowing difficulties/ determination of not being able to swallow should be\nbased on SLP consult documentation only.)\nii. Patients without intravenous access or requiring transition or de-escalation\nfrom IV to oral therapy and meet criteria as listed above.\niii. Patient being cared for in the Hospice area",
+          "page": 13
+        }
+      ]
+    },
+    {
+      "letter": "N",
+      "entries": [
+        {
+          "medication": "Naldemedine",
+          "scope": "(LBH)",
+          "restriction": "a. Restriction date: 07/2022\nb. In adult patients with diagnosis of opioid induced constipation after at least 4 weeks of\nopioid use failing adequate trial of laxative therapy (scheduled laxative from 1 or more\nclasses for minimum of 4 days within 2-week period).",
+          "page": 13
+        },
+        {
+          "medication": "Naloxegol (Movantik)",
+          "scope": "(SH)",
+          "restriction": "a. Restriction date: 01/2025\nb. To be utilized as part of colorectal ERAS protocol (in place of alvimopan)",
+          "page": 13
+        },
+        {
+          "medication": "Naloxone Intranasal",
+          "scope": "(SH, NW, CH, GMC)",
+          "restriction": "a. Restriction date: 07/2019\nb. Use in Emergency Department only",
+          "page": 13
+        },
+        {
+          "medication": "Nirsevimab",
+          "scope": "(LBH)",
+          "restriction": "a. Restriction date: 10/2023\nb. For administration during RSV seasons (September-March)\ni. Newborn nursery or NICU infant < 8 months old\nii. Mother did not receive an RSV vaccine at least 14 days prior to birth, or RSV\nvaccination status is unknown",
+          "page": 13
+        }
+      ]
+    },
+    {
+      "letter": "O",
+      "entries": [
+        {
+          "medication": "Olaratumab",
+          "scope": "(SH, NW, CH)",
+          "restriction": "a. Restriction date: 05/2017\nb. Restricted to adult patients in infusion Center\ni. Adult patients with soft tissue sarcoma who are not amenable to curative\ntreatment with surgery or radiotherapy, but have histologic type that will\nrespond to anthracycline containing regimen",
+          "page": 13
+        },
+        {
+          "medication": "Omalizumab",
+          "scope": "(SH, NW, CH)",
+          "restriction": "a. Restriction date: 01/2013\nb. Outpatient infusion center use only",
+          "page": 13
+        },
+        {
+          "medication": "Omegaven",
+          "scope": "(SH formulary only)",
+          "restriction": "a. Restriction date: 05/2021\nb. Restricted to neonates and pediatric patients who meet the following criteria:\ni. Have been diagnosed with parenteral nutrition associated cholestasis (two\nconsecutive direct bilirubin levels of ≥2 mg/dL)\nii. Have been on SMOFlipid for at least two weeks\niii. Are expected to continue with parenteral nutrition for at least two weeks\n*The patient should be switched back to SMOFlipid after direct bilirubin levels fall below 2 mg/dL.*",
+          "page": 14
+        }
+      ]
+    },
+    {
+      "letter": "P",
+      "entries": [
+        {
+          "medication": "Pimavanserin",
+          "scope": "(LBH)",
+          "restriction": "a. Restriction update: 01/2019\nb. For use in any of the following:\ni. Continuation of home therapy\nii. Initiation of therapy by neurologist or psychiatrist in patients with Parkinson’s\ndisease psychosis, PDP with dementia, and dementia with Lewy Body who have\nfailed either quetiapine or clozapine therapy.",
+          "page": 14
+        },
+        {
+          "medication": "Perampanel",
+          "scope": "(LBH)",
+          "restriction": "a. Restriction date: 2017\nb. For continuation of home therapy or ordering by neurology providers",
+          "page": 14
+        },
+        {
+          "medication": "Pertuzumab",
+          "scope": "(SH, NW, CH)",
+          "restriction": "a. Restriction date: 02/2013\nb. Outpatient infusion center use only",
+          "page": 14
+        },
+        {
+          "medication": "Pertuzumab/Trastuzumab/Hyaluronidase-zzxf (PHESGO)",
+          "scope": "",
+          "restriction": "a. Restriction date: 07/2022\nb. Outpatient infusion center use only",
+          "page": 14
+        },
+        {
+          "medication": "Phenytoin IV",
+          "scope": "(LBH)",
+          "restriction": "a. Reserved for drug shortages only. Utilize fosphenytoin IV instead (1:1 conversion)",
+          "page": 14
+        },
+        {
+          "medication": "Polatuzumab",
+          "scope": "(SH, NW, CH)",
+          "restriction": "a. Restriction date: 05/2021\nb. For outpatient infusion center use only:\ni. Approval by oncologist in patients with relapsed/refractory diffuse large b-cell\nlymphoma who have failed 2 or more previous therapies.",
+          "page": 14
+        }
+      ]
+    },
+    {
+      "letter": "Q",
+      "entries": []
+    },
+    {
+      "letter": "R",
+      "entries": [
+        {
+          "medication": "Radium-223 (Xofigo)",
+          "scope": "(SH)",
+          "restriction": "a. Restriction date: 04/2014\nb. For men with metastatic castration resistant prostate cancer with bone metastases only;\nwho are not receiving concurrent chemotherapy",
+          "page": 15
+        },
+        {
+          "medication": "Ravulizumab-cwvz (Ultomiris)",
+          "scope": "(LBH)",
+          "restriction": "a. Restriction date: 08/2020\ni. Treatment of adult patients with paroxysmal nocturnal hemoglobinuria (PNH)\nii. Treatment of adult and pediatric patients with atypical hemolytic uremic\nsyndrome (aHUS) .\n1. Ordering by hematology or nephrology providers only. Maintenance\ndoses must be given in outpatient setting.",
+          "page": 15
+        },
+        {
+          "medication": "Remdesivir",
+          "scope": "(LBH)",
+          "restriction": "a. Please refer to the intranet COVID-19 treatment algorithm",
+          "page": 15
+        },
+        {
+          "medication": "Remifentanil",
+          "scope": "(LBH) — for use by anesthesia",
+          "restriction": "a. Sinai Restriction date: ~2010\ni. Adult patients undergoing spinal or brain surgery\nii. Pediatric patients\nb. Carroll/ NW Restriction date: 01/2022\ni. Adult patients undergoing spinal surgery",
+          "page": 15
+        },
+        {
+          "medication": "Rifaximin",
+          "scope": "(LBH)",
+          "restriction": "a. Restriction date: 05/2025\nb. Hepatic Encephalopathy: 550mg tablets\ni. Continuation of home therapy/ maintenance of remission of hepatic\nencephalopathy\nii. Acute hepatic encephalopathy if:\n1. Failure of lactulose: Persistent encephalopathy after achieving a minimum of 4 bowel movements per day x 3 days with lactulose.\n2. Intolerance to lactulose: In patients with evidence of bowel obstruction,\nsignificant dysmotility, or severe dehydration, rifaximin should be\nconsidered over lactulose\nc. 550mg tablets may be utilized for irritable bowel syndrome with diarrhea or small bowel\nbacterial overgrowth syndrome\nd. 200mg tablets are reserved for indication of Traveler’s diarrhea and may not be stocked.",
+          "page": 15
+        },
+        {
+          "medication": "Rituximab-abbs (Truxima biosimilar)",
+          "scope": "(LBH)",
+          "restriction": "a. Restriction date: 2020, updated 2024\nb. For Adults: continuation of home therapy (ex: oncology indications) or indication for which\ninpatient treatment is necessary and cannot be delayed (ex: ITP). Patients previously on brand\nRituxan should continue Rituxan as the two products are not considered bioequivalent. Truxima\nhas not been approved for use in pediatric patients.",
+          "page": 15,
+          "pageEnd": 16
+        },
+        {
+          "medication": "Risankizumab (Skyrizi)",
+          "scope": "(LBH)",
+          "restriction": "a. Restriction date: 09/2024\nb. For Outpatient Infusion Center use only: Induction doses only. Adult patients must have failed\nprior anti-TNF therapy and ustekinumab (Stelara) prior to ordering risankizumab (Skyrizi).\nPediatric patients must have failed prior anti-TNF therapy prior to ordering. Limited for Crohn’s\ndisease or Ulcerative Colitis indications with GI ordering.",
+          "page": 16
+        }
+      ]
+    },
+    {
+      "letter": "S",
+      "entries": [
+        {
+          "medication": "Sacituzumab govitecan-hziy",
+          "scope": "(SH, NW, CH)",
+          "restriction": "a. Restriction date: 05/2021\nb. For outpatient infusion center use only:\ni. Approval by oncologist in patients with metastatic triple negative breast\ncancer who have received at least 2 prior therapies for metastatic disease.",
+          "page": 16
+        },
+        {
+          "medication": "SMOF Lipids",
+          "scope": "(LBH)",
+          "restriction": "a. Restriction date: 09/2018; Updated: 12/2021\nb. Adults on TPN for > 14 days and:\ni. Critically ill\nii. Increase in total bilirubin or AST/ALT levels to >2x ULN after initiation of\nIntralipid\niii. Patients being discharged on long-term HPN at risk of IFALD\nc. Adults and pediatric patients who are receiving SMOF lipid prior to admission and needing to\ncontinue the agent during hospital stay.\nd. Sinai pediatric patients who are expected to receive lipids for >14 days. Are at risk\nfor parenteral nutrition-associated cholestasis, or have increasing levels of direct\nbilirubin (>2mg/dl or >0.5mg/dl rise in levels between 2 measurements).",
+          "page": 16
+        },
+        {
+          "medication": "Sodium Zirconium Cyclosilicate",
+          "scope": "(LBH)",
+          "restriction": "a. Restriction date: 03/2020, updated 07/2021\ni. For acute hyperkalemia (1-3 doses/day) x 24 hours\nii. Chronic hyperkalemia for K >/= 5.5 meq/L (can include CKD, ESRD pts, and\npts on ACE/ARB therapy with chronic hyperkalemia)\niii. Continuation of home therapy",
+          "page": 16
+        },
+        {
+          "medication": "Suprep Bowel Preparation Kit",
+          "scope": "(LBH)",
+          "restriction": "a. Restriction date: 08/2025\ni. For patients with noncompliance or intolerance to Golytely. Limited to GI\nprescribing.",
+          "page": 17
+        },
+        {
+          "medication": "Sugammadex",
+          "scope": "(LBH)",
+          "restriction": "a. Restriction date: 11/2018, updated 2022\ni. Use by anesthesia only:\n1. Use in either of the following\na. Morbidly obese patients (BMI >/=40)\nb. Patients with obstructive sleep apnea\nc. Patients with Neuromuscular disorders\nd. Patients with previous history of severe postoperative\nnausea and vomiting\ne. Use in conditions where neostigmine/glycopyrrolate should\nbe avoided based on clinical judgement (cardiac\narrhythmias, CAD, bradycardia, hypotension)\nii. Dose round to the nearest vial size if dose is within 10% of vial, to avoid\nopening new vial\niii. Avoid in patients with CrCl < 30 mL/min\niv. Do not use Sugammadex as first line agent unless above criteria are met",
+          "page": 17
+        }
+      ]
+    },
+    {
+      "letter": "T",
+      "entries": [
+        {
+          "medication": "Tafasitamab",
+          "scope": "(LBH)",
+          "restriction": "a. Date: 09/2023\nb. Restricted to outpatient infusion center. Approval must be obtained by Oncology\nMedical Director prior to starting therapy. Consider formulary alternative polatuzumab\nwhen able.",
+          "page": 17
+        },
+        {
+          "medication": "Teclistimab-cqyv",
+          "scope": "(LBH OPIS)",
+          "restriction": "a. Date: 01/2026\nb. For outpatient infusion center patients with multiple myeloma who meet guideline\nrecommendations (relapsed/refractory, after at least 4 prior therapies)",
+          "page": 17
+        },
+        {
+          "medication": "Terlipressin",
+          "scope": "(LBH)",
+          "restriction": "a. Date: 07/2023\nb. Restricted to GI attendings only, must have documented diagnosis of HRS in Cerner.\nOrder may be placed by GI PA or another provider as long as GI attending has\ndocumented appropriateness in Cerner.\nc. See pharmacy intranet page for full inclusion/exclusion criteria and pharmacist\nworkflow (under Miscellaneous Medication Information → “Terlipressin Use Criteria\nand Workflow”)",
+          "page": 17
+        },
+        {
+          "medication": "Tigecycline",
+          "scope": "(LBH)",
+          "restriction": "a. Refer to Restricted Antibiotic Policy",
+          "page": 18
+        },
+        {
+          "medication": "Tisotumab",
+          "scope": "(LBH)",
+          "restriction": "a. Date: 07/2023\nb. Restricted to outpatient infusion center. For patients with recurrent metastatic cervical\ncancer.",
+          "page": 18
+        },
+        {
+          "medication": "Tocilizumab",
+          "scope": "(LBH)",
+          "restriction": "a. Date: 01/2020\nb. Restricted to oncology providers for treatment of cytokine release syndrome (grade 2-4)\ninduced by CAR-T cell therapy. Dose may be repeated x1.",
+          "page": 18
+        },
+        {
+          "medication": "Tolvaptan",
+          "scope": "(LBH)",
+          "restriction": "a. Restriction date: 05/2011\nb. Approved for use in patients with clinically significant hypervolemic or euvolemic\nhyponatremia due to heart failure or SIADH who have failed standard therapies.\nc. Prescribing must be under the guidance of cardiology, nephrology, or endocrinology.\nFluid restriction must be avoided during the first 24 hours of therapy.",
+          "page": 18
+        },
+        {
+          "medication": "Tranexamic Acid, Inhaled",
+          "scope": "(LBH)",
+          "restriction": "a. Restriction date: 01/2025\nb. For use in ED or ICU areas for hemoptysis, limited to 5-day duration. Respiratory therapy\nresponsible for retrieving medication from ADM, drawing up 500mg dose to be added to\nnebulizer chamber for administration to the patient.",
+          "page": 18
+        },
+        {
+          "medication": "Tremelimumab-actl",
+          "scope": "(LBH)",
+          "restriction": "a. Restriction date: 05/2023\nb. Use restricted to oncology infusion center",
+          "page": 18
+        }
+      ]
+    },
+    {
+      "letter": "U-Z",
+      "entries": [
+        {
+          "medication": "Ubrogepant",
+          "scope": "(LBH)",
+          "restriction": "a. Restriction date: 01/2026\nb. 1) For adult patients who have contraindications to triptan therapy; 2) adult patients\nwho have failed triptan therapy; 3) continuation of therapy in patients on ubrogepant\nprior to admission",
+          "page": 18
+        },
+        {
+          "medication": "Ulipristal acetate",
+          "scope": "(LBH)",
+          "restriction": "a. Restriction date: 09/2023\nb. For use via “ED Adult Safe Power plan” for sexual assault victims requiring emergency\ncontraception",
+          "page": 18
+        },
+        {
+          "medication": "Ustekinumab (Stelara)",
+          "scope": "(LBH)",
+          "restriction": "a. Restriction date: 05/2024\nb. Use restricted to oncology outpatient infusion center: limit to one-induction dose for\nIBD (Crohn’s and Ulcerative Colitis) in patients 18 years of age and older",
+          "page": 19
+        },
+        {
+          "medication": "Vedolizumab",
+          "scope": "(LBH)",
+          "restriction": "a. Restriction date: 05/2017\nb. For patients who failed anti-TNF therapy.",
+          "page": 19
+        },
+        {
+          "medication": "Vilazodone",
+          "scope": "(SH, CH, LSH, NW) (NF GMC)",
+          "restriction": "a. Restriction date: 06/2012\nb. Continuation of home therapy only.",
+          "page": 19
+        }
+      ]
+    }
+  ],
+  "approvedCorrections": [
+    {
+      "sourceText": "Budensonide respules",
+      "renderedText": "Budesonide respules",
+      "approver": "Jarvis",
+      "approvedOn": "2026-08-12",
+      "scope": "LBH Protocols Beta rendered presentation only; immutable PDF unchanged"
+    },
+    {
+      "sourceText": "with parasite density is >1%",
+      "renderedText": "if parasite density is >1%",
+      "approver": "Jarvis",
+      "approvedOn": "2026-08-12",
+      "scope": "LBH Protocols Beta rendered presentation only; immutable PDF unchanged"
+    },
+    {
+      "sourceText": "PD-L1) inhibitory",
+      "renderedText": "PD-L1) inhibitor",
+      "approver": "Jarvis",
+      "approvedOn": "2026-08-12",
+      "scope": "LBH Protocols Beta rendered presentation only; immutable PDF unchanged"
+    },
+    {
+      "sourceText": "Anticipated blood loos",
+      "renderedText": "Anticipated blood loss",
+      "approver": "Jarvis",
+      "approvedOn": "2026-08-12",
+      "scope": "LBH Protocols Beta rendered presentation only; immutable PDF unchanged"
+    },
+    {
+      "sourceText": "Genitourinary urinary syndrome",
+      "renderedText": "Genitourinary syndrome",
+      "approver": "Jarvis",
+      "approvedOn": "2026-08-12",
+      "scope": "LBH Protocols Beta rendered presentation only; immutable PDF unchanged"
+    },
+    {
+      "sourceText": "failure to morphine",
+      "renderedText": "failure of morphine",
+      "approver": "Jarvis",
+      "approvedOn": "2026-08-12",
+      "scope": "LBH Protocols Beta rendered presentation only; immutable PDF unchanged"
+    },
+    {
+      "sourceText": "Acinetobacter baumi",
+      "renderedText": "Acinetobacter baumannii",
+      "approver": "Jarvis",
+      "approvedOn": "2026-08-12",
+      "scope": "LBH Protocols Beta rendered presentation only; immutable PDF unchanged"
+    },
+    {
+      "sourceText": "Adults patients",
+      "renderedText": "Adult patients",
+      "approver": "Jarvis",
+      "approvedOn": "2026-08-12",
+      "scope": "LBH Protocols Beta rendered presentation only; immutable PDF unchanged"
+    },
+    {
+      "sourceText": "achieving minimal of 4 bowel movements",
+      "renderedText": "achieving a minimum of 4 bowel movements",
+      "approver": "Jarvis",
+      "approvedOn": "2026-08-12",
+      "scope": "LBH Protocols Beta rendered presentation only; immutable PDF unchanged"
+    },
+    {
+      "sourceText": "Adult and Pediatrics",
+      "renderedText": "Adults and pediatric patients",
+      "approver": "Jarvis",
+      "approvedOn": "2026-08-12",
+      "scope": "LBH Protocols Beta rendered presentation only; immutable PDF unchanged"
+    },
+    {
+      "sourceText": "updated -07/2021",
+      "renderedText": "updated 07/2021",
+      "approver": "Jarvis",
+      "approvedOn": "2026-08-12",
+      "scope": "LBH Protocols Beta rendered presentation only; immutable PDF unchanged"
+    },
+    {
+      "sourceText": "crcl < 30ml/min⁷",
+      "renderedText": "CrCl < 30 mL/min",
+      "approver": "Jarvis",
+      "approvedOn": "2026-08-12",
+      "scope": "LBH Protocols Beta rendered presentation only; immutable PDF unchanged"
+    },
+    {
+      "sourceText": "criteria is met",
+      "renderedText": "criteria are met",
+      "approver": "Jarvis",
+      "approvedOn": "2026-08-12",
+      "scope": "LBH Protocols Beta rendered presentation only; immutable PDF unchanged"
+    }
+  ],
+  "sourceAlerts": [
+    "Cefdinir visibly lists ‘Restriction date: ?’; no date was inferred.",
+    "Fosaprepitant IV (Cinvanti) may contain a source drug/brand mismatch; preserved pending institutional clarification.",
+    "Olaratumab remains present in the January 2026 institutional source; preserved and flagged for institutional review.",
+    "Ustekinumab’s IBD induction restriction visibly specifies the oncology outpatient infusion center; that operational scope is preserved.",
+    "Epoprostenol’s heading scope lists SH, NW, and CH while its restriction text names Sinai Hospital and NWH; both source statements are preserved without reconciling the conflict.",
+    "Caplacizumab provides ADAMTS13 instructions for < 10 U/dL and > 10 U/dL but not exactly 10 U/dL; no equality rule was inferred.",
+    "Nirsevimab’s infant and maternal criteria do not explicitly state whether they are joined by AND or OR; the source hierarchy is preserved without inference.",
+    "Ravulizumab’s ordering and outpatient-maintenance instruction is visually nested under the aHUS criterion, leaving its applicability to PNH ambiguous; the source hierarchy is preserved.",
+    "Some entries refer to CPOE alerts, the Restricted Antibiotic Policy, COVID-19 algorithm, or other intranet criteria not reproduced in this PDF."
+  ]
+}

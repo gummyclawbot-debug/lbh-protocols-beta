@@ -2,13 +2,13 @@ import { describe, expect, it } from "vitest";
 import {
   CRRT_DRUGS,
   DO_NOT_CRUSH_PROTOCOL,
+  FORMULARY_RESTRICTIONS_PROTOCOL,
   HE_PROTOCOL,
   HIV_FORMULARY,
   INSULIN_SWITCH,
   IV_ENTERAL_PROTOCOL,
   NAV,
   RENAL_DOSING,
-  RESTRICTIONS,
   THERAPEUTIC_SUBSTITUTION_PROTOCOL,
 } from "./protocols-data";
 
@@ -63,7 +63,7 @@ describe("protocol data characterization", () => {
     expect(THERAPEUTIC_SUBSTITUTION_PROTOCOL.sections.flatMap((section) => section.rows)).toHaveLength(296);
     expect(CRRT_DRUGS).toHaveLength(6);
     expect(IV_ENTERAL_PROTOCOL.rows).toHaveLength(17);
-    expect(RESTRICTIONS).toHaveLength(8);
+    expect(FORMULARY_RESTRICTIONS_PROTOCOL.sections.flatMap((section) => section.entries)).toHaveLength(109);
     expect(INSULIN_SWITCH).toHaveLength(6);
     expect(HIV_FORMULARY).toHaveLength(7);
     expect(DO_NOT_CRUSH_PROTOCOL.tables).toHaveLength(4);
@@ -77,7 +77,10 @@ describe("protocol data characterization", () => {
     );
     expectNonEmptyRecords(CRRT_DRUGS, ["name", "dose", "note"]);
     expectNonEmptyRecords(IV_ENTERAL_PROTOCOL.rows, ["medication", "iv", "enteral"]);
-    expectNonEmptyRecords(RESTRICTIONS, ["drug", "restriction", "alt"]);
+    expectNonEmptyRecords(
+      FORMULARY_RESTRICTIONS_PROTOCOL.sections.flatMap((section) => section.entries),
+      ["medication", "restriction"],
+    );
     expectNonEmptyRecords(INSULIN_SWITCH, ["from", "to", "factor", "tips"]);
     expectNonEmptyRecords(HIV_FORMULARY, ["regimen", "use", "notes"]);
     expectNonEmptyRecords(
@@ -94,8 +97,10 @@ describe("protocol data characterization", () => {
       RENAL_DOSING.find((drug) => drug.name === "Metformin")?.rows,
     ).toContainEqual({ crcl: "<30", dose: "Contraindicated" });
     expect(
-      RESTRICTIONS.find((row) => row.drug === "Daptomycin")?.restriction,
-    ).toContain("Not for pneumonia");
+      FORMULARY_RESTRICTIONS_PROTOCOL.sections
+        .flatMap((section) => section.entries)
+        .find((row) => row.medication === "Daptomycin")?.restriction,
+    ).toContain("Refer to Restricted Antibiotic Policy");
     expect(
       DO_NOT_CRUSH_PROTOCOL.tables
         .flatMap((table) => table.rows)

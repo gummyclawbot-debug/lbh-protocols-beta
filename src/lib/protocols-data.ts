@@ -1,6 +1,7 @@
 import therapeuticSubstitutionData from "./therapeutic-substitution-data.json";
 import doNotCrushData from "./do-not-crush-data.json";
 import ivEnteralData from "./iv-enteral-data.json";
+import formularyRestrictionsData from "./formulary-restrictions-data.json";
 
 export type RenalDrug = {
   name: string;
@@ -72,17 +73,6 @@ export const CRRT_DRUGS = [
   { name: "Cefepime", dose: "1–2 g IV q8–12h on CRRT.", note: "Neurotoxicity risk—monitor." },
   { name: "Levofloxacin", dose: "500–750 mg IV q24h (minimal CRRT clearance variability).", note: "Still adjust for residual function." },
   { name: "Fluconazole", dose: "200–400 mg q24h; load 800 mg when indicated.", note: "Highly dialyzable—dose after sessions if IHD." },
-];
-
-export const RESTRICTIONS = [
-  { drug: "Meropenem", restriction: "ID / stewardship approval preferred outside septic shock / ESBL protocols.", alt: "Cefepime, pip-tazo per culture" },
-  { drug: "Linezolid", restriction: "Reserve for VRE / MRSA pneumonia or intolerance to vancomycin.", alt: "Vancomycin, daptomycin (non-pneumonia)" },
-  { drug: "Daptomycin", restriction: "Not for pneumonia; stewardship review for prolonged use.", alt: "Vancomycin, linezolid" },
-  { drug: "Ceftazidime-avibactam", restriction: "ID approval — CRE / difficult gram-negatives.", alt: "Per susceptibility" },
-  { drug: "Isavuconazole", restriction: "Antifungal stewardship; invasive mold per ID.", alt: "Voriconazole, liposomal ampho" },
-  { drug: "IV acetaminophen", restriction: "Restrict to NPO or failed enteral; automatic IV→PO when eligible.", alt: "PO/PR acetaminophen" },
-  { drug: "Albumin 25%", restriction: "Indication-restricted (LVP, SBP, hepatorenal protocols).", alt: "Crystalloid when appropriate" },
-  { drug: "Levoleucovorin", restriction: "Use leucovorin unless specific restriction exception.", alt: "Leucovorin" },
 ];
 
 export const INSULIN_SWITCH = [
@@ -182,6 +172,19 @@ export type ApprovedSourceCorrection = {
   scope: string;
 };
 
+export type FormularyRestrictionEntry = {
+  medication: string;
+  scope: string;
+  restriction: string;
+  page: number;
+  pageEnd?: number;
+};
+
+export type FormularyRestrictionSection = {
+  letter: string;
+  entries: FormularyRestrictionEntry[];
+};
+
 export const THERAPEUTIC_SUBSTITUTION_PROTOCOL = therapeuticSubstitutionData as {
   source: ProtocolReference;
   sections: TherapeuticSubstitutionSection[];
@@ -230,6 +233,30 @@ export const IV_ENTERAL_PROTOCOL = ivEnteralData as {
   notes: string[];
   approvedCorrections: ApprovedSourceCorrection[];
 };
+
+export const FORMULARY_RESTRICTIONS_PROTOCOL = formularyRestrictionsData as {
+  source: ProtocolReference;
+  governingNote: string;
+  sections: FormularyRestrictionSection[];
+  approvedCorrections: ApprovedSourceCorrection[];
+  sourceAlerts: string[];
+};
+
+export function searchFormularyRestrictions(query: string) {
+  const tokens = query.trim().toLowerCase().split(/\s+/).filter(Boolean);
+  if (!tokens.length) return FORMULARY_RESTRICTIONS_PROTOCOL.sections;
+  return FORMULARY_RESTRICTIONS_PROTOCOL.sections
+    .map((section) => ({
+      ...section,
+      entries: section.entries.filter((entry) => {
+        const searchable = [entry.medication, entry.scope, entry.restriction]
+          .join(" ")
+          .toLowerCase();
+        return tokens.every((token) => searchable.includes(token));
+      }),
+    }))
+    .filter((section) => section.entries.length > 0);
+}
 
 export function searchIvEnteral(query: string) {
   const tokens = query.trim().toLowerCase().split(/\s+/).filter(Boolean);
@@ -423,6 +450,7 @@ export const PROTOCOL_REFERENCES: ProtocolReference[] = [
   THERAPEUTIC_SUBSTITUTION_PROTOCOL.source,
   DO_NOT_CRUSH_PROTOCOL.source,
   IV_ENTERAL_PROTOCOL.source,
+  FORMULARY_RESTRICTIONS_PROTOCOL.source,
 ];
 
 export const NAV = [
@@ -433,7 +461,7 @@ export const NAV = [
   { id: "therapeutic-sub" as const, label: "Therapeutic Sub", shortLabel: "Therapeutic Sub", emoji: "🔄", description: "Formulary therapeutic interchange" },
   { id: "crrt-dosing" as const, label: "CRRT Dosing", shortLabel: "CRRT Dosing", emoji: "🩺", description: "Dosing considerations on CRRT" },
   { id: "iv-po" as const, label: "IV → Enteral Conversion", shortLabel: "IV→Enteral", emoji: "💊", description: "Approved pharmacist IV-to-enteral conversion appendix" },
-  { id: "restrictions" as const, label: "Formulary Restrictions", shortLabel: "Restrictions", emoji: "⚠️", description: "Restricted antimicrobials & high-cost meds" },
+  { id: "restrictions" as const, label: "Formulary Restrictions", shortLabel: "Restrictions", emoji: "⚠️", description: "January 2026 LBH formulary medications with restrictions" },
   { id: "insulin-switch" as const, label: "Insulin Switch", shortLabel: "Insulin Switch", emoji: "💉", description: "Insulin product conversions" },
   { id: "he" as const, label: "Hepatic Encephalopathy", shortLabel: "HE", emoji: "🧠", description: "HE supportive treatment pathway" },
   { id: "hiv" as const, label: "HIV Formulary", shortLabel: "HIV", emoji: "💊", description: "Preferred HIV regimens" },

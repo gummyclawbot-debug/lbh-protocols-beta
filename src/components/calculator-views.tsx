@@ -19,15 +19,16 @@ import {
   CRRT_DRUGS,
   DO_NOT_CRUSH_PROTOCOL,
   DO_NOT_TUBE_PROTOCOL,
+  FORMULARY_RESTRICTIONS_PROTOCOL,
   HE_PROTOCOL,
   HIV_FORMULARY,
   INSULIN_SWITCH,
   IV_ENTERAL_PROTOCOL,
   NAV,
   RENAL_DOSING,
-  RESTRICTIONS,
   PROTOCOL_REFERENCES,
   searchDoNotCrush,
+  searchFormularyRestrictions,
   searchIvEnteral,
   searchTherapeuticSubstitutions,
   THERAPEUTIC_SUBSTITUTION_PROTOCOL,
@@ -498,22 +499,129 @@ function IvPoView() {
 }
 
 function RestrictionsView() {
+  const [query, setQuery] = React.useState("");
+  const normalizedQuery = query.trim();
+  const sections = searchFormularyRestrictions(query);
+  const resultCount = sections.reduce((total, section) => total + section.entries.length, 0);
+
   return (
     <Panel
-      title="⚠️ Formulary Restrictions"
-      description="Stewardship and high-cost agents. Follow LBH approval pathways."
+      title="⚠️ Formulary Medications with Restrictions"
+      description="January 2026 LifeBridge Health formulary restrictions. Search medication names, facility scope, dates, indications, criteria, and policy referrals."
     >
-      <div className="space-y-3">
-        {RESTRICTIONS.map((r) => (
-          <div key={r.drug} className="rounded-xl border p-4">
-            <div className="flex flex-wrap items-center gap-2">
-              <span className="font-semibold">{r.drug}</span>
-              <Badge variant="outline">Restricted</Badge>
+      <div className="space-y-4">
+        <div className="rounded-xl border bg-muted/25 p-4">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+            <div className="w-full max-w-xl space-y-1.5">
+              <Label htmlFor="formulary-restrictions-search">Search all 109 restricted medication entries</Label>
+              <Input
+                id="formulary-restrictions-search"
+                type="search"
+                placeholder="e.g. Sugammadex, pediatric only, CrCl 30, Restricted Antibiotic Policy…"
+                value={query}
+                onChange={(event) => setQuery(event.target.value)}
+              />
             </div>
-            <p className="mt-2 text-sm">{r.restriction}</p>
-            <p className="mt-1 text-xs text-muted-foreground">Alternatives: {r.alt}</p>
+            <a
+              href={FORMULARY_RESTRICTIONS_PROTOCOL.source.href}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex shrink-0 items-center justify-center gap-2 rounded-lg border bg-background px-3 py-2 text-sm font-medium hover:bg-muted"
+            >
+              <FileText className="size-4" /> Open approved source <ExternalLink className="size-3.5" />
+            </a>
           </div>
-        ))}
+          <p className="mt-2 text-xs text-muted-foreground">
+            {normalizedQuery
+              ? `${resultCount} direct ${resultCount === 1 ? "entry match" : "entry matches"} across ${sections.length} ${sections.length === 1 ? "section" : "sections"}.`
+              : "21 alphabetic source sections · 109 complete medication entries · facility scope and source-page traceability preserved."}
+          </p>
+        </div>
+
+        <section className="rounded-xl border border-amber-500/30 bg-amber-500/10 p-4 text-sm leading-relaxed">
+          <h3 className="font-semibold text-amber-950 dark:text-amber-100">Governing source note</h3>
+          <p className="mt-2">{FORMULARY_RESTRICTIONS_PROTOCOL.governingNote}</p>
+        </section>
+
+        {!normalizedQuery ? (
+          <nav aria-label="Formulary restriction alphabetic index" className="flex flex-wrap gap-2">
+            {FORMULARY_RESTRICTIONS_PROTOCOL.sections.map((section) => (
+              <a
+                key={section.letter}
+                href={`#restriction-section-${section.letter.replace(/[^a-z0-9]/gi, "-")}`}
+                className="rounded-lg border px-3 py-1.5 text-sm hover:border-primary/50 hover:bg-muted/40"
+              >
+                {section.letter} <span className="text-xs text-muted-foreground">({section.entries.length})</span>
+              </a>
+            ))}
+          </nav>
+        ) : null}
+
+        {sections.length ? (
+          <div className="space-y-3">
+            {sections.map((section) => (
+              <details
+                id={`restriction-section-${section.letter.replace(/[^a-z0-9]/gi, "-")}`}
+                key={section.letter}
+                open={normalizedQuery ? true : undefined}
+                className="group scroll-mt-32 overflow-hidden rounded-xl border"
+              >
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-3 bg-muted/25 px-4 py-3 hover:bg-muted/50 [&::-webkit-details-marker]:hidden">
+                  <span className="font-semibold">Section {section.letter}</span>
+                  <span className="flex shrink-0 items-center gap-2 text-xs text-muted-foreground">
+                    {section.entries.length} {section.entries.length === 1 ? "entry" : "entries"}
+                    <span aria-hidden="true" className="transition-transform group-open:rotate-180">⌄</span>
+                  </span>
+                </summary>
+                <div className="divide-y border-t">
+                  {section.entries.length ? section.entries.map((entry) => (
+                    <article key={`${entry.page}-${entry.medication}`} className="p-4 hover:bg-muted/20">
+                      <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
+                        <div>
+                          <h3 className="font-semibold">{entry.medication}</h3>
+                          {entry.scope ? <p className="mt-0.5 text-xs font-medium text-primary">{entry.scope}</p> : null}
+                        </div>
+                        <span className="shrink-0 text-xs text-muted-foreground">
+                          {entry.pageEnd ? `pp. ${entry.page}–${entry.pageEnd}` : `p. ${entry.page}`}
+                        </span>
+                      </div>
+                      <p className="mt-3 whitespace-pre-line text-sm leading-relaxed">{entry.restriction}</p>
+                    </article>
+                  )) : (
+                    <p className="p-4 text-sm text-muted-foreground">The source contains this alphabetic heading but no medication entries.</p>
+                  )}
+                </div>
+              </details>
+            ))}
+          </div>
+        ) : (
+          <div className="rounded-xl border border-dashed p-8 text-center text-sm text-muted-foreground">
+            No approved source entry matches “{query}”.
+          </div>
+        )}
+
+        <details className="rounded-xl border">
+          <summary className="cursor-pointer px-4 py-3 font-semibold">Source alerts requiring institutional awareness ({FORMULARY_RESTRICTIONS_PROTOCOL.sourceAlerts.length})</summary>
+          <ul className="list-disc space-y-2 border-t px-8 py-4 text-sm leading-relaxed">
+            {FORMULARY_RESTRICTIONS_PROTOCOL.sourceAlerts.map((alert) => <li key={alert}>{alert}</li>)}
+          </ul>
+        </details>
+
+        <details className="rounded-xl border">
+          <summary className="cursor-pointer px-4 py-3 font-semibold">Approved editorial correction ledger ({FORMULARY_RESTRICTIONS_PROTOCOL.approvedCorrections.length})</summary>
+          <div className="space-y-2 border-t px-4 py-4 text-sm leading-relaxed">
+            <p className="text-muted-foreground">The original PDF remains unchanged. Jarvis approved obvious editorial repairs for this rendered beta presentation on August 12, 2026.</p>
+            <ul className="space-y-2">
+              {FORMULARY_RESTRICTIONS_PROTOCOL.approvedCorrections.map((correction) => (
+                <li key={correction.sourceText} className="rounded-lg bg-muted/35 px-3 py-2">
+                  <span className="line-through text-muted-foreground">{correction.sourceText}</span>
+                  <span aria-hidden="true"> → </span>
+                  <strong>{correction.renderedText}</strong>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </details>
       </div>
     </Panel>
   );
