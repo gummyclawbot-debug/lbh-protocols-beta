@@ -1023,12 +1023,14 @@ export function CalculatorViews({
   view: ViewId;
   onNavigate: (id: ViewId) => void;
 }) {
+  const { resetVersion } = usePatient();
+
   return (
     <div className="mx-auto grid max-w-7xl gap-6 px-4 py-6 lg:grid-cols-[320px_1fr]">
       <aside className="lg:sticky lg:top-28 lg:self-start">
         <PatientProfileCard />
       </aside>
-      <section className="min-w-0">
+      <section key={`${view}-${resetVersion}`} className="min-w-0">
         {view === "home" && <HomeView onNavigate={onNavigate} />}
         {view === "crcl-bmi" && <CrClBmiView />}
         {view === "dose-rounding" && <DoseRoundingView />}

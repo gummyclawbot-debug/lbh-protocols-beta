@@ -15,6 +15,7 @@ type PatientContextValue = {
   setHeightCm: (cm: number) => void;
   setWeightKg: (kg: number) => void;
   setScr: (scr: number) => void;
+  resetVersion: number;
   clearAll: () => void;
 };
 
@@ -22,6 +23,7 @@ const PatientContext = React.createContext<PatientContextValue | null>(null);
 
 export function PatientProvider({ children }: { children: React.ReactNode }) {
   const [patient, setPatient] = React.useState<PatientProfile>(DEFAULT_PATIENT);
+  const [resetVersion, setResetVersion] = React.useState(0);
   const derived = React.useMemo(() => derivePatient(patient), [patient]);
 
   const value = React.useMemo<PatientContextValue>(
@@ -33,9 +35,13 @@ export function PatientProvider({ children }: { children: React.ReactNode }) {
       setHeightCm: (heightCm) => setPatient((p) => ({ ...p, heightCm })),
       setWeightKg: (weightKg) => setPatient((p) => ({ ...p, weightKg })),
       setScr: (scr) => setPatient((p) => ({ ...p, scr })),
-      clearAll: () => setPatient(DEFAULT_PATIENT),
+      resetVersion,
+      clearAll: () => {
+        setPatient(DEFAULT_PATIENT);
+        setResetVersion((version) => version + 1);
+      },
     }),
-    [patient, derived]
+    [patient, derived, resetVersion]
   );
 
   return (
