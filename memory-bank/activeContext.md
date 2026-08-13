@@ -97,6 +97,9 @@ Keep the verified April 2024 IV-to-Enteral beta release stable and continue reco
 - Global `Clear All` now resets the shared patient profile to established defaults and remounts the active calculator parameter boundary, clearing all user-entered active-view state: Restrictions/Therapeutic Substitution/IV-to-Enteral/Do Not Tube/Do Not Crush searches, Dose Rounding medication+dose, and Insulin TDD. Derived results, highlights, filters, and disclosure state reset with their inputs; navigation remains selected.
 - The exact reset tree `833ed9ee312b64ae3c3a88ff2f0d502835d5957d` passed 57 tests, full engineering gates, zero-vulnerability audit, browser matrices, and two independent PASS reviews. No clinical formulas, protocol data, governed source rows, alerts/corrections, or PDFs changed.
 - Verified commit `d55ecbc` deployed only to beta as `dpl_14YLQrX43KfjWcQSBbVb1YJsxQut`; canonical Clear All interactions passed across patient fields, Restrictions, Dose Rounding, and Insulin with no overflow or console errors. Protected legacy remained byte-identical.
+- User corrected the patient reset contract: age, height, weight, and SCr must be blank—not restored to demo defaults—both on first landing and after `Clear All`. This supersedes the prior numeric-default behavior.
+- Patient numeric fields are now nullable; incomplete profiles produce unavailable (`—`) derived values, while complete valid profiles preserve the established formulas/results exactly. Active-view searches/calculator parameters continue to reset through the central reset generation.
+- Exact corrected tree `09779efa282fcf71437af29c1d534b1f463a416a` passed 58 tests, full gates, canonical blank→entered→blank browser verification, and two independent PASS reviews. Verified commit `60718e4` deployed only to beta as `dpl_HwhjVjk3LG1DuEsd52hk6pm5QMaY`; protected legacy remained byte-identical.
 
 ## Exact next actions
 1. Commit and push this evidence-only Memory Bank handoff.
