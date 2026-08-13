@@ -16,7 +16,7 @@
 - Independent pre-commit review; documentation freshness findings resolved.
 
 ## Current phase
-- Do Not Tube, January 2026 Therapeutic Substitution, January 2026 Do Not Crush, and April 2024 IV-to-Enteral Appendix A are released and production-verified on beta.
+- Do Not Tube, January 2026 Therapeutic Substitution, January 2026 Do Not Crush, April 2024 IV-to-Enteral Appendix A, and January 2026 Formulary Medications with Restrictions are released and production-verified on beta.
 
 ## Remaining
 - Reconcile the remaining clinical tabs with authoritative source/protocol provenance one document at a time.
@@ -45,3 +45,4 @@
 - 2026-08-12: fresh independent clinical/citation, engineering/security/isolation, and corrected desktop/mobile UX re-reviews all returned PASS with no release blockers. The exact staged candidate is approved for beta-only commit/deployment; nothing has shipped yet.
 - 2026-08-12: verified commit `ee0b802` deployed only to beta as `dpl_D1VQciJovN43UfWmDWURvoXT8tUb`. Canonical search/UI/citation/References checks and exact hosted-PDF integrity passed; protected legacy remained unchanged on `dpl_9B425JWD4PwPnxKM3sUQDPvfuXMa`.
 - 2026-08-12: ingested the authoritative one-page April 2024 IV-to-Enteral Appendix A after explicit unchanged-public-hosting authorization and approval to render the source Folic Acid typo `1mg PO 24H` as `1mg PO Q24H`. Preserved the immutable PDF, replaced ten unsupported placeholders with all 17 source rows, retained five-site scope and all governing notes, added search/References/expiry/correction disclosure, passed 45 tests and full engineering/browser/integrity gates plus two independent PASS reviews, and deployed verified commit `3cac604` only to beta as `8R76Yi53AYQLiESwqs2sBJW2jaJ2`. Canonical UI and exact hosted PDF passed production verification; protected legacy remained unchanged.
+- 2026-08-12: ingested the authoritative 19-page January 2026 Formulary Medications with Restrictions. Reconciled 21 sections and 109 entries, joined all nine page continuations, replaced eight unsupported placeholders, preserved the immutable PDF, applied/disclosed 13 approved editorial corrections, and surfaced nine substantive alerts without inference. Initial source review blocked release on four missing alerts and incomplete regression coverage; the corrected 53-test candidate received fresh source and engineering PASS reviews on tree `99ed76477e6ae7416a3826b5de5672af04fb0cb8`. Verified commit `edcd6d3` deployed only to beta as `dpl_9axMbg4xgM14HvA9TeURUtaJmmtZ`; canonical UI/search and exact hosted PDF passed production verification, while protected legacy remained byte-identical before/after.

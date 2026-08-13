@@ -76,3 +76,15 @@ Some PDF text-layer extraction loses equality glyphs. The model follows visual p
 - UI must distinguish direct medication-entry matches from source-note/alert context when applicable.
 - Each entry must retain source page/page-range traceability.
 - Release only to `lbh-protocols-beta`; never deploy, alias, or promote to protected legacy `lbh-protocols`.
+
+## Release evidence
+- Lifecycle: `released-beta`; human acceptance remains separate.
+- Frozen reviewed tree: `99ed76477e6ae7416a3826b5de5672af04fb0cb8`.
+- Application commit: `edcd6d36b90250a8ec0267dbc2fe201b54ddd529`.
+- Vercel deployment: `dpl_9axMbg4xgM14HvA9TeURUtaJmmtZ` (`Ready`, target `production`, project `lbh-protocols-beta`).
+- Canonical alias: `https://lbh-protocols-beta.vercel.app`.
+- Immutable deployment URL: `https://lbh-protocols-beta-klfg5spe0-gummys-projects-8bf81988.vercel.app`.
+- Final gates: 53/53 tests, lint, TypeScript, production build, zero-vulnerability audit, two independent corrected-candidate PASS reviews.
+- Canonical production app and source PDF return HTTP 200. The source serves as `application/pdf`, begins `%PDF-`, and matches the approved 389,334-byte SHA-256 exactly.
+- Production UI verified Cefdinir unknown-date and `CrCl 30` searches, nine source alerts, 13 correction disclosures, zero horizontal overflow, and zero console errors.
+- Protected legacy remained HTTP 200 and byte-identical before/after; no legacy deployment, alias, or promotion occurred.
