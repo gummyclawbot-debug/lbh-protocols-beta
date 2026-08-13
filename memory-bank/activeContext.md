@@ -85,6 +85,12 @@ Keep the verified April 2024 IV-to-Enteral beta release stable and continue reco
 - Verified application commit `edcd6d3` was pushed and deployed only to `lbh-protocols-beta` as `dpl_9axMbg4xgM14HvA9TeURUtaJmmtZ`; immutable URL is `https://lbh-protocols-beta-klfg5spe0-gummys-projects-8bf81988.vercel.app` and canonical alias is `https://lbh-protocols-beta.vercel.app`.
 - Canonical production verification passes: app/PDF return HTTP 200; PDF is `%PDF-`, `application/pdf`, 389,334 bytes, and exact SHA-256; Cefdinir and `CrCl 30` searches match reviewed semantics; nine alerts/13 corrections render; no page overflow or console errors.
 - Protected legacy remained HTTP 200 and its response bytes were identical before/after the beta deployment; it received no mutation from this release.
+- Restrictions search now uses section navigation rather than row-only filtering for medication-like queries. Prefixes and exact medication names expand each complete matching alphabetic section; genuine medication-name tokens are visibly highlighted.
+- The interaction truthfully distinguishes absent medication-like text from source matches: `pra` and absent `prazosin` open the complete six-entry P section without false highlights, while `pert` highlights both governed Pertuzumab names.
+- Clinical criteria search remains available: single-word `pediatric` returns 14 direct restriction matches across nine complete sections, while multi-word criteria such as `CrCl 30` retain truthful counts and complete-section expansion. Exact punctuated names such as `Ceftazidime-Avibactam` match correctly.
+- Blank input restores all 21 sections/109 entries; punctuation-only input renders an explicit zero-result state. Filtered disclosures reliably reopen when the query changes, and result status uses `aria-live="polite"`.
+- The final interaction candidate passed 54 tests, lint, TypeScript, production build, zero-vulnerability audit, browser/mobile accessibility probes, and two independent PASS reviews on tree `9b72ecaf78eae3460f6681725e0693d5d090365e`.
+- Verified commit `9c344f9` was pushed and deployed only to `lbh-protocols-beta` as `dpl_2LJev8cWmbn8ZkfPmcFhpXe9W9rg`; canonical production search behavior, exact source PDF integrity, zero overflow, and zero console errors all passed. Protected legacy remained HTTP 200 and byte-identical before/after.
 
 ## Exact next actions
 1. Commit and push this evidence-only Memory Bank handoff.

@@ -88,3 +88,11 @@ Some PDF text-layer extraction loses equality glyphs. The model follows visual p
 - Canonical production app and source PDF return HTTP 200. The source serves as `application/pdf`, begins `%PDF-`, and matches the approved 389,334-byte SHA-256 exactly.
 - Production UI verified Cefdinir unknown-date and `CrCl 30` searches, nine source alerts, 13 correction disclosures, zero horizontal overflow, and zero console errors.
 - Protected legacy remained HTTP 200 and byte-identical before/after; no legacy deployment, alias, or promotion occurred.
+
+## Search interaction release — 2026-08-13
+- Medication-like lookup expands complete alphabetic sections rather than displaying detached matching rows.
+- Genuine medication-name word-prefix matches are highlighted; absent source medications are never fabricated or highlighted.
+- `pra` and absent `prazosin` open complete P; `pert` highlights both source-backed Pertuzumab entries; exact punctuated `Ceftazidime-Avibactam` opens complete C and highlights the genuine name tokens.
+- Single-word and multi-word restriction criteria remain truthful and expand complete containing sections. Punctuation-only input is an explicit no-result; blank input restores the full inventory.
+- Reviewed tree: `9b72ecaf78eae3460f6681725e0693d5d090365e`; application commit: `9c344f9450ec667f7d65b6850b4ce5594269fb98`; deployment: `dpl_2LJev8cWmbn8ZkfPmcFhpXe9W9rg`.
+- Canonical production and exact hosted PDF verification passed. Protected legacy remained byte-identical and received no mutation.
