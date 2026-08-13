@@ -94,6 +94,9 @@ Keep the verified April 2024 IV-to-Enteral beta release stable and continue reco
 - Restrictions tab source context was reordered at user request: search remains first, followed by the complete alphabetic medication list/search results and provenance disclosures; the title/January 2026 description and complete governing source note now appear exactly once at the bottom.
 - Exact wording and all nine alerts/13 corrections remain unchanged. The layout passed 55 tests, full engineering gates, desktop/mobile browser checks, and two independent PASS reviews on tree `9de1a3514f346906c1e203d2a30431d2e1e38a41`.
 - Verified commit `7d6663a` deployed only to beta as `dpl_7ATU9rYpuw8xV7c2Evmcxpj6n3c9`; canonical order and `pert` full-section highlighting passed with no overflow or console errors. Protected legacy remained byte-identical.
+- Global `Clear All` now resets the shared patient profile to established defaults and remounts the active calculator parameter boundary, clearing all user-entered active-view state: Restrictions/Therapeutic Substitution/IV-to-Enteral/Do Not Tube/Do Not Crush searches, Dose Rounding medication+dose, and Insulin TDD. Derived results, highlights, filters, and disclosure state reset with their inputs; navigation remains selected.
+- The exact reset tree `833ed9ee312b64ae3c3a88ff2f0d502835d5957d` passed 57 tests, full engineering gates, zero-vulnerability audit, browser matrices, and two independent PASS reviews. No clinical formulas, protocol data, governed source rows, alerts/corrections, or PDFs changed.
+- Verified commit `d55ecbc` deployed only to beta as `dpl_14YLQrX43KfjWcQSBbVb1YJsxQut`; canonical Clear All interactions passed across patient fields, Restrictions, Dose Rounding, and Insulin with no overflow or console errors. Protected legacy remained byte-identical.
 
 ## Exact next actions
 1. Commit and push this evidence-only Memory Bank handoff.
