@@ -196,4 +196,21 @@ describe("approved January 2026 Formulary Medications with Restrictions source",
       mode: "none",
     });
   });
+
+  it("places the restrictions title, description, and governing note after the drug list", () => {
+    const componentSource = readFileSync(
+      join(process.cwd(), "src/components/calculator-views.tsx"),
+      "utf8",
+    );
+    const restrictionsView = componentSource.slice(
+      componentSource.indexOf("function RestrictionsView()"),
+      componentSource.indexOf("function InsulinView()"),
+    );
+    const drugListEnd = restrictionsView.indexOf("Approved editorial correction ledger");
+
+    expect(drugListEnd).toBeGreaterThan(0);
+    expect(restrictionsView.indexOf("⚠️ Formulary Medications with Restrictions")).toBeGreaterThan(drugListEnd);
+    expect(restrictionsView.indexOf("January 2026 LifeBridge Health formulary restrictions.")).toBeGreaterThan(drugListEnd);
+    expect(restrictionsView.indexOf("Governing source note")).toBeGreaterThan(drugListEnd);
+  });
 });

@@ -47,21 +47,23 @@ function Panel({
   description,
   children,
 }: {
-  title: string;
+  title?: string;
   description?: string;
   children: React.ReactNode;
 }) {
   return (
     <motion.div {...fade}>
       <Card className="shadow-sm">
-        <CardHeader className="border-b [.border-b]:pb-3">
-          <CardTitle className="text-lg">{title}</CardTitle>
-          {description ? (
-            <CardDescription className="text-sm leading-relaxed">
-              {description}
-            </CardDescription>
-          ) : null}
-        </CardHeader>
+        {title || description ? (
+          <CardHeader className="border-b [.border-b]:pb-3">
+            {title ? <CardTitle className="text-lg">{title}</CardTitle> : null}
+            {description ? (
+              <CardDescription className="text-sm leading-relaxed">
+                {description}
+              </CardDescription>
+            ) : null}
+          </CardHeader>
+        ) : null}
         <CardContent className="pt-1">{children}</CardContent>
       </Card>
     </motion.div>
@@ -535,10 +537,7 @@ function RestrictionsView() {
   };
 
   return (
-    <Panel
-      title="⚠️ Formulary Medications with Restrictions"
-      description="January 2026 LifeBridge Health formulary restrictions. Search medication names, facility scope, dates, indications, criteria, and policy referrals."
-    >
+    <Panel>
       <div className="space-y-4">
         <div className="rounded-xl border bg-muted/25 p-4">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
@@ -565,11 +564,6 @@ function RestrictionsView() {
             {lookupSummary}
           </p>
         </div>
-
-        <section className="rounded-xl border border-amber-500/30 bg-amber-500/10 p-4 text-sm leading-relaxed">
-          <h3 className="font-semibold text-amber-950 dark:text-amber-100">Governing source note</h3>
-          <p className="mt-2">{FORMULARY_RESTRICTIONS_PROTOCOL.governingNote}</p>
-        </section>
 
         {!normalizedQuery ? (
           <nav aria-label="Formulary restriction alphabetic index" className="flex flex-wrap gap-2">
@@ -650,6 +644,18 @@ function RestrictionsView() {
             </ul>
           </div>
         </details>
+
+        <section className="rounded-xl border bg-muted/25 p-4">
+          <h2 className="text-lg font-semibold">⚠️ Formulary Medications with Restrictions</h2>
+          <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+            January 2026 LifeBridge Health formulary restrictions. Search medication names, facility scope, dates, indications, criteria, and policy referrals.
+          </p>
+        </section>
+
+        <section className="rounded-xl border border-amber-500/30 bg-amber-500/10 p-4 text-sm leading-relaxed">
+          <h3 className="font-semibold text-amber-950 dark:text-amber-100">Governing source note</h3>
+          <p className="mt-2">{FORMULARY_RESTRICTIONS_PROTOCOL.governingNote}</p>
+        </section>
       </div>
     </Panel>
   );
