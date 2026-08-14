@@ -108,8 +108,11 @@ Keep the verified April 2024 IV-to-Enteral beta release stable and continue reco
 - Exact advisory tree `fab4748dd24b9d046dcf916bbd15888873277e9a` passed 61 tests, full gates, and independent UX/clinical PASS reviews. Verified commit `f2d8760` deployed only to beta as `dpl_8qugXcYXQNEqLvQ3L57fuixCe5HN`; canonical `17/221/301/0.2` retained four alerts and finite formula outputs, Clear All reset cleanly, iPhone 13 layout passed, and protected legacy remained byte-identical.
 
 ## Exact next actions
-1. Commit and push this evidence-only Memory Bank handoff.
-2. Await the next authoritative clinical source and ingest only one protocol at a time.
+1. Pending user request: rename the app’s visible header title and browser/page metadata title to exactly `LBH protocol` (singular, lowercase `protocol`). This has not been implemented, committed, pushed, or deployed yet.
+2. Use TDD: add a focused title regression first, then update only the title-bearing UI/metadata locations; do not rename the repository, Vercel project, package, domain, or protected legacy application.
+3. Run focused/full tests, lint, TypeScript, production build, audit, secret scan, and diff checks; browser-verify the visible heading and document title on desktop/mobile.
+4. Commit, push, and deploy only to `.vercel/project.json` project `lbh-protocols-beta`; verify canonical beta and confirm protected `lbh-protocols` remains byte-identical.
+5. After that, await the next authoritative clinical source and ingest only one protocol at a time.
 
 ## Hazards
 - Never link, deploy, alias, or promote against `lbh-protocols` legacy.
