@@ -100,6 +100,9 @@ Keep the verified April 2024 IV-to-Enteral beta release stable and continue reco
 - User corrected the patient reset contract: age, height, weight, and SCr must be blank—not restored to demo defaults—both on first landing and after `Clear All`. This supersedes the prior numeric-default behavior.
 - Patient numeric fields are now nullable; incomplete profiles produce unavailable (`—`) derived values, while complete valid profiles preserve the established formulas/results exactly. Active-view searches/calculator parameters continue to reset through the central reset generation.
 - Exact corrected tree `09779efa282fcf71437af29c1d534b1f463a416a` passed 58 tests, full gates, canonical blank→entered→blank browser verification, and two independent PASS reviews. Verified commit `60718e4` deployed only to beta as `dpl_HwhjVjk3LG1DuEsd52hk6pm5QMaY`; protected legacy remained byte-identical.
+- Patient Profile Age/Height/Weight/SCr units now render in dedicated flex suffix boxes outside native number inputs, preserving unobstructed spinner and keyboard increment/decrement controls on desktop and iPhone 13 layouts.
+- Centralized safeguards enforce the existing ranges (age 18–120, height 120–220 cm, weight 30–300 kg, SCr 0.3–15 mg/dL). Out-of-range nonblank values receive a red `aria-invalid` field/suffix treatment plus field-linked `role=alert` guidance, and all patient-specific derived/dose outputs fail closed to `—`; blank fields remain unflagged.
+- Exact tree `a91a966ced24fa3d7d754958f2b76cd7ee3f0bfc` passed 61 tests, full gates, clinical PASS, desktop Safari/Chromium checks, and direct iPhone 13 rendering that resolved the UX reviewer’s mobile-evidence-only BLOCK. Verified commit `efeedb1` deployed only to beta as `dpl_CAYeZ15buW3vbwyFtKuBvHEhUGw4`; canonical invalid/reset/mobile checks passed with zero overflow/errors and protected legacy remained byte-identical.
 
 ## Exact next actions
 1. Commit and push this evidence-only Memory Bank handoff.
