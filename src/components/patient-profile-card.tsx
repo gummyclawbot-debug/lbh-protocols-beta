@@ -7,7 +7,6 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import {
   formatNum,
-  PATIENT_PARAMETER_RANGES,
   patientParameterError,
   type PatientNumericParameter,
 } from "@/lib/calculations";
@@ -51,7 +50,6 @@ function NumericParameterField({
   step?: number;
   className?: string;
 }) {
-  const range = PATIENT_PARAMETER_RANGES[parameter];
   const error = patientParameterError(parameter, value);
   const errorId = `${id}-error`;
 
@@ -62,8 +60,6 @@ function NumericParameterField({
         <Input
           id={id}
           type="number"
-          min={range.min}
-          max={range.max}
           step={step}
           value={value ?? ""}
           aria-invalid={Boolean(error)}
@@ -142,7 +138,7 @@ export function PatientProfileCard({ className }: { className?: string }) {
           <NumericParameterField
             parameter="age"
             id="age"
-            label="Age (18–120)"
+            label="Age"
             unit="yrs"
             value={patient.age}
             onChange={setAge}
@@ -151,7 +147,7 @@ export function PatientProfileCard({ className }: { className?: string }) {
           <NumericParameterField
             parameter="heightCm"
             id="height"
-            label="Height (120–220 cm)"
+            label="Height"
             unit="cm"
             value={patient.heightCm}
             onChange={setHeightCm}
@@ -160,7 +156,7 @@ export function PatientProfileCard({ className }: { className?: string }) {
           <NumericParameterField
             parameter="weightKg"
             id="weight"
-            label="Weight (30–300 kg)"
+            label="Weight"
             unit="kg"
             value={patient.weightKg}
             onChange={setWeightKg}
@@ -169,7 +165,7 @@ export function PatientProfileCard({ className }: { className?: string }) {
           <NumericParameterField
             parameter="scr"
             id="scr"
-            label="SCr (0.3–15 mg/dL)"
+            label="SCr"
             unit="mg/dL"
             value={patient.scr}
             onChange={setScr}

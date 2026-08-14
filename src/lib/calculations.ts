@@ -80,11 +80,7 @@ export function derivePatient(p: PatientProfile): PatientDerived {
     p.age == null ||
     p.heightCm == null ||
     p.weightKg == null ||
-    p.scr == null ||
-    patientParameterError("age", p.age) ||
-    patientParameterError("heightCm", p.heightCm) ||
-    patientParameterError("weightKg", p.weightKg) ||
-    patientParameterError("scr", p.scr)
+    p.scr == null
   ) {
     return unavailablePatientDerived();
   }

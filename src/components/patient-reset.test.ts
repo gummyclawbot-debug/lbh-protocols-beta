@@ -51,5 +51,11 @@ describe("global Clear All", () => {
     expect(profile).not.toContain("pointer-events-none absolute top-1/2 right-3");
     expect(profile).toContain("aria-invalid={Boolean(error)}");
     expect(profile).toContain('role="alert"');
+    expect(profile).not.toContain("min={range.min}");
+    expect(profile).not.toContain("max={range.max}");
+    expect(profile).toContain('label="Age"');
+    expect(profile).toContain('label="Height"');
+    expect(profile).toContain('label="Weight"');
+    expect(profile).toContain('label="SCr"');
   });
 });

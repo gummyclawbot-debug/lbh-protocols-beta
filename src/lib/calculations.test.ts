@@ -79,17 +79,16 @@ describe("calculation characterization", () => {
     expect(patientParameterError("age", null)).toBeNull();
   });
 
-  it("suppresses every derived value when a patient parameter is out of range", () => {
-    const invalidProfiles = [
-      { sex: "M" as const, age: 17, heightCm: 175, weightKg: 85, scr: 1.2 },
-      { sex: "M" as const, age: 65, heightCm: 119, weightKg: 85, scr: 1.2 },
-      { sex: "M" as const, age: 65, heightCm: 175, weightKg: 301, scr: 1.2 },
-      { sex: "M" as const, age: 65, heightCm: 175, weightKg: 85, scr: 15.1 },
-    ];
+  it("keeps range warnings advisory and calculates with complete out-of-range inputs", () => {
+    const result = derivePatient({
+      sex: "M",
+      age: 17,
+      heightCm: 221,
+      weightKg: 301,
+      scr: 0.2,
+    });
 
-    for (const profile of invalidProfiles) {
-      expect(Object.values(derivePatient(profile)).every(Number.isNaN)).toBe(true);
-    }
+    expect(Object.values(result).every(Number.isFinite)).toBe(true);
   });
 });
 
