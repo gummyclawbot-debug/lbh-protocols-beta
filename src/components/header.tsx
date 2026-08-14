@@ -31,7 +31,7 @@ export function Header({
           </div>
           <div className="min-w-0">
             <h1 className="truncate text-base font-semibold tracking-tight sm:text-lg">
-              LBH Protocols Beta
+              LBH protocol
             </h1>
             <p className="truncate text-xs text-muted-foreground">
               MedCalc Streamline · Clinical Decision Support

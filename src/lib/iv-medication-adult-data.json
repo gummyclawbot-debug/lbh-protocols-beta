@@ -1,0 +1,3569 @@
+{
+  "source": {
+    "id": "intravenous-medication-adult-2026-04",
+    "title": "Intravenous Medication: Adult",
+    "updated": "April 20, 2026",
+    "pageCount": 37,
+    "href": "/references/lbh-intravenous-medication-adult-2026-04.pdf",
+    "sha256": "5ac503951edeb244cb4461721b6213a1642cb79fa1803558cb1d61c90b50e44c",
+    "authority": "LBH institutional protocol; medical-board and P&T reviewed/approved",
+    "affectedViews": [
+      "iv-medication"
+    ]
+  },
+  "referenceNumber": "15967",
+  "nextReviewDate": "April 30, 2029",
+  "sites": [
+    "Grace Medical Center A Sinai Hospital Facility",
+    "Sinai Hospital of Baltimore"
+  ],
+  "approvers": [
+    "AMANDA SHROUT (VP PATIENT CARE SVCS AND CNO-SINAI AND GRACE)",
+    "CHARLES ALBRECHT (VP - Chief Medical Officer)",
+    "LISA POLINSKY (VP - Pharmacy and Respiratory)"
+  ],
+  "scope": "Medical Center Complex, Adult Inpatient and Adult Emergency Department population.",
+  "purpose": "To provide guidance for administering intravenous (IV) medications to patients eighteen (18) years of age or older, with allowance for adaptation in extenuating circumstances.",
+  "defaultContext": {
+    "population": "adult",
+    "site": "sinai-inpatient",
+    "unit": "general-inpatient"
+  },
+  "sourceRowCount": 230,
+  "continuationPages": [
+    10,
+    11,
+    15,
+    16,
+    17,
+    19,
+    20,
+    21,
+    23,
+    25,
+    26,
+    27,
+    28,
+    31,
+    33,
+    34
+  ],
+  "medications": [
+    {
+      "id": "iv-med-001",
+      "displayName": "Abciximab (Reopro)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC/M",
+      "considerations": "Must use 0.22-micron filter with infusion.",
+      "page": 7
+    },
+    {
+      "id": "iv-med-002",
+      "displayName": "Acetazolamide+ (Diamox)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "IV push 100mg - 500mg over 1 minute",
+      "page": 7
+    },
+    {
+      "id": "iv-med-003",
+      "displayName": "Acetylcysteine+ (Acetadote)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC/M",
+      "considerations": "",
+      "page": 7
+    },
+    {
+      "id": "iv-med-004",
+      "displayName": "Acyclovir + (Zovirax)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Concentration should not exceed 7mg/ml. Infuse over 1 hour.",
+      "page": 7
+    },
+    {
+      "id": "iv-med-005",
+      "displayName": "Adenosine + (Adenocard, Adenoscan)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G: ACLS or PALS trained RN may administer in a monitored setting or emergent situation with MP present at bedside and Lifepak in place. Otherwise, should be administered by MP on non-monitored unit. CC: Nurse can administer in CC with or without MP present. E: Pushed by CC nurse or ACLS or PALS trained RN with MP at the bedside.",
+      "considerations": "Push rapidly over 1-2 seconds while on cardiac monitor. 1st dose: 6mg, 2nd dose: 12mg, 3rd dose no longer recommended by the 2020 American Heart Association (AHA) ACLS guidelines; doses 2 min apart. Flush immediately with 10mL NS. Brief period of asystole may be seen. RN administers in G, CC or E (please see specifics in column to the left). Patient should be on continuous cardiac monitor or EKG at time of administration. AHA recommends when Adenosine is given via a central line that the doses should be reduced to half doses.",
+      "page": 7
+    },
+    {
+      "id": "iv-med-006",
+      "displayName": "Albumin +",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Use standard IV tubing, insert tubing spike into vented spike adapter, then spike bottle. Do not infuse with other medications. Avoid use in Jehovah’s Witness patients as albumin is a human plasma protein. Normovolemia: infuse 5% Albumin at 2 – 10ml/min, 25% Albumin at 1- 3ml/min. Hypovolemia: infuse single dose as rapidly as possible up to 10ml/min. Do not exceed 10ml/min to prevent pulmonary edema. Monitor and notify provider for major side effects: hypersensitivity reaction, anaphylaxis, pulmonary edema, pruritis. +Grace Medical only carries albumin 25%, 50ml product",
+      "page": 8
+    },
+    {
+      "id": "iv-med-007",
+      "displayName": "Alprostadil (Prostin VR)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC",
+      "considerations": "Glass container; Stable for 24 hours. Monitor VS and S/S bleeding",
+      "page": 8
+    },
+    {
+      "id": "iv-med-008",
+      "displayName": "Alteplase+ (Activase, Cathflo)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "ACTIVASE: IVP-E/CC/P ACTIVASE: CI-CC/P CATHFLO: G",
+      "considerations": "The Licensed Practical Nurse (LPN) is excluded from administering, unless within the hemodialysis or plasmapheresis setting.",
+      "page": 8
+    },
+    {
+      "id": "iv-med-009",
+      "displayName": "Amikacin (Amikin)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Infuse over 30 - 60 minutes. Uses variable time schedule",
+      "page": 8
+    },
+    {
+      "id": "iv-med-010",
+      "displayName": "Amino Acid products",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Usually in TPN solutions",
+      "page": 8
+    },
+    {
+      "id": "iv-med-011",
+      "displayName": "Aminocaproic acid + (Amicar)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Loading Dose for acute bleeding: 4-5 gm in 250 mL over one hour. Monitor VS q 1 hour during infusion.",
+      "page": 8
+    },
+    {
+      "id": "iv-med-012",
+      "displayName": "Aminophylline +",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Rate not to exceed 25 mg/min",
+      "page": 8
+    },
+    {
+      "id": "iv-med-013",
+      "displayName": "Amiodarone + (Cordarone)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "X",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "IVP: E, MP PRESENT Loading Dose/IVPB/CI: CC/M/CDCR",
+      "considerations": "300 or 150 mg IVP if pulseless VT/VF administering undiluted over 1-2 seconds (MP Present). All other situations administer as a 150 mg loading dose in 100 ml D5W over 10 mins, in which a MP does not have to be present for admin. of bolus. For maintenance dose, start infusion at 1 mg/min x 6 hours then decrease to 0.5 mg/min x 18 hours. Calculate QT Interval. A 0.2-micron filter is recommended.",
+      "page": 8
+    },
+    {
+      "id": "iv-med-014",
+      "displayName": "Amphotericin B (non- liposomal)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Do not pre-medicate for test dose. Mix in D5W or D10W. Concentration 0.1 mg/ml for peripheral line, > concentration through central line. Recommend pre/post infusion of NS. Infuse over 4-6 hours. VS q 30 minutes X 2, then q 1 hour with close clinical observation. Monitor K+, Mg, Ca, BUN/Cr. May give meperidine with MP order for side effects.",
+      "page": 9
+    },
+    {
+      "id": "iv-med-015",
+      "displayName": "Amphotericin lipid complex",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Infuse at 2.5 mg/kg/hr. If >2 hours hang time, gently shake bag. Conc. 1-2 mg/ml",
+      "page": 9
+    },
+    {
+      "id": "iv-med-016",
+      "displayName": "Ampicillin +",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Must be diluted in NS only; dilute using NS minibag plus before administration. 1gm is diluted with 50ml NS and 2gm with 100ml NS.",
+      "page": 9
+    },
+    {
+      "id": "iv-med-017",
+      "displayName": "Ampicillin/sulbactam+ (Unasyn)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Must be diluted in NS only; dilute using NS minibag plus before administration. 1.5gm is diluted with 50ml NS and 3gm is diluted with 100ml NS.",
+      "page": 9
+    },
+    {
+      "id": "iv-med-018",
+      "displayName": "Antithrombin III",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "M/E",
+      "considerations": "Brand Name: Thrombate III. Administer over 10-20 minutes. Administer within 3 hours following reconstitution. Monitor for hypersensitivity reactions and anaphylaxis.",
+      "page": 9
+    },
+    {
+      "id": "iv-med-019",
+      "displayName": "Argatroban +",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G (cannot be given on B5, TBI)",
+      "considerations": "Independent nurse double check of medication, dose calculations, and infusion settings required. Starting dose range 0.25-1.5mcg/kg/min as a continuous infusion. Dilute with NS, D5W or Lactated Ringers to a final concentration of 1mg/ml. Monitoring done by pharmacy.",
+      "page": 9
+    },
+    {
+      "id": "iv-med-020",
+      "displayName": "Ascorbic acid",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "IM administration preferred. Infuse slowly when administered IV.",
+      "page": 9
+    },
+    {
+      "id": "iv-med-021",
+      "displayName": "Atracurium (Tracrium)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC/P",
+      "considerations": "Patient must be on mechanical ventilation.",
+      "page": 9
+    },
+    {
+      "id": "iv-med-022",
+      "displayName": "Atropine +",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "P/E/CC/M/G",
+      "considerations": "Cardiac monitoring required. May be given to patients receiving chemotherapy for treatment of diarrhea unmonitored provided HR>50 and <80 and it is given according to oncology treatment protocol. General (G) non monitored units - Atropine (maximum 2 doses) may be given for patients receiving neostigmine as part of colonic pseudo-obstruction treatment. Follow VS monitoring per orders. AHA 2020 Guidelines: Recommend 1 mg for Bradycardia. Max 3 mg.",
+      "page": 9
+    },
+    {
+      "id": "iv-med-023",
+      "displayName": "Azithromycin +",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "G: For 500mg dose, RN to reconstitute with 250ml NS using vial mate adaptor. For BE-PACU area:azithromycin vial available for reconstitution for antibiotic prophylaxis in cesarean delivery and can be reconstituted by anesthesia as follows: reconstitute each 500 mg vial with 4.8 mL of SWFI to make concentration of 100 mg/mL. Further dilute the ordered dose to a concentration of 2 mg/mL (250 mL) in NS, D5W, or LR.",
+      "page": 9,
+      "pageEnd": 10
+    },
+    {
+      "id": "iv-med-024",
+      "displayName": "Aztreonam + (Azactam)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Dilute using D5W minibag plus before administration. 1and 2 gm are diluted with 100ml D5W.",
+      "page": 10
+    },
+    {
+      "id": "iv-med-025",
+      "displayName": "Bivalirudin (Angiomax)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G (cannot be given on B5, TBI)",
+      "considerations": "Independent nurse double check of medication, dose calculations, and infusion settings required. Starting dose range 0.025-0.15mg/kg/hr. Monitoring done by pharmacy.",
+      "page": 10
+    },
+    {
+      "id": "iv-med-026",
+      "displayName": "Brivaracetam (Briviact)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "IVP preferred- undiluted over 3 to 5 mins. IVPB- MP to request piggyback administration to Pharmacy. Formulary restricted: 1. Patients who have either failed levetiracetam therapy, were intolerant to levetiracetam related side effects, or continuation of home therapy. 2. Patients failing 1st line benzodiazepines or not appropriate for benzodiazepine therapy as determined by neurologist, for acutely seizing non-intubated patients.",
+      "page": 10
+    },
+    {
+      "id": "iv-med-027",
+      "displayName": "Bumetanide + (Bumex)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G- IV push CC/M*- CI",
+      "considerations": "Push over 1-2 min. Maximum single dose 5 mg. Maximum daily 10 mg (Exceptions to these in CC units and renal patients). Conversion ratio Furosemide: Bumetanide is 40:1 *M: non-titratable drip only",
+      "page": 10
+    },
+    {
+      "id": "iv-med-028",
+      "displayName": "Buprenorphine (Buprex)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Also given IM; for immediate release IV, administer slowly over at least 2 minutes; administration over 20-30 minutes preferred when used for opioid (heroin) withdrawal.",
+      "page": 10
+    },
+    {
+      "id": "iv-med-029",
+      "displayName": "Butorphanol (Stadol)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Also given IM",
+      "page": 10
+    },
+    {
+      "id": "iv-med-030",
+      "displayName": "Caffeine Citrate",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "",
+      "page": 10
+    },
+    {
+      "id": "iv-med-031",
+      "displayName": "Caffeine and Sodium Benzoate",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Use 0.22 micron in-line filter when administering (American Regent)",
+      "page": 10
+    },
+    {
+      "id": "iv-med-032",
+      "displayName": "Calcitriol (Calcijex)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "",
+      "page": 10
+    },
+    {
+      "id": "iv-med-033",
+      "displayName": "Calcium chloride +",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "X",
+        "ci": "X"
+      },
+      "centralLineRequired": "Y (preferred)",
+      "areasOfUse": "IVP: E/CC CI: CC IVPB: G",
+      "considerations": "IVP: E/CC, All (with MP present); CI: CC with CRRT Push 50-100 mg/min. Calcium replacement form IV is calcium gluconate. Central Line preferred.",
+      "page": 10,
+      "pageEnd": 11
+    },
+    {
+      "id": "iv-med-034",
+      "displayName": "Calcium disodium edetate",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC, M",
+      "considerations": "Daily CI over 8-24 hours or intermittent IVPB doses over 15-20 minutes. Rapid infusion should be avoided. IM route preferred",
+      "page": 11
+    },
+    {
+      "id": "iv-med-035",
+      "displayName": "Calcium gluconate +",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "X",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "IVP: E/CC CI: CC IVPB: G",
+      "considerations": "IV Push 0.5-2 ml/min. May administer through peripheral line in a large vein",
+      "page": 11
+    },
+    {
+      "id": "iv-med-036",
+      "displayName": "Cangrelor (Kengreal)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC/M/P/E",
+      "considerations": "Bolus dose is indicated in certain situations and should be given from the compounded IV infusion bag over 1 minute.",
+      "page": 11
+    },
+    {
+      "id": "iv-med-037",
+      "displayName": "Caplacizumab (Cablivi)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "First dose is given as bolus IV injection at least 15 minutes prior to plasma exchange. Reconstitute before administration with provided syringe containing 1mL SWFI. Withdraw the solution from the vial into the syringe after reconstitution. Do not shake vial. Subsequent doses are given subcutaneously.",
+      "page": 11
+    },
+    {
+      "id": "iv-med-038",
+      "displayName": "Cefazolin +",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "1 and 2gm may be given IVP. Dilute 3gm using 100ml D5W minibag plus before administration.",
+      "page": 11
+    },
+    {
+      "id": "iv-med-039",
+      "displayName": "Cefepime +",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "1gm: IVP 2gm dose: Dilute using 100ml D5W minibag plus before administration.",
+      "page": 11
+    },
+    {
+      "id": "iv-med-040",
+      "displayName": "Cefotetan (Cefotan)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Dilute 1 and 2gm doses with 50ml NS minibag plus before administration.",
+      "page": 11
+    },
+    {
+      "id": "iv-med-041",
+      "displayName": "Ceftazidime (Fortaz)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "",
+      "page": 11
+    },
+    {
+      "id": "iv-med-042",
+      "displayName": "Ceftazidime- Avibactam (Avycaz)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Dilute with 50ml NS minibag plus before administration. Infuse over 2 hours. Formulary Restriction.",
+      "page": 11
+    },
+    {
+      "id": "iv-med-043",
+      "displayName": "Ceftriaxone + (Rocephin)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X*",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "1 and 2 gm doses: Dilute with 50ml D5W minibag plus before administration. Usual dose 1 gm daily. 2 gm Q12 hours for meningitis. *1 gm IVP may be used for minibag shortage.",
+      "page": 11
+    },
+    {
+      "id": "iv-med-044",
+      "displayName": "Cefuroxime (Zinacef)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "",
+      "page": 11
+    },
+    {
+      "id": "iv-med-045",
+      "displayName": "Ceftaroline (Teflaro)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Formulary Restriction. Dilute 400mg and 600mg with 100ml D5W minibag plus before administration.",
+      "page": 11
+    },
+    {
+      "id": "iv-med-046",
+      "displayName": "Ceftolozane-tazobactam (Zerbaxa)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Infuse over 1 hour. Formulary restriction.",
+      "page": 12
+    },
+    {
+      "id": "iv-med-047",
+      "displayName": "Chloramphenicol (Chloromycetin)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "IVP at a concentration not to exceed 100 mg/ml over 1 minute. IVPB over 15-30 minutes",
+      "page": 12
+    },
+    {
+      "id": "iv-med-048",
+      "displayName": "Chlorothiazide (Diuril)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X*",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "*IVP over 5 mins, do not administer IM or SQ. Each 0.5 gm dose over 5 mins",
+      "page": 12
+    },
+    {
+      "id": "iv-med-049",
+      "displayName": "Chlorpromazinee+ (Thorazine)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X*",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "IM route preferred. IVPB: Product must be diluted to a maximum of 1mg/ml and administered at a maximum rate of 1mg/min. For hiccups: IVPB in 500-1000ml. To reduce risk of hypotension, patients receiving IV chlorpromazine should remain lying down during and for 30 minutes after the infusion. IVP is not preferred, and MP must be present. Follow dilution, maximum rate of administration and monitoring as listed above. Do not concurrently administer with tetracycline antibiotics.",
+      "page": 12
+    },
+    {
+      "id": "iv-med-050",
+      "displayName": "Ciprofloxacin + (Cipro)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Infuse over 60 minutes",
+      "page": 12
+    },
+    {
+      "id": "iv-med-051",
+      "displayName": "Cisatracurium + (Nimbex)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CI: CC/P IVP: E",
+      "considerations": "Patient must be mechanically ventilated.",
+      "page": 12
+    },
+    {
+      "id": "iv-med-052",
+      "displayName": "Clevidipine (Cleviprex)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC/P",
+      "considerations": "Restricted to neurology or neurosurgery patients requiring urgent blood pressure lowering in critical care area.",
+      "page": 12
+    },
+    {
+      "id": "iv-med-053",
+      "displayName": "Clindamycin + (Cleocin)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Rate not to exceed 30 mg/min",
+      "page": 12
+    },
+    {
+      "id": "iv-med-054",
+      "displayName": "Conjugated estrogen (Premarin)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Slow IVP to prevent flushing. Each 5 mg over 1 min. May infuse through tubing of running IV",
+      "page": 12
+    },
+    {
+      "id": "iv-med-055",
+      "displayName": "Cosyntropin + (Cortrosyn)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "X",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "IVP AND IVPB: G CI: P",
+      "considerations": "Draw plasma cortisol level prior to administration & 30 minutes after. IVP: Reconstitute with 1mL NS. Push over 2 minutes. Can be given as a 4 to 8-hour infusion if greater stimulus is required. Continuous observation x 30 minutes then frequently. HR & BP q5min x 3, then q 15 x 2, then q 1 hour till completed",
+      "page": 13
+    },
+    {
+      "id": "iv-med-056",
+      "displayName": "Dalbavancin +",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "ED and 23hr stay patients only",
+      "considerations": "Restricted to units listed or specific patient population, based on CP review.",
+      "page": 13
+    },
+    {
+      "id": "iv-med-057",
+      "displayName": "Dantrolene + (Ryanodex)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC / P",
+      "considerations": "Nurse to reconstitute each vial with 5 mL sterile water to make 50 mg/mL, Use within 6 hours after reconstitution.",
+      "page": 13
+    },
+    {
+      "id": "iv-med-058",
+      "displayName": "Daptomycin (Cubicin)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Formulary restriction",
+      "page": 13
+    },
+    {
+      "id": "iv-med-059",
+      "displayName": "Darbopoetin Alfa (Aranesp)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Formulary restriction",
+      "page": 13
+    },
+    {
+      "id": "iv-med-060",
+      "displayName": "Deferoxamine mesylate (Desferal)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC/M/B6/OPIS",
+      "considerations": "IM preferred or SQ by hypodermoclysis. IV administration in cardiovascular shock or chronic iron overload. IV rate based on pt weight, initial 1 gm infused not to exceed 15mg/kg/hr. Subsequent 500mg doses not to exceed 125mg/hr. Do not exceed 6 grams in 24 hours.",
+      "page": 13
+    },
+    {
+      "id": "iv-med-061",
+      "displayName": "Desmopressin + (DDAVP)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Direct IVP slow.",
+      "page": 13
+    },
+    {
+      "id": "iv-med-062",
+      "displayName": "Dexamethasone+ (Decadron)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Rapid IVP may cause burning in rectal area. IVP for doses ≤ 10 mg. IVPB for doses > 10 mg.",
+      "page": 13
+    },
+    {
+      "id": "iv-med-063",
+      "displayName": "Dexmedetomidine Hydrochloride + (Precedex)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC/P",
+      "considerations": "Anesthesia or credentialed MD only FOR PROCEDURAL SEDATION for IVP.",
+      "page": 13
+    },
+    {
+      "id": "iv-med-064",
+      "displayName": "Dextran-40; Dextran-70",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Anaphylaxis possible. VS q 15 min X 4, then hourly",
+      "page": 13
+    },
+    {
+      "id": "iv-med-065",
+      "displayName": "Dextrose 10% +",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Per PCS Hypoglycemia Protocol.",
+      "page": 13
+    },
+    {
+      "id": "iv-med-066",
+      "displayName": "Dextrose 20%",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "Y",
+      "areasOfUse": "CC/M",
+      "considerations": "Infused through a central line. Monitor blood glucose every 4 hours. Notify MP if patient is consistently hyperglycemic. Notify MP if patient develops low potassium levels.",
+      "page": 13
+    },
+    {
+      "id": "iv-med-067",
+      "displayName": "Dextrose 30%",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "Y",
+      "areasOfUse": "CC/M",
+      "considerations": "Infused through a central line. Monitor blood glucose every 4 hours. Notify MP if patient is consistently hyperglycemic. Notify MP if patient develops low potassium levels.",
+      "page": 13
+    },
+    {
+      "id": "iv-med-068",
+      "displayName": "Dextrose 50% +",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Per PCS Hypoglycemia Protocol. For a patient that is NPO or unresponsive with IV access: administer D50 IVP: 1-amp D50 over 2-5 minutes",
+      "page": 14
+    },
+    {
+      "id": "iv-med-069",
+      "displayName": "Diazepam + (Valium)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Inject close to vein. Rate not to exceed 5 mg/minute. Do not mix or dilute with other solutions. Observe patient for 5 minutes.",
+      "page": 14
+    },
+    {
+      "id": "iv-med-070",
+      "displayName": "Digoxin + (Lanoxin)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC/M",
+      "considerations": "IVP ≥ 5 minutes",
+      "page": 14
+    },
+    {
+      "id": "iv-med-071",
+      "displayName": "Digoxin immune FAB (DigiFAB)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X*",
+        "ivpb": "X",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC/M",
+      "considerations": "Must be on telemetry. Infuse over 30 minutes through a 0.22-micron filter. Can be infused over 2 – 5 hours. *IVP reserved for life threatening cases where cardiac arrest is imminent. VS q 5 minutes during infusion. Monitor K at q 1 hour and q 4-hour post infusion.",
+      "page": 14
+    },
+    {
+      "id": "iv-med-072",
+      "displayName": "Dihydroergotamine (DHE- 45)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Push 1 mg over 1 minute. Maximum of 2 mg per day as IV dose. Maximum of 6 mg per week.",
+      "page": 14
+    },
+    {
+      "id": "iv-med-073",
+      "displayName": "Diltiazem + (Cardizem)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC/P/E Non-titratable: 6ST/OHSD/PCU/NPCU* NPCU: Neurology Progressive Care Unit **",
+      "considerations": "IV Push 0.25 mg/kg over 2 minutes. Cardiac monitoring required, monitor BP. Cardiology consult highly recommended before CI. Max IV rate 15mg/hour *6ST/PCU- non-titratable, 15 mg/hour maximum rate with VS monitoring every 15 min for 1 hour. **OHSD/NPCU- non-titratable, 5 mg/hr with VS monitoring every 15 min for 1 hour.",
+      "page": 14
+    },
+    {
+      "id": "iv-med-074",
+      "displayName": "Diphenhydramine + (Benadryl)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X*",
+        "ivpb": "X**",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "*IVP: ≤ 50 mg at a rate of 25 mg/min. **IVPB: > 50 mg and administer over 15 minutes",
+      "page": 14
+    },
+    {
+      "id": "iv-med-075",
+      "displayName": "Dobutamine + (Dobutrex)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC/M* **CDCR – Stress Echo with MP present",
+      "considerations": "*6 ST, PCU, OHSD limit 5 mcg/kg/min in large vein antecubital preferred with 20 or > gauge. Exception made for home infusions. Contact Attending to maintain dose. -Cardiac monitoring is required unless home infusion patient (may receive at any dose and unmonitored if same as home dose). -Monitor for infiltration if delivered peripherally every 8 hours.",
+      "page": 14,
+      "pageEnd": 15
+    },
+    {
+      "id": "iv-med-076",
+      "displayName": "Dolasetron (Anzemet)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC/M",
+      "considerations": "Cardiac monitoring required. IVP over 30 sec. IVPB infuse over 15 minutes. Observe for bradycardia, hypotension.",
+      "page": 15
+    },
+    {
+      "id": "iv-med-077",
+      "displayName": "Dopamine +",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "Y – Y – For concentrated drips",
+      "areasOfUse": "CC/OR/E: Titratable drip 6 ST/PCU/OHSD: up to 10mcg/kg/min, non-titratable drip",
+      "considerations": "CC/OR/E: Central (standard or concentrated drip) or peripheral line (standard concentration drip only) Standard drip for peripheral line (400mg/250ml): Rate 2.5-10mcg/kg/min. Titrate 2.5mcg/kg/min every 5 mins. See PCS Peripheral Administration of Continuous Infusion Vasopressors policy for duration of therapy. Concentrated drip for central line (800mg/250ml): Rate 2.5-20mcg/kg/min. Titrate 2.5mcg/kg/min every 5 mins. 6 ST/PCU/OHSD: Peripheral or central line (use standard concentration only), non-titratable drip. Do not exceed 10mcg/kg/min. See PCS Peripheral Administration of Continuous Infusion Vasopressors policy for duration of therapy. CDCR: Continuous dopamine should not exceed 5mcg/kg/min",
+      "page": 15,
+      "pageEnd": 16
+    },
+    {
+      "id": "iv-med-078",
+      "displayName": "Doxapram (Dopram)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC/P",
+      "considerations": "Cardiac and BP monitoring required",
+      "page": 16
+    },
+    {
+      "id": "iv-med-079",
+      "displayName": "Doxycycline + (Vibramycin)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Infuse over 1 hour to 4 hours; dilute using 100ml NS minibag plus before administration",
+      "page": 16
+    },
+    {
+      "id": "iv-med-080",
+      "displayName": "Droperidol (Inapsine)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC/M/P",
+      "considerations": "EKG must be obtained for single or cumulative doses >2mg. Hold for prolonged QTc (>440msec in male or >450 in msec in female.). Infuse over 5-10 minutes. HR & BP before, during and after administration.",
+      "page": 16
+    },
+    {
+      "id": "iv-med-081",
+      "displayName": "Enalaprilat + (Vasotec)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC/M/E",
+      "considerations": "Slow IVP over 5 minutes. Monitor VS very frequently",
+      "page": 16
+    },
+    {
+      "id": "iv-med-082",
+      "displayName": "Ephedrine sulfate +",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC/P",
+      "considerations": "MP must be at bedside",
+      "page": 16
+    },
+    {
+      "id": "iv-med-083",
+      "displayName": "Epinephrine + (Adrenalin 1:10,000)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "Y- For concentrated drips",
+      "areasOfUse": "IVP:E CI: CC/OR",
+      "considerations": "Cardiac monitoring required. CI: Concentrated drip (10mg/250ml NS or D5W, central line only): rate 0.05- 1mcg/kg/min. Titrate 0.02 mcg/kg/min every 5 mins. Standard concentration (5mg/250ml): Peripheral (CC area only): rate 0.05-0.5mcg/kg/min. Titrate 0.01mcg/kg/min every 5 mins. See PCS Peripheral Administration of Continuous Infusion Vasopressors policy for duration of therapy. Central line rate for standard concentration: rate 0.05-1mcg/kg/min. Titrate 0.02mcg/kg/min every 5 mins. Cardiac Arrest: IV/IO dose: 1mg administered every 3-5 minutes during resuscitation; follow each dose with 20 mL flush elevate arm for 10-20 seconds after dose. Profound Bradycardia or Hypotension: 2-10 mcg/min infusion; titrate to patient response",
+      "page": 16,
+      "pageEnd": 17
+    },
+    {
+      "id": "iv-med-084",
+      "displayName": "Epoetin alpha; erythropoietin + (Retacrit, Epogen, Procrit)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Preferred route is SQ. IVP in Dialysis",
+      "page": 17
+    },
+    {
+      "id": "iv-med-085",
+      "displayName": "Ertapenem (Invanz)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "1gm: IVPFormulary restriction.",
+      "page": 17
+    },
+    {
+      "id": "iv-med-086",
+      "displayName": "Erythromycin lactobionate",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "",
+      "page": 17
+    },
+    {
+      "id": "iv-med-087",
+      "displayName": "Esmolol + (Brevibloc)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC/P/6 ST/OHSD/PCU/E",
+      "considerations": "Usual infusion rate 50-250 mcg/kg/min. Monitor hypotension, bradycardia.",
+      "page": 17
+    },
+    {
+      "id": "iv-med-088",
+      "displayName": "Estrogens, conjugated (Premarin)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Push slowly to avoid flushing.",
+      "page": 17
+    },
+    {
+      "id": "iv-med-089",
+      "displayName": "Ethacrynate sodium (Edecrin Sodium)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Dilute to a 1 mg/ml concentration. IVPB over 20-30 minutes. IVP over 2-3 minutes.",
+      "page": 17
+    },
+    {
+      "id": "iv-med-090",
+      "displayName": "Ethanol",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC",
+      "considerations": "",
+      "page": 17
+    },
+    {
+      "id": "iv-med-091",
+      "displayName": "Etomidate",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC/E/P",
+      "considerations": "Instructions: IVP with Anesthesia or MP presence.",
+      "page": 17
+    },
+    {
+      "id": "iv-med-092",
+      "displayName": "Factor IX (recombinant) Products ( Benefix or Rixubis)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Monitor for hypersensitivity reactions and thrombotic events. Administer within 3 hours after reconstitution. Do not mix with other infusion solutions.",
+      "page": 17
+    },
+    {
+      "id": "iv-med-093",
+      "displayName": "Factor II,VII,IX,X (Prothrombin Complex Concentrate – PCC)",
+      "aliases": [
+        "Kcentra (4 Factor PCC)"
+      ],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Administer intermittent infusion. Do not exceed 8.4ml/min. Administer through a separate infusion line. Administer promptly or within 4 hours from reconstitution. Do not mix with other products. Monitor for hypersensitivity reactions and thrombotic events.",
+      "page": 17,
+      "pageEnd": 18
+    },
+    {
+      "id": "iv-med-095",
+      "displayName": "Factor VIIa products (Novoseven)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "IVP Infused over 2-5 minutes. Administer within 3 hours from reconstitution. Do not mix with other infusion solutions. Monitor for hypersensitivity reactions and thrombotic events.",
+      "page": 18
+    },
+    {
+      "id": "iv-med-096",
+      "displayName": "Factor VIII products (Kogenate)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Administer within 3 hours from reconstitution. Administer over a period of 1-15 minutes. Monitor for hypersensitivity reactions. Do not mix with other infusion solutions.",
+      "page": 18
+    },
+    {
+      "id": "iv-med-097",
+      "displayName": "Factor Antihemophilic Von-Wilebrand (Humate P)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC/P/G/E",
+      "considerations": "Administer within 3 hours from reconstitution. Slowly infuse the solution (max 4ml/minute). Monitor for hypersensitivity reactions and thrombotic events. Do not mix with other infusion solutions.",
+      "page": 18
+    },
+    {
+      "id": "iv-med-098",
+      "displayName": "Famotidine + (Pepcid)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "IVP dilute each 20 mg with 3ml of NS to final volume of 5ml and administer over 2 minutes. IVPB infuse 20 mg dose over 15-30 mins.",
+      "page": 18
+    },
+    {
+      "id": "iv-med-099",
+      "displayName": "Fentanyl + (Sublimaze)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": "X*"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC/P PCA: REFER TO PCA POLICY regarding approved units",
+      "considerations": "*CI for sedation only in CC. IVP only CC/P.",
+      "page": 18
+    },
+    {
+      "id": "iv-med-100",
+      "displayName": "Ferric Gluconate",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "",
+      "page": 18
+    },
+    {
+      "id": "iv-med-101",
+      "displayName": "Filgrastim (G-CSF) (Granix)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Must be diluted to appropriate concentration (15 mcg/ml) in D5W. Infuse over 15-30 minutes. Usually given sub-q. Do not dilute in NS.",
+      "page": 18
+    },
+    {
+      "id": "iv-med-102",
+      "displayName": "Fluconazole + (Diflucan)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "",
+      "page": 18
+    },
+    {
+      "id": "iv-med-103",
+      "displayName": "Flumazenil + (Mazicon)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Reversal of moderate sedation or general anesthesia/benzodiazepine OD. Initial adult dose 0.2 mg over 15-30 seconds",
+      "page": 18
+    },
+    {
+      "id": "iv-med-104",
+      "displayName": "Folic acid +",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Can be added to most maintenance fluids to be given as infusion.",
+      "page": 18
+    },
+    {
+      "id": "iv-med-105",
+      "displayName": "Fomepizole +",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC",
+      "considerations": "",
+      "page": 18
+    },
+    {
+      "id": "iv-med-106",
+      "displayName": "Foscarnet (Foscavir)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "Y- for undiluted solution only",
+      "areasOfUse": "G",
+      "considerations": "Pre-hydrate with 500-1000 ml NS. Rate not to exceed 1 mg/kg/min (initial dose over 1 hour; maintenance dose over 2 hours). Peripheral concentration not to exceed 12 mg/ml (Must be diluted for peripheral use). Can infuse undiluted through central line.",
+      "page": 18,
+      "pageEnd": 19
+    },
+    {
+      "id": "iv-med-107",
+      "displayName": "Fosphenytoin + (Cerebyx)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "IVP: G IF > 250 mg PE dose → Cardiac monitoring requires",
+      "considerations": "IVPB: Loading dose made as IVPB from pharmacy (in 100ml NS or D5). Cardiac monitoring required for loading and doses >250mg PE. Monitor HR, BP, RR before administration and q15 minutes until 15 minutes after completion. MP to evaluate for heart block or bradycardia. IVP: maintenance doses may be given IVP. In a syringe, dilute each 2ml (100mg) vial with 8ml of NS or D5 to a concentration of 10mg/ml. Doses <=150mg, push over 1- minute minimum. Rate not to exceed 150mg PE/min. RN to double glove and wear protective gown for preparation for IVP doses. Slower rate may be better tolerated (50-100mg/min). The maximum dose on unmonitored unit is 250mg PE. Monitor HR, BP, RR before administration and 15 minutes after completion.",
+      "page": 19
+    },
+    {
+      "id": "iv-med-108",
+      "displayName": "Furosemide + (Lasix)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "X",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G- IV push CC/ M*- CI",
+      "considerations": "Single maximum dose IVP dose is 120 mg. Push 40 mg over 1-2 minute. For doses greater than 120 mg: to reduce incidence of ototoxicity, do not exceed a rate of 4 mg/min. Watch for ototoxicity, monitor K+. *M: non-titratable drip only",
+      "page": 19
+    },
+    {
+      "id": "iv-med-109",
+      "displayName": "Ganciclovir (Cytovene)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Use biohazard precautions",
+      "page": 19
+    },
+    {
+      "id": "iv-med-110",
+      "displayName": "Gentamicin +",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Infuse over 60 minutes. Trough drawn 30 min before dose, peak 60 min after infusion completed.",
+      "page": 19
+    },
+    {
+      "id": "iv-med-111",
+      "displayName": "Glucagon +",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G: Hypoglycemia Protocol CC: Beta Blocker/ CCB toxicity",
+      "considerations": "Hypoglycemia: Per PCS Hypoglycemia Protocol.",
+      "page": 19
+    },
+    {
+      "id": "iv-med-112",
+      "displayName": "Glycopyrrolatee+ (Robinal)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "0.2 mg over 1-2 minutes",
+      "page": 19
+    },
+    {
+      "id": "iv-med-113",
+      "displayName": "Haloperidol + (Haldol)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC: IVP or IM G: IM only",
+      "considerations": "IV Push not to exceed 5 mg. Hold for prolonged QTc of >440msec in male or >450 in msec in female.",
+      "page": 19
+    },
+    {
+      "id": "iv-med-114",
+      "displayName": "Hemin",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Pharmacy to reconstitute with 48mL of sterile water for injection (SWFI). Administer through a large vein or central line to prevent phlebitis. Infuse over at least 30 minutes through a 0.45 micron or smaller filter. After infusion, flush with 100 mL NS. Use immediately after reconstitution.",
+      "page": 19,
+      "pageEnd": 20
+    },
+    {
+      "id": "iv-med-115",
+      "displayName": "Heparin sodium+",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G (drip cannot be given on B5, TBI)",
+      "considerations": "Double check/signature required on pump setting. Check with pharmacy on compatibility of other meds to be infused in same line. GMC: RN to follow heparin titration instructions in medication order (EMR). Sinai aPTT ranges differ from GMC aPTT ranges.",
+      "page": 20
+    },
+    {
+      "id": "iv-med-116",
+      "displayName": "Hydralazine + (Apresoline)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC/M/L&D/OR/IR/E",
+      "considerations": "Do not exceed 5 mg/min. B/P before and after dose. IV dose ½ of oral dose.",
+      "page": 20
+    },
+    {
+      "id": "iv-med-117",
+      "displayName": "Hydrocortisone+ (Solu- cortef)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "IVP: administer over 30 seconds. Administer doses ≥ 500 mg over 10 minutes.",
+      "page": 20
+    },
+    {
+      "id": "iv-med-118",
+      "displayName": "Hydromorphone + (Dilaudid)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": "X*"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "IVP: G, Refer to PCA policy. *CI is ONLY FOR Inpatient Hospice or ICU.",
+      "considerations": "IVP over 2-5 minutes. Dilute 2 mg to 10 ml to avoid irritation. Monitor BP, HR, RR. Standard peripheral PCA (adult) 50 mg/250 ml NS.",
+      "page": 20
+    },
+    {
+      "id": "iv-med-119",
+      "displayName": "Ibutilide",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC/P (Must be administered by MP)",
+      "considerations": "Diluted in 50 ml D5W or NS, infuse over 10 minutes. Dose: Adults <60kg: 0.01mg/kg IV over 10 minutes. Adults >=60kg: 1mg over 10 minutes. A second infusion of equal strength may be infused if required. Monitoring: RN must be at bedside continuously to monitor patient. Vital signs must be recorded q5 minutes during infusion along with QTc interval. Defibrillator must be at bedside and code cart readily available. Patient must remain in CDCR for 4 hours post infusion with q1 hour vital sign and QTc interval assessment. Patient cannot be transferred to OHSD/IMC/PCU until 4 hours have passed and MP deems the patient is stable.",
+      "page": 20,
+      "pageEnd": 21
+    },
+    {
+      "id": "iv-med-120",
+      "displayName": "Idarucizumab",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "M/E",
+      "considerations": "Administer dose undiluted as an IV bolus either via syringe or as an infusion by hanging the vials. Do not mix with other drugs or administer any other infusion in the same IV line. Administer promptly once solution has been removed from vial. Infusion of each vial should take no longer than 5 to 10 minutes with the second vial of 2.5 g administered no later than 15 minutes after the end of the first 2.5 g vial.",
+      "page": 21
+    },
+    {
+      "id": "iv-med-121",
+      "displayName": "Imipenem/cilastatin (Primaxin)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Solution does appear cloudy. Infuse 250-500 mg over 20-30 minutes. Infuse 1 gm over 60 minutes. Observe for seizures.",
+      "page": 21
+    },
+    {
+      "id": "iv-med-122",
+      "displayName": "Immune globulin I.V. + (IVIG)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Administer in dedicated or separate line. Privigen brand does not require a filter. No medications may be added. Epinephrine and emergency equipment should be available during administration. VS should be obtained before, 15 mins after start of infusion or with rate change and every 1 hour for the remainder of infusion. Hematology consult recommended.",
+      "page": 21
+    },
+    {
+      "id": "iv-med-123",
+      "displayName": "Infliximab",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Manually flush line before and after use, with 20 ml NS. No other medications at same time in line. Vital signs at baseline, 15 minutes after start, and at completion",
+      "page": 21
+    },
+    {
+      "id": "iv-med-124",
+      "displayName": "Insulin, regular +",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "IVP: G CI: CC/6 ST/P",
+      "considerations": "DKA, HHS bolus: IVP 0.1u/kg, not to exceed 15 units. Acute Hyperkalemia: IVP 10 units. Usual rate for CI: 0.1 units/kg/hr, but higher doses acceptable per protocol. Monitor blood glucose and have D50 amp available. Double check/signature required on pump setting.",
+      "page": 21
+    },
+    {
+      "id": "iv-med-125",
+      "displayName": "Iron dextran (Imferon)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X (test dose)",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Epinephrine should be available at bedside during test dose. Required: 25 mg test dose over 5 mins as IVP over 5 min before first full dose. Wait 1 hr. between test dose and first dose. Maximum rate of subsequent doses 50 mg/min Monitor for allergic reaction.",
+      "page": 21
+    },
+    {
+      "id": "iv-med-126",
+      "displayName": "Iron sucrose+ (Venofer)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "",
+      "page": 21
+    },
+    {
+      "id": "iv-med-127",
+      "displayName": "Isoproterenol (Isuprel)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC/E",
+      "considerations": "Cardiac monitoring required",
+      "page": 22
+    },
+    {
+      "id": "iv-med-128",
+      "displayName": "Ketamine +",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "X",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "IVP: CC/P/E IVPB: E, ICU CI: CC",
+      "considerations": "Anesthesia or credentialed MD only FOR PROCEDURAL SEDATION IVPB in ED and ICU (post-operative) for pain management only.",
+      "page": 22
+    },
+    {
+      "id": "iv-med-129",
+      "displayName": "Ketorolac + (Toradol)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Push over 1-2 minutes. Maximum dose of 30 mg/Dose. Give for a maximum of 5 days only (includes any oral ketorolac received as well). Dose should be ½ normal for patients >65, weight < 50 kg and CrCl < 30 ml/min.",
+      "page": 22
+    },
+    {
+      "id": "iv-med-130",
+      "displayName": "Labetalol + (Normodyne. Trandate)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC/M/P/E",
+      "considerations": "Push 10 mg over 2 minutes – may repeat at 40-80 mg X 2-Cummulative dose 300mg, if no response MP evaluation for CI. CI initial rate 2 mg/min. Patient should be supine for administration- monitor BP before, 5 and 10 minutes after IVP. Continuous infusion requires continuous cardiac monitoring.",
+      "page": 22
+    },
+    {
+      "id": "iv-med-131",
+      "displayName": "Lacosamide",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X*",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "*IVP: ED, ICU, PACU, 6 ST, 3ST, PCU, OHSD, OROC IVPB: G",
+      "considerations": "*IVP- For loading and maintenance doses </= 400 mg ED, ICU, 3 South, 6 ST, PCU, OHSD, OROC If giving IVP, each 200mg vial can be given no faster than 80mg/min and requires monitoring of vital signs q15 minutes for one hour after IVP loading dose is administered.",
+      "page": 22
+    },
+    {
+      "id": "iv-med-132",
+      "displayName": "Leucovorin calcium",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Antidote; Antineoplastic adjunct. IV push over minimum 3 minutes.",
+      "page": 22
+    },
+    {
+      "id": "iv-med-133",
+      "displayName": "Levetiracetam +",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X*",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Cardiac monitor not required during infusion. IVPB: to be diluted prior to administration. Must dilute in compatible diluent (NS, D5, LR), for maximum concentration of 15mg/ml. Diluted solutions are stable for 24 hr. Compatible with lorazepam, diazepam, valproate sodium Must be administered as a 15-min infusion. *IVP undiluted for doses </=1500mg may be given",
+      "page": 22,
+      "pageEnd": 23
+    },
+    {
+      "id": "iv-med-134",
+      "displayName": "Levofloxacin + (Levaquin)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "IV Push over a minimum of 1-2 minutes. Use immediately after reconstitution. IV therapy restricted and IV dose is half of oral dose (1:2 ratio).",
+      "page": 23
+    },
+    {
+      "id": "iv-med-135",
+      "displayName": "Lidocaine + (Xylocaine)**",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "X",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "IVP: E/CC IVPB: E CI: CC/OHSD/6 ST/PCU",
+      "considerations": "Rate not to exceed 50 mg/min. Cardiac monitoring required. IVPB in ED for pain management only. Cardiac Arrest From VF/VT -Initial Dose: 1-1.5 mg/kg IV/IO -For Refractory VF, may give additional 0.5-0.75mg/kg IV push and repeat in 5-10 mines; maximum doses or total of 3mg/kg Perfusing Arrhythmia For stable VT, wide-complex tachycardia of uncertain type, significant ectopy -Doses ranging from 0.5-0.75 mg/kg and up to 1-1.5 mg/kg maybe used -Repeat 0.5-0.75 mg/kg every 5-10 minutes; maximum total dose: 3mg/kg Maintenance Infusion 1-4 mg/min (30-50 mcg/kg/min)",
+      "page": 23
+    },
+    {
+      "id": "iv-med-136",
+      "displayName": "Linezolid + (Zylox)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "",
+      "page": 24
+    },
+    {
+      "id": "iv-med-137",
+      "displayName": "Lorazepam + (Ativan)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": "X*"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "IVP: G CI: CC OR PULM/ID*",
+      "considerations": "*CI: CC *CI Pulm/ID: terminal sedation during terminal vent wean, must have documentation from attending & pulmonologist; IVP All CI must be in glass or polyolefin. CI concentration are 0.1 mg/ml or 0.2 mg/ml only. IVP: Dilute to 1:1 for IVP with NS or D5W and push at a rate not exceeding 2 mg/min.",
+      "page": 24
+    },
+    {
+      "id": "iv-med-138",
+      "displayName": "Magnesium sulfate +",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X*",
+        "ivpb": "X",
+        "ci": "X**"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "IVPB: All **High dose 40gm/1000ml CI bag restricted to OB/L&D/CC/B1/E. ***High dose 20gm/250ml CI bag restricted to ED/ CC areas *IVP: CC & E (if Medical Emergency or Rapid Response and with MP present)",
+      "considerations": "Adult intermittent dose, non-L&D pts: 1gm/100ml over 1 hr, 2gm/50 ml over 1 hr, and 3gm/150ml over 3 hr. Monitoring not required for intermittent electrolyte replacement therapy. High-dose: Independent nursing double checks required for high concentration magnesium. **OB/L&D rates and concentration exceed the floor maximums. Monitor high dose Magnesium drips per L&D protocols (pulse, BP, RR, deep tendon reflexes). ***CC/E 20gm/250ml CI drips for shivering or status asthmaticus requires monitoring of pulse, BP, RR, deep tendon reflexes q4 hours. Notify MP for hypotension, changes in heart rhythm, shortness of breath, flushing, or muscle weakness. *IVP as a 10% solution over 1 min for life threatening low Mg/arrhythmias. *Cardiac Arrest (Due to Hypomagnesemia or Torsades de Pointes) 1-2g (2-4 mL of a 50% solution diluted in 10mL (D5W, Normal Saline) given IV/IO. Torsades de Pointes with a pulse or AMI with Hypomagnesemia: Loading dose of 1-2g mixed in 50-100ml of diluent. (D5W, normal saline) over 5-60 mins. Follow with 0.5-1 g per hour IV (titrate to control torsades.",
+      "page": 24,
+      "pageEnd": 25
+    },
+    {
+      "id": "iv-med-139",
+      "displayName": "Mannitol +",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "IVP: E/CC IVPB: G",
+      "considerations": "Mannitol Bolus for reduction of ICP should be administered in CC/E areas. Mannitol Bolus for reduction of ICP is administered over 20-30 minutes. Bolus may be administered via IVPB or slow IVP using vials when IVPB unavailable. Inspect for crystals prior to administration. In-line filter set (</= 5 micron) is required for use.",
+      "page": 25
+    },
+    {
+      "id": "iv-med-140",
+      "displayName": "Meperidine (Demerol)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Slow IVP over 2-5 minutes. Limit use for rigors.",
+      "page": 25
+    },
+    {
+      "id": "iv-med-141",
+      "displayName": "Meropenem +",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "500mg and 1gm dose: IVP 2gm: Dilute using 100ml NS minibag plus before administration",
+      "page": 25
+    },
+    {
+      "id": "iv-med-142",
+      "displayName": "Meropenem-vaborbactam (Vabomere)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Infuse over 3 hours. Formulary restriction.",
+      "page": 25
+    },
+    {
+      "id": "iv-med-143",
+      "displayName": "Mestinon (pyridostigmine)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC/M/P/E",
+      "considerations": "Push 0.5 mg – 5 mg over 1 min",
+      "page": 25
+    },
+    {
+      "id": "iv-med-144",
+      "displayName": "Methadone (Dolophine)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "P",
+      "considerations": "Perioperative use by anesthesia MP only",
+      "page": 25
+    },
+    {
+      "id": "iv-med-145",
+      "displayName": "Methocarbamol (Robaxin)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Maximum 3g/day for no more than 3 days; IM is allowed; IV infusion for tetanus indication; max rate 3mL/min, must remain in recumbent position for 10-15min after administration; IV use contraindicated in renal impairment",
+      "page": 25
+    },
+    {
+      "id": "iv-med-146",
+      "displayName": "Methohexital (Brevital)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC/P",
+      "considerations": "",
+      "page": 25
+    },
+    {
+      "id": "iv-med-147",
+      "displayName": "Methyldopa (Aldomet)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Maximum dose of 1 gram. Monitor BP q 30 minutes.",
+      "page": 25
+    },
+    {
+      "id": "iv-med-148",
+      "displayName": "Methylene Blue",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G: IVP CC: IVPB",
+      "considerations": "IVP: for indication of drug induced methemoglobinemia. 1-2mg/kg. May be given as slow IV Push over minimum 5 minutes. Do not dilute in NS solutions. IVPB for CC units: For cardiac surgery related vasoplegia or refractory septic shock: 2mg/kg infused over 30-60 minutes. Dilute in 50-100ml D5W only. Central line preferred for administration due to risk of extravasation. May cause discoloration of skin and urine (blue/green discoloration).",
+      "page": 25,
+      "pageEnd": 26
+    },
+    {
+      "id": "iv-med-149",
+      "displayName": "Methylergonovine (Methergine)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "",
+      "page": 26
+    },
+    {
+      "id": "iv-med-150",
+      "displayName": "Methylprednisolone + (Solumedrol)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "",
+      "page": 26
+    },
+    {
+      "id": "iv-med-151",
+      "displayName": "Metoclopramide + (Reglan)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Doses > 10 mg must be diluted as IVPB over 15 minutes. Push 10 mg or less over 1-2 minutes.",
+      "page": 26
+    },
+    {
+      "id": "iv-med-152",
+      "displayName": "Metoprolol + (Lopressor)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "X*",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "*Patient MAY receive Metoprolol (IVPB) on a non-monitored unit IF the patient is non-naïve (has received metoprolol PO at home prior to this admission) and is NPO.",
+      "considerations": "*1) For the non-naive patient (patient taking a beta blocker at home) receiving metoprolol who is NPO, on a non-monitored unit, the following monitoring is required: B/P and pulse before the start of the infusion; 30 minutes after the start of the infusion; and after the infusion. Infuse over 60 min. 2) For the patient who has never received a beta blocker (naïve) and metoprolol is ordered, cardiac monitoring is required, and patient must be transferred to a monitored unit (CC, 6 ST, PCU, OHSD, 3E or 3S-NPCU) 3) IVP is not appropriate for routine replacement of beta blocker therapy; it is only used in acute/urgent situations. IVP in monitored unit with pre-and post B/P and cardiac rhythm visualization at bedside. The maximum dose is 5mg over 1-2 minutes every 5 minutes x 3 doses.",
+      "page": 26
+    },
+    {
+      "id": "iv-med-153",
+      "displayName": "Metronidazole + (Flagyl)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Do not refrigerate",
+      "page": 26
+    },
+    {
+      "id": "iv-med-154",
+      "displayName": "Micafungin",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Flush line with NS prior to administration",
+      "page": 26
+    },
+    {
+      "id": "iv-med-155",
+      "displayName": "Midazolam + (Versed)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X*",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC/P/E",
+      "considerations": "*IVP: Must be given by MP in Med/Surge units. RN may administer IVP on CC/P/E units. Push 1 mg over 2 minutes. Antidote available (Flumazenil). If used > 24 hours consider lorazepam. RN may administer intramuscular (IM) dose on any unit as ordered by the MP.",
+      "page": 26,
+      "pageEnd": 27
+    },
+    {
+      "id": "iv-med-156",
+      "displayName": "Milrinone (Primacor)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC/M (MP to titrate)",
+      "considerations": "Loading dose 50 mcg/kg IVP over 10 minutes. 50 mg/250 ml D5W. Infusion: 0.5mcg/kg/min & titrate by 0.125-0.75 mcg/kg/min (max 0.75 mcg/kg/min).",
+      "page": 27
+    },
+    {
+      "id": "iv-med-157",
+      "displayName": "Morphine sulfate",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "X*",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "IVP: G CI: CC (use outside of CC if indication is comfort care) *Refer to the PCS: Continuous Opioid Infusion policy.",
+      "considerations": "Administer slow IV over 4-5 minutes, rapid administration may result in chest wall rigidity. Maximum push 10 mg on M/S units.",
+      "page": 27
+    },
+    {
+      "id": "iv-med-158",
+      "displayName": "MVI-12 (multi-vitamin)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "",
+      "page": 27
+    },
+    {
+      "id": "iv-med-159",
+      "displayName": "Nafcillin +",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Dilute using 50ml D5W for 1gm and 100ml NS for 2gm minibag plus before administration.",
+      "page": 27
+    },
+    {
+      "id": "iv-med-160",
+      "displayName": "Nalbuphine (Nubain)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "X",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "IVP/IVPB: G CI: L&D, BE-PACU, B1",
+      "considerations": "Usual dose 10 mg IV q 3-6 hours. Max 24-hour dose is 160 mg. Observe pt frequently. Administer undiluted over at least 2 to 3 minutes; larger induction doses should be administered over 10 to 15 minutes. IM and SubQ administer undiluted.",
+      "page": 27
+    },
+    {
+      "id": "iv-med-161",
+      "displayName": "Naloxone + (Narcan)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": "X*"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G* (non-titratable drip)",
+      "considerations": "Opioid overdos–: 0.4 mg - 2 mg every 30 min -2 hours X 3. Opioid induced itching: 1mg Naloxone in 1000ml given at a rate determined by MP. Postop opioid depression: 0.1-0.2 mg q30 min-1 hour x 3. Dilute 0.4 mg (1ml) ampule with 9 ml of NS for a total volume of 10 ml to achieve a concentration of 0.04 mg/ml.",
+      "page": 27
+    },
+    {
+      "id": "iv-med-162",
+      "displayName": "Neostigmine + (Prostigmin)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC/M/P/E/G",
+      "considerations": "IV Push slowly > 0.5 mg over 1-2 minutes for a monitored unit and </=0.5 mg dose for an unmonitored unit. Observe for bradycardia. Atropine must be available. Protect vial from light until time of use. Ensure GI/Hospitalist collaboration on dosing.",
+      "page": 27,
+      "pageEnd": 28
+    },
+    {
+      "id": "iv-med-163",
+      "displayName": "Nicardipine + (Cardene)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC/NPCU/P/6 ST/ PCU/OHSD NPCU: Neurology Progressive Care Unit",
+      "considerations": "Usual dose 5-15 mg/hour. Rotate peripheral site every 12 hours. Dose of 25mg/250ml should be reconstituted by RN using vial mate adaptor and 250ml of NS. OHSD/PCU/6 ST- non-titratable, 5mg/hr. with VS monitoring every 15 min for 1 hour. CDCR: Continuous Nicardipine should not exceed 10 mcg/kg/minute.",
+      "page": 28
+    },
+    {
+      "id": "iv-med-164",
+      "displayName": "Nitroglycerin + (Tridil)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC/P/6 ST/OHSD/PCU/E",
+      "considerations": "Must be in glass or non-PVC bag. OHSD/PCU/6 ST- non-titratable, rate < 25 mcg/min CDCR: Continuous nitroglycerin should not exceed 50 mcg/kg/minute.",
+      "page": 28
+    },
+    {
+      "id": "iv-med-165",
+      "displayName": "Nitroprusside + (Nipride)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC/L&D/E",
+      "considerations": "Protect from light to avoid degradation. Max dose 10mcg/kg/min",
+      "page": 28
+    },
+    {
+      "id": "iv-med-166",
+      "displayName": "Norepinephrine + (Levophed)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "Y For concentrated drip",
+      "areasOfUse": "CC/E/P",
+      "considerations": "Concentrated drip concentration (32mg/250ml NS or D5W, central line only): rate 0.05-3mcg/kg/min. Titrate 0.1mcg/kg/min every 5 mins. Standard concentration (8mg/250ml premix bag): Peripheral line (CC area only): rate 0.05-0.5mcg/kg/min. Titrate 0.05mcg/kg/min every 5 mins. See PCS Peripheral Administration of Continuous Infusion Vasopressors policy for duration of therapy. Central line for standard concentration: rate 0.05-3mcg/kg/min. Titrate 0.1mcg/kg/min every 5 mins. CDCR: Continuous norepinephrine should not exceed 0.06 mcg/kg/min",
+      "page": 28
+    },
+    {
+      "id": "iv-med-167",
+      "displayName": "Octreotide + (Sandostatin)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "X",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Usual route SQ. IV Push over 3 minutes. IVPB in 50-200 ml over 15-30 minutes. CI 25- 50 mcg/hr",
+      "page": 29
+    },
+    {
+      "id": "iv-med-168",
+      "displayName": "Olanzapine + (Zyprexa)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC / ICU Stepdown (6 ST): IVP or IM Use IM administration for outside of CC or ICU Stepdown (6 ST)",
+      "considerations": "IV Push not to exceed 5mg/dose.",
+      "page": 29
+    },
+    {
+      "id": "iv-med-169",
+      "displayName": "Ondansetron + (Zofran)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "IVPB for greater than 4mg. IVP over 30 seconds (preferably over 2-5 mins) for doses </=4mg.",
+      "page": 29
+    },
+    {
+      "id": "iv-med-170",
+      "displayName": "Oxytocin (Pitocin)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "L&D; B1-Mother/Baby; CC",
+      "considerations": "",
+      "page": 29
+    },
+    {
+      "id": "iv-med-171",
+      "displayName": "Pamidronate (Aredia)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Infuse over at least 2 hours.",
+      "page": 29
+    },
+    {
+      "id": "iv-med-172",
+      "displayName": "Pancuronium (Pavulon)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC/P",
+      "considerations": "Patient must be mechanically ventilated. Initial bolus 0.04 - 0.1 mg/kg. Initial infusion 0.06 - 0.1 mg/kg/hr. Dilutions are stable for 48hrs.",
+      "page": 29
+    },
+    {
+      "id": "iv-med-173",
+      "displayName": "Pantoprazole + (Protonix)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "IVP: Reconstitute with 10 mL NS for final concentration of 4mg/ml. May be used for up to 2 hours. Push over at least 2 minutes. Flush line before and after with NS, D5W or LR. 80 mg bolus dose: given as 40 mg IVP x2 consecutive doses.",
+      "page": 29
+    },
+    {
+      "id": "iv-med-174",
+      "displayName": "perflutren lipid microspheres (Definity)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "P/ CDCR",
+      "considerations": "Refer to PCS: Echocardiogram Enhancement Agents for additional information.",
+      "page": 29
+    },
+    {
+      "id": "iv-med-175",
+      "displayName": "Penicillin G potassium +",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Dilute 5MU dose with 100ml D5W minibag plus before administration.",
+      "page": 29
+    },
+    {
+      "id": "iv-med-176",
+      "displayName": "Pentamidine",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "IVPB over 60-120 minutes. BP q15 minutes. Stop if SBP changes by 25 mmHg or below 60 mmHg. Monitor blood glucose once each day pentamidine is given. For patients at risk for hyper or hypo-glycemia, monitor per MP order.",
+      "page": 29
+    },
+    {
+      "id": "iv-med-177",
+      "displayName": "Pentobarbital (Nembutal)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC/P",
+      "considerations": "Do not exceed 50 mg/min",
+      "page": 29
+    },
+    {
+      "id": "iv-med-178",
+      "displayName": "Phenobarbital +",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC/M",
+      "considerations": "Rate not to exceed 50 mg/min. CC: For seizures or per alcohol withdrawal power plan w/ RASS monitoring. M: For seizures as ordered by MP.",
+      "page": 29
+    },
+    {
+      "id": "iv-med-179",
+      "displayName": "Phentolamine + (Regitine)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "IVP:CC G: For extravasation indication",
+      "considerations": "",
+      "page": 30
+    },
+    {
+      "id": "iv-med-180",
+      "displayName": "Phenylephrine + (Neo- synephrine)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "Y - For concentrated drips",
+      "areasOfUse": "CC/P/E",
+      "considerations": "CI: Concentrated drip concentration (100mg/250ml, central line only): rate 0.5 - 8mcg/kg/min. Titrate 0.2mcg/kg/min every 5 mins. Standard Concentration (20mg/250ml): Peripheral line (CC only): rate 0.2 -2mcg/kg/min. Titrate 0.2mcg/kg/min every 5 mins. See PCS Peripheral Administration of Continuous Infusion Vasopressors policy for duration of therapy. Central line for standard concentration: rate 0.5 - 8mcg/kg/min. Titrate 0.2mcg/kg/min every 5 mins. Emergency situations: Dilute 20mg/250ml D5W or NS in emergency using two - 10mg/ml vials. Starting rate 0.5mcg/kg/min. IVP: Use phenylephrine 1mg/10ml syringe (100mcg/ml). Usual dose is 100 -300mcg per push. Administer over 30 seconds, can be repeated every 2 minutes until BP goal achieved. CDCR: Continuous phenylephrine should not exceed 0.6 mcg/kg/min.",
+      "page": 30
+    },
+    {
+      "id": "iv-med-181",
+      "displayName": "Phenytoin+",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "IVP: G, IF > 250 MG THEN CARDIAC MONITORING REQUIRED",
+      "considerations": "*Phenytoin reserved for fosphenytoin shortage *Maximum rate of IV administration is 50 mg/min, Cardiac monitoring required for loading and dose > 250 mg PE. Slower rate may be better tolerated. Monitor HR, BP, RR before administration and q 15 minutes until 15 minutes after completion. MP administers loading doses on non-monitored unit. The maximum dose on unmonitored unit is 250 mg PE. Must be diluted in 100 cc 0.9% NS. MP evaluates if heart block or bradycardia. An in-line 0.2-micron filter is recommended.",
+      "page": 30,
+      "pageEnd": 31
+    },
+    {
+      "id": "iv-med-182",
+      "displayName": "Physostigmine (Antilirium)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC/E",
+      "considerations": "Rate not to exceed 1 mg/min.",
+      "page": 31
+    },
+    {
+      "id": "iv-med-183",
+      "displayName": "Phytonadione + (vitamin K)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Diluted in 50 ml D5W or NS and administered over 30 minutes. Monitor HR, RR, BP at 15 min after initiation and conclusion.",
+      "page": 31
+    },
+    {
+      "id": "iv-med-184",
+      "displayName": "Piperacillin sodium/tazobactam sodium + (Zosyn)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "-Infuse over 30 minutes for first dose and 4 hours for all additional maintenance 4.5gm doses. - Dilute using 100ml D5W minibag plus before administration.",
+      "page": 31
+    },
+    {
+      "id": "iv-med-185",
+      "displayName": "Plasmanate",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC/P/M/E",
+      "considerations": "No medications may be added to blood derivatives. Follow blood component policy for VS monitoring.",
+      "page": 31
+    },
+    {
+      "id": "iv-med-186",
+      "displayName": "Potassium chloride +",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G CC/M: If infusing > 20 mEq/hr or conc >40meq/L",
+      "considerations": "Maximum runs not to exceed > 20 mEq/hr on M/S and OPIS. Maximum runs 40 mEq/hr on cardiac monitor. Maximum 24-hour dose not on cardiac monitor = 200 mEq if K>3 and 400 mEq if K<3. Peripheral runs: 10 mEq/100 mL. Central runs: 20 mEq/50-100 mL or 40 mEq/100 mL. Maximum concentration for CI = 40 mEq/liter if peripheral, 60 mEq/liter if central. If serum K <2.5 must check) K level after 80 mEq. If serum K>2.5, must check K level after 60 mEq",
+      "page": 31
+    },
+    {
+      "id": "iv-med-187",
+      "displayName": "Potassium Phosphate",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Maximum of 20mmol/250ml. Infuse over 4-6 hours.",
+      "page": 31
+    },
+    {
+      "id": "iv-med-188",
+      "displayName": "Procainamide (Pronestyl)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC/6ST/OHSD/PCU/E",
+      "considerations": "Cardiac monitoring required.",
+      "page": 31
+    },
+    {
+      "id": "iv-med-189",
+      "displayName": "Prochloperazine (Compazine)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Maximum single dose 10mg. Maximum 24-hour dose 40mg. Rate not to exceed 5mg/min. Dilute 5mg with 9ml NS to give IVP. Monitor BP and Pulse.",
+      "page": 31
+    },
+    {
+      "id": "iv-med-190",
+      "displayName": "Propofol (Diprivan)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X*",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CI: CC",
+      "considerations": "Anesthesia or credentialed MD only for procedural sedation. *IVP- RN cannot administer IV push doses of propofol.",
+      "page": 31
+    },
+    {
+      "id": "iv-med-191",
+      "displayName": "Propranolol (Inderal)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC/M/L&D",
+      "considerations": "Rate not to exceed 1mg/min. IVPB over 10-15 mins. Monitor HR and BP.",
+      "page": 32
+    },
+    {
+      "id": "iv-med-192",
+      "displayName": "Protamine",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC/M/P/E",
+      "considerations": "IVP over 10-minute period. Monitor BP/HR/RR/APTT 5-15 mins after administration.",
+      "page": 32
+    },
+    {
+      "id": "iv-med-193",
+      "displayName": "Pyridostigmine (Mestinon)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "IVP: CC/M/P/E only IVI: CC only",
+      "considerations": "IVP push 0.5mg-5mg over 1 minute.",
+      "page": 32
+    },
+    {
+      "id": "iv-med-194",
+      "displayName": "Pyridoxine (vitamin B6)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Administer at rate of 50mg over 1 minute.",
+      "page": 32
+    },
+    {
+      "id": "iv-med-195",
+      "displayName": "Quinidine gluconate",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC/M",
+      "considerations": "Monitor EKG and BP. CI for malaria.",
+      "page": 32
+    },
+    {
+      "id": "iv-med-196",
+      "displayName": "Rasburicase",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "",
+      "page": 32
+    },
+    {
+      "id": "iv-med-197",
+      "displayName": "Remdesivir +",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "-Flush line with at least 30 mL NS after remdesivir infusion is complete. Do NOT administer simultaneously with any other medication or IV solutions. - Dilute using 100 ml NS minibag plus before administration",
+      "page": 32
+    },
+    {
+      "id": "iv-med-198",
+      "displayName": "RH0(D) Immune Globulin Intravenous (Rhophylac)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC/L&D/B1",
+      "considerations": "Suppression of Rh Isoimmunization Intravenous or intramuscular administration • Pregnancy and obstetric conditions • Rh-incompatible pregnancy – 1500 IU (300 mcg) at Week 28-30 of gestation and another 1500 IU (300 mcg) within 72 hours of birth of an Rh0(D)-positive baby • Obstetric complications/invasive procedures – 1500 IU (300 mcg) within 72 hours of the at-risk event • Excessive fetomaternal hemorrhage – 1500 IU (300 mcg) within 72 hours plus 100 IU (20 mcg) per mL fetal RBCs >15 mL (excess transplacental bleeding) IVP- 300 mcg (2 mL) over 15-60 seconds.",
+      "page": 32
+    },
+    {
+      "id": "iv-med-199",
+      "displayName": "Rifampin",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Can infuse 100 ml volume over 30 minutes. Larger volumes should be infused over 3 hours. Solution is very red.",
+      "page": 32
+    },
+    {
+      "id": "iv-med-200",
+      "displayName": "Rituximab-Monoclonal Antibody (Rituxan, Truxima)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Premedication required. 1st dose 50mg/hr, increase at 30 min-intervals by 50mg/hr to max 400mg/hr. Subsequent doses 100mg/hr, increase by 100mg/hr at 30min intervals to 400mg/hr – First infusion: Monitor vital signs at start, every 15 minutes x4, then every 30 minutes with rate changes, and then hourly until completion. Subsequent infusions: Monitor vital signs at start, every 30 minutes with rate changes, and then hourly until completion. Monitor for infusion reactions, hypersensitivity hypotension, angioedema hypoxia, urticaria, bronchospasm. If pt has SOB, drop in BP, or reaction- stop, notify provider, medicate if ordered, and resume at 1/2(half) rate.",
+      "page": 32,
+      "pageEnd": 33
+    },
+    {
+      "id": "iv-med-201",
+      "displayName": "Rocuronium + (Zemuron)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC/P/E",
+      "considerations": "By nursing immediately preceding intubation or once the patient is mechanically ventilated.",
+      "page": 33
+    },
+    {
+      "id": "iv-med-202",
+      "displayName": "Secretin",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "GIDC/RADIOLOGY",
+      "considerations": "Skin Test. IVP over 1 minute.",
+      "page": 33
+    },
+    {
+      "id": "iv-med-203",
+      "displayName": "Sincalide (cholecystokinin; Kinevac)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "GIDC/RADIOLOGY",
+      "considerations": "IVP over 30-60 seconds.",
+      "page": 33
+    },
+    {
+      "id": "iv-med-204",
+      "displayName": "Sodium bicarbonate +",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "IVP:CC/M/E/P IVI: G",
+      "considerations": "",
+      "page": 33
+    },
+    {
+      "id": "iv-med-205",
+      "displayName": "Sodium chloride 2%- Hypertonic",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC/NPCU, 6 South/E",
+      "considerations": "Administer via peripheral IV, central venous catheter, or intraosseous line (see policy for details on indications, dosing, monitoring) Double check/signature required on pump settings",
+      "page": 33
+    },
+    {
+      "id": "iv-med-206",
+      "displayName": "Sodium chloride 3% - Hypertonic +",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC/E",
+      "considerations": "Administer via peripheral IV, central venous catheter, or intraosseous line (see policy for details on indications, dosing, monitoring) Double check/signature required on pump settings",
+      "page": 33
+    },
+    {
+      "id": "iv-med-207",
+      "displayName": "Sodium chloride 23.4% +",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": ""
+      },
+      "centralLineRequired": "Y",
+      "areasOfUse": "CC/E",
+      "considerations": "Administer via central venous catheter or intraosseous line only (see policy for details on indications, dosing, monitoring) Double check/signature required on pump settings",
+      "page": 33
+    },
+    {
+      "id": "iv-med-208",
+      "displayName": "Sodium phosphate +",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Max 20 mmol /250 ml. Infuse 4-6 hours",
+      "page": 33
+    },
+    {
+      "id": "iv-med-209",
+      "displayName": "Sodium Glycerphosphate",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "",
+      "page": 33
+    },
+    {
+      "id": "iv-med-210",
+      "displayName": "Succinylcholine + (Anectine)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC/P/E",
+      "considerations": "Instructions: IVP over 30 seconds with Anesthesia or MP presence.",
+      "page": 33
+    },
+    {
+      "id": "iv-med-211",
+      "displayName": "Sugammadex",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "P",
+      "considerations": "Restricted to anesthesia providers only. Use criteria: morbidly obese patients, patients with OSA, patients with neuromuscular disorders, patients with previous history of severe PONV and for patients where neostigmine/glycopyrrolate should be avoided based on clinical judgement. Dose round to the nearest vial size if dose is within 10% of vial. Avoid in patients with CrCl <30ml/min.",
+      "page": 33,
+      "pageEnd": 34
+    },
+    {
+      "id": "iv-med-212",
+      "displayName": "Sulfamethoxazole- trimethoprim (Septra; Bactrim)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Infuse over 60-90 minutes. Do not refrigerate solution. Stability time based on concentration.",
+      "page": 34
+    },
+    {
+      "id": "iv-med-213",
+      "displayName": "Tenecteplase",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "ED/CC/P",
+      "considerations": "For Acute Ischemic Stroke. 0.25mg/kg (max 25mg), IVpush over 5 seconds. Reconstitute each vial with 10ml of sterile water for injection (SWFI). Incompatible with dextrose containing fluids. Flush dextrose containing lines with saline before use. If TNK is mixed and not administered, it needs to be taken to pharmacy as soon as possible with a patient sticker and reason not administered.",
+      "page": 34
+    },
+    {
+      "id": "iv-med-214",
+      "displayName": "Terbutaline + (Brethine)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "L&D/CC",
+      "considerations": "",
+      "page": 34
+    },
+    {
+      "id": "iv-med-215",
+      "displayName": "Terlipressin (Terlivaz)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "6ST (ICU Stepdown) only",
+      "considerations": "Reconstitute each 0.85mg vial with 5ml NS. Administer as slow IV push over 2 minutes through peripheral or central line. Flush the line after administration.",
+      "page": 34
+    },
+    {
+      "id": "iv-med-216",
+      "displayName": "Thiamine +",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "IVP each 100 mg over 5 minutes. IVP for doses </=200mg.",
+      "page": 34
+    },
+    {
+      "id": "iv-med-217",
+      "displayName": "Tigecycline",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Dilute 50mg with 100ml D5W minibag plus.",
+      "page": 34
+    },
+    {
+      "id": "iv-med-218",
+      "displayName": "Tirofiban (Aggrastat)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "Cath Lab, CDCR, OHSD, CC, ED; 6 ST",
+      "considerations": "",
+      "page": 34
+    },
+    {
+      "id": "iv-med-219",
+      "displayName": "Tobramycin +",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Infuse over 60 min. Trough 30 min before dose, peak 60 min after infusion complete.",
+      "page": 34
+    },
+    {
+      "id": "iv-med-220",
+      "displayName": "Tocilizumab",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "",
+      "page": 34
+    },
+    {
+      "id": "iv-med-221",
+      "displayName": "TPN",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": "X"
+      },
+      "centralLineRequired": "Y- dependent on concentration",
+      "areasOfUse": "G",
+      "considerations": "Clinimix 5/15 and 5/20 require central line. Clinimix 4.25/5 can be administered via peripheral line.",
+      "page": 34
+    },
+    {
+      "id": "iv-med-222",
+      "displayName": "Tranexamic Acid +",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC/P/E",
+      "considerations": "IVP at maximum rate of 100 mg/min",
+      "page": 34
+    },
+    {
+      "id": "iv-med-223",
+      "displayName": "Valproic acid+ (Depacon)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Infuse dose over 60 minutes. Rate not to exceed 20 mg/min for large doses.",
+      "page": 35
+    },
+    {
+      "id": "iv-med-224",
+      "displayName": "Vancomycin +",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Infuse over 60 minutes. If redness and itching infuse over 2 hours (infusion rate depends on dose). Concentration should not exceed 5 mg/ml. Random levels to be ordered. Random levels should be obtained at least 1 hour after infusion is completed. Dose of 500mg: Dilute with 100ml D5W minibag plus before administration. Dose of 750mg, 1gm, 1.25gm and 1.5gm should be reconstituted by RN using vial mate adaptor with 250ml NS.",
+      "page": 35
+    },
+    {
+      "id": "iv-med-225",
+      "displayName": "Vasopressin + (Pitressin)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "Y",
+      "areasOfUse": "CC/GIDC/E",
+      "considerations": "For shock/hemodynamic instability. Rate and titration per MP order.:",
+      "page": 35
+    },
+    {
+      "id": "iv-med-226",
+      "displayName": "Vecuronium + (Norcuron)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC/P/E",
+      "considerations": "Patient must be mechanically ventilated.",
+      "page": 35
+    },
+    {
+      "id": "iv-med-227",
+      "displayName": "Verapamil + (Calan)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "X",
+        "ivpb": "",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "CC/P/6 ST/OHSD/PCU/E",
+      "considerations": "IVP: Push over at least 2-minutes with longer 3-minute administration times for patients >65 years old with labile blood pressure or HR Cardiac monitoring required. Cautious use above rate of 40 mg/hr.",
+      "page": 35
+    },
+    {
+      "id": "iv-med-228",
+      "displayName": "Voriconazole",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "",
+      "page": 35
+    },
+    {
+      "id": "iv-med-229",
+      "displayName": "Zidovudine (Retrovir)",
+      "aliases": [],
+      "graceAvailable": false,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": "X"
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "L&D",
+      "considerations": "NIH Protocol for Maternal-Fetal HIV Transmission.",
+      "page": 35
+    },
+    {
+      "id": "iv-med-230",
+      "displayName": "Zoledronic Acid + (Zometa)",
+      "aliases": [],
+      "graceAvailable": true,
+      "routes": {
+        "ivp": "",
+        "ivpb": "X",
+        "ci": ""
+      },
+      "centralLineRequired": "",
+      "areasOfUse": "G",
+      "considerations": "Ordering restricted to Oncologists, Endocrinologists and Nephrologists. Infuse over at least 15 minutes. Shorter infusion times can result in renal toxicity and progression to renal failure. Flush IV line with 10 mL of NS flush following infusion. Infuse in a line separate from other medications.",
+      "page": 35
+    }
+  ],
+  "sourceAlerts": [
+    "Page 9: Amphotericin B (non-liposomal) states ‘> concentration through central line’ without defining the higher concentration.",
+    "Pages 10–11: Calcium chloride text spans the page break and does not cleanly delimit every CRRT, push-rate, and replacement-form clause.",
+    "Page 12: Chlorpromazinee has IVPB marked while the note also discusses IV push; both routes are shown as conditional without resolving the conflict.",
+    "Page 18: Kcentra (4 Factor PCC) appears as an otherwise blank alias row immediately after the Factor II,VII,IX,X PCC entry.",
+    "Page 23: Levofloxacin is marked IVPB while its consideration text says ‘IV Push’; both routes are shown as conditional.",
+    "Page 27: Naloxone timing wording is preserved exactly and requires institutional review before reinterpretation.",
+    "Page 28: Source-visible rate units include an anomalous value; no unit was corrected silently.",
+    "Page 31: Potassium instructions contain source contradictions and stray punctuation; exact wording is retained.",
+    "Pages 32–33: Source-visible ‘IVI’ wording is preserved rather than interpreted.",
+    "Page 34: Terlipressin route marking conflicts with administration wording; both implicated routes are conditional.",
+    "Pages 36–37 include pediatric content inside an adult policy; pediatric rules are intentionally excluded pending a separate approved pediatric protocol.",
+    "Pages 36–37: Fentanyl’s adult maximum is printed as ‘1.5 mcg/Kg/hr’ in bolus-dose context and is preserved without correction.",
+    "Page 37: Naloxone ‘Maximum dose: 2 mg’ and ‘May repeat every 2-3 minutes’ appear after the Pediatric subsection without a new Adult/shared label; they are not assigned to the adult dose."
+  ],
+  "proceduralSedationAdult": [
+    {
+      "drug": "Midazolam",
+      "dose": "Adult Age 18-60 years: 1 – 5 mg IV over 5 minutes; titrated in 1 mg per minute increments to a maximum total dose not to exceed 0.2 mg/Kg when used without an opioid. Adult Age > 60 years: 0.5 mg – 1.5 mg IV over 3 minutes titrated in 0.5 mg per minute to a maximum total dose of up to 0.1 mg/Kg when used without an opioid.",
+      "onsetPeak": "Onset of Action: 30 seconds to 1 minute. Peak Effect: 3-5 minutes.",
+      "duration": "15 – 80 minutes",
+      "reversal": "Flumazenil",
+      "sideEffects": "Produces anxiolytic, sedative, hypnotic, skeletal muscle relaxant and anticonvulsant effects. Capable of producing all levels of CNS depression from mild sedation to respiratory depression and coma. Anterograde amnesia occurs within 1-5 minutes. Respiratory depression in elderly or when combined with opioids. Hypotension when combined with opioids.",
+      "page": 36
+    },
+    {
+      "drug": "Fentanyl",
+      "dose": "Adult 18-60 years: 25 mcg IV over 1-2 minutes to a max of 1.5 mcg/Kg/hr. Adult Age > 60 years: 12.5 mcg IV over 1 – 2 minutes to a max of 50 mcg/hr.",
+      "onsetPeak": "Onset of action: within 1 minute. Peak Effect: 1-3 minutes.",
+      "duration": "30-60 minutes after a single dose of up to 100 mcg.",
+      "reversal": "Naloxone",
+      "sideEffects": "Respiratory depression increased combined with benzodiazepines. Minimal hypnotic action. Brady/tachy arrhythmias.",
+      "page": 36,
+      "pageEnd": 37
+    },
+    {
+      "drug": "Naloxone",
+      "dose": "Adult: 0.2 mg IV every 2-3 minutes until respiratory rate greater than 8 returns.",
+      "onsetPeak": "",
+      "duration": "",
+      "reversal": "",
+      "sideEffects": "Pulmonary edema. May precipitate acute withdrawal.",
+      "page": 37
+    },
+    {
+      "drug": "Flumazenil",
+      "dose": "Adult: 0.2mg IV over 15 sec every minute to maximum dose of 1 mg.",
+      "onsetPeak": "",
+      "duration": "",
+      "reversal": "",
+      "sideEffects": "Increased risk of seizures.",
+      "page": 37
+    }
+  ],
+  "pediatric": {
+    "status": "awaiting-authoritative-source",
+    "message": "Pediatric rules are intentionally blank pending a separate approved pediatric protocol.",
+    "excludedSourcePages": [
+      36,
+      37
+    ]
+  }
+}

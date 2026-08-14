@@ -3,7 +3,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "LBH Protocols Beta",
+  title: "LBH protocol",
   description:
     "MedCalc Streamline – Local Health LBH Clinical Decision Support. Calculators, renal dosing, IV→PO, formulary tools.",
 };

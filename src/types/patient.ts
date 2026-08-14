@@ -26,6 +26,7 @@ export type ViewId =
   | "therapeutic-sub"
   | "crrt-dosing"
   | "iv-po"
+  | "iv-medication"
   | "restrictions"
   | "insulin-switch"
   | "he"

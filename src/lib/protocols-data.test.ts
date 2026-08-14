@@ -25,7 +25,7 @@ function expectNonEmptyRecords(
 
 describe("protocol data characterization", () => {
   it("keeps all navigation destinations unique and populated", () => {
-    expect(NAV).toHaveLength(14);
+    expect(NAV).toHaveLength(15);
     expect(new Set(NAV.map((entry) => entry.id)).size).toBe(NAV.length);
     expect(NAV[0]?.id).toBe("home");
     expect(NAV.map((entry) => entry.id)).toEqual([
@@ -36,6 +36,7 @@ describe("protocol data characterization", () => {
       "therapeutic-sub",
       "crrt-dosing",
       "iv-po",
+      "iv-medication",
       "restrictions",
       "insulin-switch",
       "he",

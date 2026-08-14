@@ -24,10 +24,13 @@ import {
   HIV_FORMULARY,
   INSULIN_SWITCH,
   IV_ENTERAL_PROTOCOL,
+  IV_MEDICATION_ADULT_PROTOCOL,
+  IV_MEDICATION_UNITS,
   NAV,
   RENAL_DOSING,
   PROTOCOL_REFERENCES,
   resolveFormularyRestrictionLookup,
+  resolveIvMedicationLookup,
   searchDoNotCrush,
   searchIvEnteral,
   searchTherapeuticSubstitutions,
@@ -56,7 +59,7 @@ function Panel({
       <Card className="shadow-sm">
         {title || description ? (
           <CardHeader className="border-b [.border-b]:pb-3">
-            {title ? <CardTitle className="text-lg">{title}</CardTitle> : null}
+            {title ? <CardTitle role="heading" aria-level={2} className="text-lg">{title}</CardTitle> : null}
             {description ? (
               <CardDescription className="text-sm leading-relaxed">
                 {description}
@@ -827,11 +830,260 @@ function DntView() {
   );
 }
 
+export function IvMedicationView({
+  initialPopulation = "adult",
+}: {
+  initialPopulation?: "adult" | "pediatric";
+}) {
+  const [population, setPopulation] = React.useState<"adult" | "pediatric">(initialPopulation);
+  const [unitId, setUnitId] = React.useState<string>(IV_MEDICATION_ADULT_PROTOCOL.defaultContext.unit);
+  const [query, setQuery] = React.useState("");
+  const lookup = resolveIvMedicationLookup(query, unitId);
+  const routeCards = [
+    { key: "ivp" as const, label: "IV Push", abbreviation: "IVP" },
+    { key: "ivpb" as const, label: "IV Piggyback", abbreviation: "IVPB" },
+    { key: "ci" as const, label: "Continuous Infusion", abbreviation: "CI" },
+  ];
+  const statusStyle = {
+    allowed: "border-emerald-500/40 bg-emerald-500/10 text-emerald-950 dark:text-emerald-100",
+    conditional: "border-amber-500/40 bg-amber-500/10 text-amber-950 dark:text-amber-100",
+    "emergency-only": "border-orange-500/40 bg-orange-500/10 text-orange-950 dark:text-orange-100",
+    "not-permitted": "border-red-500/40 bg-red-500/10 text-red-950 dark:text-red-100",
+    "not-listed": "border-border bg-muted/35 text-muted-foreground",
+  } as const;
+  const statusLabel = {
+    allowed: "Allowed",
+    conditional: "Conditional",
+    "emergency-only": "Emergency only",
+    "not-permitted": "Not permitted for unit",
+    "not-listed": "Not listed",
+  } as const;
+  const unitGroups = ["General", "Monitored", "Critical Care", "Procedural"] as const;
+
+  return (
+    <Panel
+      title={`💉 Intravenous Medication: ${population === "adult" ? "Adult" : "Pediatric"}`}
+      description={population === "adult"
+        ? "Search the approved April 2026 source by medication or brand, then verify IV route permission for the selected Sinai inpatient unit."
+        : "Pediatric IV medication guidance is intentionally unavailable until a separate authoritative pediatric protocol is approved."}
+    >
+      <div className="space-y-5">
+        <div className="rounded-xl border bg-muted/20 p-4">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <fieldset className="inline-flex rounded-lg border bg-background p-1">
+              <legend className="sr-only">Population protocol</legend>
+              {(["adult", "pediatric"] as const).map((option) => (
+                <button
+                  key={option}
+                  type="button"
+                  aria-pressed={population === option}
+                  onClick={() => setPopulation(option)}
+                  className={cn(
+                    "rounded-md px-3 py-1.5 text-sm font-medium transition-colors",
+                    population === option ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground",
+                  )}
+                >
+                  {option === "adult" ? "Adult" : "Pediatric"}
+                </button>
+              ))}
+            </fieldset>
+            {population === "adult" ? (
+              <a
+                href={IV_MEDICATION_ADULT_PROTOCOL.source.href}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-lg border bg-background px-3 py-2 text-sm font-medium hover:bg-muted"
+              >
+                <FileText className="size-4" /> Open approved source PDF <ExternalLink className="size-3.5" />
+              </a>
+            ) : (
+              <Badge variant="outline">Awaiting separate pediatric source</Badge>
+            )}
+          </div>
+          {population === "adult" ? (
+            <div className="mt-3 flex flex-wrap gap-2 text-xs text-muted-foreground">
+              <Badge variant="secondary">Sinai Inpatient</Badge>
+              <span>Effective 04/20/2026</span>
+              <span>·</span>
+              <span>Reference #15967</span>
+              <span>·</span>
+              <span>{IV_MEDICATION_ADULT_PROTOCOL.sourceRowCount} Appendix A source rows</span>
+            </div>
+          ) : (
+            <p className="mt-3 text-xs text-muted-foreground">
+              No pediatric medication source, route permissions, or adult-source metadata are displayed in this mode.
+            </p>
+          )}
+        </div>
+
+        {population === "pediatric" ? (
+          <section className="rounded-xl border border-dashed p-8 text-center">
+            <div className="text-3xl" aria-hidden="true">🧸</div>
+            <h3 className="mt-3 font-semibold">Pediatric protocol coming later</h3>
+            <p className="mx-auto mt-2 max-w-xl text-sm text-muted-foreground">
+              Pediatric rules are intentionally blank pending a separate approved pediatric protocol. Adult rules are never reused or inferred for pediatric patients.
+            </p>
+          </section>
+        ) : (
+          <>
+            <div className="grid gap-4 rounded-xl border p-4 lg:grid-cols-[minmax(220px,0.8fr)_minmax(280px,1.2fr)]">
+              <div className="space-y-1.5">
+                <Label htmlFor="iv-medication-unit">Select unit</Label>
+                <select
+                  id="iv-medication-unit"
+                  value={unitId}
+                  onChange={(event) => setUnitId(event.target.value)}
+                  className="flex h-10 w-full rounded-lg border border-input bg-background px-3 text-sm"
+                >
+                  {unitGroups.map((group) => (
+                    <optgroup key={group} label={group}>
+                      {IV_MEDICATION_UNITS.filter((unit) => unit.group === group).map((unit) => (
+                        <option key={unit.id} value={unit.id}>{unit.label}</option>
+                      ))}
+                    </optgroup>
+                  ))}
+                </select>
+                <p className="text-xs text-muted-foreground">
+                  {lookup.unit
+                    ? `${lookup.unit.sourceLabel} · inherited permissions: ${lookup.unit.permissions.join(" + ")}`
+                    : <span className="text-destructive">{lookup.error}</span>}
+                </p>
+              </div>
+              <div className="space-y-1.5">
+                <Label htmlFor="iv-medication-search">Search generic or brand name</Label>
+                <Input
+                  id="iv-medication-search"
+                  type="search"
+                  autoComplete="off"
+                  placeholder="e.g. amiodarone, Cordarone, Kcentra, vancomycin…"
+                  value={query}
+                  onChange={(event) => setQuery(event.target.value)}
+                />
+                <p aria-live="polite" className="text-xs text-muted-foreground">
+                  {query.trim()
+                    ? lookup.unit
+                      ? `${lookup.matches.length} ${lookup.matches.length === 1 ? "source match" : "source matches"} for ${lookup.unit.label}.`
+                      : lookup.error
+                    : "Choose the patient’s current unit, then search a medication or brand name."}
+                </p>
+              </div>
+            </div>
+
+            {query.trim() ? (
+              lookup.matches.length ? (
+                <div className="space-y-4">
+                  {lookup.matches.map((result) => (
+                    <article key={result.medication.id} className="overflow-hidden rounded-xl border">
+                      <header className="flex flex-col gap-2 border-b bg-muted/25 px-4 py-3 sm:flex-row sm:items-start sm:justify-between">
+                        <div>
+                          <h3 className="font-semibold leading-snug">{result.medication.displayName}</h3>
+                          {result.medication.aliases.length ? (
+                            <p className="mt-1 text-xs text-muted-foreground">Also shown as: {result.medication.aliases.join(", ")}</p>
+                          ) : null}
+                        </div>
+                        <div className="flex flex-wrap gap-2">
+                          {result.medication.graceAvailable ? <Badge variant="secondary">+ Available at Grace</Badge> : null}
+                          <Badge variant="outline">
+                            {result.medication.pageEnd
+                              ? `pp. ${result.medication.page}–${result.medication.pageEnd}`
+                              : `p. ${result.medication.page}`}
+                          </Badge>
+                        </div>
+                      </header>
+
+                      <div className="grid gap-3 p-4 md:grid-cols-3">
+                        {routeCards.map((route) => {
+                          const resolution = result.routes[route.key];
+                          return (
+                            <section key={route.key} className={cn("rounded-xl border p-3", statusStyle[resolution.state])}>
+                              <div className="flex items-start justify-between gap-2">
+                                <div>
+                                  <div className="text-xs font-semibold uppercase tracking-wide opacity-75">{route.abbreviation}</div>
+                                  <h4 className="font-semibold">{route.label}</h4>
+                                </div>
+                                <span className="rounded-full border border-current/20 px-2 py-0.5 text-[11px] font-semibold">
+                                  {statusLabel[resolution.state]}
+                                </span>
+                              </div>
+                              <p className="mt-3 text-xs leading-relaxed opacity-90">{resolution.reason}</p>
+                              {resolution.sourceMarker ? (
+                                <p className="mt-2 font-mono text-[11px] opacity-75">Source marker: {resolution.sourceMarker}</p>
+                              ) : null}
+                            </section>
+                          );
+                        })}
+                      </div>
+
+                      <div className="grid gap-3 border-t px-4 py-4 md:grid-cols-2">
+                        <section className="rounded-lg bg-muted/35 p-3">
+                          <h4 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Central line</h4>
+                          <p className="mt-1 text-sm">{result.medication.centralLineRequired || "Not marked as required"}</p>
+                        </section>
+                        <section className="rounded-lg bg-muted/35 p-3">
+                          <h4 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Areas of Use</h4>
+                          <p className="mt-1 text-sm whitespace-pre-line">{result.medication.areasOfUse || "No area text printed"}</p>
+                        </section>
+                        <section className="rounded-lg border border-primary/20 bg-primary/5 p-3 md:col-span-2">
+                          <h4 className="text-xs font-semibold uppercase tracking-wide text-primary">Monitoring and Other Considerations</h4>
+                          <p className="mt-1 text-sm leading-relaxed whitespace-pre-line">
+                            {result.medication.considerations || "No additional consideration text printed in the source row."}
+                          </p>
+                        </section>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              ) : (
+                <div className="rounded-xl border border-dashed p-8 text-center text-sm text-muted-foreground">
+                  No approved Appendix A medication row matches “{query}”.
+                </div>
+              )
+            ) : (
+              <div className="rounded-xl border border-dashed p-8 text-center text-sm text-muted-foreground">
+                Search one of {IV_MEDICATION_ADULT_PROTOCOL.medications.length} logical medications to see IVP, IVPB, CI, central-line, unit, and caveat details.
+              </div>
+            )}
+
+            <details className="rounded-xl border border-amber-500/30 bg-amber-500/5">
+              <summary className="cursor-pointer px-4 py-3 font-semibold text-amber-950 dark:text-amber-100">
+                Preserved source ambiguities and conflicts ({IV_MEDICATION_ADULT_PROTOCOL.sourceAlerts.length})
+              </summary>
+              <ul className="space-y-2 border-t border-amber-500/20 px-5 py-4 text-sm leading-relaxed">
+                {IV_MEDICATION_ADULT_PROTOCOL.sourceAlerts.map((alert) => <li key={alert}>• {alert}</li>)}
+              </ul>
+            </details>
+
+            <details className="rounded-xl border">
+              <summary className="cursor-pointer px-4 py-3 font-semibold">Adult procedural sedation reference (Appendix B)</summary>
+              <div className="space-y-3 border-t p-4">
+                {IV_MEDICATION_ADULT_PROTOCOL.proceduralSedationAdult.map((row) => (
+                  <article key={row.drug} className="rounded-lg border p-3">
+                    <div className="flex items-center justify-between gap-3">
+                      <h4 className="font-semibold">{row.drug}</h4>
+                      <span className="text-xs text-muted-foreground">{row.pageEnd ? `pp. ${row.page}–${row.pageEnd}` : `p. ${row.page}`}</span>
+                    </div>
+                    <dl className="mt-2 grid gap-2 text-sm md:grid-cols-2">
+                      <div><dt className="font-medium">Dose</dt><dd className="mt-0.5 text-muted-foreground">{row.dose}</dd></div>
+                      <div><dt className="font-medium">Onset / peak</dt><dd className="mt-0.5 text-muted-foreground">{row.onsetPeak || "Not printed"}</dd></div>
+                      <div><dt className="font-medium">Duration / reversal</dt><dd className="mt-0.5 text-muted-foreground">{[row.duration, row.reversal].filter(Boolean).join(" · ") || "Not printed"}</dd></div>
+                      <div><dt className="font-medium">Side effects</dt><dd className="mt-0.5 text-muted-foreground">{row.sideEffects}</dd></div>
+                    </dl>
+                  </article>
+                ))}
+              </div>
+            </details>
+          </>
+        )}
+      </div>
+    </Panel>
+  );
+}
+
 function ReferencesView() {
   return (
     <Panel
       title="📚 References"
-      description="Original approved institutional protocols used by LBH Protocols Beta. Open the source to validate the rendered workflow."
+      description="Original approved institutional protocols used by LBH protocol. Open the source to validate the rendered workflow."
     >
       <div className="space-y-3">
         {PROTOCOL_REFERENCES.map((reference) => (
@@ -1038,6 +1290,7 @@ export function CalculatorViews({
         {view === "therapeutic-sub" && <TherapeuticSubView />}
         {view === "crrt-dosing" && <CrrtView />}
         {view === "iv-po" && <IvPoView />}
+        {view === "iv-medication" && <IvMedicationView />}
         {view === "restrictions" && <RestrictionsView />}
         {view === "insulin-switch" && <InsulinView />}
         {view === "he" && <HeView />}

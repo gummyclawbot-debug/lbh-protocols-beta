@@ -20,7 +20,7 @@ export function AppShell() {
           <div className="mx-auto max-w-7xl space-y-1 px-4 py-4 text-center text-xs text-muted-foreground">
             <p>
               <strong className="text-foreground">
-                LBH Protocols Beta
+                LBH protocol
               </strong>{" "}
               · MedCalc Streamline clinical tools
             </p>
