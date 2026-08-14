@@ -1,10 +1,10 @@
 # Active context
 
-Last verified: 2026-08-12 EDT
-Evidence: Git/GitHub, Vercel CLI, live HTTP probes, local lint/build/audit
+Last verified: 2026-08-14 EDT
+Evidence: Git/GitHub, Vercel CLI, exact pre/post response bytes, local/full gates, independent review, desktop/mobile browser and contrast probes
 
 ## Current objective
-Keep the verified April 2024 IV-to-Enteral beta release stable and continue reconciling remaining clinical tabs one authoritative source at a time.
+Ship the narrow Adult IV Medication route-card contrast hotfix, then keep the verified beta stable and continue reconciling one authoritative source at a time.
 
 ## Verified state
 - Canonical clone: `/Users/gummyserver/Developer/jarvis/active/lbh-protocols-beta`
@@ -12,6 +12,9 @@ Keep the verified April 2024 IV-to-Enteral beta release stable and continue reco
 - Baseline Git commit: `6a516ba`; local `main` matched `origin/main` before branching.
 - Live beta and protected legacy both returned HTTP 200 before work began.
 - Local Vercel metadata points to team project `lbh-protocols-beta`, not legacy.
+- Adult IV Medication source release commit `c5a9618` was pushed and deployed only to beta as `dpl_2HLF7zmKyBWmeHX621vjwWYbWHG1`; canonical beta, exact hosted PDF integrity, fail-closed unit/product behavior, Pediatric isolation, and production desktop/mobile checks passed.
+- Protected legacy response remained byte-identical before and after that beta deployment: 213,467 bytes, SHA-256 `7c884c4657835598e68103e2fc77c6bc180f4553cb0ffee73933c7fcc359c795`.
+- A delayed exact-tree accessibility review found one remaining beta-only WCAG AA defect: 12px route abbreviations inherited `text-muted-foreground` and `opacity-75`, measuring about 3.36:1 light / 4.09:1 dark. A failing regression now pins full foreground opacity; the narrow two-line opacity fix is implemented locally and awaits full gates, exact-tree review, and beta-only redeployment.
 - Compact Memory Bank, clinical-validation runbook, beta-only deployment runbook, and root resume protocol are installed.
 - Next.js and `eslint-config-next` are upgraded to 16.3.0; Vitest 4.1.10 is installed.
 - The theme hydration lint issue and unused import are repaired without changing clinical behavior.
@@ -108,10 +111,10 @@ Keep the verified April 2024 IV-to-Enteral beta release stable and continue reco
 - Exact advisory tree `fab4748dd24b9d046dcf916bbd15888873277e9a` passed 61 tests, full gates, and independent UX/clinical PASS reviews. Verified commit `f2d8760` deployed only to beta as `dpl_8qugXcYXQNEqLvQ3L57fuixCe5HN`; canonical `17/221/301/0.2` retained four alerts and finite formula outputs, Clear All reset cleanly, iPhone 13 layout passed, and protected legacy remained byte-identical.
 
 ## Exact next actions
-1. Pending user request: rename the app’s visible header title and browser/page metadata title to exactly `LBH protocol` (singular, lowercase `protocol`). This has not been implemented, committed, pushed, or deployed yet.
-2. Use TDD: add a focused title regression first, then update only the title-bearing UI/metadata locations; do not rename the repository, Vercel project, package, domain, or protected legacy application.
-3. Run focused/full tests, lint, TypeScript, production build, audit, secret scan, and diff checks; browser-verify the visible heading and document title on desktop/mobile.
-4. Commit, push, and deploy only to `.vercel/project.json` project `lbh-protocols-beta`; verify canonical beta and confirm protected `lbh-protocols` remains byte-identical.
+1. Run the full test/lint/typecheck/build/audit/security gate for the route-card contrast hotfix.
+2. Verify populated IV route cards in real Chromium in explicit light and dark themes, including computed contrast for abbreviations and source markers.
+3. Freeze the staged tree and obtain an independent narrow accessibility/engineering PASS.
+4. Commit, push, and deploy only to `.vercel/project.json` project `lbh-protocols-beta`; recapture canonical beta and prove protected `lbh-protocols` remains byte-identical to the current baseline.
 5. After that, await the next authoritative clinical source and ingest only one protocol at a time.
 
 ## Hazards

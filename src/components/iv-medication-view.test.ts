@@ -69,6 +69,11 @@ describe("Intravenous Medication tab shell", () => {
     ]) expect(pediatric).not.toContain(forbidden);
   });
 
+  it("keeps populated route abbreviations at full foreground opacity for WCAG contrast", () => {
+    const source = readFileSync(join(process.cwd(), "src/components/calculator-views.tsx"), "utf8");
+    expect(source).not.toMatch(/text-xs font-semibold uppercase tracking-wide opacity-/);
+  });
+
   it("uses the approved visible app name in References copy", () => {
     const source = readFileSync(join(process.cwd(), "src/components/calculator-views.tsx"), "utf8");
     const references = source.slice(source.indexOf("function ReferencesView()"), source.indexOf("function DncView()"));

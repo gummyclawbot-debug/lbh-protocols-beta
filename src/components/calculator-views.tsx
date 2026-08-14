@@ -998,7 +998,7 @@ export function IvMedicationView({
                             <section key={route.key} className={cn("rounded-xl border p-3", statusStyle[resolution.state])}>
                               <div className="flex items-start justify-between gap-2">
                                 <div>
-                                  <div className="text-xs font-semibold uppercase tracking-wide opacity-75">{route.abbreviation}</div>
+                                  <div className="text-xs font-semibold uppercase tracking-wide">{route.abbreviation}</div>
                                   <h4 className="font-semibold">{route.label}</h4>
                                 </div>
                                 <span className="rounded-full border border-current/20 px-2 py-0.5 text-[11px] font-semibold">
@@ -1007,7 +1007,7 @@ export function IvMedicationView({
                               </div>
                               <p className="mt-3 text-xs leading-relaxed opacity-90">{resolution.reason}</p>
                               {resolution.sourceMarker ? (
-                                <p className="mt-2 font-mono text-[11px] opacity-75">Source marker: {resolution.sourceMarker}</p>
+                                <p className="mt-2 font-mono text-[11px]">Source marker: {resolution.sourceMarker}</p>
                               ) : null}
                             </section>
                           );
