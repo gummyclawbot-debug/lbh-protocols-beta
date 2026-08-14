@@ -5,7 +5,12 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { formatNum } from "@/lib/calculations";
+import {
+  formatNum,
+  PATIENT_PARAMETER_RANGES,
+  patientParameterError,
+  type PatientNumericParameter,
+} from "@/lib/calculations";
 import { UserRound, RotateCcw } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -23,6 +28,65 @@ function Stat({ label, value, unit }: { label: string; value: string; unit?: str
           </span>
         ) : null}
       </div>
+    </div>
+  );
+}
+
+function NumericParameterField({
+  parameter,
+  id,
+  label,
+  unit,
+  value,
+  onChange,
+  step,
+  className,
+}: {
+  parameter: PatientNumericParameter;
+  id: string;
+  label: string;
+  unit: string;
+  value: number | null;
+  onChange: (value: number | null) => void;
+  step?: number;
+  className?: string;
+}) {
+  const range = PATIENT_PARAMETER_RANGES[parameter];
+  const error = patientParameterError(parameter, value);
+  const errorId = `${id}-error`;
+
+  return (
+    <div className={cn("space-y-1.5", className)}>
+      <Label htmlFor={id}>{label}</Label>
+      <div className="flex w-full max-w-xs">
+        <Input
+          id={id}
+          type="number"
+          min={range.min}
+          max={range.max}
+          step={step}
+          value={value ?? ""}
+          aria-invalid={Boolean(error)}
+          aria-describedby={error ? errorId : undefined}
+          className="rounded-r-none focus-visible:z-10"
+          onChange={(event) => onChange(event.target.value === "" ? null : Number(event.target.value))}
+        />
+        <span
+          data-slot="input-unit"
+          aria-hidden="true"
+          className={cn(
+            "inline-flex h-8 shrink-0 items-center rounded-r-lg border border-l-0 bg-muted/50 px-2.5 text-xs font-medium text-muted-foreground",
+            error && "border-destructive bg-destructive/10 text-destructive dark:border-destructive/50",
+          )}
+        >
+          {unit}
+        </span>
+      </div>
+      {error ? (
+        <p id={errorId} role="alert" className="text-xs font-medium text-destructive">
+          {error}
+        </p>
+      ) : null}
     </div>
   );
 }
@@ -75,74 +139,43 @@ export function PatientProfileCard({ className }: { className?: string }) {
             </div>
           </div>
 
-          <div className="space-y-1.5">
-            <Label htmlFor="age">Age (18–120)</Label>
-            <div className="relative">
-              <Input
-                id="age"
-                type="number"
-                min={18}
-                max={120}
-                value={patient.age ?? ""}
-                onChange={(e) => setAge(e.target.value === "" ? null : Number(e.target.value))}
-              />
-              <span className="pointer-events-none absolute top-1/2 right-3 -translate-y-1/2 text-xs text-muted-foreground">
-                yrs
-              </span>
-            </div>
-          </div>
+          <NumericParameterField
+            parameter="age"
+            id="age"
+            label="Age (18–120)"
+            unit="yrs"
+            value={patient.age}
+            onChange={setAge}
+          />
 
-          <div className="space-y-1.5">
-            <Label htmlFor="height">Height (120–220 cm)</Label>
-            <div className="relative">
-              <Input
-                id="height"
-                type="number"
-                min={120}
-                max={220}
-                value={patient.heightCm ?? ""}
-                onChange={(e) => setHeightCm(e.target.value === "" ? null : Number(e.target.value))}
-              />
-              <span className="pointer-events-none absolute top-1/2 right-3 -translate-y-1/2 text-xs text-muted-foreground">
-                cm
-              </span>
-            </div>
-          </div>
+          <NumericParameterField
+            parameter="heightCm"
+            id="height"
+            label="Height (120–220 cm)"
+            unit="cm"
+            value={patient.heightCm}
+            onChange={setHeightCm}
+          />
 
-          <div className="space-y-1.5">
-            <Label htmlFor="weight">Weight (30–300 kg)</Label>
-            <div className="relative">
-              <Input
-                id="weight"
-                type="number"
-                min={30}
-                max={300}
-                value={patient.weightKg ?? ""}
-                onChange={(e) => setWeightKg(e.target.value === "" ? null : Number(e.target.value))}
-              />
-              <span className="pointer-events-none absolute top-1/2 right-3 -translate-y-1/2 text-xs text-muted-foreground">
-                kg
-              </span>
-            </div>
-          </div>
+          <NumericParameterField
+            parameter="weightKg"
+            id="weight"
+            label="Weight (30–300 kg)"
+            unit="kg"
+            value={patient.weightKg}
+            onChange={setWeightKg}
+          />
 
-          <div className="space-y-1.5 sm:col-span-2">
-            <Label htmlFor="scr">SCr (0.3–15 mg/dL)</Label>
-            <div className="relative max-w-xs">
-              <Input
-                id="scr"
-                type="number"
-                min={0.3}
-                max={15}
-                step={0.1}
-                value={patient.scr ?? ""}
-                onChange={(e) => setScr(e.target.value === "" ? null : Number(e.target.value))}
-              />
-              <span className="pointer-events-none absolute top-1/2 right-3 -translate-y-1/2 text-xs text-muted-foreground">
-                mg/dL
-              </span>
-            </div>
-          </div>
+          <NumericParameterField
+            parameter="scr"
+            id="scr"
+            label="SCr (0.3–15 mg/dL)"
+            unit="mg/dL"
+            value={patient.scr}
+            onChange={setScr}
+            step={0.1}
+            className="sm:col-span-2"
+          />
         </div>
 
         <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">

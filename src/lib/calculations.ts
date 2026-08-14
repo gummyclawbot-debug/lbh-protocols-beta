@@ -8,6 +8,38 @@ export const DEFAULT_PATIENT: PatientProfile = {
   scr: null,
 };
 
+export type PatientNumericParameter = "age" | "heightCm" | "weightKg" | "scr";
+
+export const PATIENT_PARAMETER_RANGES = {
+  age: { min: 18, max: 120, message: "Enter an age from 18 to 120 years." },
+  heightCm: { min: 120, max: 220, message: "Enter a height from 120 to 220 cm." },
+  weightKg: { min: 30, max: 300, message: "Enter a weight from 30 to 300 kg." },
+  scr: { min: 0.3, max: 15, message: "Enter an SCr from 0.3 to 15 mg/dL." },
+} as const satisfies Record<PatientNumericParameter, { min: number; max: number; message: string }>;
+
+export function patientParameterError(
+  parameter: PatientNumericParameter,
+  value: number | null,
+): string | null {
+  if (value == null) return null;
+  const range = PATIENT_PARAMETER_RANGES[parameter];
+  return Number.isFinite(value) && value >= range.min && value <= range.max
+    ? null
+    : range.message;
+}
+
+function unavailablePatientDerived(): PatientDerived {
+  return {
+    bmi: Number.NaN,
+    ibwKg: Number.NaN,
+    adjBwKg: Number.NaN,
+    dosingWtKg: Number.NaN,
+    crclAbw: Number.NaN,
+    crclIbw: Number.NaN,
+    heightIn: Number.NaN,
+  };
+}
+
 export function cmToInches(cm: number): number {
   return cm / 2.54;
 }
@@ -44,16 +76,17 @@ export function cockcroftGault(
 }
 
 export function derivePatient(p: PatientProfile): PatientDerived {
-  if (p.age == null || p.heightCm == null || p.weightKg == null || p.scr == null) {
-    return {
-      bmi: Number.NaN,
-      ibwKg: Number.NaN,
-      adjBwKg: Number.NaN,
-      dosingWtKg: Number.NaN,
-      crclAbw: Number.NaN,
-      crclIbw: Number.NaN,
-      heightIn: Number.NaN,
-    };
+  if (
+    p.age == null ||
+    p.heightCm == null ||
+    p.weightKg == null ||
+    p.scr == null ||
+    patientParameterError("age", p.age) ||
+    patientParameterError("heightCm", p.heightCm) ||
+    patientParameterError("weightKg", p.weightKg) ||
+    patientParameterError("scr", p.scr)
+  ) {
+    return unavailablePatientDerived();
   }
   const heightIn = cmToInches(p.heightCm);
   const bmi = bodyMassIndex(p.weightKg, p.heightCm);

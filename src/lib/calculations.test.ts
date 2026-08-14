@@ -9,6 +9,7 @@ import {
   DOSE_ROUND_MEDS,
   formatNum,
   idealBodyWeight,
+  patientParameterError,
   roundTo,
   type DoseRoundRule,
 } from "./calculations";
@@ -60,6 +61,35 @@ describe("calculation characterization", () => {
     expect(result.dosingWtKg).toBeCloseTo(76.2787, 4);
     expect(result.crclAbw).toBeCloseTo(73.7847, 4);
     expect(result.crclIbw).toBeCloseTo(61.1672, 4);
+  });
+
+  it("accepts safeguarded patient boundaries and rejects values outside them", () => {
+    expect(patientParameterError("age", 18)).toBeNull();
+    expect(patientParameterError("age", 120)).toBeNull();
+    expect(patientParameterError("heightCm", 120)).toBeNull();
+    expect(patientParameterError("heightCm", 220)).toBeNull();
+    expect(patientParameterError("weightKg", 30)).toBeNull();
+    expect(patientParameterError("weightKg", 300)).toBeNull();
+    expect(patientParameterError("scr", 0.3)).toBeNull();
+    expect(patientParameterError("scr", 15)).toBeNull();
+    expect(patientParameterError("age", 17)).toBe("Enter an age from 18 to 120 years.");
+    expect(patientParameterError("heightCm", 221)).toBe("Enter a height from 120 to 220 cm.");
+    expect(patientParameterError("weightKg", 301)).toBe("Enter a weight from 30 to 300 kg.");
+    expect(patientParameterError("scr", 0.2)).toBe("Enter an SCr from 0.3 to 15 mg/dL.");
+    expect(patientParameterError("age", null)).toBeNull();
+  });
+
+  it("suppresses every derived value when a patient parameter is out of range", () => {
+    const invalidProfiles = [
+      { sex: "M" as const, age: 17, heightCm: 175, weightKg: 85, scr: 1.2 },
+      { sex: "M" as const, age: 65, heightCm: 119, weightKg: 85, scr: 1.2 },
+      { sex: "M" as const, age: 65, heightCm: 175, weightKg: 301, scr: 1.2 },
+      { sex: "M" as const, age: 65, heightCm: 175, weightKg: 85, scr: 15.1 },
+    ];
+
+    for (const profile of invalidProfiles) {
+      expect(Object.values(derivePatient(profile)).every(Number.isNaN)).toBe(true);
+    }
   });
 });
 

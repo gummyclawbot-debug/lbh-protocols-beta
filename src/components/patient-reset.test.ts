@@ -43,4 +43,13 @@ describe("global Clear All", () => {
       views.indexOf('{view === "home"'),
     );
   });
+
+  it("renders units outside native number inputs and exposes range alerts", () => {
+    const profile = readSource("src/components/patient-profile-card.tsx");
+
+    expect(profile).toContain('data-slot="input-unit"');
+    expect(profile).not.toContain("pointer-events-none absolute top-1/2 right-3");
+    expect(profile).toContain("aria-invalid={Boolean(error)}");
+    expect(profile).toContain('role="alert"');
+  });
 });
