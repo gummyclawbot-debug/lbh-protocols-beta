@@ -152,11 +152,12 @@ cmp /tmp/iv-medication-pediatric-data.json src/lib/iv-medication-pediatric-data.
 
 The generator is hash-gated to the approved PDF, accepts only the four visually verified continuation pages, requires exactly 197/197 rows, and fails if any marked route lacks a normalized reviewed scope.
 
-## Verification still required before release
+## Release verification — 2026-08-15
 
-- Freeze and stage the intended candidate; record staged tree/hash.
-- Independent exact-tree source-vs-data-vs-UI-vs-test review must explicitly PASS.
-- Full tests, Python tests, lint, typecheck, build, audit, secret/PHI scan, and responsive browser/console checks must pass.
-- Deploy only from the beta-linked project.
-- Verify canonical beta alias, hosted PDF MIME/signature/bytes/hash, Pediatric toggle/search/unit behavior, and References.
-- Re-verify protected legacy byte/hash invariance and no new legacy deployment/alias movement.
+- Corrected exact staged tree `0926c4904a0c40a199eb2da488034ec25f77ef4b` received independent clinical, engineering/security, and responsive UI/accessibility PASS verdicts.
+- Chlorpromazine IVP/IVPB are Conditional in all 13 Pediatric unit contexts; CI remains Not listed. The corrected exhaustive oracle contains 7,683 outcomes: 3,874 Not listed, 2,635 Allowed, 540 Not permitted, 463 Conditional, and 171 Emergency only.
+- Full gate passed: 94 tests, lint, TypeScript, production build, deterministic byte-identical extraction, Python compilation, audit with zero vulnerabilities, secret/integrity checks, and desktop/mobile browser checks.
+- Verified application commit `865c0557ed40a5e0f6a59703d96d5047f6589d23` was pushed and deployed only to `lbh-protocols-beta` as `dpl_4wrSasYYTU7TMKdZB8QxP2WrcABS`.
+- Canonical beta returned HTTP 200. The hosted Pediatric PDF returned `application/pdf`, 400,287 bytes, and exact SHA-256 `be9b5065dfe2d18a5d1a3c32ee6d0dfc772eaff8eeb70a8ae549282f55805351`.
+- Production desktop/mobile checks confirmed the existing IV Meds Adult/Pediatric toggle, two Conditional Chlorpromazine route cards, Pediatric References entry, no horizontal overflow, and zero console errors. Narrow screens render IV Meds before Patient Profile; desktop retains the profile sidebar.
+- Protected legacy remained on `dpl_9B425JWD4PwPnxKM3sUQDPvfuXMa`, HTTP 200, 213,467 bytes, SHA-256 `7c884c4657835598e68103e2fc77c6bc180f4553cb0ffee73933c7fcc359c795`.

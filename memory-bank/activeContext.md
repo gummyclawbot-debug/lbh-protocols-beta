@@ -110,6 +110,14 @@ Keep the verified Adult IV Medication beta release stable and continue reconcili
 - Parenthesized ranges were removed from labels, leaving aligned `Sex`, `Age`, `Height`, `Weight`, and `SCr` labels while preserving separate unit suffixes and unobstructed spinners.
 - Exact advisory tree `fab4748dd24b9d046dcf916bbd15888873277e9a` passed 61 tests, full gates, and independent UX/clinical PASS reviews. Verified commit `f2d8760` deployed only to beta as `dpl_8qugXcYXQNEqLvQ3L57fuixCe5HN`; canonical `17/221/301/0.2` retained four alerts and finite formula outputs, Clear All reset cleanly, iPhone 13 layout passed, and protected legacy remained byte-identical.
 
+## 2026-08-15 — Pediatric IV Medication released to beta
+- Ingested the approved 32-page April 2026 `Intravenous Medication: Pediatric` policy inside the existing IV Meds tab and existing Adult/Pediatric toggle. Adult and Pediatric protocols remain independent across medications, units, route resolution, source metadata, alerts, query state, and supplemental material.
+- Preserved the authoritative PDF byte-for-byte: 400,287 bytes, SHA-256 `be9b5065dfe2d18a5d1a3c32ee6d0dfc772eaff8eeb70a8ae549282f55805351`. Deterministic extraction yields 197 source rows / 197 logical medications and 293 marked routes.
+- Initial independent review correctly blocked release for permissive Chlorpromazine IVP/IVPB behavior and mobile Patient Profile precedence. Both were corrected: Chlorpromazine is Conditional for IVP/IVPB in every Pediatric unit, and narrow screens prioritize IV Meds while preserving the desktop sidebar.
+- Corrected tree `0926c4904a0c40a199eb2da488034ec25f77ef4b` received independent clinical, UI/accessibility, and engineering/security PASS verdicts. Final gate: 94 tests, lint, TypeScript, production build, deterministic extraction, audit 0, no secret hits, no overflow/errors, and zero Axe A/AA violations in the independent matrix.
+- Verified commit `865c0557ed40a5e0f6a59703d96d5047f6589d23` deployed only to beta as `dpl_4wrSasYYTU7TMKdZB8QxP2WrcABS`. Canonical beta and exact PDF passed production checks.
+- Protected legacy remained unchanged on `dpl_9B425JWD4PwPnxKM3sUQDPvfuXMa`, 213,467 bytes, SHA-256 `7c884c4657835598e68103e2fc77c6bc180f4553cb0ffee73933c7fcc359c795`.
+
 ## Exact next actions
 1. Await the next authoritative clinical source and ingest only one protocol at a time.
 2. Preserve fail-closed source-to-UI/test traceability, Pediatric isolation, and beta-only deployment boundaries.
