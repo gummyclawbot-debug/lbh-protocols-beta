@@ -3,6 +3,7 @@ import doNotCrushData from "./do-not-crush-data.json";
 import ivEnteralData from "./iv-enteral-data.json";
 import formularyRestrictionsData from "./formulary-restrictions-data.json";
 import ivMedicationAdultData from "./iv-medication-adult-data.json";
+import ivMedicationPediatricData from "./iv-medication-pediatric-data.json";
 
 export type RenalDrug = {
   name: string;
@@ -133,6 +134,16 @@ export type IvMedicationRouteState =
   | "not-permitted"
   | "not-listed";
 
+export type IvMedicationRouteScope = {
+  scopes: (IvMedicationArea | "E" | string)[];
+  conditional?: boolean;
+  providerRestricted?: boolean;
+  unresolved?: boolean;
+  sourceMarker?: string;
+  excludedUnitIds?: string[];
+  forceNotListed?: boolean;
+};
+
 export type IvMedicationEntry = {
   id: string;
   displayName: string;
@@ -144,6 +155,7 @@ export type IvMedicationEntry = {
   considerations: string;
   page: number;
   pageEnd?: number;
+  routeScopes?: Partial<Record<IvMedicationRoute, IvMedicationRouteScope>>;
 };
 
 export type IvMedicationUnit = {
@@ -599,6 +611,21 @@ export const IV_MEDICATION_ADULT_PROTOCOL = ivMedicationAdultData as {
   };
 };
 
+export const IV_MEDICATION_PEDIATRIC_PROTOCOL = ivMedicationPediatricData as {
+  source: ProtocolReference;
+  referenceNumber: string;
+  nextReviewDate: string;
+  sites: string[];
+  approvers: string[];
+  scope: string;
+  purpose: string;
+  defaultContext: { population: "pediatric"; site: "sinai-pediatric"; unit: "general-pediatrics" };
+  sourceRowCount: number;
+  continuationPages: number[];
+  medications: IvMedicationEntry[];
+  sourceAlerts: string[];
+};
+
 export const IV_MEDICATION_UNITS: IvMedicationUnit[] = [
   { id: "general-inpatient", label: "Other Sinai inpatient unit", group: "General", permissions: ["G"], sourceLabel: "All nursing units", matchTokens: [] },
   { id: "gigu-5w", label: "GIGU (5W)", group: "General", permissions: ["G"], sourceLabel: "GIGU (5W)", matchTokens: ["GIGU", "5W"] },
@@ -630,14 +657,23 @@ export const IV_MEDICATION_UNITS: IvMedicationUnit[] = [
   { id: "labor-delivery", label: "Labor and Delivery (L&D) — all BE areas", group: "Procedural", permissions: ["G", "P"], sourceLabel: "Labor and Delivery (L&D)- all BE areas", matchTokens: ["L&D", "OB/L&D"] },
 ];
 
-type IvRouteOverride = {
-  scopes: (IvMedicationArea | "E" | string)[];
-  conditional?: boolean;
-  providerRestricted?: boolean;
-  sourceMarker?: string;
-  excludedUnitIds?: string[];
-  forceNotListed?: boolean;
-};
+export const IV_MEDICATION_PEDIATRIC_UNITS: IvMedicationUnit[] = [
+  { id: "general-pediatrics", label: "Other pediatric nursing unit", group: "General", permissions: ["G"], sourceLabel: "All nursing units servicing pediatric patients", matchTokens: [] },
+  { id: "scn", label: "Special Care Nursery (SCN)", group: "General", permissions: ["G"], sourceLabel: "Special Care Nursery (SCN)", matchTokens: ["SCN"] },
+  { id: "pediatric-heme-onc", label: "Pediatric Hematology/Oncology Clinic", group: "General", permissions: ["G"], sourceLabel: "Pediatric Hematology/Oncology Clinic", matchTokens: ["HEMATOLOGY/ONCOLOGY", "HEM/ONC"] },
+  { id: "3chs", label: "General Pediatrics (3CHS)", group: "Monitored", permissions: ["G", "M"], sourceLabel: "General pediatrics (3CHS)", matchTokens: ["3CHS"] },
+  { id: "picu", label: "Pediatric Intensive Care Unit (PICU)", group: "Critical Care", permissions: ["G", "M", "CC"], sourceLabel: "Pediatric Intensive Care Unit (PICU)", matchTokens: ["PICU"] },
+  { id: "nicu", label: "Neonatal Intensive Care Unit (NICU)", group: "Critical Care", permissions: ["G", "M", "CC"], sourceLabel: "Neonatal Intensive Care Unit (NICU)", matchTokens: ["NICU"] },
+  { id: "pediatric-ed", label: "Pediatric Emergency Department (ED)", group: "Critical Care", permissions: ["G", "M", "CC"], sourceLabel: "Pediatric Emergency Department (ED)", matchTokens: ["ED"] },
+  { id: "pediatric-preop", label: "Pediatric Pre-Op", group: "Critical Care", permissions: ["G", "M", "CC"], sourceLabel: "Pediatric patients in Pre-Op", matchTokens: ["PRE-OP", "PREOP"] },
+  { id: "pediatric-pacu", label: "Pediatric PACU", group: "Critical Care", permissions: ["G", "M", "CC"], sourceLabel: "Pediatric patients in PACU", matchTokens: ["PACU"] },
+  { id: "cdc", label: "Children’s Diagnostic Center (CDC)", group: "Procedural", permissions: ["G", "P"], sourceLabel: "Children’s Diagnostic Center (CDC)", matchTokens: ["CDC"] },
+  { id: "or-pediatric", label: "Pediatric Operating Room (OR)", group: "Procedural", permissions: ["G", "P"], sourceLabel: "Pediatric patients in the Operating Room", matchTokens: ["OR"] },
+  { id: "gidc-pediatric", label: "Pediatric GIDC", group: "Procedural", permissions: ["G", "P"], sourceLabel: "Pediatric patients in GIDC", matchTokens: ["GIDC"] },
+  { id: "ir-pediatric", label: "Pediatric Interventional Radiology (IR)", group: "Procedural", permissions: ["G", "P"], sourceLabel: "Pediatric patients in IR", matchTokens: ["IR"] },
+];
+
+type IvRouteOverride = IvMedicationRouteScope;
 
 export const IV_ROUTE_OVERRIDES: Record<string, Partial<Record<IvMedicationRoute, IvRouteOverride>>> = {
   "Argatroban +": {
@@ -800,6 +836,149 @@ export const IV_ROUTE_OVERRIDES: Record<string, Partial<Record<IvMedicationRoute
   },
 };
 
+export const IV_PEDIATRIC_ROUTE_SCOPE_REVIEW_FIXTURE: Record<string, Partial<Record<IvMedicationRoute, IvRouteOverride>>> = {
+  "Adenosine (Adenocard, Adenoscan)": {
+    ivp: { scopes: ["G", "CC", "P", "E"], conditional: true },
+  },
+  "Alteplase (Activase, Cathflo)": {
+    ivp: { scopes: ["E", "CC"], unresolved: true },
+    ci: { scopes: ["CC"], unresolved: true },
+  },
+  Aminophylline: {
+    ivpb: { scopes: ["M"] },
+    ci: { scopes: ["CC"] },
+  },
+  "Amiodarone (Cordarone)": {
+    ivp: { scopes: ["E"] },
+    ivpb: { scopes: ["CC", "P"] },
+    ci: { scopes: ["CC", "P"] },
+  },
+  "Calcium chloride": {
+    ivp: { scopes: ["E"], conditional: true },
+    ivpb: { scopes: ["M", "CC", "P"] },
+    ci: { scopes: ["CC"] },
+  },
+  "Calcium gluconate": {
+    ivp: { scopes: ["E"], conditional: true },
+    ivpb: { scopes: ["M", "CC", "P"] },
+    ci: { scopes: ["CC"] },
+  },
+  "Chlorpromazine (Thorazine)": {
+    ivp: { scopes: ["G"], conditional: true },
+    ivpb: { scopes: ["G"], conditional: true },
+  },
+  Crizanlizumab: { ivpb: { scopes: ["G"], conditional: true } },
+  Dalbavancin: { ivpb: { scopes: ["ED"], conditional: true } },
+  "Deferoxamine mesylate (Desferal)": {
+    ivpb: { scopes: ["G", "M", "CC"], conditional: true },
+    ci: { scopes: ["G", "M", "CC"], conditional: true },
+  },
+  Droperidol: { ivp: { scopes: ["OR"], conditional: true } },
+  "Ephedrine sulfate": { ivp: { scopes: ["CC", "P"], conditional: true } },
+  "Epinephrine (Adrenalin 0.1 mg/mL)": {
+    ivp: { scopes: ["E"] },
+    ci: { scopes: ["CC", "P"] },
+  },
+  "Fentanyl (Sublimaze)": {
+    ivp: { scopes: ["M", "CC", "P"] },
+    ci: { scopes: ["M", "CC"], conditional: true },
+  },
+  "Ferumoxytol (Feraheme)": { ivpb: { scopes: ["G"], conditional: true } },
+  "Fosphenytoin (Cerebyx)": { ivpb: { scopes: ["G"], conditional: true } },
+  Glucagon: {
+    ivp: { scopes: ["G"], conditional: true },
+    ci: { scopes: ["CC"], conditional: true },
+  },
+  "Haloperidol (Haldol) lactate": { ivp: { scopes: ["M", "CC"], conditional: true } },
+  "Heparin sodium": {
+    ivp: { scopes: ["G"], conditional: true },
+    ci: { scopes: ["G", "CC", "P"], conditional: true },
+  },
+  "Hydromor-phone (Dilaudid)": {
+    ivp: { scopes: ["G"] },
+    ci: { scopes: ["M", "CC"], conditional: true },
+  },
+  Indomethacin: { ivpb: { scopes: ["NICU"], conditional: true } },
+  "Insulin, regular": {
+    ivp: { scopes: ["E"] },
+    ivpb: { scopes: ["NICU"], conditional: true },
+    ci: { scopes: ["CC", "P"] },
+  },
+  Etomidate: { ivp: { scopes: ["CC", "P", "E"], conditional: true } },
+  Ketamine: {
+    ivp: { scopes: ["CC", "P", "E"], conditional: true },
+    ci: { scopes: ["CC", "M"], conditional: true },
+  },
+  "Lidocaine (Xylocaine)": {
+    ivp: { scopes: ["E", "CC", "P"] },
+    ci: { scopes: ["CC", "P"] },
+  },
+  "Lorazepam (Ativan)": {
+    ivp: { scopes: ["G"] },
+    ci: { scopes: [], unresolved: true },
+  },
+  "Magnesium sulfate": {
+    ivp: { scopes: ["CC", "E"], conditional: true },
+    ivpb: { scopes: ["G"] },
+    ci: { scopes: ["CC"] },
+  },
+  Mannitol: {
+    ivp: { scopes: ["CC", "E"] },
+    ivpb: { scopes: ["G"] },
+  },
+  "Meperidine (Demerol)": {
+    ivp: { scopes: ["OR"], conditional: true },
+    ivpb: { scopes: ["G"] },
+  },
+  "Metoprolol (Lopressor)": {
+    ivp: { scopes: ["P"], conditional: true },
+    ivpb: { scopes: ["M", "CC", "P"] },
+  },
+  "Midazolam (Versed)": {
+    ivp: { scopes: ["G", "CC", "P", "E"], conditional: true },
+    ci: { scopes: ["CC"] },
+  },
+  "Morphine sulfate": {
+    ivp: { scopes: ["G"] },
+    ci: { scopes: ["M", "CC"], conditional: true },
+  },
+  "Naloxone (Narcan)": {
+    ivp: { scopes: ["G"] },
+    ci: { scopes: ["G", "CC"], conditional: true },
+  },
+  "Potassium acetate": { ci: { scopes: ["G"], conditional: true } },
+  "Potassium chloride": {
+    ivpb: { scopes: ["G"], conditional: true },
+    ci: { scopes: ["G"], conditional: true },
+  },
+  "Potassium phosphate": {
+    ivpb: { scopes: ["G"], conditional: true },
+    ci: { scopes: ["G"], conditional: true },
+  },
+  "Propofol (Diprivan)": {
+    ivp: { scopes: ["CC", "P"], conditional: true },
+    ci: { scopes: ["CC", "P"] },
+  },
+  "Prochlorperazine (Compazine)": {
+    ivp: { scopes: ["G"], conditional: true },
+    ivpb: { scopes: ["G"], conditional: true },
+  },
+  "Sodium chloride 23.4%": { ivpb: { scopes: ["E"], unresolved: true } },
+  Sugammadex: { ivp: { scopes: ["CC", "P"], conditional: true } },
+  "Ustekinumab (Stelara)": { ivpb: { scopes: ["G"], conditional: true } },
+  "Vedolizumab (Entyvio)": { ivpb: { scopes: ["G"], conditional: true } },
+};
+
+export const IV_PEDIATRIC_ROUTE_OVERRIDES: Record<
+  string,
+  Partial<Record<IvMedicationRoute, IvRouteOverride>>
+> = Object.fromEntries(
+  IV_MEDICATION_PEDIATRIC_PROTOCOL.medications.map((medication) => [
+    medication.displayName,
+    medication.routeScopes ?? {},
+  ]),
+);
+
 export const IV_QUERY_ROUTE_OVERRIDES: Record<
   string,
   Record<string, Partial<Record<IvMedicationRoute, IvRouteOverride>>>
@@ -816,13 +995,34 @@ export const IV_QUERY_ROUTE_OVERRIDES: Record<
   },
 };
 
+export const IV_PEDIATRIC_QUERY_ROUTE_OVERRIDES: Record<
+  string,
+  Record<string, Partial<Record<IvMedicationRoute, IvRouteOverride>>>
+> = {
+  "Alteplase (Activase, Cathflo)": {
+    activase: {
+      ivp: { scopes: ["E", "CC"] },
+      ci: { scopes: ["CC"] },
+    },
+    cathflo: {
+      ivp: { scopes: [], forceNotListed: true },
+      ci: { scopes: [], forceNotListed: true },
+    },
+  },
+};
+
 function hasDelimitedToken(text: string, token: string) {
   const escaped = token.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   return new RegExp(`(^|[^A-Z0-9])${escaped}($|[^A-Z0-9])`, "i").test(text);
 }
 
-function queryRouteOverride(entry: IvMedicationEntry, route: IvMedicationRoute, query: string) {
-  const variants = IV_QUERY_ROUTE_OVERRIDES[entry.displayName];
+function queryRouteOverride(
+  entry: IvMedicationEntry,
+  route: IvMedicationRoute,
+  query: string,
+  queryOverrides: Record<string, Record<string, Partial<Record<IvMedicationRoute, IvRouteOverride>>>>,
+) {
+  const variants = queryOverrides[entry.displayName];
   if (!variants) return undefined;
   const matchedVariants = Object.entries(variants).filter(([token]) => hasDelimitedToken(query, token));
   return matchedVariants.length === 1 ? matchedVariants[0][1][route] : undefined;
@@ -843,6 +1043,14 @@ export const IV_MEDICATION_UNREVIEWED_ROUTE_SCOPES = IV_MEDICATION_ADULT_PROTOCO
     .filter((route) => entry.routes[route] && !IV_ROUTE_OVERRIDES[entry.displayName]?.[route])
     .map((route) => `${entry.displayName}:${route}:${entry.areasOfUse}`);
 });
+
+export const IV_MEDICATION_PEDIATRIC_UNREVIEWED_ROUTE_SCOPES =
+  IV_MEDICATION_PEDIATRIC_PROTOCOL.medications.flatMap((entry) => {
+    if (!ROUTE_SCOPE_CLAUSE.test(entry.areasOfUse)) return [];
+    return (["ivp", "ivpb", "ci"] as const)
+      .filter((route) => entry.routes[route] && !IV_PEDIATRIC_ROUTE_OVERRIDES[entry.displayName]?.[route])
+      .map((route) => `${entry.displayName}:${route}:${entry.areasOfUse}`);
+  });
 
 function sourceScopes(
   entry: IvMedicationEntry,
@@ -867,8 +1075,10 @@ function resolveIvRoute(
   route: IvMedicationRoute,
   unit: IvMedicationUnit,
   query: string,
+  routeOverrides: Record<string, Partial<Record<IvMedicationRoute, IvRouteOverride>>>,
+  queryOverrides: Record<string, Record<string, Partial<Record<IvMedicationRoute, IvRouteOverride>>>>,
 ): IvMedicationRouteResolution {
-  const override = queryRouteOverride(entry, route, query) ?? IV_ROUTE_OVERRIDES[entry.displayName]?.[route];
+  const override = queryRouteOverride(entry, route, query, queryOverrides) ?? routeOverrides[entry.displayName]?.[route];
   if (override?.forceNotListed) {
     return {
       state: "not-listed",
@@ -885,6 +1095,13 @@ function resolveIvRoute(
       state: "conditional",
       sourceMarker,
       reason: "The source marks this route with a provider/indication restriction rather than a unit permission; read the exact caveat.",
+    };
+  }
+  if (override?.unresolved) {
+    return {
+      state: "conditional",
+      sourceMarker,
+      reason: "The source marks this route but does not assign a route-specific area; read the exact Areas of Use text.",
     };
   }
   if (override?.excludedUnitIds?.includes(unit.id)) {
@@ -929,19 +1146,30 @@ function resolveIvRoute(
   };
 }
 
-export function resolveIvMedicationLookup(query: string, unitId: string) {
+export type IvMedicationPopulation = "adult" | "pediatric";
+
+export function resolveIvMedicationLookup(
+  query: string,
+  unitId: string,
+  population: IvMedicationPopulation = "adult",
+) {
   const normalized = query.trim().toLowerCase();
-  const unit = IV_MEDICATION_UNITS.find((item) => item.id === unitId);
+  const pediatric = population === "pediatric";
+  const units = pediatric ? IV_MEDICATION_PEDIATRIC_UNITS : IV_MEDICATION_UNITS;
+  const protocol = pediatric ? IV_MEDICATION_PEDIATRIC_PROTOCOL : IV_MEDICATION_ADULT_PROTOCOL;
+  const routeOverrides = pediatric ? IV_PEDIATRIC_ROUTE_OVERRIDES : IV_ROUTE_OVERRIDES;
+  const queryOverrides = pediatric ? IV_PEDIATRIC_QUERY_ROUTE_OVERRIDES : IV_QUERY_ROUTE_OVERRIDES;
+  const unit = units.find((item) => item.id === unitId);
   if (!unit) {
     return {
       query: normalized,
       unit: null,
       matches: [],
-      error: `Unknown IV medication unit: ${unitId}`,
+      error: `Unknown ${pediatric ? "pediatric " : ""}IV medication unit: ${unitId}`,
     };
   }
   const medications = normalized
-    ? IV_MEDICATION_ADULT_PROTOCOL.medications.filter((medication) =>
+    ? protocol.medications.filter((medication) =>
         [medication.displayName, ...medication.aliases, medication.areasOfUse, medication.considerations]
           .join(" ")
           .toLowerCase()
@@ -954,9 +1182,9 @@ export function resolveIvMedicationLookup(query: string, unitId: string) {
     matches: medications.map((medication) => ({
       medication,
       routes: {
-        ivp: resolveIvRoute(medication, "ivp", unit, normalized),
-        ivpb: resolveIvRoute(medication, "ivpb", unit, normalized),
-        ci: resolveIvRoute(medication, "ci", unit, normalized),
+        ivp: resolveIvRoute(medication, "ivp", unit, normalized, routeOverrides, queryOverrides),
+        ivpb: resolveIvRoute(medication, "ivpb", unit, normalized, routeOverrides, queryOverrides),
+        ci: resolveIvRoute(medication, "ci", unit, normalized, routeOverrides, queryOverrides),
       },
     })),
   };
@@ -969,6 +1197,7 @@ export const PROTOCOL_REFERENCES: ProtocolReference[] = [
   IV_ENTERAL_PROTOCOL.source,
   FORMULARY_RESTRICTIONS_PROTOCOL.source,
   IV_MEDICATION_ADULT_PROTOCOL.source,
+  IV_MEDICATION_PEDIATRIC_PROTOCOL.source,
 ];
 
 export const NAV = [
@@ -979,7 +1208,7 @@ export const NAV = [
   { id: "therapeutic-sub" as const, label: "Therapeutic Sub", shortLabel: "Therapeutic Sub", emoji: "🔄", description: "Formulary therapeutic interchange" },
   { id: "crrt-dosing" as const, label: "CRRT Dosing", shortLabel: "CRRT Dosing", emoji: "🩺", description: "Dosing considerations on CRRT" },
   { id: "iv-po" as const, label: "IV → Enteral Conversion", shortLabel: "IV→Enteral", emoji: "💊", description: "Approved pharmacist IV-to-enteral conversion appendix" },
-  { id: "iv-medication" as const, label: "IV Medication", shortLabel: "IV Meds", emoji: "💉", description: "Adult IV route and unit permissions from the approved April 2026 policy" },
+  { id: "iv-medication" as const, label: "IV Medication", shortLabel: "IV Meds", emoji: "💉", description: "Adult and pediatric IV route and unit permissions from approved April 2026 policies" },
   { id: "restrictions" as const, label: "Formulary Restrictions", shortLabel: "Restrictions", emoji: "⚠️", description: "January 2026 LBH formulary medications with restrictions" },
   { id: "insulin-switch" as const, label: "Insulin Switch", shortLabel: "Insulin Switch", emoji: "💉", description: "Insulin product conversions" },
   { id: "he" as const, label: "Hepatic Encephalopathy", shortLabel: "HE", emoji: "🧠", description: "HE supportive treatment pathway" },

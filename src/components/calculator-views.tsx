@@ -25,6 +25,8 @@ import {
   INSULIN_SWITCH,
   IV_ENTERAL_PROTOCOL,
   IV_MEDICATION_ADULT_PROTOCOL,
+  IV_MEDICATION_PEDIATRIC_PROTOCOL,
+  IV_MEDICATION_PEDIATRIC_UNITS,
   IV_MEDICATION_UNITS,
   NAV,
   RENAL_DOSING,
@@ -35,6 +37,7 @@ import {
   searchIvEnteral,
   searchTherapeuticSubstitutions,
   THERAPEUTIC_SUBSTITUTION_PROTOCOL,
+  type IvMedicationPopulation,
 } from "@/lib/protocols-data";
 import type { ViewId } from "@/types/patient";
 import { cn } from "@/lib/utils";
@@ -835,10 +838,25 @@ export function IvMedicationView({
 }: {
   initialPopulation?: "adult" | "pediatric";
 }) {
-  const [population, setPopulation] = React.useState<"adult" | "pediatric">(initialPopulation);
-  const [unitId, setUnitId] = React.useState<string>(IV_MEDICATION_ADULT_PROTOCOL.defaultContext.unit);
+  const [population, setPopulation] = React.useState<IvMedicationPopulation>(initialPopulation);
+  const [unitId, setUnitId] = React.useState<string>(() =>
+    initialPopulation === "pediatric"
+      ? IV_MEDICATION_PEDIATRIC_PROTOCOL.defaultContext.unit
+      : IV_MEDICATION_ADULT_PROTOCOL.defaultContext.unit,
+  );
   const [query, setQuery] = React.useState("");
-  const lookup = resolveIvMedicationLookup(query, unitId);
+  const protocol = population === "pediatric" ? IV_MEDICATION_PEDIATRIC_PROTOCOL : IV_MEDICATION_ADULT_PROTOCOL;
+  const units = population === "pediatric" ? IV_MEDICATION_PEDIATRIC_UNITS : IV_MEDICATION_UNITS;
+  const lookup = resolveIvMedicationLookup(query, unitId, population);
+
+  function selectPopulation(nextPopulation: IvMedicationPopulation) {
+    const nextProtocol = nextPopulation === "pediatric"
+      ? IV_MEDICATION_PEDIATRIC_PROTOCOL
+      : IV_MEDICATION_ADULT_PROTOCOL;
+    setPopulation(nextPopulation);
+    setUnitId(nextProtocol.defaultContext.unit);
+    setQuery("");
+  }
   const routeCards = [
     { key: "ivp" as const, label: "IV Push", abbreviation: "IVP" },
     { key: "ivpb" as const, label: "IV Piggyback", abbreviation: "IVPB" },
@@ -863,9 +881,7 @@ export function IvMedicationView({
   return (
     <Panel
       title={`💉 Intravenous Medication: ${population === "adult" ? "Adult" : "Pediatric"}`}
-      description={population === "adult"
-        ? "Search the approved April 2026 source by medication or brand, then verify IV route permission for the selected Sinai inpatient unit."
-        : "Pediatric IV medication guidance is intentionally unavailable until a separate authoritative pediatric protocol is approved."}
+      description={`Search the approved April 2026 ${population === "adult" ? "Adult" : "Pediatric"} source by medication or brand, then verify IV route permission for the selected ${population === "adult" ? "Sinai inpatient" : "pediatric"} unit.`}
     >
       <div className="space-y-5">
         <div className="rounded-xl border bg-muted/20 p-4">
@@ -877,7 +893,7 @@ export function IvMedicationView({
                   key={option}
                   type="button"
                   aria-pressed={population === option}
-                  onClick={() => setPopulation(option)}
+                  onClick={() => selectPopulation(option)}
                   className={cn(
                     "rounded-md px-3 py-1.5 text-sm font-medium transition-colors",
                     population === option ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground",
@@ -887,45 +903,26 @@ export function IvMedicationView({
                 </button>
               ))}
             </fieldset>
-            {population === "adult" ? (
-              <a
-                href={IV_MEDICATION_ADULT_PROTOCOL.source.href}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg border bg-background px-3 py-2 text-sm font-medium hover:bg-muted"
-              >
-                <FileText className="size-4" /> Open approved source PDF <ExternalLink className="size-3.5" />
-              </a>
-            ) : (
-              <Badge variant="outline">Awaiting separate pediatric source</Badge>
-            )}
+            <a
+              href={protocol.source.href}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 rounded-lg border bg-background px-3 py-2 text-sm font-medium hover:bg-muted"
+            >
+              <FileText className="size-4" /> Open approved source PDF <ExternalLink className="size-3.5" />
+            </a>
           </div>
-          {population === "adult" ? (
-            <div className="mt-3 flex flex-wrap gap-2 text-xs text-muted-foreground">
-              <Badge variant="secondary">Sinai Inpatient</Badge>
-              <span>Effective 04/20/2026</span>
-              <span>·</span>
-              <span>Reference #15967</span>
-              <span>·</span>
-              <span>{IV_MEDICATION_ADULT_PROTOCOL.sourceRowCount} Appendix A source rows</span>
-            </div>
-          ) : (
-            <p className="mt-3 text-xs text-muted-foreground">
-              No pediatric medication source, route permissions, or adult-source metadata are displayed in this mode.
-            </p>
-          )}
+          <div className="mt-3 flex flex-wrap gap-2 text-xs text-muted-foreground">
+            <Badge variant="secondary">{population === "adult" ? "Sinai Inpatient" : "Sinai Pediatric"}</Badge>
+            <span>Effective {protocol.source.updated}</span>
+            <span>·</span>
+            <span>Reference #{protocol.referenceNumber}</span>
+            <span>·</span>
+            <span>{protocol.sourceRowCount} Appendix A source rows</span>
+          </div>
         </div>
 
-        {population === "pediatric" ? (
-          <section className="rounded-xl border border-dashed p-8 text-center">
-            <div className="text-3xl" aria-hidden="true">🧸</div>
-            <h3 className="mt-3 font-semibold">Pediatric protocol coming later</h3>
-            <p className="mx-auto mt-2 max-w-xl text-sm text-muted-foreground">
-              Pediatric rules are intentionally blank pending a separate approved pediatric protocol. Adult rules are never reused or inferred for pediatric patients.
-            </p>
-          </section>
-        ) : (
-          <>
+        <>
             <div className="grid gap-4 rounded-xl border p-4 lg:grid-cols-[minmax(220px,0.8fr)_minmax(280px,1.2fr)]">
               <div className="space-y-1.5">
                 <Label htmlFor="iv-medication-unit">Select unit</Label>
@@ -937,7 +934,7 @@ export function IvMedicationView({
                 >
                   {unitGroups.map((group) => (
                     <optgroup key={group} label={group}>
-                      {IV_MEDICATION_UNITS.filter((unit) => unit.group === group).map((unit) => (
+                      {units.filter((unit) => unit.group === group).map((unit) => (
                         <option key={unit.id} value={unit.id}>{unit.label}</option>
                       ))}
                     </optgroup>
@@ -1040,21 +1037,22 @@ export function IvMedicationView({
               )
             ) : (
               <div className="rounded-xl border border-dashed p-8 text-center text-sm text-muted-foreground">
-                Search one of {IV_MEDICATION_ADULT_PROTOCOL.medications.length} logical medications to see IVP, IVPB, CI, central-line, unit, and caveat details.
+                Search one of {protocol.medications.length} logical medications to see IVP, IVPB, CI, central-line, unit, and caveat details.
               </div>
             )}
 
             <details className="rounded-xl border border-amber-500/30 bg-amber-500/5">
               <summary className="cursor-pointer px-4 py-3 font-semibold text-amber-950 dark:text-amber-100">
-                Preserved source ambiguities and conflicts ({IV_MEDICATION_ADULT_PROTOCOL.sourceAlerts.length})
+                Preserved source ambiguities and conflicts ({protocol.sourceAlerts.length})
               </summary>
               <ul className="space-y-2 border-t border-amber-500/20 px-5 py-4 text-sm leading-relaxed">
-                {IV_MEDICATION_ADULT_PROTOCOL.sourceAlerts.map((alert) => <li key={alert}>• {alert}</li>)}
+                {protocol.sourceAlerts.map((alert) => <li key={alert}>• {alert}</li>)}
               </ul>
             </details>
 
-            <details className="rounded-xl border">
-              <summary className="cursor-pointer px-4 py-3 font-semibold">Adult procedural sedation reference (Appendix B)</summary>
+            {population === "adult" ? (
+              <details className="rounded-xl border">
+                <summary className="cursor-pointer px-4 py-3 font-semibold">Adult procedural sedation reference (Appendix B)</summary>
               <div className="space-y-3 border-t p-4">
                 {IV_MEDICATION_ADULT_PROTOCOL.proceduralSedationAdult.map((row) => (
                   <article key={row.drug} className="rounded-lg border p-3">
@@ -1071,9 +1069,9 @@ export function IvMedicationView({
                   </article>
                 ))}
               </div>
-            </details>
+              </details>
+            ) : null}
           </>
-        )}
       </div>
     </Panel>
   );
@@ -1279,10 +1277,13 @@ export function CalculatorViews({
 
   return (
     <div className="mx-auto grid max-w-7xl gap-6 px-4 py-6 lg:grid-cols-[320px_1fr]">
-      <aside className="lg:sticky lg:top-28 lg:self-start">
+      <aside className={cn("lg:sticky lg:top-28 lg:self-start", view === "iv-medication" && "order-2 lg:order-1")}>
         <PatientProfileCard />
       </aside>
-      <section key={`${view}-${resetVersion}`} className="min-w-0">
+      <section
+        key={`${view}-${resetVersion}`}
+        className={cn("min-w-0", view === "iv-medication" && "order-1 lg:order-2")}
+      >
         {view === "home" && <HomeView onNavigate={onNavigate} />}
         {view === "crcl-bmi" && <CrClBmiView />}
         {view === "dose-rounding" && <DoseRoundingView />}

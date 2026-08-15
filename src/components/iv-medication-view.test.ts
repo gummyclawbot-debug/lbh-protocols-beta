@@ -41,11 +41,11 @@ describe("Intravenous Medication tab shell", () => {
       "Areas of Use",
       "Monitoring and Other Considerations",
       "Open approved source PDF",
-      "Pediatric rules are intentionally blank",
+      "Sinai Pediatric",
     ]) expect(view).toContain(expected);
   });
 
-  it("renders distinct adult and pediatric states without adult provenance in pediatric mode", () => {
+  it("renders distinct adult and pediatric sources without cross-population provenance", () => {
     const adult = renderToStaticMarkup(createElement(IvMedicationView, { initialPopulation: "adult" }));
     expect(adult).toContain("Open approved source PDF");
     expect(adult).toContain("Reference #15967");
@@ -56,16 +56,22 @@ describe("Intravenous Medication tab shell", () => {
     expect(adult).not.toContain('aria-label="Population protocol"');
     expect(adult).toContain('role="heading"');
     expect(adult).toContain('aria-level="2"');
+    expect(adult).toContain("Adult procedural sedation reference (Appendix B)");
+    expect(adult).not.toContain("Reference #18234");
 
     const pediatric = renderToStaticMarkup(createElement(IvMedicationView, { initialPopulation: "pediatric" }));
-    expect(pediatric).toContain("Pediatric protocol coming later");
-    for (const forbidden of [
+    for (const expected of [
       "Open approved source PDF",
-      "Reference #15967",
-      "Appendix A source rows",
+      "Reference #18234",
+      "197 Appendix A source rows",
       "Search generic or brand name",
-      "approved April 2026 source",
-      "selected Sinai inpatient unit",
+      "Sinai Pediatric",
+      "lbh-intravenous-medication-pediatric-2026-04.pdf",
+    ]) expect(pediatric).toContain(expected);
+    for (const forbidden of [
+      "Reference #15967",
+      "Adult procedural sedation reference (Appendix B)",
+      "lbh-intravenous-medication-adult-2026-04.pdf",
     ]) expect(pediatric).not.toContain(forbidden);
   });
 
